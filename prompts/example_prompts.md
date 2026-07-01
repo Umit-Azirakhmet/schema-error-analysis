@@ -1,25 +1,3 @@
-# Example Prompts
-
-Prompt templates for schema-guided JSON generation, adapted from [Let Me Speak Freely](https://arxiv.org/pdf/2408.02442) Appendix G.
-
-**Universal template:**
-
-```
-Follow the instruction to complete the task: {task_description}
-Instruct: {format_description}
-{few_shots}
-{question}
-```
-
-Three prompting methods are defined per dataset:
-
-1. **Direct zero-shot (FRI)** — format-restricting instructions with schema in a single call.
-2. **Direct few-shot (FRI)** — same as zero-shot plus in-context examples.
-3. **NL-to-Format** — Stage 1: natural language only; Stage 2: convert NL response to JSON.
-
-> **Note:** Few-shot `{example_*}` placeholders should be sampled from each dataset's CSV at generation time (not fixed in this file).
-
----
 
 ## ARQA
 
@@ -43,16 +21,16 @@ Table: %VW2015_T4e9153%
 {few_shots}
 
 Example 1 input:
-{example_1_input}
+%{example_1_input}%
 
 Example 1 output:
-{example_1_output}
+%{example_1_output}%
 
 Example 2 input:
-{example_2_input}
+%{example_2_input}%
 
 Example 2 output:
-{example_2_output}
+%{example_2_output}%
 ```
 
 
@@ -62,10 +40,10 @@ Answer the following question using the provided context.
 
 Follow this two-part format:
 
-PART 1 - REASONING (Natural Language):
+PART 1 (Natural Language):
 Explain your reasoning step by step, then give your final answer in natural language.
 
-PART 2 - FINAL ANSWER (JSON):
+PART 2 (JSON):
 Convert your reasoning and answer into the following JSON structure:
 
 {
@@ -82,11 +60,7 @@ Convert your reasoning and answer into the following JSON structure:
   ]
 }
 
-Important Rules:
-1. First, provide your reasoning in natural language in the "PART 1" section
-2. Then, provide your structured JSON in the "PART 2" section
-3. Do NOT output any other text after the JSON
-4. Ensure your claims are directly supported by the provided context
+
 
 Context:
 %{context}%
@@ -135,17 +109,17 @@ Text: %The movie "Inception" was directed by Christopher Nolan and released in 2
 {few_shots}
 
 Example 1:
-Text: {example_1_text}
-Schema: {example_1_schema}
-JSON: {example_1_json}
+Text: %{example_1_text}%
+Schema: %{example_1_schema}%
+JSON: %{example_1_json}%
 
 Example 2:
-Text: {example_2_text}
-Schema: {example_2_schema}
-JSON: {example_2_json}
+Text: %{example_2_text}%
+Schema: %{example_2_schema}%
+JSON: %{example_2_json}%
 
-Text: {text}
-Schema: {schema}
+Text: %{text}%
+Schema: %{schema}%
 ```
 
 ### NL-to-Format
@@ -154,11 +128,11 @@ Read the following text and extract the relevant information to answer the impli
 
 Follow this two-part format:
 
-PART 1 - REASONING (Natural Language):
+PART 1 (Natural Language):
 First, explain your reasoning about what information you need to extract and why.
 Then, provide the extracted answer in natural language.
 
-PART 2 - STRUCTURED OUTPUT (JSON):
+PART 2 (JSON):
 Convert your extraction into valid JSON that validates against the provided schema.
 Return only valid JSON. No markdown.
 
@@ -176,7 +150,7 @@ Text:
 **Task description:**
 
 ```
-Given a pipe-delimited table %(`table_code`)%, optional supporting text %(`sup_text`)%, and target cell coordinates,
+Given a pipe-delimited table (`table_code`), optional supporting text (`sup_text`), and target cell coordinates,
 produce `gold_json_records`: a JSON object with parallel lists `cell_index` and `cell_record` (each cell_record is a JSON string).
 ```
 
@@ -187,8 +161,8 @@ Return only valid JSON. Record types include "Other" and "Glass_Compound_Amount"
 
 Output structure:
 {
-  "cell_index": %[[i, j, k], ...]%,
-  "cell_record": %["{\"value\": \"...\", \"type\": \"...\", ...}", ...]%
+  "cell_index": [[i, j, k], ...],
+  "cell_record": ["{\"value\": \"...\", \"type\": \"...\", ...}", ...]
 }
 ```
 
@@ -208,14 +182,14 @@ target_cells: %{"i": [2], "j": [3], "k": [0], "cell_value_processed": ["12.5"]}%
 
 ```
 Example 1:
-table_code: {example_1_table_code}
-target_cells: {example_1_target_cells}
-Output: {example_1_gold_json_records}
+table_code: %{example_1_table_code}%
+target_cells: %{example_1_target_cells}%
+Output: %{example_1_gold_json_records}%
 
 Example 2:
-table_code: {example_2_table_code}
-target_cells: {example_2_target_cells
-Output: {example_2_gold_json_records}
+table_code: %{example_2_table_code}%
+target_cells: %{example_2_target_cells}%
+Output: %{example_2_gold_json_records}%
 
 table_code: %{table_code}%
 sup_text: %{sup_text}%
@@ -229,11 +203,11 @@ Identify the values and record types for each target cell in the provided table.
 
 Follow this two-part format:
 
-PART 1 - REASONING (Natural Language):
+PART 1 (Natural Language):
 First, explain your reasoning about what values and record types you need to identify.
 Then, provide the answer in natural language.
 
-PART 2 - STRUCTURED OUTPUT (JSON):
+PART 2 (JSON):
 Convert your extraction into valid JSON with "cell_index" and "cell_record" lists of equal length.
 Return only valid JSON. No markdown.
 
