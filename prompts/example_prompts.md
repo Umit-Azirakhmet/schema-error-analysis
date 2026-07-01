@@ -43,16 +43,16 @@ Table: %VW2015_T4e9153%
 {few_shots}
 
 Example 1 input:
-%{example_1_input}%
+{example_1_input}
 
 Example 1 output:
-%{example_1_output}%
+{example_1_output}
 
 Example 2 input:
-%{example_2_input}%
+{example_2_input}
 
 Example 2 output:
-%{example_2_output}%
+{example_2_output}
 ```
 
 
@@ -63,7 +63,7 @@ Answer the following question using the provided context.
 Follow this two-part format:
 
 PART 1 - REASONING (Natural Language):
-Explain your reasoning step by step before giving your final answer.
+Explain your reasoning step by step, then give your final answer in natural language.
 
 PART 2 - FINAL ANSWER (JSON):
 Convert your reasoning and answer into the following JSON structure:
@@ -135,17 +135,17 @@ Text: %The movie "Inception" was directed by Christopher Nolan and released in 2
 {few_shots}
 
 Example 1:
-Text: %{example_1_text}%
-Schema: %{example_1_schema}%
-JSON: %{example_1_json}%
+Text: {example_1_text}
+Schema: {example_1_schema}
+JSON: {example_1_json}
 
 Example 2:
-Text: %{example_2_text}%
-Schema: %{example_2_schema}%
-JSON: %{example_2_json}%
+Text: {example_2_text}
+Schema: {example_2_schema}
+JSON: {example_2_json}
 
-Text: %{text}%
-Schema: %{schema}%
+Text: {text}
+Schema: {schema}
 ```
 
 ### NL-to-Format
@@ -156,7 +156,7 @@ Follow this two-part format:
 
 PART 1 - REASONING (Natural Language):
 First, explain your reasoning about what information you need to extract and why.
-Then, provide the extracted information in natural language.
+Then, provide the extracted answer in natural language.
 
 PART 2 - STRUCTURED OUTPUT (JSON):
 Convert your extraction into valid JSON that validates against the provided schema.
@@ -208,14 +208,14 @@ target_cells: %{"i": [2], "j": [3], "k": [0], "cell_value_processed": ["12.5"]}%
 
 ```
 Example 1:
-table_code: %{example_1_table_code}%
-target_cells: %{example_1_target_cells}%
-Output: %{example_1_gold_json_records}%
+table_code: {example_1_table_code}
+target_cells: {example_1_target_cells}
+Output: {example_1_gold_json_records}
 
 Example 2:
-table_code: %{example_2_table_code}%
-target_cells: %{example_2_target_cells}%
-Output: %{example_2_gold_json_records}%
+table_code: {example_2_table_code}
+target_cells: {example_2_target_cells
+Output: {example_2_gold_json_records}
 
 table_code: %{table_code}%
 sup_text: %{sup_text}%
@@ -231,7 +231,7 @@ Follow this two-part format:
 
 PART 1 - REASONING (Natural Language):
 First, explain your reasoning about what values and record types you need to identify.
-Then, provide the extracted information in natural language.
+Then, provide the answer in natural language.
 
 PART 2 - STRUCTURED OUTPUT (JSON):
 Convert your extraction into valid JSON with "cell_index" and "cell_record" lists of equal length.
