@@ -205,16 +205,20 @@ Given a pipe-delimited table, optional supporting text, and target cell coordina
 Requirements:
 - Each item in "cell_index" must be a coordinate [i, j, k].
 - Each item in "cell_record" must be a valid JSON object serialized as a string.
-- Each inner JSON object must contain:
+- Allowed record types are "Other" and "Glass_Compound_Amount".
+- Each inner record must have exactly one of these types.
+- The complete output may contain only one type or a mixture of both types.
+- An "Other" record must contain:
   - "value": string
-  - "type": string
-- Depending on the record type, the inner object may also contain:
+  - "type": "Other"
+- A "Glass_Compound_Amount" record must contain:
+  - "value": string
+  - "type": "Glass_Compound_Amount"
   - "constituent": string
   - "unit": string
   - "material": string
 - The nth "cell_index" must correspond to the nth "cell_record".
 - Do not omit or reorder target cells.
-- Use the record type and required fields supported by the table context and dataset examples.
 - Return only valid JSON with no markdown or extra commentary.
 
 Required output structure:
@@ -243,17 +247,22 @@ Given a pipe-delimited table, optional supporting text, and target cell coordina
 Requirements:
 - Each item in "cell_index" must be a coordinate [i, j, k].
 - Each item in "cell_record" must be a valid JSON object serialized as a string.
-- Each inner JSON object must contain:
+- Allowed record types are "Other" and "Glass_Compound_Amount".
+- Each inner record must have exactly one of these types.
+- The complete output may contain only one type or a mixture of both types.
+- An "Other" record must contain:
   - "value": string
-  - "type": string
-- Depending on the record type, the inner object may also contain:
+  - "type": "Other"
+- A "Glass_Compound_Amount" record must contain:
+  - "value": string
+  - "type": "Glass_Compound_Amount"
   - "constituent": string
   - "unit": string
   - "material": string
 - The nth "cell_index" must correspond to the nth "cell_record".
 - Do not omit or reorder target cells.
-- Use the record type and required fields supported by the table context and dataset examples.
 - Return only valid JSON with no markdown or extra commentary.
+
 
 Required output structure:
 {
@@ -293,16 +302,20 @@ Convert only the final natural-language answer from PART 1 into a valid JSON obj
 Requirements:
 - Each item in "cell_index" must be a coordinate [i, j, k].
 - Each item in "cell_record" must be a valid JSON object serialized as a string.
-- Each inner JSON object must contain:
+- Allowed record types are "Other" and "Glass_Compound_Amount".
+- Each inner record must have exactly one of these types.
+- The complete output may contain only one type or a mixture of both types.
+- An "Other" record must contain:
   - "value": string
-  - "type": string
-- Depending on the record type, the inner object may also contain:
+  - "type": "Other"
+- A "Glass_Compound_Amount" record must contain:
+  - "value": string
+  - "type": "Glass_Compound_Amount"
   - "constituent": string
   - "unit": string
   - "material": string
 - The nth "cell_index" must correspond to the nth "cell_record".
 - Do not omit or reorder target cells.
-- Use the record type and required fields supported by the table context and dataset examples.
 - Return only valid JSON with no markdown or extra commentary.
 - Do not add information that was not stated in PART 1.
 
