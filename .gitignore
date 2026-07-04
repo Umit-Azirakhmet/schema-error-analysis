@@ -128,3 +128,11 @@ temp/
 # Optional: uncomment if generated outputs should not be committed
 # data/*_final.csv
 # data/*.parquet
+outputs/
+data/ARQA_characteristics.csv
+data/ARQA_cleaned.csv
+data/ARQA_validated.csv
+data/ARQA_validated2k.csv
+data/DeepJSONEval_characteristics-v1.csv
+data/DeepJSONEval_characteristics-v2.csv
+data/SchemaToJSON_characteristics.csv

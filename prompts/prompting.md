@@ -1,337 +1,232 @@
-# Final Prompt Templates
 
 ## ARQA
 
-### Zero-shot
+### Zero-shot (FRI)
 
-```text
-You are answering a financial document question using the provided context.
 
-Return a JSON object with:
-- "answer": a concise final answer
-- "claims": an array of claim objects
+**Full prompt example:**
 
-Each claim must contain:
-- "type": "table" or "text"
-- "claim_text": a factual statement supporting the answer
-- "evidence"
+```
+Follow the instruction to complete the task: You are answering a financial document question. Given the question and supporting context, produce a JSON object with fields "answer" (string), "claims" (array of claim objects), and evidence (table_cells and/or text_spans) matching the gold structure.
+Instruct: Return only valid JSON. No markdown fences, no commentary outside the JSON object. Required top-level keys: "answer", "claims". Each claim must have "type", "claim_text", and "evidence".
 
-For table evidence, use:
-"table_cells": [{"table_id": "...", "row": "...", "col": "...", "cell_text": "..."}]
-
-For text evidence, use:
-"text_spans": [{"para_id": "...", "char_start": 0, "char_end": 0, "text": "..."}]
-
-Return only valid JSON. Do not include markdown or commentary.
-
-Question:
-%{question}%
-
-Context paragraphs:
-%{context_paragraphs}%
-
-Tables:
-%{tables}%
+Question: %Discuss the distinct roles of the Automotive Division and the Financial Services Division in the Volkswagen Group's operations.%
+Context paragraphs: %[VW2015_P5e55fd]%
+Table: %VW2015_T4e9153%
 ```
 
+### Few-shot (FRI)
 
 
-### Few-shot
+{few_shots}
 
-```text
-You are answering a financial document question using the provided context.
+Example 1 input:
+%{example_1_input}%
 
-Return a JSON object with:
-- "answer": a concise final answer
-- "claims": an array of claim objects
+Example 1 output:
+%{example_1_output}%
 
-Each claim must contain:
-- "type": "table" or "text"
-- "claim_text": a factual statement supporting the answer
-- "evidence"
+Example 2 input:
+%{example_2_input}%
 
-For table evidence, use:
-"table_cells": [{"table_id": "...", "row": "...", "col": "...", "cell_text": "..."}]
-
-For text evidence, use:
-"text_spans": [{"para_id": "...", "char_start": 0, "char_end": 0, "text": "..."}]
-
-Return only valid JSON. Do not include markdown or commentary.
-
-%{few_shots}%
-
-Now complete the following instance.
-
-Question:
-%{question}%
-
-Context paragraphs:
-%{context_paragraphs}%
-
-Tables:
-%{tables}%
+Example 2 output:
+%{example_2_output}%
 ```
 
 
 
 ### NL-to-Format
+Answer the following question using the provided context.
 
-```text
-Answer the financial document question using the provided context.
+Follow this two-part format:
 
-Follow this exact two-part format.
+PART 1 (Natural Language):
+Explain your reasoning step by step, then give your final answer in natural language.
 
-PART 1 — Natural Language:
-Briefly explain how the evidence from the tables and text supports the answer. Then provide the complete final answer in natural language.
+PART 2 (JSON):
+Convert your reasoning and answer into the following JSON structure:
 
-PART 2 — JSON:
-Convert only the final natural-language answer from PART 1 into valid JSON that satisfies these requirements:
+{
+  "answer": "<string>",
+  "claims": [
+    {
+      "type": "table" | "text",
+      "claim_text": "<string>",
+      "evidence": {
+        "table_cells": [{"table_id": "<string>", "cell_text": "<string>"}],
+        "text_spans": [{"para_id": "<string>", "span_text": "<string>"}]
+      }
+    }
+  ]
+}
 
-Provide a valid JSON object with:
-- "answer": a concise final answer
-- "claims": an array of claim objects
 
-Each claim must contain:
-- "type": "table" or "text"
-- "claim_text": a factual statement supporting the answer
-- "evidence"
 
-For table evidence, use:
-"table_cells": [{"table_id": "...", "row": "...", "col": "...", "cell_text": "..."}]
-
-For text evidence, use:
-"text_spans": [{"para_id": "...", "char_start": 0, "char_end": 0, "text": "..."}]
-
-Do not include markdown fences.
+Context:
+%{context}%
 
 Question:
 %{question}%
-
-Context paragraphs:
-%{context_paragraphs}%
-
-Tables:
-%{tables}%
-```
-
----
 
 
 
 ## DeepJSONEval
 
+### Zero-shot (FRI)
 
+**Task description:**
 
-### Zero-shot
+```
+Given a source text and a JSON Schema, generate a JSON instance that satisfies the schema
+and accurately reflects the information in the text.
+```
 
-```text
-Given a source text and a JSON Schema, generate a JSON instance that satisfies the schema and accurately reflects the text.
+**Format description:**
 
-Include all required fields.
-Preserve the data types defined in the schema.
-Do not add unsupported information.
-Return only valid JSON with no markdown or extra commentary.
+```
+Return only valid JSON matching the schema below. No extra keys, no markdown fences.
 
 Schema:
 %{schema}%
-
-Text:
-%{text}%
 ```
 
 
+**Full prompt example:**
 
-### Few-shot
-
-```text
-Given a source text and a JSON Schema, generate a JSON instance that satisfies the schema and accurately reflects the text.
-
-Include all required fields.
-Preserve the data types defined in the schema.
-Do not add unsupported information.
-Return only valid JSON with no markdown or extra commentary.
-
-%{few_shots}%
-
-Now complete the following instance.
+```
+Follow the instruction to complete the task: Given a source text and a JSON Schema, generate a JSON instance that satisfies the schema and accurately reflects the information in the text.
+Instruct: Return only valid JSON matching the schema below. No extra keys, no markdown fences.
 
 Schema:
-%{schema}%
+%{"title": "Movie", "type": "object", "properties": {"title": {"type": "string"}, "director": {"type": "string"}, "year": {"type": "integer"}}, "required": ["title", "director", "year"]}%
 
-Text:
-%{text}%
+Text: %The movie "Inception" was directed by Christopher Nolan and released in 2010..%.
 ```
 
+### Few-shot (FRI)
 
+```
+{few_shots}
+
+Example 1:
+Text: %{example_1_text}%
+Schema: %{example_1_schema}%
+JSON: %{example_1_json}%
+
+Example 2:
+Text: %{example_2_text}%
+Schema: %{example_2_schema}%
+JSON: %{example_2_json}%
+
+Text: %{text}%
+Schema: %{schema}%
+```
 
 ### NL-to-Format
 
-```text
-Read the source text and identify the information required by the JSON Schema.
+Read the following text and extract the relevant information to answer the implicit structured-data task.
 
-Follow this exact two-part format.
+Follow this two-part format:
 
-PART 1 — Natural Language Answer:
-Briefly explain which information must be extracted from the text to satisfy the schema. Then provide the complete final answer in natural language.
+PART 1 (Natural Language):
+First, explain your reasoning about what information you need to extract and why.
+Then, provide the extracted answer in natural language.
 
-PART 2 — JSON Conversion:
-Convert only the final natural-language answer from PART 1 into valid JSON that satisfies the provided schema.
-
-Include all required fields.
-Preserve the data types defined in the schema.
-Do not add information that was not stated in PART 1.
-Do not include markdown fences.
+PART 2 (JSON):
+Convert your extraction into valid JSON that validates against the provided schema.
+Return only valid JSON. No markdown.
 
 Schema:
 %{schema}%
 
 Text:
 %{text}%
-```
-
----
-
 
 
 ## SchemaToJSON
 
+### Zero-shot (FRI)
 
+**Task description:**
 
-### Zero-shot
+```
+Given a pipe-delimited table (`table_code`), optional supporting text (`sup_text`), and target cell coordinates,
+produce `gold_json_records`: a JSON object with parallel lists `cell_index` and `cell_record` (each cell_record is a JSON string).
+```
 
-```text
-Given a pipe-delimited table, optional supporting text, and target cell coordinates, produce a JSON object with parallel lists "cell_index" and "cell_record".
+**Format description:**
 
-Requirements:
-- Each item in "cell_index" must be a coordinate [i, j, k].
-- Each item in "cell_record" must be a valid JSON object serialized as a string.
-- Allowed record types are "Other" and "Glass_Compound_Amount".
-- Each inner record must have exactly one of these types.
-- The complete output may contain only one type or a mixture of both types.
-- An "Other" record must contain:
-  - "value": string
-  - "type": "Other"
-- A "Glass_Compound_Amount" record must contain:
-  - "value": string
-  - "type": "Glass_Compound_Amount"
-  - "constituent": string
-  - "unit": string
-  - "material": string
-- The nth "cell_index" must correspond to the nth "cell_record".
-- Do not omit or reorder target cells.
-- Return only valid JSON with no markdown or extra commentary.
+```
+Return only valid JSON. Record types include "Other" and "Glass_Compound_Amount" with dataset-specific required fields.
 
-Required output structure:
+Output structure:
 {
   "cell_index": [[i, j, k], ...],
   "cell_record": ["{\"value\": \"...\", \"type\": \"...\", ...}", ...]
 }
-
-Table:
-%{table_code}%
-
-Supporting text:
-%{sup_text}%
-
-Target cells:
-%{target_cells}%
 ```
 
+**Question (filled example, truncated):**
 
+```
+table_code:
+%| ... | Alkali germanate glasses | ...
+| Li | Na | K | ...%
 
-### Few-shot
+sup_text: %(optional excerpt)%
 
-```text
-Given a pipe-delimited table, optional supporting text, and target cell coordinates, produce a JSON object with parallel lists "cell_index" and "cell_record".
-
-Requirements:
-- Each item in "cell_index" must be a coordinate [i, j, k].
-- Each item in "cell_record" must be a valid JSON object serialized as a string.
-- Allowed record types are "Other" and "Glass_Compound_Amount".
-- Each inner record must have exactly one of these types.
-- The complete output may contain only one type or a mixture of both types.
-- An "Other" record must contain:
-  - "value": string
-  - "type": "Other"
-- A "Glass_Compound_Amount" record must contain:
-  - "value": string
-  - "type": "Glass_Compound_Amount"
-  - "constituent": string
-  - "unit": string
-  - "material": string
-- The nth "cell_index" must correspond to the nth "cell_record".
-- Do not omit or reorder target cells.
-- Return only valid JSON with no markdown or extra commentary.
-
-
-Required output structure:
-{
-  "cell_index": [[i, j, k], ...],
-  "cell_record": ["{\"value\": \"...\", \"type\": \"...\", ...}", ...]
-}
-
-%{few_shots}%
-
-Now complete the following instance.
-
-Table:
-%{table_code}%
-
-Supporting text:
-%{sup_text}%
-
-Target cells:
-%{target_cells}%
+target_cells: %{"i": [2], "j": [3], "k": [0], "cell_value_processed": ["12.5"]}%
 ```
 
+### Few-shot (FRI)
+
+```
+Example 1:
+table_code: %{example_1_table_code}%
+target_cells: %{example_1_target_cells}%
+Output: %{example_1_gold_json_records}%
+
+Example 2:
+table_code: %{example_2_table_code}%
+target_cells: %{example_2_target_cells}%
+Output: %{example_2_gold_json_records}%
+
+table_code: %{table_code}%
+sup_text: %{sup_text}%
+target_cells: %{target_cells}%
+```
 
 
 ### NL-to-Format
 
-```text
-Identify the value and record type for each target cell in the table.
+Identify the values and record types for each target cell in the provided table.
 
-Follow this exact two-part format.
+Follow this two-part format:
 
-PART 1 — Natural Language Answer:
-For each target cell, briefly explain the identified value, record type, and any additional fields required by that record type. Then provide the complete final answer in natural language, preserving the order of the target cells.
+PART 1 (Natural Language):
+First, explain your reasoning about what values and record types you need to identify.
+Then, provide the answer in natural language.
 
-PART 2 — JSON Conversion:
-Convert only the final natural-language answer from PART 1 into a valid JSON object with parallel lists "cell_index" and "cell_record".
+PART 2 (JSON):
+Convert your extraction into valid JSON with "cell_index" and "cell_record" lists of equal length.
+Return only valid JSON. No markdown.
 
-Requirements:
-- Each item in "cell_index" must be a coordinate [i, j, k].
-- Each item in "cell_record" must be a valid JSON object serialized as a string.
-- Allowed record types are "Other" and "Glass_Compound_Amount".
-- Each inner record must have exactly one of these types.
-- The complete output may contain only one type or a mixture of both types.
-- An "Other" record must contain:
-  - "value": string
-  - "type": "Other"
-- A "Glass_Compound_Amount" record must contain:
-  - "value": string
-  - "type": "Glass_Compound_Amount"
-  - "constituent": string
-  - "unit": string
-  - "material": string
-- The nth "cell_index" must correspond to the nth "cell_record".
-- Do not omit or reorder target cells.
-- Return only valid JSON with no markdown or extra commentary.
-- Do not add information that was not stated in PART 1.
-
-Required output structure:
-{
-  "cell_index": [[i, j, k], ...],
-  "cell_record": ["{\"value\": \"...\", \"type\": \"...\", ...}", ...]
-}
-
-Table:
+Table Code:
 %{table_code}%
 
-Supporting text:
+Supplementary Text:
 %{sup_text}%
 
-Target cells:
+Target Cells (to extract):
 %{target_cells}%
-```
+
+Required JSON Structure:
+{
+  "cell_index": [[i, j, k], ...],
+  "cell_record": ["<JSON string per cell>", ...]
+}
+
+---
+
+
 

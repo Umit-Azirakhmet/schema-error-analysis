@@ -1,0 +1,17 @@
+dataset: ARQA
+dataset_path: data/ARQA_characteristics_final.csv
+context_path: data/ARQA_DB.csv
+prompts_path: prompts/prompting.md
+
+model_name: Qwen/Qwen3-8B
+method: zero_shot
+num_shots: 0
+random_seed: 42
+max_rows: 3
+
+generation:
+  do_sample: false
+  temperature: 0
+  max_new_tokens: 2048
+
+output_root: outputs
