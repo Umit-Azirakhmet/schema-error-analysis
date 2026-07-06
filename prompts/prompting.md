@@ -5,7 +5,7 @@
 ### Zero-shot
 
 ```text
-You are answering a financial document question using the provided context.
+You are answering a "category" question using the provided context.
 
 Return a JSON object with:
 - "answer": a concise final answer

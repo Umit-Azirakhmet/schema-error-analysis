@@ -4,7 +4,7 @@ Prompt template management for the generation pipeline.
 import re
 import os
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict
 
 class PromptManager:
     """Manage prompt templates from prompting.md."""
@@ -12,10 +12,10 @@ class PromptManager:
     def __init__(self, prompts_path: str):
         # Try multiple locations for the prompts file
         possible_paths = [
-            Path(prompts_path),  # As provided
-            Path.cwd() / prompts_path,  # Relative to current working directory
-            Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) / prompts_path,  # Relative to project root
-            Path(__file__).parent.parent / prompts_path,  # From src directory
+            Path(prompts_path),
+            Path.cwd() / prompts_path,
+            Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) / prompts_path,
+            Path(__file__).parent.parent / prompts_path,
         ]
         
         self.prompts_path = None
@@ -25,7 +25,6 @@ class PromptManager:
                 break
         
         if self.prompts_path is None:
-            # List all files to help debug
             print("ERROR: Could not find prompts file. Searched in:")
             for path in possible_paths:
                 print(f"  - {path}")
@@ -39,50 +38,85 @@ class PromptManager:
         with open(self.prompts_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Parse templates by dataset and method
         templates = {}
         
-        # Split by headers (### or ##)
-        sections = re.split(r'#{2,3}\s+', content)
-        for section in sections:
+        # Split by dataset sections (## ARQA, ## DeepJSONEval, ## SchemaToJSON)
+        dataset_sections = re.split(r'##\s+', content)
+        
+        for section in dataset_sections:
             if not section.strip():
                 continue
             
             lines = section.strip().split('\n')
             if not lines:
                 continue
-                
-            # Try to find the dataset and method in the header
-            header = lines[0].strip()
             
-            # Parse header like "ARQA - zero_shot" or "ARQA\n### zero_shot"
-            if ' - ' in header:
-                dataset, method = header.split(' - ', 1)
-                template = '\n'.join(lines[1:]).strip()
+            # First line is the dataset name
+            dataset = lines[0].strip()
+            
+            # Skip if not a valid dataset
+            if dataset not in ['ARQA', 'DeepJSONEval', 'SchemaToJSON']:
+                continue
+            
+            # Join remaining lines
+            section_content = '\n'.join(lines[1:])
+            
+            # Split by method headers (### Zero-shot, ### Few-shot, ### NL-to-Format)
+            method_sections = re.split(r'###\s+', section_content)
+            
+            for method_section in method_sections:
+                if not method_section.strip():
+                    continue
+                
+                method_lines = method_section.strip().split('\n')
+                if not method_lines:
+                    continue
+                
+                # First line is the method name
+                method_header = method_lines[0].strip()
+                
+                # Map method names to our internal naming
+                method_map = {
+                    'Zero-shot': 'zero_shot',
+                    'Few-shot': 'few_shot',
+                    'NL-to-Format': 'nl_to_format',
+                    'Zero Shot': 'zero_shot',
+                    'Few Shot': 'few_shot',
+                    'NL to Format': 'nl_to_format',
+                }
+                
+                method = method_map.get(method_header, method_header.lower().replace(' ', '_'))
+                
+                # Get the template content (everything after the header)
+                template_content = '\n'.join(method_lines[1:]).strip()
+                
+                # Remove markdown code fences (```text ... ```)
+                template_content = re.sub(r'```\w*\n?', '', template_content)
+                template_content = template_content.strip()
+                
+                # Remove any extra separators
+                template_content = re.sub(r'^---\s*$', '', template_content, flags=re.MULTILINE)
+                template_content = template_content.strip()
                 
                 if dataset not in templates:
                     templates[dataset] = {}
-                templates[dataset][method] = template
-            elif header in ['ARQA', 'DeepJSONEval', 'SchemaToJSON']:
-                dataset = header
-                # Look for method headers in the content
-                method_sections = re.split(r'###\s+', '\n'.join(lines[1:]))
-                for method_section in method_sections:
-                    if not method_section.strip():
-                        continue
-                    method_lines = method_section.strip().split('\n')
-                    if method_lines:
-                        method = method_lines[0].strip()
-                        template = '\n'.join(method_lines[1:]).strip()
-                        if dataset not in templates:
-                            templates[dataset] = {}
-                        templates[dataset][method] = template
+                
+                templates[dataset][method] = template_content
         
         return templates
     
     def get_template(self, dataset: str, method: str) -> str:
         """Get template for specific dataset and method."""
-        return self.templates.get(dataset, {}).get(method, "")
+        # Try exact match first
+        if dataset in self.templates and method in self.templates[dataset]:
+            return self.templates[dataset][method]
+        
+        # Try case-insensitive match
+        for key in self.templates.get(dataset, {}):
+            if key.lower() == method.lower():
+                return self.templates[dataset][key]
+        
+        return ""
     
     def fill_prompt(self, template: str, fields: Dict) -> str:
         """Fill template placeholders with values."""
