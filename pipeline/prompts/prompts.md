@@ -99,6 +99,8 @@ Tables:
 %{tables}%
 """
 
+
+
 ### few_shot
 Given the following context and question, generate a JSON response.
 

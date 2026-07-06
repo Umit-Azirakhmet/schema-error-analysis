@@ -126,7 +126,7 @@ temp/
 *.bak
 
 # Pipeline run artifacts
-pipeline/outputs/
+#pipeline/outputs/
 
 # Optional: uncomment if generated outputs should not be committed
 # data/*_final.csv
