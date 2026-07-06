@@ -4,7 +4,9 @@ pandas
 numpy
 tqdm
 python-dotenv
+pyyaml
 rich
+
 huggingface_hub
 tenacity
 matplotlib

@@ -1,5 +1,5 @@
 dataset: "ARQA"
-dataset_path: "data/arqa_final.csv"
+dataset_path: "data/ARQA.csv"
 context_path: "data/ARQA_DB.csv"
 prompts_path: "prompts/prompting.md"
 model: "Qwen/Qwen3-8B"
