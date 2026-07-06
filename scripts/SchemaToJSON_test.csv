@@ -1,0 +1,1957 @@
+paper_id,table_id,table_code,sup_text,target_cells,gold_json_records
+PMC3241339,tbl1,"<table-wrap><label>Table 1</label><caption><title>Inhibition of CHK1 and CHK2 by Bicyclic and Tricyclic Compounds</title></caption><graphic></graphic><table><colgroup><col/><col/><col/><col/><col/></colgroup><thead>
+<tr>
+	<th> </th>
+	<th>CHK1 Inhibition IC50 (μM)a</th>
+	<th>CHK2 Inhibition IC50 (μM)a</th>
+	<th>Selectivity (CHK2/CHK1)b</th>
+	<th>LE (kcal mol–1 non-H atom–1)c</th>
+</tr></thead><tbody>
+<tr>
+	<td>2</td>
+	<td>1.0 (0.86, 1.2)</td>
+	<td>50 (26, 74)</td>
+	<td>50</td>
+	<td>0.38</td>
+</tr>
+<tr>
+	<td>4</td>
+	<td>1.5 (1.3, 1.8)</td>
+	<td>n.d.d</td>
+	<td> </td>
+	<td>0.27</td>
+</tr>
+<tr>
+	<td>5</td>
+	<td>3.2 (2.2, 4.2)</td>
+	<td>28 (13, 43)</td>
+	<td>9</td>
+	<td>0.31</td>
+</tr>
+<tr>
+	<td>6</td>
+	<td>0.43 (0.26, 0.60)</td>
+	<td>3.4 (±1.16)e</td>
+	<td>8</td>
+	<td>0.36</td>
+</tr>
+<tr>
+	<td>rac-7</td>
+	<td>3.2 (2.4, 3.9)</td>
+	<td>12 (11, 13)</td>
+	<td>4</td>
+	<td>0.37</td>
+</tr>
+<tr>
+	<td>(R)-7</td>
+	<td>3.0 (2.9, 3.2)</td>
+	<td>13 (11, 16)</td>
+	<td>4</td>
+	<td>0.37</td>
+</tr>
+<tr>
+	<td>(S)-7</td>
+	<td>2.3 (1.55, 3.0)</td>
+	<td>3.5 (2.3, 4.6)</td>
+	<td>2</td>
+	<td>0.38</td>
+</tr>
+<tr>
+	<td>8</td>
+	<td>0.88 (±0.21) e</td>
+	<td>19 (16, 23)</td>
+	<td>22</td>
+	<td>0.40</td>
+</tr>
+<tr>
+	<td>9</td>
+	<td>3.7 (3.2, 4.2)</td>
+	<td>10 (9.3, 11)</td>
+	<td>3</td>
+	<td>0.33</td>
+</tr>
+<tr>
+	<td>10</td>
+	<td>1.7 (1.7, 1.8)</td>
+	<td>23 (22, 24)</td>
+	<td>14</td>
+	<td>0.47</td>
+</tr>
+<tr>
+	<td>11</td>
+	<td>1.7 (1.7, 1.8)</td>
+	<td>11 (8.1, 14)</td>
+	<td>6</td>
+	<td>0.45</td>
+</tr>
+<tr>
+	<td>12</td>
+	<td>0.67 (0.53, 0.80)</td>
+	<td>16 (10, 21)</td>
+	<td>24</td>
+	<td>0.43</td>
+</tr>
+<tr>
+	<td>13</td>
+	<td>0.29 (±0.02)e</td>
+	<td>12 (6.8, 16)</td>
+	<td>41</td>
+	<td>0.43</td>
+</tr></tbody></table><table-wrap-foot><fn><label>a</label><p>IC50 determined in a dissociation-enhanced lanthanide fluorescent immunoassay (DELFIA).(33) Mean of two independent determinations; individual values in parentheses. Standard inhibitor staurosporine gave CHK1 IC50 = 2.1 (±1.8) nM and CHK2 IC50 = 27 (±8) nM.</p></fn><fn><label>b</label><p>Ratio of IC50 values (CHK2/CHK1).</p></fn><fn><label>c</label><p>Ligand efficiency (LE) calculated using LE = [−1.4 log10(IC50 (M))]/(number of heavy atoms).(37)</p></fn><fn><label>d</label><p>Not determined.</p></fn><fn><label>e</label><p>Mean (±SD) of at least three independent determinations.</p></fn></table-wrap-foot></table-wrap>",,"{""cell_value"": [""2"", ""1.0"", ""50"", ""50"", ""0.38"", ""4"", ""1.5"", ""0.27"", ""5"", ""3.2"", ""28"", ""9"", ""0.31"", ""6"", ""0.43"", ""3.4"", ""8"", ""0.36"", ""3.2"", ""12"", ""4"", ""0.37"", ""3.0"", ""13"", ""4"", ""0.37"", ""2.3"", ""3.5"", ""2"", ""0.38"", ""8"", ""0.88"", ""19"", ""22"", ""0.40"", ""9"", ""3.7"", ""10"", ""3"", ""0.33"", ""10"", ""1.7"", ""23"", ""14"", ""0.47"", ""11"", ""1.7"", ""11"", ""6"", ""0.45"", ""12"", ""0.67"", ""16"", ""24"", ""0.43"", ""13"", ""0.29"", ""12"", ""41"", ""0.43""], ""cell_raw"": [""2"", ""1.0 (0.86, 1.2)"", ""50 (26, 74)"", ""50"", ""0.38"", ""4"", ""1.5 (1.3, 1.8)"", ""0.27"", ""5"", ""3.2 (2.2, 4.2)"", ""28 (13, 43)"", ""9"", ""0.31"", ""6"", ""0.43 (0.26, 0.60)"", ""3.4 (±1.16)e"", ""8"", ""0.36"", ""3.2 (2.4, 3.9)"", ""12 (11, 13)"", ""4"", ""0.37"", ""3.0 (2.9, 3.2)"", ""13 (11, 16)"", ""4"", ""0.37"", ""2.3 (1.55, 3.0)"", ""3.5 (2.3, 4.6)"", ""2"", ""0.38"", ""8"", ""0.88 (±0.21) e"", ""19 (16, 23)"", ""22"", ""0.40"", ""9"", ""3.7 (3.2, 4.2)"", ""10 (9.3, 11)"", ""3"", ""0.33"", ""10"", ""1.7 (1.7, 1.8)"", ""23 (22, 24)"", ""14"", ""0.47"", ""11"", ""1.7 (1.7, 1.8)"", ""11 (8.1, 14)"", ""6"", ""0.45"", ""12"", ""0.67 (0.53, 0.80)"", ""16 (10, 21)"", ""24"", ""0.43"", ""13"", ""0.29 (±0.02)e"", ""12 (6.8, 16)"", ""41"", ""0.43""], ""cell_index"": [""CA(1,0)"", ""CA(1,1)"", ""CA(1,2)"", ""CA(1,3)"", ""CA(1,4)"", ""CA(2,0)"", ""CA(2,1)"", ""CA(2,4)"", ""CA(3,0)"", ""CA(3,1)"", ""CA(3,2)"", ""CA(3,3)"", ""CA(3,4)"", ""CA(4,0)"", ""CA(4,1)"", ""CA(4,2)"", ""CA(4,3)"", ""CA(4,4)"", ""CA(5,1)"", ""CA(5,2)"", ""CA(5,3)"", ""CA(5,4)"", ""CA(6,1)"", ""CA(6,2)"", ""CA(6,3)"", ""CA(6,4)"", ""CA(7,1)"", ""CA(7,2)"", ""CA(7,3)"", ""CA(7,4)"", ""CA(8,0)"", ""CA(8,1)"", ""CA(8,2)"", ""CA(8,3)"", ""CA(8,4)"", ""CA(9,0)"", ""CA(9,1)"", ""CA(9,2)"", ""CA(9,3)"", ""CA(9,4)"", ""CA(10,0)"", ""CA(10,1)"", ""CA(10,2)"", ""CA(10,3)"", ""CA(10,4)"", ""CA(11,0)"", ""CA(11,1)"", ""CA(11,2)"", ""CA(11,3)"", ""CA(11,4)"", ""CA(12,0)"", ""CA(12,1)"", ""CA(12,2)"", ""CA(12,3)"", ""CA(12,4)"", ""CA(13,0)"", ""CA(13,1)"", ""CA(13,2)"", ""CA(13,3)"", ""CA(13,4)""], ""cell_row_idx"": [1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 13, 13, 13, 13, 13], ""cell_col_idx"": [0, 1, 2, 3, 4, 0, 1, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4]}","{""cell_index"": [""CA(1,0)"", ""CA(1,1)"", ""CA(1,2)"", ""CA(1,3)"", ""CA(1,4)"", ""CA(2,0)"", ""CA(2,1)"", ""CA(2,4)"", ""CA(3,0)"", ""CA(3,1)"", ""CA(3,2)"", ""CA(3,3)"", ""CA(3,4)"", ""CA(4,0)"", ""CA(4,1)"", ""CA(4,2)"", ""CA(4,3)"", ""CA(4,4)"", ""CA(5,1)"", ""CA(5,2)"", ""CA(5,3)"", ""CA(5,4)"", ""CA(6,1)"", ""CA(6,2)"", ""CA(6,3)"", ""CA(6,4)"", ""CA(7,1)"", ""CA(7,2)"", ""CA(7,3)"", ""CA(7,4)"", ""CA(8,0)"", ""CA(8,1)"", ""CA(8,2)"", ""CA(8,3)"", ""CA(8,4)"", ""CA(9,0)"", ""CA(9,1)"", ""CA(9,2)"", ""CA(9,3)"", ""CA(9,4)"", ""CA(10,0)"", ""CA(10,1)"", ""CA(10,2)"", ""CA(10,3)"", ""CA(10,4)"", ""CA(11,0)"", ""CA(11,1)"", ""CA(11,2)"", ""CA(11,3)"", ""CA(11,4)"", ""CA(12,0)"", ""CA(12,1)"", ""CA(12,2)"", ""CA(12,3)"", ""CA(12,4)"", ""CA(13,0)"", ""CA(13,1)"", ""CA(13,2)"", ""CA(13,3)"", ""CA(13,4)""], ""cell_record"": [""{\""value\"": \""2\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1.0\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""2\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""50\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""2\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""50\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.38\"", \""type\"": \""Other\""}"", ""{\""value\"": \""4\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1.5\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""4\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.27\"", \""type\"": \""Other\""}"", ""{\""value\"": \""5\"", \""type\"": \""Other\""}"", ""{\""value\"": \""3.2\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""5\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""28\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""5\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""9\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.31\"", \""type\"": \""Other\""}"", ""{\""value\"": \""6\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.43\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""6\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""3.4\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""6\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""8\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.36\"", \""type\"": \""Other\""}"", ""{\""value\"": \""3.2\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""rac-7\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""12\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""rac-7\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""4\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.37\"", \""type\"": \""Other\""}"", ""{\""value\"": \""3.0\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""(R)-7\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""13\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""(R)-7\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""4\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.37\"", \""type\"": \""Other\""}"", ""{\""value\"": \""2.3\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""(S)-7\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""3.5\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""(S)-7\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""2\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.38\"", \""type\"": \""Other\""}"", ""{\""value\"": \""8\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.88\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""8\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""19\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""8\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""22\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.40\"", \""type\"": \""Other\""}"", ""{\""value\"": \""9\"", \""type\"": \""Other\""}"", ""{\""value\"": \""3.7\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""9\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""10\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""9\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""3\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.33\"", \""type\"": \""Other\""}"", ""{\""value\"": \""10\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1.7\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""10\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""23\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""10\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""14\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.47\"", \""type\"": \""Other\""}"", ""{\""value\"": \""11\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1.7\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""11\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""11\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""11\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""6\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.45\"", \""type\"": \""Other\""}"", ""{\""value\"": \""12\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.67\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""12\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""16\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""12\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""24\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.43\"", \""type\"": \""Other\""}"", ""{\""value\"": \""13\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.29\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""13\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""12\"", \""type\"": \""IC50\"", \""target\"": \""CHK2\"", \""treatment\"": \""13\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""41\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.43\"", \""type\"": \""Other\""}""]}"
+PMC3241339,tbl4,"<table-wrap><label>Table 4</label><caption><title>G2 Checkpoint Abrogation and Potentiation of SN38 Cytotoxicity in Human Colon Cancer Cells by Selected Compounds</title></caption><table><colgroup><col/><col/><col/><col/><col/><col/><col/></colgroup><thead>
+<tr>
+	<th> </th>
+	<th>CHK1 IC50 (μM)a</th>
+	<th>SRB (HT29) GI50 (μM)b</th>
+	<th>Checkpoint abrogation (HT29) IC50 (μM)c</th>
+	<th>Potentiation of SN38 cytotoxicity (HT29) P.I.d</th>
+	<th>ALogPe</th>
+	<th>TPSAe</th>
+</tr></thead><tbody>
+<tr>
+	<td>2</td>
+	<td>1.0</td>
+	<td>64f</td>
+	<td>18.5f</td>
+	<td> </td>
+	<td>–0.22</td>
+	<td>106</td>
+</tr>
+<tr>
+	<td>8</td>
+	<td>0.88</td>
+	<td>62f</td>
+	<td>13.5f</td>
+	<td> </td>
+	<td>–0.44</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>13</td>
+	<td>0.29</td>
+	<td>17.5f</td>
+	<td>3.1f</td>
+	<td> </td>
+	<td>1.0</td>
+	<td>84</td>
+</tr>
+<tr>
+	<td>19</td>
+	<td>0.40</td>
+	<td>24f</td>
+	<td>n.d.</td>
+	<td> </td>
+	<td>–0.21</td>
+	<td>125</td>
+</tr>
+<tr>
+	<td>20</td>
+	<td>0.12</td>
+	<td>76.5f</td>
+	<td>n.d.</td>
+	<td> </td>
+	<td>0.077</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>24</td>
+	<td>1.9</td>
+	<td>46 (±39, n = 3)</td>
+	<td>23 (±22, n = 3)</td>
+	<td> </td>
+	<td>0.19</td>
+	<td>103</td>
+</tr>
+<tr>
+	<td>26</td>
+	<td>0.049</td>
+	<td>125 (120, 130)</td>
+	<td>128 (120, 135)</td>
+	<td> </td>
+	<td>1.5</td>
+	<td>124</td>
+</tr>
+<tr>
+	<td>27</td>
+	<td>1.2</td>
+	<td>26 (21, 30)</td>
+	<td>>100, >100</td>
+	<td>1.3</td>
+	<td>2.2</td>
+	<td>74</td>
+</tr>
+<tr>
+	<td>28</td>
+	<td>0.017</td>
+	<td>1.2 (1.1, 1.2)</td>
+	<td>0.17 (0.16, 0.17)</td>
+	<td>3.3</td>
+	<td>2.3</td>
+	<td>96</td>
+</tr>
+<tr>
+	<td>29</td>
+	<td>0.74</td>
+	<td>120 (120, 120)</td>
+	<td>2.7 (2.0, 3.3)</td>
+	<td>2.6</td>
+	<td>2.2</td>
+	<td>74</td>
+</tr>
+<tr>
+	<td>30</td>
+	<td>0.022</td>
+	<td>0.53 (0.52, 0.53)</td>
+	<td>0.18, 0.008g</td>
+	<td> </td>
+	<td>2.9</td>
+	<td>96</td>
+</tr>
+<tr>
+	<td>(R)-3</td>
+	<td>0.013</td>
+	<td>0.47 (±0.19, n = 11)</td>
+	<td>0.055 (±0.019, n = 5)</td>
+	<td>3.1 (±1.6, n = 5)</td>
+	<td>3.9</td>
+	<td>87</td>
+</tr></tbody></table><table-wrap-foot><fn><label>a</label><p>IC50 determined in DELFIA. Mean of at least two independent determinations.</p></fn><fn><label>b</label><p>SRB cytotoxicity assay; mean of two independent determinations unless otherwise stated.</p></fn><fn><label>c</label><p>G2 checkpoint abrogation assay.(17)</p></fn><fn><label>d</label><p>PI; ratio of SRB GI50 for CHK1 inhibitor alone to GI50 for the combination of CHK1 inhibitor and SN38 (see ref (17)).</p></fn><fn><label>e</label><p>ALogP(53) and TPSA(54) calculated with Pipeline Pilot (v7).(55)</p></fn><fn><label>f</label><p>Single determination.</p></fn><fn><label>g</label><p>Poor aqueous solubility gave variability for this analogue in this assay.</p></fn></table-wrap-foot></table-wrap>",,"{""cell_value"": [""2"", ""1.0"", ""106"", ""8"", ""0.88"", ""93"", ""13"", ""0.29"", ""1.0"", ""84"", ""19"", ""0.40"", ""125"", ""20"", ""0.12"", ""0.077"", ""111"", ""24"", ""1.9"", ""46"", ""23"", ""0.19"", ""103"", ""26"", ""0.049"", ""125"", ""128"", ""1.5"", ""124"", ""27"", ""1.2"", ""26"", ""100"", ""1.3"", ""2.2"", ""74"", ""28"", ""0.017"", ""1.2"", ""0.17"", ""3.3"", ""2.3"", ""96"", ""29"", ""0.74"", ""120"", ""2.7"", ""2.6"", ""2.2"", ""74"", ""30"", ""0.022"", ""0.53"", ""0.18"", ""2.9"", ""96"", ""0.013"", ""0.47"", ""0.055"", ""3.1"", ""3.9"", ""87""], ""cell_raw"": [""2"", ""1.0"", ""106"", ""8"", ""0.88"", ""93"", ""13"", ""0.29"", ""1.0"", ""84"", ""19"", ""0.40"", ""125"", ""20"", ""0.12"", ""0.077"", ""111"", ""24"", ""1.9"", ""46 (±39, n = 3)"", ""23 (±22, n = 3)"", ""0.19"", ""103"", ""26"", ""0.049"", ""125 (120, 130)"", ""128 (120, 135)"", ""1.5"", ""124"", ""27"", ""1.2"", ""26 (21, 30)"", ""100, 100"", ""1.3"", ""2.2"", ""74"", ""28"", ""0.017"", ""1.2 (1.1, 1.2)"", ""0.17 (0.16, 0.17)"", ""3.3"", ""2.3"", ""96"", ""29"", ""0.74"", ""120 (120, 120)"", ""2.7 (2.0, 3.3)"", ""2.6"", ""2.2"", ""74"", ""30"", ""0.022"", ""0.53 (0.52, 0.53)"", ""0.18, 0.008g"", ""2.9"", ""96"", ""0.013"", ""0.47 (±0.19, n = 11)"", ""0.055 (±0.019, n = 5)"", ""3.1 (±1.6, n = 5)"", ""3.9"", ""87""], ""cell_index"": [""CA(1,0)"", ""CA(1,1)"", ""CA(1,6)"", ""CA(2,0)"", ""CA(2,1)"", ""CA(2,6)"", ""CA(3,0)"", ""CA(3,1)"", ""CA(3,5)"", ""CA(3,6)"", ""CA(4,0)"", ""CA(4,1)"", ""CA(4,6)"", ""CA(5,0)"", ""CA(5,1)"", ""CA(5,5)"", ""CA(5,6)"", ""CA(6,0)"", ""CA(6,1)"", ""CA(6,2)"", ""CA(6,3)"", ""CA(6,5)"", ""CA(6,6)"", ""CA(7,0)"", ""CA(7,1)"", ""CA(7,2)"", ""CA(7,3)"", ""CA(7,5)"", ""CA(7,6)"", ""CA(8,0)"", ""CA(8,1)"", ""CA(8,2)"", ""CA(8,3)"", ""CA(8,4)"", ""CA(8,5)"", ""CA(8,6)"", ""CA(9,0)"", ""CA(9,1)"", ""CA(9,2)"", ""CA(9,3)"", ""CA(9,4)"", ""CA(9,5)"", ""CA(9,6)"", ""CA(10,0)"", ""CA(10,1)"", ""CA(10,2)"", ""CA(10,3)"", ""CA(10,4)"", ""CA(10,5)"", ""CA(10,6)"", ""CA(11,0)"", ""CA(11,1)"", ""CA(11,2)"", ""CA(11,3)"", ""CA(11,5)"", ""CA(11,6)"", ""CA(12,1)"", ""CA(12,2)"", ""CA(12,3)"", ""CA(12,4)"", ""CA(12,5)"", ""CA(12,6)""], ""cell_row_idx"": [1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12], ""cell_col_idx"": [0, 1, 6, 0, 1, 6, 0, 1, 5, 6, 0, 1, 6, 0, 1, 5, 6, 0, 1, 2, 3, 5, 6, 0, 1, 2, 3, 5, 6, 0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 5, 6, 1, 2, 3, 4, 5, 6]}","{""cell_index"": [""CA(1,0)"", ""CA(1,1)"", ""CA(1,2)"", ""CA(1,3)"", ""CA(1,6)"", ""CA(2,0)"", ""CA(2,1)"", ""CA(2,2)"", ""CA(2,3)"", ""CA(2,6)"", ""CA(3,0)"", ""CA(3,1)"", ""CA(3,2)"", ""CA(3,3)"", ""CA(3,5)"", ""CA(3,6)"", ""CA(4,0)"", ""CA(4,1)"", ""CA(4,2)"", ""CA(4,6)"", ""CA(5,0)"", ""CA(5,1)"", ""CA(5,2)"", ""CA(5,5)"", ""CA(5,6)"", ""CA(6,0)"", ""CA(6,1)"", ""CA(6,2)"", ""CA(6,3)"", ""CA(6,5)"", ""CA(6,6)"", ""CA(7,0)"", ""CA(7,1)"", ""CA(7,2)"", ""CA(7,3)"", ""CA(7,5)"", ""CA(7,6)"", ""CA(8,0)"", ""CA(8,1)"", ""CA(8,2)"", ""CA(8,3)"", ""CA(8,4)"", ""CA(8,5)"", ""CA(8,6)"", ""CA(9,0)"", ""CA(9,1)"", ""CA(9,2)"", ""CA(9,3)"", ""CA(9,4)"", ""CA(9,5)"", ""CA(9,6)"", ""CA(10,0)"", ""CA(10,1)"", ""CA(10,2)"", ""CA(10,3)"", ""CA(10,4)"", ""CA(10,5)"", ""CA(10,6)"", ""CA(11,0)"", ""CA(11,1)"", ""CA(11,2)"", ""CA(11,3)"", ""CA(11,5)"", ""CA(11,6)"", ""CA(12,1)"", ""CA(12,2)"", ""CA(12,3)"", ""CA(12,4)"", ""CA(12,5)"", ""CA(12,6)""], ""cell_record"": [""{\""value\"": \""2\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1.0\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""2\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""64\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""2\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""18.5\"", \""type\"": \""IC50\"", \""target\"": \""Checkpoint\\nabrogation\"", \""treatment\"": \""2\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""106\"", \""type\"": \""Other\""}"", ""{\""value\"": \""8\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.88\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""8\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""62\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""8\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""13.5\"", \""type\"": \""IC50\"", \""target\"": \""Checkpoint\\nabrogation\"", \""treatment\"": \""8\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""93\"", \""type\"": \""Other\""}"", ""{\""value\"": \""13\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.29\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""13\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""17.5\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""13\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""3.1\"", \""type\"": \""IC50\"", \""target\"": \""Checkpoint\\nabrogation\"", \""treatment\"": \""13\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""1.0\"", \""type\"": \""Other\""}"", ""{\""value\"": \""84\"", \""type\"": \""Other\""}"", ""{\""value\"": \""19\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.40\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""19\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""24\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""19\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""125\"", \""type\"": \""Other\""}"", ""{\""value\"": \""20\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.12\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""20\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""76.5\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""20\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.077\"", \""type\"": \""Other\""}"", ""{\""value\"": \""111\"", \""type\"": \""Other\""}"", ""{\""value\"": \""24\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1.9\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""24\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""46\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""24\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""23\"", \""type\"": \""IC50\"", \""target\"": \""Checkpoint\\nabrogation\"", \""treatment\"": \""24\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.19\"", \""type\"": \""Other\""}"", ""{\""value\"": \""103\"", \""type\"": \""Other\""}"", ""{\""value\"": \""26\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.049\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""26\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""125\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""26\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""128\"", \""type\"": \""IC50\"", \""target\"": \""Checkpoint\\nabrogation\"", \""treatment\"": \""26\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""1.5\"", \""type\"": \""Other\""}"", ""{\""value\"": \""124\"", \""type\"": \""Other\""}"", ""{\""value\"": \""27\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1.2\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""27\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""26\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""27\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""100\"", \""type\"": \""IC50\"", \""target\"": \""Checkpoint\\nabrogation\"", \""treatment\"": \""27\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""1.3\"", \""type\"": \""Other\""}"", ""{\""value\"": \""2.2\"", \""type\"": \""Other\""}"", ""{\""value\"": \""74\"", \""type\"": \""Other\""}"", ""{\""value\"": \""28\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.017\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""28\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""1.2\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""28\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.17\"", \""type\"": \""IC50\"", \""target\"": \""Checkpoint\\nabrogation\"", \""treatment\"": \""28\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""3.3\"", \""type\"": \""Other\""}"", ""{\""value\"": \""2.3\"", \""type\"": \""Other\""}"", ""{\""value\"": \""96\"", \""type\"": \""Other\""}"", ""{\""value\"": \""29\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.74\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""29\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""120\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""29\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""2.7\"", \""type\"": \""IC50\"", \""target\"": \""Checkpoint\\nabrogation\"", \""treatment\"": \""29\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""2.6\"", \""type\"": \""Other\""}"", ""{\""value\"": \""2.2\"", \""type\"": \""Other\""}"", ""{\""value\"": \""74\"", \""type\"": \""Other\""}"", ""{\""value\"": \""30\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.022\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""30\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.53\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""30\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.18\"", \""type\"": \""IC50\"", \""target\"": \""Checkpoint\\nabrogation\"", \""treatment\"": \""30\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""2.9\"", \""type\"": \""Other\""}"", ""{\""value\"": \""96\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.013\"", \""type\"": \""IC50\"", \""target\"": \""CHK1\"", \""treatment\"": \""(R)-3\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.47\"", \""type\"": \""GI50\"", \""target\"": \""SRB\"", \""treatment\"": \""(R)-3\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.055\"", \""type\"": \""IC50\"", \""target\"": \""Checkpoint\\nabrogation\"", \""treatment\"": \""(R)-3\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""3.1\"", \""type\"": \""Other\""}"", ""{\""value\"": \""3.9\"", \""type\"": \""Other\""}"", ""{\""value\"": \""87\"", \""type\"": \""Other\""}""]}"
+PMC3654564,tbl1,"<table-wrap><label>Table 1</label><caption><title>Inhibition of COX Enzymes by Indomethacin and CF3–Indomethacin</title></caption><table><colgroup><col/><col/><col/></colgroup><thead>
+<tr>
+	<th>enzyme</th>
+	<th>INDO IC50a</th>
+	<th>CF3–INDO IC50a</th>
+</tr></thead><tbody>
+<tr>
+	<td>wt mCOX-2</td>
+	<td>127 nM</td>
+	<td>267 nM</td>
+</tr>
+<tr>
+	<td>wt oCOX-1</td>
+	<td>27 nM</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>mV349A</td>
+	<td>71 nM (1.8↑)</td>
+	<td>120 nM (2.2↑)</td>
+</tr>
+<tr>
+	<td>mV349I</td>
+	<td>315 nM (2.5↓)</td>
+	<td>163 μM (6.1↓)</td>
+</tr>
+<tr>
+	<td>mV349L</td>
+	<td>1.34 μM (10.6↓)</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>mS530A</td>
+	<td>220 nM (1.7↓)</td>
+	<td>435 nM (1.6↓)</td>
+</tr>
+<tr>
+	<td>mR120A</td>
+	<td> </td>
+	<td> </td>
+</tr>
+<tr>
+	<td>mR120Q</td>
+	<td>326 nM (2.6↓)</td>
+	<td>1.56 μM (5.8↓)</td>
+</tr>
+<tr>
+	<td>mY355F</td>
+	<td> </td>
+	<td> </td>
+</tr>
+<tr>
+	<td>mV523I</td>
+	<td>475 nM (3.7↓)</td>
+	<td>>4 μM (15↓)</td>
+</tr></tbody></table><table-wrap-foot><fn><label>a</label><p>Indomethacin (INDO) and CF3–indomethacin (CF3–INDO) were screened against purified wild-type (wt) oCOX-1, mCOX-2, and the indicated mCOX-2 mutants as described in the Experimental Procedures in the Supporting Information. Values in parentheses indicate the fold increase or decrease in IC50 values for the mutants compared to wt mCOX-2. Dashed lines indicate that no inhibition was observed for inhibitor concentrations of up to 100 μM.</p></fn></table-wrap-foot></table-wrap>",,"{""cell_value"": [""127"", ""267"", ""27"", ""71"", ""120"", ""315"", ""163"", ""1.34"", ""220"", ""435"", ""326"", ""1.56"", ""475"", ""4""], ""cell_raw"": [""127 nM"", ""267 nM"", ""27 nM"", ""71 nM (1.8↑)"", ""120 nM (2.2↑)"", ""315 nM (2.5↓)"", ""163 μM (6.1↓)"", ""1.34 μM (10.6↓)"", ""220 nM (1.7↓)"", ""435 nM (1.6↓)"", ""326 nM (2.6↓)"", ""1.56 μM (5.8↓)"", ""475 nM (3.7↓)"", ""4 μM (15↓)""], ""cell_index"": [""CA(1,1)"", ""CA(1,2)"", ""CA(2,1)"", ""CA(3,1)"", ""CA(3,2)"", ""CA(4,1)"", ""CA(4,2)"", ""CA(5,1)"", ""CA(6,1)"", ""CA(6,2)"", ""CA(8,1)"", ""CA(8,2)"", ""CA(10,1)"", ""CA(10,2)""], ""cell_row_idx"": [1, 1, 2, 3, 3, 4, 4, 5, 6, 6, 8, 8, 10, 10], ""cell_col_idx"": [1, 2, 1, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2]}","{""cell_index"": [""CA(1,1)"", ""CA(1,2)"", ""CA(2,1)"", ""CA(3,1)"", ""CA(3,2)"", ""CA(4,1)"", ""CA(4,2)"", ""CA(5,1)"", ""CA(6,1)"", ""CA(6,2)"", ""CA(8,1)"", ""CA(8,2)"", ""CA(10,1)"", ""CA(10,2)""], ""cell_record"": [""{\""value\"": \""127\"", \""type\"": \""IC50\"", \""target\"": \""wt mCOX-2\"", \""treatment\"": \""INDO\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""267\"", \""type\"": \""IC50\"", \""target\"": \""wt mCOX-2\"", \""treatment\"": \""CF3–INDO\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""27\"", \""type\"": \""IC50\"", \""target\"": \""wt oCOX-1\"", \""treatment\"": \""INDO\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""71\"", \""type\"": \""IC50\"", \""target\"": \""mV349A\"", \""treatment\"": \""INDO\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""120\"", \""type\"": \""IC50\"", \""target\"": \""mV349A\"", \""treatment\"": \""CF3–INDO\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""315\"", \""type\"": \""IC50\"", \""target\"": \""mV349I\"", \""treatment\"": \""INDO\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""163\"", \""type\"": \""IC50\"", \""target\"": \""mV349I\"", \""treatment\"": \""CF3–INDO\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""1.34\"", \""type\"": \""IC50\"", \""target\"": \""mV349L\"", \""treatment\"": \""INDO\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""220\"", \""type\"": \""IC50\"", \""target\"": \""mS530A\"", \""treatment\"": \""INDO\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""435\"", \""type\"": \""IC50\"", \""target\"": \""mS530A\"", \""treatment\"": \""CF3–INDO\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""326\"", \""type\"": \""IC50\"", \""target\"": \""mR120Q\"", \""treatment\"": \""INDO\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""1.56\"", \""type\"": \""IC50\"", \""target\"": \""mR120Q\"", \""treatment\"": \""CF3–INDO\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""475\"", \""type\"": \""IC50\"", \""target\"": \""mV523I\"", \""treatment\"": \""INDO\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""4\"", \""type\"": \""IC50\"", \""target\"": \""mV523I\"", \""treatment\"": \""CF3–INDO\"", \""unit\"": \""μM\""}""]}"
+PMC3873039,T3,"<table-wrap><label>Table 3.</label><caption><p>The IC50 values responsible for 50% inhibition of cellular proliferation in each leukemic and non-tumor control cell line following 24 h treatment with each polyphenols.</p></caption><table><thead>
+<tr>
+	<th colspan=""3"" rowspan=""2"">Cell Types</th>
+	<th colspan=""8"" rowspan=""1"">Polyphenols IC50 in µM</th>
+</tr>
+<tr>
+	<th>Quercetin</th>
+	<th>Apigenin</th>
+	<th>Chrysin</th>
+	<th>Rhein </th>
+	<th>Emodin</th>
+	<th>Aloe - Emodin</th>
+	<th>Cis- Stilbene</th>
+	<th>Trans-Stilbene</th>
+</tr></thead><tbody>
+<tr>
+	<td colspan=""1"" rowspan=""8"">Cell lines</td>
+	<td colspan=""1"" rowspan=""3"">Lymphoid leukaemia</td>
+	<td>JURKAT</td>
+	<td>10 </td>
+	<td>143 </td>
+	<td>180 </td>
+	<td>277 </td>
+	<td>9 </td>
+	<td>185 </td>
+	<td>38 </td>
+	<td>163 </td>
+</tr>
+<tr>
+	<td>CCRF-CEM</td>
+	<td>10 </td>
+	<td>195 </td>
+	<td>128 </td>
+	<td>140 </td>
+	<td>22 </td>
+	<td>211 </td>
+	<td>53 </td>
+	<td>109 </td>
+</tr>
+<tr>
+	<td>MOLT-3</td>
+	<td>20 </td>
+	<td>140 </td>
+	<td>217 </td>
+	<td>158 </td>
+	<td>8 </td>
+	<td>220 </td>
+	<td>25 </td>
+	<td>180 </td>
+</tr>
+<tr>
+	<td colspan=""1"" rowspan=""4"">Myeloid  leukaemia</td>
+	<td>HL60</td>
+	<td>8 </td>
+	<td>100 </td>
+	<td>328 </td>
+	<td>150 </td>
+	<td>5 </td>
+	<td>225 </td>
+	<td>32 </td>
+	<td>135 </td>
+</tr>
+<tr>
+	<td>THP-1</td>
+	<td>37 </td>
+	<td>180 </td>
+	<td>500 </td>
+	<td>158 </td>
+	<td>10 </td>
+	<td>450 </td>
+	<td>45 </td>
+	<td>380 </td>
+</tr>
+<tr>
+	<td>K562</td>
+	<td>33 </td>
+	<td>350 </td>
+	<td>340 </td>
+	<td>380 </td>
+	<td>13 </td>
+	<td>309 </td>
+	<td>53 </td>
+	<td>500 </td>
+</tr>
+<tr>
+	<td>KG1a</td>
+	<td>155 </td>
+	<td>500 </td>
+	<td>335 </td>
+	<td>169 </td>
+	<td>15 </td>
+	<td>310 </td>
+	<td>85 </td>
+	<td>250 </td>
+</tr>
+<tr>
+	<td>Histocytic lymphoma </td>
+	<td>U937</td>
+	<td>8 </td>
+	<td>160 </td>
+	<td>217</td>
+	<td>135 </td>
+	<td>7 </td>
+	<td>250 </td>
+	<td>30 </td>
+	<td>340 </td>
+</tr>
+<tr>
+	<td>Peripheral blood cells</td>
+	<td>Non-tumour control cells </td>
+	<td>CD34+  </td>
+	<td>>500 </td>
+	<td>>500 </td>
+	<td>>500 </td>
+	<td>380 </td>
+	<td>150 </td>
+	<td>>500 </td>
+	<td>>500 </td>
+	<td>500 </td>
+</tr></tbody></table><table-wrap-foot><fn><p>This was determined by CellTiter-Glo® Luminescent assay. The polyphenols were ranked in order of activity with respect to inhibition of 50% proliferation in lymphoid cells (emodin = quercetin > cis-stilbene > apigenin > trans-stilbene ≥ chrysin = rhein > aloe-emodin); and in myeloid cells (emodin = cis-stilbene ≥ quercetin > apigenin = rhein > aloe-emodin = trans-stilbene = chrysin). In Non-tumour cells (CD34+), did not reach 50% inhibition until the polyphenol treatments excessed 500≥M, the only exceptions were emodin and rhein. Note that the highest doses of aloe-emodin, chrysin, rhein and trans-stilbene would be clinically impractical, while quercetin emodin, cis-stilbene had much lower doses and thus are potentially more clinically useful.</p></fn></table-wrap-foot></table-wrap>",,"{""cell_value"": [""10"", ""143"", ""180"", ""277"", ""9"", ""185"", ""38"", ""163"", ""10"", ""195"", ""128"", ""140"", ""22"", ""211"", ""53"", ""109"", ""20"", ""140"", ""217"", ""158"", ""8"", ""220"", ""25"", ""180"", ""8"", ""100"", ""328"", ""150"", ""5"", ""225"", ""32"", ""135"", ""37"", ""180"", ""500"", ""158"", ""10"", ""450"", ""45"", ""380"", ""33"", ""350"", ""340"", ""380"", ""13"", ""309"", ""53"", ""500"", ""155"", ""500"", ""335"", ""169"", ""15"", ""310"", ""85"", ""250"", ""8"", ""160"", ""217"", ""135"", ""7"", ""250"", ""30"", ""340"", ""500"", ""500"", ""500"", ""380"", ""150"", ""500"", ""500"", ""500""], ""cell_raw"": [""10"", ""143"", ""180"", ""277"", ""9"", ""185"", ""38"", ""163"", ""10"", ""195"", ""128"", ""140"", ""22"", ""211"", ""53"", ""109"", ""20"", ""140"", ""217"", ""158"", ""8"", ""220"", ""25"", ""180"", ""8"", ""100"", ""328"", ""150"", ""5"", ""225"", ""32"", ""135"", ""37"", ""180"", ""500"", ""158"", ""10"", ""450"", ""45"", ""380"", ""33"", ""350"", ""340"", ""380"", ""13"", ""309"", ""53"", ""500"", ""155"", ""500"", ""335"", ""169"", ""15"", ""310"", ""85"", ""250"", ""8"", ""160"", ""217"", ""135"", ""7"", ""250"", ""30"", ""340"", ""500"", ""500"", ""500"", ""380"", ""150"", ""500"", ""500"", ""500""], ""cell_index"": [""CA(2,3)"", ""CA(2,4)"", ""CA(2,5)"", ""CA(2,6)"", ""CA(2,7)"", ""CA(2,8)"", ""CA(2,9)"", ""CA(2,10)"", ""CA(3,3)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(3,6)"", ""CA(3,7)"", ""CA(3,8)"", ""CA(3,9)"", ""CA(3,10)"", ""CA(4,3)"", ""CA(4,4)"", ""CA(4,5)"", ""CA(4,6)"", ""CA(4,7)"", ""CA(4,8)"", ""CA(4,9)"", ""CA(4,10)"", ""CA(5,3)"", ""CA(5,4)"", ""CA(5,5)"", ""CA(5,6)"", ""CA(5,7)"", ""CA(5,8)"", ""CA(5,9)"", ""CA(5,10)"", ""CA(6,3)"", ""CA(6,4)"", ""CA(6,5)"", ""CA(6,6)"", ""CA(6,7)"", ""CA(6,8)"", ""CA(6,9)"", ""CA(6,10)"", ""CA(7,3)"", ""CA(7,4)"", ""CA(7,5)"", ""CA(7,6)"", ""CA(7,7)"", ""CA(7,8)"", ""CA(7,9)"", ""CA(7,10)"", ""CA(8,3)"", ""CA(8,4)"", ""CA(8,5)"", ""CA(8,6)"", ""CA(8,7)"", ""CA(8,8)"", ""CA(8,9)"", ""CA(8,10)"", ""CA(9,3)"", ""CA(9,4)"", ""CA(9,5)"", ""CA(9,6)"", ""CA(9,7)"", ""CA(9,8)"", ""CA(9,9)"", ""CA(9,10)"", ""CA(10,3)"", ""CA(10,4)"", ""CA(10,5)"", ""CA(10,6)"", ""CA(10,7)"", ""CA(10,8)"", ""CA(10,9)"", ""CA(10,10)""], ""cell_row_idx"": [2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10], ""cell_col_idx"": [3, 4, 5, 6, 7, 8, 9, 10, 3, 4, 5, 6, 7, 8, 9, 10, 3, 4, 5, 6, 7, 8, 9, 10, 3, 4, 5, 6, 7, 8, 9, 10, 3, 4, 5, 6, 7, 8, 9, 10, 3, 4, 5, 6, 7, 8, 9, 10, 3, 4, 5, 6, 7, 8, 9, 10, 3, 4, 5, 6, 7, 8, 9, 10, 3, 4, 5, 6, 7, 8, 9, 10]}","{""cell_index"": [""CA(2,3)"", ""CA(2,4)"", ""CA(2,5)"", ""CA(2,6)"", ""CA(2,7)"", ""CA(2,8)"", ""CA(2,9)"", ""CA(2,10)"", ""CA(3,3)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(3,6)"", ""CA(3,7)"", ""CA(3,8)"", ""CA(3,9)"", ""CA(3,10)"", ""CA(4,3)"", ""CA(4,4)"", ""CA(4,5)"", ""CA(4,6)"", ""CA(4,7)"", ""CA(4,8)"", ""CA(4,9)"", ""CA(4,10)"", ""CA(5,3)"", ""CA(5,4)"", ""CA(5,5)"", ""CA(5,6)"", ""CA(5,7)"", ""CA(5,8)"", ""CA(5,9)"", ""CA(5,10)"", ""CA(6,3)"", ""CA(6,4)"", ""CA(6,5)"", ""CA(6,6)"", ""CA(6,7)"", ""CA(6,8)"", ""CA(6,9)"", ""CA(6,10)"", ""CA(7,3)"", ""CA(7,4)"", ""CA(7,5)"", ""CA(7,6)"", ""CA(7,7)"", ""CA(7,8)"", ""CA(7,9)"", ""CA(7,10)"", ""CA(8,3)"", ""CA(8,4)"", ""CA(8,5)"", ""CA(8,6)"", ""CA(8,7)"", ""CA(8,8)"", ""CA(8,9)"", ""CA(8,10)"", ""CA(9,3)"", ""CA(9,4)"", ""CA(9,5)"", ""CA(9,6)"", ""CA(9,7)"", ""CA(9,8)"", ""CA(9,9)"", ""CA(9,10)"", ""CA(10,3)"", ""CA(10,4)"", ""CA(10,5)"", ""CA(10,6)"", ""CA(10,7)"", ""CA(10,8)"", ""CA(10,9)"", ""CA(10,10)""], ""cell_record"": [""{\""value\"": \""10\"", \""type\"": \""IC50\"", \""target\"": \""JURKAT\"", \""treatment\"": \""Quercetin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""143\"", \""type\"": \""IC50\"", \""target\"": \""JURKAT\"", \""treatment\"": \""Apigenin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""180\"", \""type\"": \""IC50\"", \""target\"": \""JURKAT\"", \""treatment\"": \""Chrysin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""277\"", \""type\"": \""IC50\"", \""target\"": \""JURKAT\"", \""treatment\"": \""Rhein\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""9\"", \""type\"": \""IC50\"", \""target\"": \""JURKAT\"", \""treatment\"": \""Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""185\"", \""type\"": \""IC50\"", \""target\"": \""JURKAT\"", \""treatment\"": \""Aloe - Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""38\"", \""type\"": \""IC50\"", \""target\"": \""JURKAT\"", \""treatment\"": \""Cis- Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""163\"", \""type\"": \""IC50\"", \""target\"": \""JURKAT\"", \""treatment\"": \""Trans-Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""10\"", \""type\"": \""IC50\"", \""target\"": \""CCRF-CEM\"", \""treatment\"": \""Quercetin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""195\"", \""type\"": \""IC50\"", \""target\"": \""CCRF-CEM\"", \""treatment\"": \""Apigenin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""128\"", \""type\"": \""IC50\"", \""target\"": \""CCRF-CEM\"", \""treatment\"": \""Chrysin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""140\"", \""type\"": \""IC50\"", \""target\"": \""CCRF-CEM\"", \""treatment\"": \""Rhein\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""22\"", \""type\"": \""IC50\"", \""target\"": \""CCRF-CEM\"", \""treatment\"": \""Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""211\"", \""type\"": \""IC50\"", \""target\"": \""CCRF-CEM\"", \""treatment\"": \""Aloe - Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""53\"", \""type\"": \""IC50\"", \""target\"": \""CCRF-CEM\"", \""treatment\"": \""Cis- Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""109\"", \""type\"": \""IC50\"", \""target\"": \""CCRF-CEM\"", \""treatment\"": \""Trans-Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""20\"", \""type\"": \""IC50\"", \""target\"": \""MOLT-3\"", \""treatment\"": \""Quercetin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""140\"", \""type\"": \""IC50\"", \""target\"": \""MOLT-3\"", \""treatment\"": \""Apigenin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""217\"", \""type\"": \""IC50\"", \""target\"": \""MOLT-3\"", \""treatment\"": \""Chrysin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""158\"", \""type\"": \""IC50\"", \""target\"": \""MOLT-3\"", \""treatment\"": \""Rhein\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""8\"", \""type\"": \""IC50\"", \""target\"": \""MOLT-3\"", \""treatment\"": \""Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""220\"", \""type\"": \""IC50\"", \""target\"": \""MOLT-3\"", \""treatment\"": \""Aloe - Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""25\"", \""type\"": \""IC50\"", \""target\"": \""MOLT-3\"", \""treatment\"": \""Cis- Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""180\"", \""type\"": \""IC50\"", \""target\"": \""MOLT-3\"", \""treatment\"": \""Trans-Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""8\"", \""type\"": \""IC50\"", \""target\"": \""HL60\"", \""treatment\"": \""Quercetin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""100\"", \""type\"": \""IC50\"", \""target\"": \""HL60\"", \""treatment\"": \""Apigenin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""328\"", \""type\"": \""IC50\"", \""target\"": \""HL60\"", \""treatment\"": \""Chrysin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""150\"", \""type\"": \""IC50\"", \""target\"": \""HL60\"", \""treatment\"": \""Rhein\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""5\"", \""type\"": \""IC50\"", \""target\"": \""HL60\"", \""treatment\"": \""Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""225\"", \""type\"": \""IC50\"", \""target\"": \""HL60\"", \""treatment\"": \""Aloe - Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""32\"", \""type\"": \""IC50\"", \""target\"": \""HL60\"", \""treatment\"": \""Cis- Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""135\"", \""type\"": \""IC50\"", \""target\"": \""HL60\"", \""treatment\"": \""Trans-Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""37\"", \""type\"": \""IC50\"", \""target\"": \""THP-1\"", \""treatment\"": \""Quercetin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""180\"", \""type\"": \""IC50\"", \""target\"": \""THP-1\"", \""treatment\"": \""Apigenin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""500\"", \""type\"": \""IC50\"", \""target\"": \""THP-1\"", \""treatment\"": \""Chrysin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""158\"", \""type\"": \""IC50\"", \""target\"": \""THP-1\"", \""treatment\"": \""Rhein\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""10\"", \""type\"": \""IC50\"", \""target\"": \""THP-1\"", \""treatment\"": \""Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""450\"", \""type\"": \""IC50\"", \""target\"": \""THP-1\"", \""treatment\"": \""Aloe - Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""45\"", \""type\"": \""IC50\"", \""target\"": \""THP-1\"", \""treatment\"": \""Cis- Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""380\"", \""type\"": \""IC50\"", \""target\"": \""THP-1\"", \""treatment\"": \""Trans-Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""33\"", \""type\"": \""IC50\"", \""target\"": \""K562\"", \""treatment\"": \""Quercetin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""350\"", \""type\"": \""IC50\"", \""target\"": \""K562\"", \""treatment\"": \""Apigenin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""340\"", \""type\"": \""IC50\"", \""target\"": \""K562\"", \""treatment\"": \""Chrysin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""380\"", \""type\"": \""IC50\"", \""target\"": \""K562\"", \""treatment\"": \""Rhein\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""13\"", \""type\"": \""IC50\"", \""target\"": \""K562\"", \""treatment\"": \""Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""309\"", \""type\"": \""IC50\"", \""target\"": \""K562\"", \""treatment\"": \""Aloe - Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""53\"", \""type\"": \""IC50\"", \""target\"": \""K562\"", \""treatment\"": \""Cis- Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""500\"", \""type\"": \""IC50\"", \""target\"": \""K562\"", \""treatment\"": \""Trans-Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""155\"", \""type\"": \""IC50\"", \""target\"": \""KG1a\"", \""treatment\"": \""Quercetin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""500\"", \""type\"": \""IC50\"", \""target\"": \""KG1a\"", \""treatment\"": \""Apigenin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""335\"", \""type\"": \""IC50\"", \""target\"": \""KG1a\"", \""treatment\"": \""Chrysin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""169\"", \""type\"": \""IC50\"", \""target\"": \""KG1a\"", \""treatment\"": \""Rhein\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""15\"", \""type\"": \""IC50\"", \""target\"": \""KG1a\"", \""treatment\"": \""Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""310\"", \""type\"": \""IC50\"", \""target\"": \""KG1a\"", \""treatment\"": \""Aloe - Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""85\"", \""type\"": \""IC50\"", \""target\"": \""KG1a\"", \""treatment\"": \""Cis- Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""250\"", \""type\"": \""IC50\"", \""target\"": \""KG1a\"", \""treatment\"": \""Trans-Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""8\"", \""type\"": \""IC50\"", \""target\"": \""U937\"", \""treatment\"": \""Quercetin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""160\"", \""type\"": \""IC50\"", \""target\"": \""U937\"", \""treatment\"": \""Apigenin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""217\"", \""type\"": \""IC50\"", \""target\"": \""U937\"", \""treatment\"": \""Chrysin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""135\"", \""type\"": \""IC50\"", \""target\"": \""U937\"", \""treatment\"": \""Rhein\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""7\"", \""type\"": \""IC50\"", \""target\"": \""U937\"", \""treatment\"": \""Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""250\"", \""type\"": \""IC50\"", \""target\"": \""U937\"", \""treatment\"": \""Aloe - Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""30\"", \""type\"": \""IC50\"", \""target\"": \""U937\"", \""treatment\"": \""Cis- Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""340\"", \""type\"": \""IC50\"", \""target\"": \""U937\"", \""treatment\"": \""Trans-Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""500\"", \""type\"": \""IC50\"", \""target\"": \""CD34+\"", \""treatment\"": \""Quercetin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""500\"", \""type\"": \""IC50\"", \""target\"": \""CD34+\"", \""treatment\"": \""Apigenin\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""500\"", \""type\"": \""IC50\"", \""target\"": \""CD34+\"", \""treatment\"": \""Chrysin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""380\"", \""type\"": \""IC50\"", \""target\"": \""CD34+\"", \""treatment\"": \""Rhein\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""150\"", \""type\"": \""IC50\"", \""target\"": \""CD34+\"", \""treatment\"": \""Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""500\"", \""type\"": \""IC50\"", \""target\"": \""CD34+\"", \""treatment\"": \""Aloe - Emodin\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""500\"", \""type\"": \""IC50\"", \""target\"": \""CD34+\"", \""treatment\"": \""Cis- Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}"", ""{\""value\"": \""500\"", \""type\"": \""IC50\"", \""target\"": \""CD34+\"", \""treatment\"": \""Trans-Stilbene\"", \""unit\"": \""Polyphenols IC50 in µM\""}""]}"
+PMC3983390,tbl2,"<table-wrap><label>Table 2</label><caption><title>Stimulation of [35S]GTPγS Binding to hD2 and hD3 Receptors Expressed in CHO Cells</title></caption><table><colgroup><col/><col/><col/><col/><col/><col/></colgroup><thead>
+<tr>
+	<th> </th>
+	<th colspan=""2"">CHO–D2<hr/></th>
+	<th colspan=""2"">CHO–D3<hr/></th>
+	<th> </th>
+</tr>
+<tr>
+	<th>compd</th>
+	<th>EC50 (nM)a [35S]GTPγS</th>
+	<th>%Emax</th>
+	<th>EC50 (nM)a [35S]GTPγS</th>
+	<th>%Emax</th>
+	<th>D2/D3</th>
+</tr></thead><tbody>
+<tr>
+	<td>dopamine</td>
+	<td>218 ± 12</td>
+	<td>100</td>
+	<td>10.6 ± 2.1</td>
+	<td>100</td>
+	<td>26.5</td>
+</tr>
+<tr>
+	<td>1ab</td>
+	<td>33.1 ± 6.6</td>
+	<td>104 ± 5</td>
+	<td>1.51 ± 0.02</td>
+	<td>90 ± 4.3</td>
+	<td>22.1</td>
+</tr>
+<tr>
+	<td>(−)-8b</td>
+	<td>36.8 ± 7.2</td>
+	<td>105 ± 6</td>
+	<td>3.42 ± 1.01</td>
+	<td>67.3 ± 5.6</td>
+	<td>10.8</td>
+</tr>
+<tr>
+	<td>(−)-9b</td>
+	<td>15.9 ± 1.8</td>
+	<td>116 ± 10</td>
+	<td>0.10 ± 0.02</td>
+	<td>95.8 ± 3.7</td>
+	<td>159</td>
+</tr></tbody></table><table-wrap-foot><fn><label>a</label><p>EC50 is the concentration producing half-maximal stimulation; for each compound, maximal stimulation (Emax) is expressed as percent of the Emax observed with 1 mM (D2) or 100 uM (D3) of the full agonist DA (%Emax). Results are the means ± SEM for 3–6 experiments each performed in triplicate.</p></fn><fn><label>b</label><p>From previous ref (43).</p></fn></table-wrap-foot></table-wrap>",,"{""cell_value"": [""218"", ""100"", ""10.6"", ""100"", ""26.5"", ""33.1"", ""104"", ""1.51"", ""90"", ""22.1"", ""36.8"", ""105"", ""3.42"", ""67.3"", ""10.8"", ""15.9"", ""116"", ""0.10"", ""95.8"", ""159""], ""cell_raw"": [""218 ± 12"", ""100"", ""10.6 ± 2.1"", ""100"", ""26.5"", ""33.1 ± 6.6"", ""104 ± 5"", ""1.51 ± 0.02"", ""90 ± 4.3"", ""22.1"", ""36.8 ± 7.2"", ""105 ± 6"", ""3.42 ± 1.01"", ""67.3 ± 5.6"", ""10.8"", ""15.9 ± 1.8"", ""116 ± 10"", ""0.10 ± 0.02"", ""95.8 ± 3.7"", ""159""], ""cell_index"": [""CA(2,1)"", ""CA(2,2)"", ""CA(2,3)"", ""CA(2,4)"", ""CA(2,5)"", ""CA(3,1)"", ""CA(3,2)"", ""CA(3,3)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(4,1)"", ""CA(4,2)"", ""CA(4,3)"", ""CA(4,4)"", ""CA(4,5)"", ""CA(5,1)"", ""CA(5,2)"", ""CA(5,3)"", ""CA(5,4)"", ""CA(5,5)""], ""cell_row_idx"": [2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5], ""cell_col_idx"": [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]}","{""cell_index"": [""CA(2,1)"", ""CA(2,2)"", ""CA(2,3)"", ""CA(2,4)"", ""CA(2,5)"", ""CA(3,1)"", ""CA(3,2)"", ""CA(3,3)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(4,1)"", ""CA(4,2)"", ""CA(4,3)"", ""CA(4,4)"", ""CA(4,5)"", ""CA(5,1)"", ""CA(5,2)"", ""CA(5,3)"", ""CA(5,4)"", ""CA(5,5)""], ""cell_record"": [""{\""value\"": \""218\"", \""type\"": \""EC50\"", \""target\"": \""D2\"", \""treatment\"": \""dopamine\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""100\"", \""type\"": \""Other\""}"", ""{\""value\"": \""10.6\"", \""type\"": \""EC50\"", \""target\"": \""D3\"", \""treatment\"": \""dopamine\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""100\"", \""type\"": \""Other\""}"", ""{\""value\"": \""26.5\"", \""type\"": \""Other\""}"", ""{\""value\"": \""33.1\"", \""type\"": \""EC50\"", \""target\"": \""D2\"", \""treatment\"": \""1ab\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""104\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1.51\"", \""type\"": \""EC50\"", \""target\"": \""D3\"", \""treatment\"": \""1ab\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""90\"", \""type\"": \""Other\""}"", ""{\""value\"": \""22.1\"", \""type\"": \""Other\""}"", ""{\""value\"": \""36.8\"", \""type\"": \""EC50\"", \""target\"": \""D2\"", \""treatment\"": \""(−)-8b\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""105\"", \""type\"": \""Other\""}"", ""{\""value\"": \""3.42\"", \""type\"": \""EC50\"", \""target\"": \""D3\"", \""treatment\"": \""(−)-8b\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""67.3\"", \""type\"": \""Other\""}"", ""{\""value\"": \""10.8\"", \""type\"": \""Other\""}"", ""{\""value\"": \""15.9\"", \""type\"": \""EC50\"", \""target\"": \""D2\"", \""treatment\"": \""(−)-9b\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""116\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.10\"", \""type\"": \""EC50\"", \""target\"": \""D3\"", \""treatment\"": \""(−)-9b\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""95.8\"", \""type\"": \""Other\""}"", ""{\""value\"": \""159\"", \""type\"": \""Other\""}""]}"
+PMC3983391,tbl1,"<table-wrap><label>Table 1</label><caption><title>Antiproliferative Activities of Series 4 and 5 against Human Tumor Cell Lines</title></caption><graphic></graphic><table><colgroup><col/><col/><col/><col/><col/><col/><col/><col/></colgroup><thead>
+<tr>
+	<th> </th>
+	<th> </th>
+	<th> </th>
+	<th> </th>
+	<th colspan=""4"">GI50 (μM ± SD)a<hr/></th>
+</tr>
+<tr>
+	<th>compound</th>
+	<th>R1</th>
+	<th>R</th>
+	<th> </th>
+	<th>A549</th>
+	<th>KB</th>
+	<th>KBvin</th>
+	<th>DU145</th>
+</tr></thead><tbody>
+<tr>
+	<td>4a</td>
+	<td>Cl</td>
+	<td>Me</td>
+	<td> </td>
+	<td>0.043 ± 0.011</td>
+	<td>0.048 ± 0.004</td>
+	<td>0.046 ± 0.002</td>
+	<td>0.057 ± 0.011</td>
+</tr>
+<tr>
+	<td>4b</td>
+	<td>Me</td>
+	<td>Me</td>
+	<td> </td>
+	<td>0.211 ± 0.038</td>
+	<td>0.204 ± 0.035</td>
+	<td>0.176 ± 0.031</td>
+	<td>0.187 ± 0.007</td>
+</tr>
+<tr>
+	<td>4c</td>
+	<td>Me</td>
+	<td>Br</td>
+	<td> </td>
+	<td>0.211 ± 0.034</td>
+	<td>0.178 ± 0.028</td>
+	<td>0.169 ± 0.011</td>
+	<td>0.198 ± 0.034</td>
+</tr>
+<tr>
+	<td>compound</td>
+	<td>R1</td>
+	<td>X</td>
+	<td>Y</td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+</tr>
+<tr>
+	<td>5a</td>
+	<td>Cl</td>
+	<td>CH2</td>
+	<td>CO</td>
+	<td>0.027 ± 0.005</td>
+	<td>0.028 ± 0.005</td>
+	<td>0.033 ± 0.005</td>
+	<td>0.031 ± 0.006</td>
+</tr>
+<tr>
+	<td>5b</td>
+	<td>Me</td>
+	<td>CH2</td>
+	<td>CO</td>
+	<td>0.024 ± 0.001</td>
+	<td>0.019 ± 0.003</td>
+	<td>0.021 ± 0.001</td>
+	<td>0.021 ± 0.004</td>
+</tr>
+<tr>
+	<td>5c</td>
+	<td>Me</td>
+	<td>CH2</td>
+	<td>CHOH</td>
+	<td>0.019 ± 0.003</td>
+	<td>0.018 ± 0.002</td>
+	<td>0.017 ± 0.001</td>
+	<td>0.018 ± 0.004</td>
+</tr>
+<tr>
+	<td>5d</td>
+	<td>Cl</td>
+	<td>CH2</td>
+	<td>O</td>
+	<td>0.199 ± 0.004</td>
+	<td>0.153 ± 0.028</td>
+	<td>0.195 ± 0.031</td>
+	<td>0.169 ± 0.021</td>
+</tr>
+<tr>
+	<td>5e</td>
+	<td>Me</td>
+	<td>CH2</td>
+	<td>O</td>
+	<td>0.189 ± 0.016</td>
+	<td>0.211 ± 0.036</td>
+	<td>0.169 ± 0.033</td>
+	<td>0.198 ± 0.033</td>
+</tr>
+<tr>
+	<td>5f</td>
+	<td>Me</td>
+	<td>CO</td>
+	<td>NH</td>
+	<td>0.0032 ± 0.0007</td>
+	<td>0.0023 ± 0.0005</td>
+	<td>0.0022 ± 0.0004</td>
+	<td>0.0019 ± 0.0004</td>
+</tr>
+<tr>
+	<td>5g</td>
+	<td>Me</td>
+	<td>CO</td>
+	<td>NMe</td>
+	<td>0.019 ± 0.002</td>
+	<td>0.017 ± 0.003</td>
+	<td>0.025 ± 0.002</td>
+	<td>0.022 ± 0.003</td>
+</tr>
+<tr>
+	<td>5h</td>
+	<td>Cl</td>
+	<td>CH2</td>
+	<td> </td>
+	<td>0.233 ± 0.013</td>
+	<td>0.227 ± 0.026</td>
+	<td>0.197 ± 0.024</td>
+	<td>0.165 ± 0.035</td>
+</tr>
+<tr>
+	<td>5i</td>
+	<td>Me</td>
+	<td>CH2</td>
+	<td> </td>
+	<td>0.268 ± 0.021</td>
+	<td>0.320 ± 0.056</td>
+	<td>0.216 ± 0.025</td>
+	<td>0.243 ± 0.039</td>
+</tr>
+<tr>
+	<td>5j</td>
+	<td>Cl</td>
+	<td>(CH2)2</td>
+	<td>CH2</td>
+	<td>0.191 ± 0.029</td>
+	<td>0.227 ± 0.015</td>
+	<td>0.197 ± 0.024</td>
+	<td>0.165 ± 0.035</td>
+</tr>
+<tr>
+	<td>5k</td>
+	<td>Me</td>
+	<td>(CH2)2</td>
+	<td>CH2</td>
+	<td>0.021 ± 0.002</td>
+	<td>0.019 ± 0.001</td>
+	<td>0.020 ± 0.001</td>
+	<td>0.018 ± 0.004</td>
+</tr>
+<tr>
+	<td>5l</td>
+	<td>Cl</td>
+	<td> </td>
+	<td> </td>
+	<td>7.57 ± 0.55</td>
+	<td>11.30 ± 0.58</td>
+	<td>5.45 ± 0.90</td>
+	<td>6.81 ± 1.34</td>
+</tr>
+<tr>
+	<td>5m</td>
+	<td>Me</td>
+	<td> </td>
+	<td> </td>
+	<td>16.71 ± 2.90</td>
+	<td>19.59 ± 3.33</td>
+	<td>14.76 ± 2.32</td>
+	<td>14.63 ± 1.33</td>
+</tr>
+<tr>
+	<td>paclitaxelb</td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td>0.0076 ± 0.0017</td>
+	<td>0.0064 ± 0.0014</td>
+	<td>1.21 ± 0.19</td>
+	<td>0.006 ± 0.001</td>
+</tr></tbody></table><table-wrap-foot><fn><label>a</label><p>Concentration of compound that inhibits 50% human tumor cell growth, presented as the mean ± standard deviation (SD) and performed at least in triplicate.</p></fn><fn><label>b</label><p>Positive control.</p></fn></table-wrap-foot></table-wrap>",,"{""cell_value"": [""0.043"", ""0.048"", ""0.046"", ""0.057"", ""0.211"", ""0.204"", ""0.176"", ""0.187"", ""0.211"", ""0.178"", ""0.169"", ""0.198"", ""0.027"", ""0.028"", ""0.033"", ""0.031"", ""0.024"", ""0.019"", ""0.021"", ""0.021"", ""0.019"", ""0.018"", ""0.017"", ""0.018"", ""0.199"", ""0.153"", ""0.195"", ""0.169"", ""0.189"", ""0.211"", ""0.169"", ""0.198"", ""0.0032"", ""0.0023"", ""0.0022"", ""0.0019"", ""0.019"", ""0.017"", ""0.025"", ""0.022"", ""0.233"", ""0.227"", ""0.197"", ""0.165"", ""0.268"", ""0.320"", ""0.216"", ""0.243"", ""0.191"", ""0.227"", ""0.197"", ""0.165"", ""0.021"", ""0.019"", ""0.020"", ""0.018"", ""7.57"", ""11.30"", ""5.45"", ""6.81"", ""16.71"", ""19.59"", ""14.76"", ""14.63"", ""0.0076"", ""0.0064"", ""1.21"", ""0.006""], ""cell_raw"": [""0.043 ± 0.011"", ""0.048 ± 0.004"", ""0.046 ± 0.002"", ""0.057 ± 0.011"", ""0.211 ± 0.038"", ""0.204 ± 0.035"", ""0.176 ± 0.031"", ""0.187 ± 0.007"", ""0.211 ± 0.034"", ""0.178 ± 0.028"", ""0.169 ± 0.011"", ""0.198 ± 0.034"", ""0.027 ± 0.005"", ""0.028 ± 0.005"", ""0.033 ± 0.005"", ""0.031 ± 0.006"", ""0.024 ± 0.001"", ""0.019 ± 0.003"", ""0.021 ± 0.001"", ""0.021 ± 0.004"", ""0.019 ± 0.003"", ""0.018 ± 0.002"", ""0.017 ± 0.001"", ""0.018 ± 0.004"", ""0.199 ± 0.004"", ""0.153 ± 0.028"", ""0.195 ± 0.031"", ""0.169 ± 0.021"", ""0.189 ± 0.016"", ""0.211 ± 0.036"", ""0.169 ± 0.033"", ""0.198 ± 0.033"", ""0.0032 ± 0.0007"", ""0.0023 ± 0.0005"", ""0.0022 ± 0.0004"", ""0.0019 ± 0.0004"", ""0.019 ± 0.002"", ""0.017 ± 0.003"", ""0.025 ± 0.002"", ""0.022 ± 0.003"", ""0.233 ± 0.013"", ""0.227 ± 0.026"", ""0.197 ± 0.024"", ""0.165 ± 0.035"", ""0.268 ± 0.021"", ""0.320 ± 0.056"", ""0.216 ± 0.025"", ""0.243 ± 0.039"", ""0.191 ± 0.029"", ""0.227 ± 0.015"", ""0.197 ± 0.024"", ""0.165 ± 0.035"", ""0.021 ± 0.002"", ""0.019 ± 0.001"", ""0.020 ± 0.001"", ""0.018 ± 0.004"", ""7.57 ± 0.55"", ""11.30 ± 0.58"", ""5.45 ± 0.90"", ""6.81 ± 1.34"", ""16.71 ± 2.90"", ""19.59 ± 3.33"", ""14.76 ± 2.32"", ""14.63 ± 1.33"", ""0.0076 ± 0.0017"", ""0.0064 ± 0.0014"", ""1.21 ± 0.19"", ""0.006 ± 0.001""], ""cell_index"": [""CA(2,4)"", ""CA(2,5)"", ""CA(2,6)"", ""CA(2,7)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(3,6)"", ""CA(3,7)"", ""CA(4,4)"", ""CA(4,5)"", ""CA(4,6)"", ""CA(4,7)"", ""CA(6,4)"", ""CA(6,5)"", ""CA(6,6)"", ""CA(6,7)"", ""CA(7,4)"", ""CA(7,5)"", ""CA(7,6)"", ""CA(7,7)"", ""CA(8,4)"", ""CA(8,5)"", ""CA(8,6)"", ""CA(8,7)"", ""CA(9,4)"", ""CA(9,5)"", ""CA(9,6)"", ""CA(9,7)"", ""CA(10,4)"", ""CA(10,5)"", ""CA(10,6)"", ""CA(10,7)"", ""CA(11,4)"", ""CA(11,5)"", ""CA(11,6)"", ""CA(11,7)"", ""CA(12,4)"", ""CA(12,5)"", ""CA(12,6)"", ""CA(12,7)"", ""CA(13,4)"", ""CA(13,5)"", ""CA(13,6)"", ""CA(13,7)"", ""CA(14,4)"", ""CA(14,5)"", ""CA(14,6)"", ""CA(14,7)"", ""CA(15,4)"", ""CA(15,5)"", ""CA(15,6)"", ""CA(15,7)"", ""CA(16,4)"", ""CA(16,5)"", ""CA(16,6)"", ""CA(16,7)"", ""CA(17,4)"", ""CA(17,5)"", ""CA(17,6)"", ""CA(17,7)"", ""CA(18,4)"", ""CA(18,5)"", ""CA(18,6)"", ""CA(18,7)"", ""CA(19,4)"", ""CA(19,5)"", ""CA(19,6)"", ""CA(19,7)""], ""cell_row_idx"": [2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14, 14, 15, 15, 15, 15, 16, 16, 16, 16, 17, 17, 17, 17, 18, 18, 18, 18, 19, 19, 19, 19], ""cell_col_idx"": [4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7]}","{""cell_index"": [""CA(2,4)"", ""CA(2,5)"", ""CA(2,6)"", ""CA(2,7)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(3,6)"", ""CA(3,7)"", ""CA(4,4)"", ""CA(4,5)"", ""CA(4,6)"", ""CA(4,7)"", ""CA(6,4)"", ""CA(6,5)"", ""CA(6,6)"", ""CA(6,7)"", ""CA(7,4)"", ""CA(7,5)"", ""CA(7,6)"", ""CA(7,7)"", ""CA(8,4)"", ""CA(8,5)"", ""CA(8,6)"", ""CA(8,7)"", ""CA(9,4)"", ""CA(9,5)"", ""CA(9,6)"", ""CA(9,7)"", ""CA(10,4)"", ""CA(10,5)"", ""CA(10,6)"", ""CA(10,7)"", ""CA(11,4)"", ""CA(11,5)"", ""CA(11,6)"", ""CA(11,7)"", ""CA(12,4)"", ""CA(12,5)"", ""CA(12,6)"", ""CA(12,7)"", ""CA(13,4)"", ""CA(13,5)"", ""CA(13,6)"", ""CA(13,7)"", ""CA(14,4)"", ""CA(14,5)"", ""CA(14,6)"", ""CA(14,7)"", ""CA(15,4)"", ""CA(15,5)"", ""CA(15,6)"", ""CA(15,7)"", ""CA(16,4)"", ""CA(16,5)"", ""CA(16,6)"", ""CA(16,7)"", ""CA(17,4)"", ""CA(17,5)"", ""CA(17,6)"", ""CA(17,7)"", ""CA(18,4)"", ""CA(18,5)"", ""CA(18,6)"", ""CA(18,7)"", ""CA(19,4)"", ""CA(19,5)"", ""CA(19,6)"", ""CA(19,7)""], ""cell_record"": [""{\""value\"": \""0.043\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""4a\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.048\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""4a\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.046\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""4a\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.057\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""4a\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.211\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""4b\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.204\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""4b\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.176\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""4b\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.187\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""4b\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.211\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""4c\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.178\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""4c\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.169\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""4c\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.198\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""4c\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.027\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5a\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.028\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5a\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.033\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5a\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.031\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5a\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.024\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5b\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.019\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5b\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.021\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5b\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.021\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5b\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.019\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5c\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.018\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5c\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.017\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5c\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.018\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5c\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.199\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5d\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.153\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5d\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.195\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5d\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.169\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5d\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.189\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5e\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.211\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5e\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.169\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5e\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.198\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5e\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.0032\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5f\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.0023\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5f\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.0022\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5f\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.0019\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5f\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.019\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5g\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.017\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5g\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.025\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5g\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.022\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5g\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.233\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5h\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.227\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5h\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.197\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5h\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.165\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5h\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.268\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5i\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.320\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5i\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.216\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5i\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.243\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5i\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.191\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5j\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.227\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5j\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.197\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5j\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.165\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5j\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.021\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5k\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.019\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5k\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.020\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5k\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.018\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5k\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""7.57\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5l\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""11.30\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5l\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""5.45\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5l\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""6.81\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5l\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""16.71\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""5m\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""19.59\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""5m\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""14.76\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""5m\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""14.63\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""5m\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.0076\"", \""type\"": \""GI50\"", \""target\"": \""A549\"", \""treatment\"": \""paclitaxelb\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.0064\"", \""type\"": \""GI50\"", \""target\"": \""KB\"", \""treatment\"": \""paclitaxelb\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""1.21\"", \""type\"": \""GI50\"", \""target\"": \""KBvin\"", \""treatment\"": \""paclitaxelb\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.006\"", \""type\"": \""GI50\"", \""target\"": \""DU145\"", \""treatment\"": \""paclitaxelb\"", \""unit\"": \""μM\""}""]}"
+PMC3983391,tbl2,"<table-wrap><label>Table 2</label><caption><title>Inhibition of Tubulin Polymerizationa and Colchicine Binding to Tubulinb</title></caption><table><colgroup><col/><col/><col/><col/></colgroup><thead>
+<tr>
+	<th> </th>
+	<th> </th>
+	<th colspan=""2"">inhibition of colchicine binding (%) inhibition ± SD<hr/></th>
+</tr>
+<tr>
+	<th>compound</th>
+	<th>inhibition of tubulin assembly IC50 (μM) ± SD</th>
+	<th>5 μM</th>
+	<th>1 μM</th>
+</tr></thead><tbody>
+<tr>
+	<td>5b</td>
+	<td>0.94 ± 0.03</td>
+	<td>87 ± 1</td>
+	<td>56 ± 4</td>
+</tr>
+<tr>
+	<td>5c</td>
+	<td>0.97 ± 0.1</td>
+	<td>94 ± 0.7</td>
+	<td>75 ± 0.6</td>
+</tr>
+<tr>
+	<td>5f</td>
+	<td>0.77 ± 0.07</td>
+	<td>99 ± 0.02</td>
+	<td>93 ± 0.8</td>
+</tr>
+<tr>
+	<td>5g</td>
+	<td>1.3 ± 0.03</td>
+	<td>96 ± 2</td>
+	<td>82 ± 0.2</td>
+</tr>
+<tr>
+	<td>5k</td>
+	<td>0.87 ± 0.1</td>
+	<td>89 ± 1</td>
+	<td>46 ± 0.6</td>
+</tr>
+<tr>
+	<td>CA4c</td>
+	<td>0.96 ± 0.07</td>
+	<td>98 ± 0.6</td>
+	<td>90 ± 0.2</td>
+</tr></tbody></table><table-wrap-foot><fn><label>a</label><p>The tubulin assembly assay measured the extent of assembly of 10 μM tubulin after 20 min at 30 °C.</p></fn><fn><label>b</label><p>Tubulin, 1 μM; [3H]colchicine, 5 μM; and inhibitor, 5 or 1 μM. Incubation was performed for 10 min at 37 °C.</p></fn><fn><label>c</label><p>The reference compound is a drug candidate in phase II/III clinical trials.</p></fn></table-wrap-foot></table-wrap>",,"{""cell_value"": [""5"", ""1"", ""0.94"", ""87"", ""56"", ""0.97"", ""94"", ""75"", ""0.77"", ""99"", ""93"", ""1.3"", ""96"", ""82"", ""0.87"", ""89"", ""46"", ""0.96"", ""98"", ""90""], ""cell_raw"": [""5 μM"", ""1 μM"", ""0.94 ± 0.03"", ""87 ± 1"", ""56 ± 4"", ""0.97 ± 0.1"", ""94 ± 0.7"", ""75 ± 0.6"", ""0.77 ± 0.07"", ""99 ± 0.02"", ""93 ± 0.8"", ""1.3 ± 0.03"", ""96 ± 2"", ""82 ± 0.2"", ""0.87 ± 0.1"", ""89 ± 1"", ""46 ± 0.6"", ""0.96 ± 0.07"", ""98 ± 0.6"", ""90 ± 0.2""], ""cell_index"": [""CA(1,2)"", ""CA(1,3)"", ""CA(2,1)"", ""CA(2,2)"", ""CA(2,3)"", ""CA(3,1)"", ""CA(3,2)"", ""CA(3,3)"", ""CA(4,1)"", ""CA(4,2)"", ""CA(4,3)"", ""CA(5,1)"", ""CA(5,2)"", ""CA(5,3)"", ""CA(6,1)"", ""CA(6,2)"", ""CA(6,3)"", ""CA(7,1)"", ""CA(7,2)"", ""CA(7,3)""], ""cell_row_idx"": [1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7], ""cell_col_idx"": [2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]}","{""cell_index"": [""CA(1,2)"", ""CA(1,3)"", ""CA(2,1)"", ""CA(2,2)"", ""CA(2,3)"", ""CA(3,1)"", ""CA(3,2)"", ""CA(3,3)"", ""CA(4,1)"", ""CA(4,2)"", ""CA(4,3)"", ""CA(5,1)"", ""CA(5,2)"", ""CA(5,3)"", ""CA(6,1)"", ""CA(6,2)"", ""CA(6,3)"", ""CA(7,1)"", ""CA(7,2)"", ""CA(7,3)""], ""cell_record"": [""{\""value\"": \""5\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.94\"", \""type\"": \""IC50\"", \""target\"": \""tubulin assembly\"", \""treatment\"": \""5b\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""87\"", \""type\"": \""Other\""}"", ""{\""value\"": \""56\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.97\"", \""type\"": \""IC50\"", \""target\"": \""tubulin assembly\"", \""treatment\"": \""5c\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""94\"", \""type\"": \""Other\""}"", ""{\""value\"": \""75\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.77\"", \""type\"": \""IC50\"", \""target\"": \""tubulin assembly\"", \""treatment\"": \""5f\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""99\"", \""type\"": \""Other\""}"", ""{\""value\"": \""93\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1.3\"", \""type\"": \""IC50\"", \""target\"": \""tubulin assembly\"", \""treatment\"": \""5g\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""96\"", \""type\"": \""Other\""}"", ""{\""value\"": \""82\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.87\"", \""type\"": \""IC50\"", \""target\"": \""tubulin assembly\"", \""treatment\"": \""5k\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""89\"", \""type\"": \""Other\""}"", ""{\""value\"": \""46\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.96\"", \""type\"": \""IC50\"", \""target\"": \""tubulin assembly\"", \""treatment\"": \""CA4c\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""98\"", \""type\"": \""Other\""}"", ""{\""value\"": \""90\"", \""type\"": \""Other\""}""]}"
+PMC4251525,tbl1,"<table-wrap><label>Table 1</label><caption><title>In Vitro Potency of SL0101 (1) and Analoguesa</title></caption><table><colgroup><col/><col/><col/><col/><col/><col/></colgroup><thead>
+<tr>
+	<th>compd name</th>
+	<th>RSK2 IC50 [μM]</th>
+	<th>RSK2 IC50p(1)</th>
+	<th>MCF-7 proliferation [% control]</th>
+	<th>MCF-7 proliferation p(DMSO)</th>
+	<th>MCF-7 proliferation p(1)</th>
+</tr></thead><tbody>
+<tr>
+	<td>SL0101 (1)</td>
+	<td>1.04 ± 0.60</td>
+	<td> </td>
+	<td>38.6 ± 14.6</td>
+	<td><0.01</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>4a</td>
+	<td>0.76 ± 0.43</td>
+	<td>0.17</td>
+	<td>94.5 ± 21.6</td>
+	<td>0.41</td>
+	<td> </td>
+</tr>
+<tr>
+	<td>4b</td>
+	<td>0.23 ± 0.07</td>
+	<td><0.01</td>
+	<td>39.2 ± 7.2</td>
+	<td><0.01</td>
+	<td>0.91</td>
+</tr>
+<tr>
+	<td>4c</td>
+	<td>0.11 ± 0.09</td>
+	<td><0.01</td>
+	<td>47.8 ± 10.6</td>
+	<td><0.01</td>
+	<td>0.16</td>
+</tr>
+<tr>
+	<td>4d</td>
+	<td>0.44 ± 0.39</td>
+	<td>0.02</td>
+	<td>–80.0 ± 6.6</td>
+	<td><0.01</td>
+	<td><0.01</td>
+</tr>
+<tr>
+	<td>5a</td>
+	<td>2.33 ± 0.88</td>
+	<td><0.01</td>
+	<td>47.5 ± 19.1</td>
+	<td><0.01</td>
+	<td>0.21</td>
+</tr>
+<tr>
+	<td>5b</td>
+	<td>0.32 ± 0.18</td>
+	<td><0.01</td>
+	<td>24.6 ± 10.4</td>
+	<td><0.01</td>
+	<td>0.03</td>
+</tr></tbody></table><table-wrap-foot><fn><label>a</label><p>RSK2 IC50: concentration needed for 50% RSK2 inhibition (n > 2; quadruplicate: mean, S.D.; p(1) Student’s t test compared to SL0101(1)). MCF-7 proliferation: (n > 2; triplicate: mean, S.D.; p(DMSO) Student’s t test compared to control; p(1) Student’s t test compared to SL0101 (1)). p < 0.01 significant.</p></fn></table-wrap-foot></table-wrap>",,"{""cell_value"": [""1.04"", ""38.6"", ""0.01"", ""0.76"", ""0.17"", ""94.5"", ""0.41"", ""0.23"", ""0.01"", ""39.2"", ""0.01"", ""0.91"", ""0.11"", ""0.01"", ""47.8"", ""0.01"", ""0.16"", ""0.44"", ""0.02"", ""0.01"", ""0.01"", ""2.33"", ""0.01"", ""47.5"", ""0.01"", ""0.21"", ""0.32"", ""0.01"", ""24.6"", ""0.01"", ""0.03""], ""cell_raw"": [""1.04 ± 0.60"", ""38.6 ± 14.6"", ""0.01"", ""0.76 ± 0.43"", ""0.17"", ""94.5 ± 21.6"", ""0.41"", ""0.23 ± 0.07"", ""0.01"", ""39.2 ± 7.2"", ""0.01"", ""0.91"", ""0.11 ± 0.09"", ""0.01"", ""47.8 ± 10.6"", ""0.01"", ""0.16"", ""0.44 ± 0.39"", ""0.02"", ""0.01"", ""0.01"", ""2.33 ± 0.88"", ""0.01"", ""47.5 ± 19.1"", ""0.01"", ""0.21"", ""0.32 ± 0.18"", ""0.01"", ""24.6 ± 10.4"", ""0.01"", ""0.03""], ""cell_index"": [""CA(1,1)"", ""CA(1,3)"", ""CA(1,4)"", ""CA(2,1)"", ""CA(2,2)"", ""CA(2,3)"", ""CA(2,4)"", ""CA(3,1)"", ""CA(3,2)"", ""CA(3,3)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(4,1)"", ""CA(4,2)"", ""CA(4,3)"", ""CA(4,4)"", ""CA(4,5)"", ""CA(5,1)"", ""CA(5,2)"", ""CA(5,4)"", ""CA(5,5)"", ""CA(6,1)"", ""CA(6,2)"", ""CA(6,3)"", ""CA(6,4)"", ""CA(6,5)"", ""CA(7,1)"", ""CA(7,2)"", ""CA(7,3)"", ""CA(7,4)"", ""CA(7,5)""], ""cell_row_idx"": [1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7], ""cell_col_idx"": [1, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]}","{""cell_index"": [""CA(1,1)"", ""CA(1,3)"", ""CA(1,4)"", ""CA(2,1)"", ""CA(2,2)"", ""CA(2,3)"", ""CA(2,4)"", ""CA(3,1)"", ""CA(3,2)"", ""CA(3,3)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(4,1)"", ""CA(4,2)"", ""CA(4,3)"", ""CA(4,4)"", ""CA(4,5)"", ""CA(5,1)"", ""CA(5,2)"", ""CA(5,4)"", ""CA(5,5)"", ""CA(6,1)"", ""CA(6,2)"", ""CA(6,3)"", ""CA(6,4)"", ""CA(6,5)"", ""CA(7,1)"", ""CA(7,2)"", ""CA(7,3)"", ""CA(7,4)"", ""CA(7,5)""], ""cell_record"": [""{\""value\"": \""1.04\"", \""type\"": \""IC50\"", \""target\"": \""RSK2\"", \""treatment\"": \""SL0101 (1)\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""38.6\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.01\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.76\"", \""type\"": \""IC50\"", \""target\"": \""RSK2\"", \""treatment\"": \""4a\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.17\"", \""type\"": \""Other\""}"", ""{\""value\"": \""94.5\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.41\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.23\"", \""type\"": \""IC50\"", \""target\"": \""RSK2\"", \""treatment\"": \""4b\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.01\"", \""type\"": \""Other\""}"", ""{\""value\"": \""39.2\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.01\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.91\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.11\"", \""type\"": \""IC50\"", \""target\"": \""RSK2\"", \""treatment\"": \""4c\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.01\"", \""type\"": \""Other\""}"", ""{\""value\"": \""47.8\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.01\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.16\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.44\"", \""type\"": \""IC50\"", \""target\"": \""RSK2\"", \""treatment\"": \""4d\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.02\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.01\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.01\"", \""type\"": \""Other\""}"", ""{\""value\"": \""2.33\"", \""type\"": \""IC50\"", \""target\"": \""RSK2\"", \""treatment\"": \""5a\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.01\"", \""type\"": \""Other\""}"", ""{\""value\"": \""47.5\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.01\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.21\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.32\"", \""type\"": \""IC50\"", \""target\"": \""RSK2\"", \""treatment\"": \""5b\"", \""unit\"": \""μM\""}"", ""{\""value\"": \""0.01\"", \""type\"": \""Other\""}"", ""{\""value\"": \""24.6\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.01\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.03\"", \""type\"": \""Other\""}""]}"
+PMC4257840,tbl1,"<table-wrap><label>Table 1</label><caption><title>Impact of Modifying P1, P2, and P3 Groups on Der p 1 Potency and Selectivity over Cat B</title></caption><graphic></graphic><table><colgroup><col/><col/><col/><col/><col/><col/><col/></colgroup><thead>
+<tr>
+	<th>compd no.</th>
+	<th>P1</th>
+	<th>P2</th>
+	<th>P3</th>
+	<th>P′</th>
+	<th>Der p 1 IC50 (nM)</th>
+	<th>Cat B IC50 (nM)</th>
+</tr></thead><tbody>
+<tr>
+	<td>5</td>
+	<td>n-Bu</td>
+	<td>Me</td>
+	<td>benzyl</td>
+	<td>cyclohexyl</td>
+	<td>8 ± 1</td>
+	<td>17 ± 2</td>
+</tr>
+<tr>
+	<td>19a</td>
+	<td>i-Pr</td>
+	<td>Me</td>
+	<td>benzyl</td>
+	<td>cyclohexyl</td>
+	<td>18 ± 2</td>
+	<td>52 ± 5</td>
+</tr>
+<tr>
+	<td>20</td>
+	<td>i-Pr</td>
+	<td>Me</td>
+	<td>benzyl</td>
+	<td>benzyl</td>
+	<td>12 ± 2</td>
+	<td>50 ± 5</td>
+</tr>
+<tr>
+	<td>21</td>
+	<td>t-Bu</td>
+	<td>Me</td>
+	<td>benzyl</td>
+	<td>cyclohexyl</td>
+	<td>9167 ± 880</td>
+	<td>NDb</td>
+</tr>
+<tr>
+	<td>22</td>
+	<td>i-Pr</td>
+	<td>Me</td>
+	<td>t-Bu</td>
+	<td>cyclohexyl</td>
+	<td>14 ± 3</td>
+	<td>378 ± 27</td>
+</tr>
+<tr>
+	<td>23</td>
+	<td>i-Pr</td>
+	<td>Me</td>
+	<td>C(Me)2Ph</td>
+	<td>benzyl</td>
+	<td>42 ± 6</td>
+	<td>446 ± 11</td>
+</tr>
+<tr>
+	<td>24</td>
+	<td>i-Pr</td>
+	<td>n-Pr</td>
+	<td>benzyl</td>
+	<td>cyclohexyl</td>
+	<td>164 ± 24</td>
+	<td>67 ± 1</td>
+</tr></tbody></table><table-wrap-foot><fn><label>a</label><p>Contains ∼30% of P1 R epimer.</p></fn><fn><label>b</label><p>ND = not determined.</p></fn></table-wrap-foot></table-wrap>",,"{""cell_value"": [""5"", ""8"", ""17"", ""18"", ""52"", ""20"", ""12"", ""50"", ""21"", ""9167"", ""22"", ""14"", ""378"", ""23"", ""42"", ""446"", ""24"", ""164"", ""67""], ""cell_raw"": [""5"", ""8 ± 1"", ""17 ± 2"", ""18 ± 2"", ""52 ± 5"", ""20"", ""12 ± 2"", ""50 ± 5"", ""21"", ""9167 ± 880"", ""22"", ""14 ± 3"", ""378 ± 27"", ""23"", ""42 ± 6"", ""446 ± 11"", ""24"", ""164 ± 24"", ""67 ± 1""], ""cell_index"": [""CA(1,0)"", ""CA(1,5)"", ""CA(1,6)"", ""CA(2,5)"", ""CA(2,6)"", ""CA(3,0)"", ""CA(3,5)"", ""CA(3,6)"", ""CA(4,0)"", ""CA(4,5)"", ""CA(5,0)"", ""CA(5,5)"", ""CA(5,6)"", ""CA(6,0)"", ""CA(6,5)"", ""CA(6,6)"", ""CA(7,0)"", ""CA(7,5)"", ""CA(7,6)""], ""cell_row_idx"": [1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7], ""cell_col_idx"": [0, 5, 6, 5, 6, 0, 5, 6, 0, 5, 0, 5, 6, 0, 5, 6, 0, 5, 6]}","{""cell_index"": [""CA(1,0)"", ""CA(1,5)"", ""CA(1,6)"", ""CA(2,5)"", ""CA(2,6)"", ""CA(3,0)"", ""CA(3,5)"", ""CA(3,6)"", ""CA(4,0)"", ""CA(4,5)"", ""CA(5,0)"", ""CA(5,5)"", ""CA(5,6)"", ""CA(6,0)"", ""CA(6,5)"", ""CA(6,6)"", ""CA(7,0)"", ""CA(7,5)"", ""CA(7,6)""], ""cell_record"": [""{\""value\"": \""5\"", \""type\"": \""Other\""}"", ""{\""value\"": \""8\"", \""type\"": \""IC50\"", \""target\"": \""Der p 1\"", \""treatment\"": \""5\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""17\"", \""type\"": \""IC50\"", \""target\"": \""Cat B\"", \""treatment\"": \""5\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""18\"", \""type\"": \""IC50\"", \""target\"": \""Der p 1\"", \""treatment\"": \""19a\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""52\"", \""type\"": \""IC50\"", \""target\"": \""Cat B\"", \""treatment\"": \""19a\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""20\"", \""type\"": \""Other\""}"", ""{\""value\"": \""12\"", \""type\"": \""IC50\"", \""target\"": \""Der p 1\"", \""treatment\"": \""20\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""50\"", \""type\"": \""IC50\"", \""target\"": \""Cat B\"", \""treatment\"": \""20\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""21\"", \""type\"": \""Other\""}"", ""{\""value\"": \""9167\"", \""type\"": \""IC50\"", \""target\"": \""Der p 1\"", \""treatment\"": \""21\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""22\"", \""type\"": \""Other\""}"", ""{\""value\"": \""14\"", \""type\"": \""IC50\"", \""target\"": \""Der p 1\"", \""treatment\"": \""22\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""378\"", \""type\"": \""IC50\"", \""target\"": \""Cat B\"", \""treatment\"": \""22\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""23\"", \""type\"": \""Other\""}"", ""{\""value\"": \""42\"", \""type\"": \""IC50\"", \""target\"": \""Der p 1\"", \""treatment\"": \""23\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""446\"", \""type\"": \""IC50\"", \""target\"": \""Cat B\"", \""treatment\"": \""23\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""24\"", \""type\"": \""Other\""}"", ""{\""value\"": \""164\"", \""type\"": \""IC50\"", \""target\"": \""Der p 1\"", \""treatment\"": \""24\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""67\"", \""type\"": \""IC50\"", \""target\"": \""Cat B\"", \""treatment\"": \""24\"", \""unit\"": \""nM\""}""]}"
+PMC4295614,tab2,"<table-wrap><label>Table 2</label><caption><p>SAR and MIC of thiazolyl pyrrolidine carboxamides.</p></caption><table><thead>
+<tr>
+	<th>Compd. number </th>
+	<th>MIC (µg/mL)</th>
+	<th>R</th>
+</tr></thead><tbody>
+<tr>
+	<td> 26a </td>
+	<td>25</td>
+	<td>H</td>
+</tr>
+<tr>
+	<td> 26b </td>
+	<td>50</td>
+	<td>Cl</td>
+</tr>
+<tr>
+	<td> 26c </td>
+	<td>50</td>
+	<td>CH3 </td>
+</tr>
+<tr>
+	<td> 26d </td>
+	<td>25</td>
+	<td>OCH3 </td>
+</tr>
+<tr>
+	<td> 26e </td>
+	<td>25</td>
+	<td>NO2 </td>
+</tr></tbody></table></table-wrap>",,"{""cell_value"": [""25"", ""50"", ""50"", ""25"", ""25""], ""cell_raw"": [""25"", ""50"", ""50"", ""25"", ""25""], ""cell_index"": [""CA(1,1)"", ""CA(2,1)"", ""CA(3,1)"", ""CA(4,1)"", ""CA(5,1)""], ""cell_row_idx"": [1, 2, 3, 4, 5], ""cell_col_idx"": [1, 1, 1, 1, 1]}","{""cell_index"": [""CA(1,1)"", ""CA(2,1)"", ""CA(3,1)"", ""CA(4,1)"", ""CA(5,1)""], ""cell_record"": [""{\""value\"": \""25\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""26a\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""50\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""26b\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""50\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""26c\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""25\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""26d\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""25\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""26e\"", \""unit\"": \""µg/mL\""}""]}"
+PMC4295614,tab3,"<table-wrap><label>Table 3</label><caption><p>SAR and MIC of pyrimidine carboxamides.</p></caption><table><thead>
+<tr>
+	<th>Compd. number</th>
+	<th>R</th>
+	<th>R1 </th>
+	<th>R2 </th>
+	<th>R3 </th>
+	<th>R4 </th>
+	<th>% inhibition (µg/mL)</th>
+</tr></thead><tbody>
+<tr>
+	<td> 31a </td>
+	<td>4-OCH3 </td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>CH3 </td>
+	<td>2</td>
+</tr>
+<tr>
+	<td> 31b </td>
+	<td>3-OPh</td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>CH3 </td>
+	<td>27</td>
+</tr>
+<tr>
+	<td> 31c </td>
+	<td>3-OPh</td>
+	<td>CH3 </td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>65</td>
+</tr>
+<tr>
+	<td> 31d </td>
+	<td>2-NO2 </td>
+	<td>Cl</td>
+	<td>H</td>
+	<td>H</td>
+	<td>H</td>
+	<td>11</td>
+</tr>
+<tr>
+	<td> 31e </td>
+	<td>4-NO2 </td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>CH3 </td>
+	<td>4</td>
+</tr>
+<tr>
+	<td> 31f </td>
+	<td>4-Cl</td>
+	<td>H</td>
+	<td>H</td>
+	<td>H</td>
+	<td>H</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td> 31g </td>
+	<td>4-OH</td>
+	<td>F</td>
+	<td>H</td>
+	<td>H</td>
+	<td>H</td>
+	<td>18</td>
+</tr>
+<tr>
+	<td> 31h </td>
+	<td>4-NO2 </td>
+	<td>Cl</td>
+	<td>H</td>
+	<td>H</td>
+	<td>Cl</td>
+	<td>18</td>
+</tr>
+<tr>
+	<td> 31i </td>
+	<td>4-OH</td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td> 31j </td>
+	<td>4-OH</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td> 31k </td>
+	<td>3-Cl</td>
+	<td>H</td>
+	<td>Cl</td>
+	<td>F</td>
+	<td>H</td>
+	<td>48</td>
+</tr>
+<tr>
+	<td> 31l </td>
+	<td>4-NO2 </td>
+	<td>F</td>
+	<td>H</td>
+	<td>H</td>
+	<td>H</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td> 31m </td>
+	<td>4-NO2 </td>
+	<td>H</td>
+	<td>CH3 </td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td> 31n </td>
+	<td>4-NO2 </td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td> 31o </td>
+	<td>3-NO2 </td>
+	<td>Cl</td>
+	<td>H</td>
+	<td>H</td>
+	<td>H</td>
+	<td>26</td>
+</tr>
+<tr>
+	<td> 31p </td>
+	<td>3-NO2 </td>
+	<td>H</td>
+	<td>Cl</td>
+	<td>F</td>
+	<td>H</td>
+	<td>29</td>
+</tr>
+<tr>
+	<td> 31q </td>
+	<td>3-NO2 </td>
+	<td>F</td>
+	<td>H</td>
+	<td>H</td>
+	<td>H</td>
+	<td>24</td>
+</tr>
+<tr>
+	<td> 31r </td>
+	<td>3-Cl</td>
+	<td>H</td>
+	<td>H</td>
+	<td>F</td>
+	<td>H</td>
+	<td>38</td>
+</tr>
+<tr>
+	<td> 31s </td>
+	<td>4-NO2 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>OCH3 </td>
+	<td>H</td>
+	<td>21</td>
+</tr>
+<tr>
+	<td> 31t </td>
+	<td>3-NO2 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>Cl</td>
+	<td>H</td>
+	<td>29</td>
+</tr>
+<tr>
+	<td> 31u </td>
+	<td>3-NO2 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>28</td>
+</tr>
+<tr>
+	<td> 31v </td>
+	<td>3-NO2 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>F</td>
+	<td>H</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td colspan=""7"" rowspan=""1""> <hr/> </td>
+</tr>
+<tr>
+	<td> 32a </td>
+	<td>3-NO2 </td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>H</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td> 32b </td>
+	<td>4-Cl</td>
+	<td>Cl</td>
+	<td>H</td>
+	<td>H</td>
+	<td>H</td>
+	<td>26</td>
+</tr>
+<tr>
+	<td> 32c </td>
+	<td>4-NO2 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>Cl</td>
+	<td>H</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td> 32d </td>
+	<td>3-OPh</td>
+	<td>H</td>
+	<td>CH3 </td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>32</td>
+</tr>
+<tr>
+	<td> 32e </td>
+	<td>4-NO2 </td>
+	<td>H</td>
+	<td>H</td>
+	<td>H</td>
+	<td>H</td>
+	<td>25</td>
+</tr>
+<tr>
+	<td> 32f </td>
+	<td>3-NO2 </td>
+	<td>H</td>
+	<td>CH3 </td>
+	<td>CH3 </td>
+	<td>H</td>
+	<td>63</td>
+</tr>
+<tr>
+	<td> 32g </td>
+	<td>4-NO2 </td>
+	<td>H</td>
+	<td>Cl</td>
+	<td>F</td>
+	<td>H</td>
+	<td>22</td>
+</tr></tbody></table></table-wrap>",,"{""cell_value"": [""2"", ""27"", ""65"", ""11"", ""4"", ""6"", ""18"", ""18"", ""12"", ""2"", ""48"", ""4"", ""13"", ""12"", ""26"", ""29"", ""24"", ""38"", ""21"", ""29"", ""28"", ""30"", ""6"", ""26"", ""9"", ""32"", ""25"", ""63"", ""22""], ""cell_raw"": [""2"", ""27"", ""65"", ""11"", ""4"", ""6"", ""18"", ""18"", ""12"", ""2"", ""48"", ""4"", ""13"", ""12"", ""26"", ""29"", ""24"", ""38"", ""21"", ""29"", ""28"", ""30"", ""6"", ""26"", ""9"", ""32"", ""25"", ""63"", ""22""], ""cell_index"": [""CA(1,6)"", ""CA(2,6)"", ""CA(3,6)"", ""CA(4,6)"", ""CA(5,6)"", ""CA(6,6)"", ""CA(7,6)"", ""CA(8,6)"", ""CA(9,6)"", ""CA(10,6)"", ""CA(11,6)"", ""CA(12,6)"", ""CA(13,6)"", ""CA(14,6)"", ""CA(15,6)"", ""CA(16,6)"", ""CA(17,6)"", ""CA(18,6)"", ""CA(19,6)"", ""CA(20,6)"", ""CA(21,6)"", ""CA(22,6)"", ""CA(24,6)"", ""CA(25,6)"", ""CA(26,6)"", ""CA(27,6)"", ""CA(28,6)"", ""CA(29,6)"", ""CA(30,6)""], ""cell_row_idx"": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30], ""cell_col_idx"": [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]}","{""cell_index"": [""CA(1,6)"", ""CA(2,6)"", ""CA(3,6)"", ""CA(4,6)"", ""CA(5,6)"", ""CA(6,6)"", ""CA(7,6)"", ""CA(8,6)"", ""CA(9,6)"", ""CA(10,6)"", ""CA(11,6)"", ""CA(12,6)"", ""CA(13,6)"", ""CA(14,6)"", ""CA(15,6)"", ""CA(16,6)"", ""CA(17,6)"", ""CA(18,6)"", ""CA(19,6)"", ""CA(20,6)"", ""CA(21,6)"", ""CA(22,6)"", ""CA(24,6)"", ""CA(25,6)"", ""CA(26,6)"", ""CA(27,6)"", ""CA(28,6)"", ""CA(29,6)"", ""CA(30,6)""], ""cell_record"": [""{\""value\"": \""2\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31a\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""27\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31b\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""65\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31c\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""11\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31d\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""4\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31e\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""6\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31f\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""18\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31g\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""18\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31h\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""12\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31i\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""2\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31j\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""48\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31k\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""4\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31l\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""13\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31m\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""12\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31n\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""26\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31o\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""29\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31p\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""24\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31q\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""38\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31r\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""21\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31s\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""29\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31t\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""28\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31u\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""30\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""31v\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""6\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""32a\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""26\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""32b\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""9\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""32c\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""32\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""32d\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""25\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""32e\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""63\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""32f\"", \""unit\"": \""µg/mL\""}"", ""{\""value\"": \""22\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""32g\"", \""unit\"": \""µg/mL\""}""]}"
+PMC4295614,tab4,"<table-wrap><label>Table 4</label><caption><p>SAR and MIC of aryl thiazolidine carboxamides.</p></caption><table><thead>
+<tr>
+	<th>Number</th>
+	<th>Ar</th>
+	<th>R1 </th>
+	<th>R2 </th>
+	<th>MTB</th>
+	<th>MC2</th>
+</tr></thead><tbody>
+<tr>
+	<td> 35a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>11.00</td>
+	<td>11.00</td>
+</tr>
+<tr>
+	<td> 35b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>5.15</td>
+	<td>5.19</td>
+</tr>
+<tr>
+	<td> 35c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>20.94</td>
+	<td>20.94</td>
+</tr>
+<tr>
+	<td> 35d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>18.91</td>
+	<td>9.47</td>
+</tr>
+<tr>
+	<td> 36a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>1.34</td>
+	<td>2.64</td>
+</tr>
+<tr>
+	<td> 36b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>4.93</td>
+	<td>39.50</td>
+</tr>
+<tr>
+	<td> 36c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>10.01</td>
+	<td>5.02</td>
+</tr>
+<tr>
+	<td> 36d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>0.58</td>
+	<td>2.29</td>
+</tr>
+<tr>
+	<td> 37a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>9.81</td>
+	<td>19.60</td>
+</tr>
+<tr>
+	<td> 37b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>0.59</td>
+	<td>2.34</td>
+</tr>
+<tr>
+	<td> 37c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>8.60</td>
+	<td>17.17</td>
+</tr>
+<tr>
+	<td> 37d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>1.09</td>
+	<td>4.30</td>
+</tr>
+<tr>
+	<td> 38a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>4.93</td>
+	<td>19.75</td>
+</tr>
+<tr>
+	<td> 38b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>4.66</td>
+	<td>9.36</td>
+</tr>
+<tr>
+	<td> 38c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>9.47</td>
+	<td>18.91</td>
+</tr>
+<tr>
+	<td> 38d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>2.15</td>
+	<td>8.63</td>
+</tr>
+<tr>
+	<td> 39a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>0.53</td>
+	<td>2.08</td>
+</tr>
+<tr>
+	<td> 39b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>1.01</td>
+	<td>7.97</td>
+</tr>
+<tr>
+	<td> 39c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>7.46</td>
+	<td>29.80</td>
+</tr>
+<tr>
+	<td> 39d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>0.47</td>
+	<td>1.87</td>
+</tr>
+<tr>
+	<td> 40a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>20.87</td>
+	<td>20.87</td>
+</tr>
+<tr>
+	<td> 40b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>H</td>
+	<td>0.63</td>
+	<td>2.48</td>
+</tr>
+<tr>
+	<td> 40c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>9.08</td>
+	<td>18.14</td>
+</tr>
+<tr>
+	<td> 40d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>1.15</td>
+	<td>2.28</td>
+</tr>
+<tr>
+	<td> 41a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>20.87</td>
+	<td>10.45</td>
+</tr>
+<tr>
+	<td> 41b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>0.63</td>
+	<td>2.48</td>
+</tr>
+<tr>
+	<td> 41c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>4.52</td>
+	<td>18.14</td>
+</tr>
+<tr>
+	<td> 41d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>4.51</td>
+	<td>4.51</td>
+</tr>
+<tr>
+	<td> 42a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>9.78</td>
+	<td>4.87</td>
+</tr>
+<tr>
+	<td> 42b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>1.18</td>
+	<td>4.64</td>
+</tr>
+<tr>
+	<td> 42c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>4.27</td>
+	<td>17.13</td>
+</tr>
+<tr>
+	<td> 42d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>4.26</td>
+	<td>4.26</td>
+</tr>
+<tr>
+	<td> 43a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>4.24</td>
+	<td>2.14</td>
+</tr>
+<tr>
+	<td> 43b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>0.12</td>
+	<td>2.04</td>
+</tr>
+<tr>
+	<td> 43c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>3.78</td>
+	<td>15.15</td>
+</tr>
+<tr>
+	<td> 43d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>1.88</td>
+	<td>1.88</td>
+</tr>
+<tr>
+	<td> 44a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>17.68</td>
+	<td>35.36</td>
+</tr>
+<tr>
+	<td> 44b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>1.07</td>
+	<td>2.12</td>
+</tr>
+<tr>
+	<td> 44c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>7.85</td>
+	<td>15.68</td>
+</tr>
+<tr>
+	<td> 44d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>7.83</td>
+	<td>18.09</td>
+</tr>
+<tr>
+	<td> 45a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>16.11</td>
+	<td>8.06</td>
+</tr>
+<tr>
+	<td> 45b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>0.49</td>
+	<td>1.94</td>
+</tr>
+<tr>
+	<td> 45c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>1.80</td>
+	<td>3.62</td>
+</tr>
+<tr>
+	<td> 45d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>0.92</td>
+	<td>1.82</td>
+</tr>
+<tr>
+	<td> 46a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>0.76</td>
+	<td>1.51</td>
+</tr>
+<tr>
+	<td> 46b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>1.44</td>
+	<td>5.79</td>
+</tr>
+<tr>
+	<td> 46c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>5.51</td>
+	<td>11.01</td>
+</tr>
+<tr>
+	<td> 46d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>0.35</td>
+	<td>1.38</td>
+</tr>
+<tr>
+	<td> 47a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>0.78</td>
+	<td>1.54</td>
+</tr>
+<tr>
+	<td> 47b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>2.95</td>
+	<td>2.97</td>
+</tr>
+<tr>
+	<td> 47c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>5.63</td>
+	<td>5.63</td>
+</tr>
+<tr>
+	<td> 47d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>0.17</td>
+	<td>1.41</td>
+</tr>
+<tr>
+	<td> 48a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>2.88</td>
+	<td>11.56</td>
+</tr>
+<tr>
+	<td> 48b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>2.79</td>
+	<td>5.60</td>
+</tr>
+<tr>
+	<td> 48c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>5.34</td>
+	<td>10.67</td>
+</tr>
+<tr>
+	<td> 48d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>1.32</td>
+	<td>5.33</td>
+</tr>
+<tr>
+	<td> 49a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>2.75</td>
+	<td>11.02</td>
+</tr>
+<tr>
+	<td> 49b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>0.34</td>
+	<td>1.35</td>
+</tr>
+<tr>
+	<td> 49c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>2.55</td>
+	<td>5.11</td>
+</tr>
+<tr>
+	<td> 49d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>1.27</td>
+	<td>5.10</td>
+</tr>
+<tr>
+	<td> 50a </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>H</td>
+	<td>H</td>
+	<td>0.67</td>
+	<td>1.23</td>
+</tr>
+<tr>
+	<td> 50b </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>F</td>
+	<td>0.32</td>
+	<td>1.23</td>
+</tr>
+<tr>
+	<td> 50c </td>
+	<td>-do-</td>
+	<td>H</td>
+	<td>NO2 </td>
+	<td>2.44</td>
+	<td>1.23</td>
+</tr>
+<tr>
+	<td> 50d </td>
+	<td>-do-</td>
+	<td>OCH3 </td>
+	<td>OH</td>
+	<td>0.15</td>
+	<td>2.45</td>
+</tr>
+<tr>
+	<td>INH</td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td>0.66</td>
+	<td>>123</td>
+</tr>
+<tr>
+	<td>RIFAM PICIN</td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td>0.23</td>
+	<td>45.57</td>
+</tr>
+<tr>
+	<td>Ciprofloxacin</td>
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<td>4.71</td>
+	<td>2.35</td>
+</tr></tbody></table></table-wrap>",,"{""cell_value"": [""11.00"", ""11.00"", ""5.15"", ""5.19"", ""20.94"", ""20.94"", ""18.91"", ""9.47"", ""1.34"", ""2.64"", ""4.93"", ""39.50"", ""10.01"", ""5.02"", ""0.58"", ""2.29"", ""9.81"", ""19.60"", ""0.59"", ""2.34"", ""8.60"", ""17.17"", ""1.09"", ""4.30"", ""4.93"", ""19.75"", ""4.66"", ""9.36"", ""9.47"", ""18.91"", ""2.15"", ""8.63"", ""0.53"", ""2.08"", ""1.01"", ""7.97"", ""7.46"", ""29.80"", ""0.47"", ""1.87"", ""20.87"", ""20.87"", ""0.63"", ""2.48"", ""9.08"", ""18.14"", ""1.15"", ""2.28"", ""20.87"", ""10.45"", ""0.63"", ""2.48"", ""4.52"", ""18.14"", ""4.51"", ""4.51"", ""9.78"", ""4.87"", ""1.18"", ""4.64"", ""4.27"", ""17.13"", ""4.26"", ""4.26"", ""4.24"", ""2.14"", ""0.12"", ""2.04"", ""3.78"", ""15.15"", ""1.88"", ""1.88"", ""17.68"", ""35.36"", ""1.07"", ""2.12"", ""7.85"", ""15.68"", ""7.83"", ""18.09"", ""16.11"", ""8.06"", ""0.49"", ""1.94"", ""1.80"", ""3.62"", ""0.92"", ""1.82"", ""0.76"", ""1.51"", ""1.44"", ""5.79"", ""5.51"", ""11.01"", ""0.35"", ""1.38"", ""0.78"", ""1.54"", ""2.95"", ""2.97"", ""5.63"", ""5.63"", ""0.17"", ""1.41"", ""2.88"", ""11.56"", ""2.79"", ""5.60"", ""5.34"", ""10.67"", ""1.32"", ""5.33"", ""2.75"", ""11.02"", ""0.34"", ""1.35"", ""2.55"", ""5.11"", ""1.27"", ""5.10"", ""0.67"", ""1.23"", ""0.32"", ""1.23"", ""2.44"", ""1.23"", ""0.15"", ""2.45"", ""0.66"", ""123"", ""0.23"", ""45.57"", ""4.71"", ""2.35""], ""cell_raw"": [""11.00"", ""11.00"", ""5.15"", ""5.19"", ""20.94"", ""20.94"", ""18.91"", ""9.47"", ""1.34"", ""2.64"", ""4.93"", ""39.50"", ""10.01"", ""5.02"", ""0.58"", ""2.29"", ""9.81"", ""19.60"", ""0.59"", ""2.34"", ""8.60"", ""17.17"", ""1.09"", ""4.30"", ""4.93"", ""19.75"", ""4.66"", ""9.36"", ""9.47"", ""18.91"", ""2.15"", ""8.63"", ""0.53"", ""2.08"", ""1.01"", ""7.97"", ""7.46"", ""29.80"", ""0.47"", ""1.87"", ""20.87"", ""20.87"", ""0.63"", ""2.48"", ""9.08"", ""18.14"", ""1.15"", ""2.28"", ""20.87"", ""10.45"", ""0.63"", ""2.48"", ""4.52"", ""18.14"", ""4.51"", ""4.51"", ""9.78"", ""4.87"", ""1.18"", ""4.64"", ""4.27"", ""17.13"", ""4.26"", ""4.26"", ""4.24"", ""2.14"", ""0.12"", ""2.04"", ""3.78"", ""15.15"", ""1.88"", ""1.88"", ""17.68"", ""35.36"", ""1.07"", ""2.12"", ""7.85"", ""15.68"", ""7.83"", ""18.09"", ""16.11"", ""8.06"", ""0.49"", ""1.94"", ""1.80"", ""3.62"", ""0.92"", ""1.82"", ""0.76"", ""1.51"", ""1.44"", ""5.79"", ""5.51"", ""11.01"", ""0.35"", ""1.38"", ""0.78"", ""1.54"", ""2.95"", ""2.97"", ""5.63"", ""5.63"", ""0.17"", ""1.41"", ""2.88"", ""11.56"", ""2.79"", ""5.60"", ""5.34"", ""10.67"", ""1.32"", ""5.33"", ""2.75"", ""11.02"", ""0.34"", ""1.35"", ""2.55"", ""5.11"", ""1.27"", ""5.10"", ""0.67"", ""1.23"", ""0.32"", ""1.23"", ""2.44"", ""1.23"", ""0.15"", ""2.45"", ""0.66"", ""123"", ""0.23"", ""45.57"", ""4.71"", ""2.35""], ""cell_index"": [""CA(1,4)"", ""CA(1,5)"", ""CA(2,4)"", ""CA(2,5)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(4,4)"", ""CA(4,5)"", ""CA(5,4)"", ""CA(5,5)"", ""CA(6,4)"", ""CA(6,5)"", ""CA(7,4)"", ""CA(7,5)"", ""CA(8,4)"", ""CA(8,5)"", ""CA(9,4)"", ""CA(9,5)"", ""CA(10,4)"", ""CA(10,5)"", ""CA(11,4)"", ""CA(11,5)"", ""CA(12,4)"", ""CA(12,5)"", ""CA(13,4)"", ""CA(13,5)"", ""CA(14,4)"", ""CA(14,5)"", ""CA(15,4)"", ""CA(15,5)"", ""CA(16,4)"", ""CA(16,5)"", ""CA(17,4)"", ""CA(17,5)"", ""CA(18,4)"", ""CA(18,5)"", ""CA(19,4)"", ""CA(19,5)"", ""CA(20,4)"", ""CA(20,5)"", ""CA(21,4)"", ""CA(21,5)"", ""CA(22,4)"", ""CA(22,5)"", ""CA(23,4)"", ""CA(23,5)"", ""CA(24,4)"", ""CA(24,5)"", ""CA(25,4)"", ""CA(25,5)"", ""CA(26,4)"", ""CA(26,5)"", ""CA(27,4)"", ""CA(27,5)"", ""CA(28,4)"", ""CA(28,5)"", ""CA(29,4)"", ""CA(29,5)"", ""CA(30,4)"", ""CA(30,5)"", ""CA(31,4)"", ""CA(31,5)"", ""CA(32,4)"", ""CA(32,5)"", ""CA(33,4)"", ""CA(33,5)"", ""CA(34,4)"", ""CA(34,5)"", ""CA(35,4)"", ""CA(35,5)"", ""CA(36,4)"", ""CA(36,5)"", ""CA(37,4)"", ""CA(37,5)"", ""CA(38,4)"", ""CA(38,5)"", ""CA(39,4)"", ""CA(39,5)"", ""CA(40,4)"", ""CA(40,5)"", ""CA(41,4)"", ""CA(41,5)"", ""CA(42,4)"", ""CA(42,5)"", ""CA(43,4)"", ""CA(43,5)"", ""CA(44,4)"", ""CA(44,5)"", ""CA(45,4)"", ""CA(45,5)"", ""CA(46,4)"", ""CA(46,5)"", ""CA(47,4)"", ""CA(47,5)"", ""CA(48,4)"", ""CA(48,5)"", ""CA(49,4)"", ""CA(49,5)"", ""CA(50,4)"", ""CA(50,5)"", ""CA(51,4)"", ""CA(51,5)"", ""CA(52,4)"", ""CA(52,5)"", ""CA(53,4)"", ""CA(53,5)"", ""CA(54,4)"", ""CA(54,5)"", ""CA(55,4)"", ""CA(55,5)"", ""CA(56,4)"", ""CA(56,5)"", ""CA(57,4)"", ""CA(57,5)"", ""CA(58,4)"", ""CA(58,5)"", ""CA(59,4)"", ""CA(59,5)"", ""CA(60,4)"", ""CA(60,5)"", ""CA(61,4)"", ""CA(61,5)"", ""CA(62,4)"", ""CA(62,5)"", ""CA(63,4)"", ""CA(63,5)"", ""CA(64,4)"", ""CA(64,5)"", ""CA(65,4)"", ""CA(65,5)"", ""CA(66,4)"", ""CA(66,5)"", ""CA(67,4)"", ""CA(67,5)""], ""cell_row_idx"": [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20, 21, 21, 22, 22, 23, 23, 24, 24, 25, 25, 26, 26, 27, 27, 28, 28, 29, 29, 30, 30, 31, 31, 32, 32, 33, 33, 34, 34, 35, 35, 36, 36, 37, 37, 38, 38, 39, 39, 40, 40, 41, 41, 42, 42, 43, 43, 44, 44, 45, 45, 46, 46, 47, 47, 48, 48, 49, 49, 50, 50, 51, 51, 52, 52, 53, 53, 54, 54, 55, 55, 56, 56, 57, 57, 58, 58, 59, 59, 60, 60, 61, 61, 62, 62, 63, 63, 64, 64, 65, 65, 66, 66, 67, 67], ""cell_col_idx"": [4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5]}","{""cell_index"": [""CA(1,4)"", ""CA(1,5)"", ""CA(2,4)"", ""CA(2,5)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(4,4)"", ""CA(4,5)"", ""CA(5,4)"", ""CA(5,5)"", ""CA(6,4)"", ""CA(6,5)"", ""CA(7,4)"", ""CA(7,5)"", ""CA(8,4)"", ""CA(8,5)"", ""CA(9,4)"", ""CA(9,5)"", ""CA(10,4)"", ""CA(10,5)"", ""CA(11,4)"", ""CA(11,5)"", ""CA(12,4)"", ""CA(12,5)"", ""CA(13,4)"", ""CA(13,5)"", ""CA(14,4)"", ""CA(14,5)"", ""CA(15,4)"", ""CA(15,5)"", ""CA(16,4)"", ""CA(16,5)"", ""CA(17,4)"", ""CA(17,5)"", ""CA(18,4)"", ""CA(18,5)"", ""CA(19,4)"", ""CA(19,5)"", ""CA(20,4)"", ""CA(20,5)"", ""CA(21,4)"", ""CA(21,5)"", ""CA(22,4)"", ""CA(22,5)"", ""CA(23,4)"", ""CA(23,5)"", ""CA(24,4)"", ""CA(24,5)"", ""CA(25,4)"", ""CA(25,5)"", ""CA(26,4)"", ""CA(26,5)"", ""CA(27,4)"", ""CA(27,5)"", ""CA(28,4)"", ""CA(28,5)"", ""CA(29,4)"", ""CA(29,5)"", ""CA(30,4)"", ""CA(30,5)"", ""CA(31,4)"", ""CA(31,5)"", ""CA(32,4)"", ""CA(32,5)"", ""CA(33,4)"", ""CA(33,5)"", ""CA(34,4)"", ""CA(34,5)"", ""CA(35,4)"", ""CA(35,5)"", ""CA(36,4)"", ""CA(36,5)"", ""CA(37,4)"", ""CA(37,5)"", ""CA(38,4)"", ""CA(38,5)"", ""CA(39,4)"", ""CA(39,5)"", ""CA(40,4)"", ""CA(40,5)"", ""CA(41,4)"", ""CA(41,5)"", ""CA(42,4)"", ""CA(42,5)"", ""CA(43,4)"", ""CA(43,5)"", ""CA(44,4)"", ""CA(44,5)"", ""CA(45,4)"", ""CA(45,5)"", ""CA(46,4)"", ""CA(46,5)"", ""CA(47,4)"", ""CA(47,5)"", ""CA(48,4)"", ""CA(48,5)"", ""CA(49,4)"", ""CA(49,5)"", ""CA(50,4)"", ""CA(50,5)"", ""CA(51,4)"", ""CA(51,5)"", ""CA(52,4)"", ""CA(52,5)"", ""CA(53,4)"", ""CA(53,5)"", ""CA(54,4)"", ""CA(54,5)"", ""CA(55,4)"", ""CA(55,5)"", ""CA(56,4)"", ""CA(56,5)"", ""CA(57,4)"", ""CA(57,5)"", ""CA(58,4)"", ""CA(58,5)"", ""CA(59,4)"", ""CA(59,5)"", ""CA(60,4)"", ""CA(60,5)"", ""CA(61,4)"", ""CA(61,5)"", ""CA(62,4)"", ""CA(62,5)"", ""CA(63,4)"", ""CA(63,5)"", ""CA(64,4)"", ""CA(64,5)"", ""CA(65,4)"", ""CA(65,5)"", ""CA(66,4)"", ""CA(66,5)"", ""CA(67,4)"", ""CA(67,5)""], ""cell_record"": [""{\""value\"": \""11.00\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""35a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""11.00\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""35a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.15\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""35b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.19\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""35b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""20.94\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""35c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""20.94\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""35c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""18.91\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""35d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""9.47\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""35d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.34\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""36a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.64\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""36a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.93\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""36b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""39.50\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""36b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""10.01\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""36c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.02\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""36c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.58\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""36d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.29\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""36d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""9.81\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""37a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""19.60\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""37a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.59\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""37b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.34\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""37b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""8.60\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""37c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""17.17\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""37c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.09\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""37d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.30\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""37d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.93\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""38a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""19.75\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""38a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.66\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""38b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""9.36\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""38b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""9.47\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""38c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""18.91\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""38c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.15\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""38d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""8.63\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""38d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.53\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""39a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.08\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""39a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.01\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""39b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""7.97\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""39b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""7.46\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""39c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""29.80\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""39c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.47\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""39d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.87\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""39d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""20.87\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""40a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""20.87\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""40a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.63\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""40b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.48\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""40b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""9.08\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""40c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""18.14\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""40c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.15\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""40d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.28\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""40d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""20.87\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""41a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""10.45\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""41a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.63\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""41b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.48\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""41b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.52\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""41c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""18.14\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""41c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.51\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""41d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.51\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""41d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""9.78\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""42a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.87\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""42a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.18\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""42b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.64\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""42b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.27\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""42c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""17.13\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""42c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.26\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""42d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.26\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""42d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.24\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""43a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.14\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""43a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.12\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""43b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.04\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""43b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""3.78\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""43c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""15.15\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""43c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.88\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""43d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.88\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""43d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""17.68\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""44a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""35.36\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""44a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.07\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""44b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.12\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""44b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""7.85\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""44c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""15.68\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""44c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""7.83\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""44d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""18.09\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""44d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""16.11\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""45a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""8.06\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""45a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.49\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""45b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.94\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""45b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.80\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""45c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""3.62\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""45c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.92\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""45d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.82\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""45d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.76\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""46a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.51\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""46a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.44\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""46b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.79\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""46b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.51\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""46c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""11.01\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""46c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.35\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""46d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.38\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""46d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.78\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""47a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.54\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""47a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.95\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""47b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.97\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""47b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.63\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""47c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.63\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""47c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.17\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""47d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.41\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""47d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.88\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""48a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""11.56\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""48a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.79\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""48b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.60\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""48b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.34\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""48c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""10.67\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""48c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.32\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""48d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.33\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""48d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.75\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""49a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""11.02\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""49a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.34\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""49b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.35\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""49b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.55\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""49c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.11\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""49c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.27\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""49d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""5.10\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""49d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.67\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""50a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.23\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""50a\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.32\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""50b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.23\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""50b\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.44\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""50c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""1.23\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""50c\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.15\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""50d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.45\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""50d\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.66\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""INH\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""123\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""INH\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""0.23\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""RIFAM PICIN\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""45.57\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""RIFAM PICIN\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""4.71\"", \""type\"": \""MIC\"", \""target\"": \""MTB\"", \""treatment\"": \""Ciprofloxacin\"", \""unit\"": \""xx\""}"", ""{\""value\"": \""2.35\"", \""type\"": \""MIC\"", \""target\"": \""MC2\"", \""treatment\"": \""Ciprofloxacin\"", \""unit\"": \""xx\""}""]}"
+PMC4295614,tab6,"<table-wrap><label>Table 6</label><caption><p>SAR and MIC of tetrahydropyrazolopyrimidine carboxamides.</p></caption><table><thead>
+<tr>
+	<th>Compounds </th>
+	<th>R1 </th>
+	<th>R2 </th>
+	<th>R3 </th>
+	<th>MIC (µM)</th>
+	<th>log⁡P a </th>
+	<th>Solubilityb (mM, pH 6.8)</th>
+	<th>PPB (%)c(h/m)</th>
+</tr></thead><tbody>
+<tr>
+	<td> 65 </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>CF3 </td>
+	<td>0.15 ± 0.04</td>
+	<td>6.3</td>
+	<td><4</td>
+	<td>>99.0/99.0</td>
+</tr>
+<tr>
+	<td colspan=""8"" rowspan=""1""> <hr/> </td>
+</tr>
+<tr>
+	<td> 66 </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>CF3 </td>
+	<td>0.44 ± 0.1</td>
+	<td>4.4</td>
+	<td>9</td>
+	<td>96.1/95.8</td>
+</tr>
+<tr>
+	<td colspan=""8"" rowspan=""1""> <hr/> </td>
+</tr>
+<tr>
+	<td> 67 </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>CF3 </td>
+	<td>0.13 ± 0.06</td>
+	<td>5.5</td>
+	<td><4</td>
+	<td>>99.0/99.0</td>
+</tr>
+<tr>
+	<td colspan=""8"" rowspan=""1""> <hr/> </td>
+</tr>
+<tr>
+	<td> 68 </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>CF3 </td>
+	<td>0.87 ± 0.18</td>
+	<td>4.8</td>
+	<td><4</td>
+	<td>98.2/98.4</td>
+</tr>
+<tr>
+	<td colspan=""8"" rowspan=""1""> <hr/> </td>
+</tr>
+<tr>
+	<td> 69 </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>CF3 </td>
+	<td>0.44 ± 0.04</td>
+	<td>4.1</td>
+	<td>6</td>
+	<td>98.1/98.5</td>
+</tr>
+<tr>
+	<td colspan=""8"" rowspan=""1""> <hr/> </td>
+</tr>
+<tr>
+	<td> 70 </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>CF3 </td>
+	<td>0.73 ± 0.1</td>
+	<td>5.1</td>
+	<td>9</td>
+	<td>97.3/97.6</td>
+</tr>
+<tr>
+	<td colspan=""8"" rowspan=""1""> <hr/> </td>
+</tr>
+<tr>
+	<td> 71 </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>CF3 </td>
+	<td>0.47 ± 0.15</td>
+	<td>5.1</td>
+	<td><4</td>
+	<td>>99.0/99.0</td>
+</tr>
+<tr>
+	<td colspan=""8"" rowspan=""1""> <hr/> </td>
+</tr>
+<tr>
+	<td> 72 </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>CF3 </td>
+	<td>0.83 ± 0.24</td>
+	<td>4.9</td>
+	<td><4</td>
+	<td>>99.0/99.0</td>
+</tr>
+<tr>
+	<td colspan=""8"" rowspan=""1""> <hr/> </td>
+</tr>
+<tr>
+	<td> 73 </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>CHF2 </td>
+	<td>0.60 ± 0.2</td>
+	<td>4.6</td>
+	<td>212</td>
+	<td>95.7/94.8</td>
+</tr>
+<tr>
+	<td colspan=""8"" rowspan=""1""> <hr/> </td>
+</tr>
+<tr>
+	<td> 74 </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>CF3 </td>
+	<td>52.2 ± 24.1</td>
+	<td>3.2</td>
+	<td>347</td>
+	<td>81.9/87.2</td>
+</tr>
+<tr>
+	<td colspan=""8"" rowspan=""1""> <hr/> </td>
+</tr>
+<tr>
+	<td> 75 </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td> <inline-graphic></inline-graphic> </td>
+	<td>CF3 </td>
+	<td>3.7 ± 0.6</td>
+	<td>3.2</td>
+	<td>20</td>
+	<td>87.8/89.2</td>
+</tr></tbody></table><table-wrap-foot><fn><p> alog⁡P: high throughput measured octanol/water partition coefficient, bsolubility: high throughput equilibrium solubility, cPPB: plasma protein binding measured by rapid equilibrium dialysis (RED) device.</p></fn></table-wrap-foot></table-wrap>",,"{""cell_value"": [""65"", ""0.15"", ""6.3"", ""4"", ""66"", ""0.44"", ""4.4"", ""9"", ""67"", ""0.13"", ""5.5"", ""4"", ""68"", ""0.87"", ""4.8"", ""4"", ""69"", ""0.44"", ""4.1"", ""6"", ""70"", ""0.73"", ""5.1"", ""9"", ""71"", ""0.47"", ""5.1"", ""4"", ""72"", ""0.83"", ""4.9"", ""4"", ""73"", ""0.60"", ""4.6"", ""212"", ""74"", ""52.2"", ""3.2"", ""347"", ""75"", ""3.7"", ""3.2"", ""20""], ""cell_raw"": [""65"", ""0.15 ± 0.04"", ""6.3"", ""4"", ""66"", ""0.44 ± 0.1"", ""4.4"", ""9"", ""67"", ""0.13 ± 0.06"", ""5.5"", ""4"", ""68"", ""0.87 ± 0.18"", ""4.8"", ""4"", ""69"", ""0.44 ± 0.04"", ""4.1"", ""6"", ""70"", ""0.73 ± 0.1"", ""5.1"", ""9"", ""71"", ""0.47 ± 0.15"", ""5.1"", ""4"", ""72"", ""0.83 ± 0.24"", ""4.9"", ""4"", ""73"", ""0.60 ± 0.2"", ""4.6"", ""212"", ""74"", ""52.2 ± 24.1"", ""3.2"", ""347"", ""75"", ""3.7 ± 0.6"", ""3.2"", ""20""], ""cell_index"": [""CA(1,0)"", ""CA(1,4)"", ""CA(1,5)"", ""CA(1,6)"", ""CA(3,0)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(3,6)"", ""CA(5,0)"", ""CA(5,4)"", ""CA(5,5)"", ""CA(5,6)"", ""CA(7,0)"", ""CA(7,4)"", ""CA(7,5)"", ""CA(7,6)"", ""CA(9,0)"", ""CA(9,4)"", ""CA(9,5)"", ""CA(9,6)"", ""CA(11,0)"", ""CA(11,4)"", ""CA(11,5)"", ""CA(11,6)"", ""CA(13,0)"", ""CA(13,4)"", ""CA(13,5)"", ""CA(13,6)"", ""CA(15,0)"", ""CA(15,4)"", ""CA(15,5)"", ""CA(15,6)"", ""CA(17,0)"", ""CA(17,4)"", ""CA(17,5)"", ""CA(17,6)"", ""CA(19,0)"", ""CA(19,4)"", ""CA(19,5)"", ""CA(19,6)"", ""CA(21,0)"", ""CA(21,4)"", ""CA(21,5)"", ""CA(21,6)""], ""cell_row_idx"": [1, 1, 1, 1, 3, 3, 3, 3, 5, 5, 5, 5, 7, 7, 7, 7, 9, 9, 9, 9, 11, 11, 11, 11, 13, 13, 13, 13, 15, 15, 15, 15, 17, 17, 17, 17, 19, 19, 19, 19, 21, 21, 21, 21], ""cell_col_idx"": [0, 4, 5, 6, 0, 4, 5, 6, 0, 4, 5, 6, 0, 4, 5, 6, 0, 4, 5, 6, 0, 4, 5, 6, 0, 4, 5, 6, 0, 4, 5, 6, 0, 4, 5, 6, 0, 4, 5, 6, 0, 4, 5, 6]}","{""cell_index"": [""CA(1,0)"", ""CA(1,4)"", ""CA(1,5)"", ""CA(1,6)"", ""CA(3,0)"", ""CA(3,4)"", ""CA(3,5)"", ""CA(3,6)"", ""CA(5,0)"", ""CA(5,4)"", ""CA(5,5)"", ""CA(5,6)"", ""CA(7,0)"", ""CA(7,4)"", ""CA(7,5)"", ""CA(7,6)"", ""CA(9,0)"", ""CA(9,4)"", ""CA(9,5)"", ""CA(9,6)"", ""CA(11,0)"", ""CA(11,4)"", ""CA(11,5)"", ""CA(11,6)"", ""CA(13,0)"", ""CA(13,4)"", ""CA(13,5)"", ""CA(13,6)"", ""CA(15,0)"", ""CA(15,4)"", ""CA(15,5)"", ""CA(15,6)"", ""CA(17,0)"", ""CA(17,4)"", ""CA(17,5)"", ""CA(17,6)"", ""CA(19,0)"", ""CA(19,4)"", ""CA(19,5)"", ""CA(19,6)"", ""CA(21,0)"", ""CA(21,4)"", ""CA(21,5)"", ""CA(21,6)""], ""cell_record"": [""{\""value\"": \""65\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.15\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""65\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""6.3\"", \""type\"": \""Other\""}"", ""{\""value\"": \""4\"", \""type\"": \""Other\""}"", ""{\""value\"": \""66\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.44\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""66\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""4.4\"", \""type\"": \""Other\""}"", ""{\""value\"": \""9\"", \""type\"": \""Other\""}"", ""{\""value\"": \""67\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.13\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""67\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""5.5\"", \""type\"": \""Other\""}"", ""{\""value\"": \""4\"", \""type\"": \""Other\""}"", ""{\""value\"": \""68\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.87\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""68\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""4.8\"", \""type\"": \""Other\""}"", ""{\""value\"": \""4\"", \""type\"": \""Other\""}"", ""{\""value\"": \""69\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.44\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""69\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""4.1\"", \""type\"": \""Other\""}"", ""{\""value\"": \""6\"", \""type\"": \""Other\""}"", ""{\""value\"": \""70\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.73\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""70\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""5.1\"", \""type\"": \""Other\""}"", ""{\""value\"": \""9\"", \""type\"": \""Other\""}"", ""{\""value\"": \""71\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.47\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""71\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""5.1\"", \""type\"": \""Other\""}"", ""{\""value\"": \""4\"", \""type\"": \""Other\""}"", ""{\""value\"": \""72\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.83\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""72\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""4.9\"", \""type\"": \""Other\""}"", ""{\""value\"": \""4\"", \""type\"": \""Other\""}"", ""{\""value\"": \""73\"", \""type\"": \""Other\""}"", ""{\""value\"": \""0.60\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""73\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""4.6\"", \""type\"": \""Other\""}"", ""{\""value\"": \""212\"", \""type\"": \""Other\""}"", ""{\""value\"": \""74\"", \""type\"": \""Other\""}"", ""{\""value\"": \""52.2\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""74\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""3.2\"", \""type\"": \""Other\""}"", ""{\""value\"": \""347\"", \""type\"": \""Other\""}"", ""{\""value\"": \""75\"", \""type\"": \""Other\""}"", ""{\""value\"": \""3.7\"", \""type\"": \""MIC\"", \""target\"": \""xx\"", \""treatment\"": \""75\"", \""unit\"": \""µM\""}"", ""{\""value\"": \""3.2\"", \""type\"": \""Other\""}"", ""{\""value\"": \""20\"", \""type\"": \""Other\""}""]}"
+PMC4358631,tbl4,"<table-wrap><label>Table 4</label><caption><title>Inhibitory Potencies (IC50 ± SEM (nM)) of 11 Selected Compounds Identified as Active Hits from Initial Screening of the Second Generation Library for α3β4, α3β2, and α4β2 nAChRs Using the Fluorescent Membrane Potential Assay (n = 4)</title></caption><table><colgroup><col/><col/><col/><col/><col/><col/><col/><col/></colgroup><thead>
+<tr>
+	<th>TP-2212</th>
+	<th>sequence</th>
+	<th>α3β4</th>
+	<th>Hill slope</th>
+	<th>α3β2</th>
+	<th>Hill Slope</th>
+	<th>α4β2</th>
+	<th>Hill slope</th>
+</tr></thead><tbody>
+<tr>
+	<td>BuIA</td>
+	<td>Gly-Cys-Cys-Ser-Thr-Pro-Pro-Cys-Ala-Val-Leu-Tyr-Cys</td>
+	<td>265 ± 17</td>
+	<td>–1.06</td>
+	<td>26 ± 1.0</td>
+	<td>–1.20</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr>
+<tr>
+	<td>35</td>
+	<td>Gly-Cys-Cys-Ser-His-Pro-Abu-Cys-Phe-Trp-Nle-Tyr-Cys</td>
+	<td>1727 ± 151</td>
+	<td>–1.08</td>
+	<td>>10000</td>
+	<td>ND</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr>
+<tr>
+	<td>41</td>
+	<td>Gly-Cys-Cys-Ser-His-Pro-Pro-Cys-Phe-Abu-Nle-Tyr-Cys</td>
+	<td>469 ± 19</td>
+	<td>–0.94</td>
+	<td>>10000</td>
+	<td>ND</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr>
+<tr>
+	<td>42</td>
+	<td>Gly-Cys-Cys-Ser-Nle-Pro-Pro-Cys-Phe-Abu-Nle-Tyr-Cys</td>
+	<td>397 ± 24</td>
+	<td>–0.96</td>
+	<td>>10000</td>
+	<td>ND</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr>
+<tr>
+	<td>43</td>
+	<td>Gly-Cys-Cys-Ser-His-Pro-Abu-Cys-Phe-Abu-Nle-Tyr-Cys</td>
+	<td>307 ± 37</td>
+	<td>–0.94</td>
+	<td>>10000</td>
+	<td>ND</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr>
+<tr>
+	<td>44</td>
+	<td>Gly-Cys-Cys-Ser-Nle-Pro-Abu-Cys-Phe-Abu-Nle-Tyr-Cys</td>
+	<td>310 ± 29</td>
+	<td>–1.00</td>
+	<td>>10000</td>
+	<td>ND</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr>
+<tr>
+	<td>47</td>
+	<td>Gly-Cys-Cys-Ser-His-Pro-Abu-Cys-Ile-Abu-Nle-Tyr-Cys</td>
+	<td>463 ± 9.0</td>
+	<td>–0.96</td>
+	<td>>10000</td>
+	<td>ND</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr>
+<tr>
+	<td>57</td>
+	<td>Gly-Cys-Cys-Ser-His-Pro-Pro-Cys-Phe-Abu-Nva-Tyr-Cys</td>
+	<td>298 ± 22</td>
+	<td>–0.97</td>
+	<td>>10000</td>
+	<td>ND</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr>
+<tr>
+	<td>58</td>
+	<td>Gly-Cys-Cys-Ser-Nle-Pro-Pro-Cys-Phe-Abu-Nva-Tyr-Cys</td>
+	<td>345 ± 31</td>
+	<td>–1.01</td>
+	<td>>10000</td>
+	<td>ND</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr>
+<tr>
+	<td>59</td>
+	<td>Gly-Cys-Cys-Ser-His-Pro-Abu-Cys-Phe-Abu-Nva-Tyr-Cys</td>
+	<td>183 ± 36</td>
+	<td>–1.05</td>
+	<td>>10000</td>
+	<td>ND</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr>
+<tr>
+	<td>60</td>
+	<td>Gly-Cys-Cys-Ser-Nle-Pro-Abu-Cys-Phe-Abu-Nva-Tyr-Cys</td>
+	<td>320 ± 14</td>
+	<td>–0.99</td>
+	<td>>10000</td>
+	<td>ND</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr>
+<tr>
+	<td>63</td>
+	<td>Gly-Cys-Cys-Ser-His-Pro-Abu-Cys-Ile-Abu-Nva-Tyr-Cys</td>
+	<td>1934 ± 77</td>
+	<td>–0.93</td>
+	<td>>10000</td>
+	<td>ND</td>
+	<td>>10000</td>
+	<td>ND</td>
+</tr></tbody></table></table-wrap>",,"{""cell_value"": [""265"", ""26"", ""10000"", ""35"", ""1727"", ""10000"", ""10000"", ""41"", ""469"", ""10000"", ""10000"", ""42"", ""397"", ""10000"", ""10000"", ""43"", ""307"", ""10000"", ""10000"", ""44"", ""310"", ""10000"", ""10000"", ""47"", ""463"", ""10000"", ""10000"", ""57"", ""298"", ""10000"", ""10000"", ""58"", ""345"", ""10000"", ""10000"", ""59"", ""183"", ""10000"", ""10000"", ""60"", ""320"", ""10000"", ""10000"", ""63"", ""1934"", ""10000"", ""10000""], ""cell_raw"": [""265 ± 17"", ""26 ± 1.0"", ""10000"", ""35"", ""1727 ± 151"", ""10000"", ""10000"", ""41"", ""469 ± 19"", ""10000"", ""10000"", ""42"", ""397 ± 24"", ""10000"", ""10000"", ""43"", ""307 ± 37"", ""10000"", ""10000"", ""44"", ""310 ± 29"", ""10000"", ""10000"", ""47"", ""463 ± 9.0"", ""10000"", ""10000"", ""57"", ""298 ± 22"", ""10000"", ""10000"", ""58"", ""345 ± 31"", ""10000"", ""10000"", ""59"", ""183 ± 36"", ""10000"", ""10000"", ""60"", ""320 ± 14"", ""10000"", ""10000"", ""63"", ""1934 ± 77"", ""10000"", ""10000""], ""cell_index"": [""CA(1,2)"", ""CA(1,4)"", ""CA(1,6)"", ""CA(2,0)"", ""CA(2,2)"", ""CA(2,4)"", ""CA(2,6)"", ""CA(3,0)"", ""CA(3,2)"", ""CA(3,4)"", ""CA(3,6)"", ""CA(4,0)"", ""CA(4,2)"", ""CA(4,4)"", ""CA(4,6)"", ""CA(5,0)"", ""CA(5,2)"", ""CA(5,4)"", ""CA(5,6)"", ""CA(6,0)"", ""CA(6,2)"", ""CA(6,4)"", ""CA(6,6)"", ""CA(7,0)"", ""CA(7,2)"", ""CA(7,4)"", ""CA(7,6)"", ""CA(8,0)"", ""CA(8,2)"", ""CA(8,4)"", ""CA(8,6)"", ""CA(9,0)"", ""CA(9,2)"", ""CA(9,4)"", ""CA(9,6)"", ""CA(10,0)"", ""CA(10,2)"", ""CA(10,4)"", ""CA(10,6)"", ""CA(11,0)"", ""CA(11,2)"", ""CA(11,4)"", ""CA(11,6)"", ""CA(12,0)"", ""CA(12,2)"", ""CA(12,4)"", ""CA(12,6)""], ""cell_row_idx"": [1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 12, 12, 12, 12], ""cell_col_idx"": [2, 4, 6, 0, 2, 4, 6, 0, 2, 4, 6, 0, 2, 4, 6, 0, 2, 4, 6, 0, 2, 4, 6, 0, 2, 4, 6, 0, 2, 4, 6, 0, 2, 4, 6, 0, 2, 4, 6, 0, 2, 4, 6, 0, 2, 4, 6]}","{""cell_index"": [""CA(1,2)"", ""CA(1,4)"", ""CA(1,6)"", ""CA(2,0)"", ""CA(2,2)"", ""CA(2,4)"", ""CA(2,6)"", ""CA(3,0)"", ""CA(3,2)"", ""CA(3,4)"", ""CA(3,6)"", ""CA(4,0)"", ""CA(4,2)"", ""CA(4,4)"", ""CA(4,6)"", ""CA(5,0)"", ""CA(5,2)"", ""CA(5,4)"", ""CA(5,6)"", ""CA(6,0)"", ""CA(6,2)"", ""CA(6,4)"", ""CA(6,6)"", ""CA(7,0)"", ""CA(7,2)"", ""CA(7,4)"", ""CA(7,6)"", ""CA(8,0)"", ""CA(8,2)"", ""CA(8,4)"", ""CA(8,6)"", ""CA(9,0)"", ""CA(9,2)"", ""CA(9,4)"", ""CA(9,6)"", ""CA(10,0)"", ""CA(10,2)"", ""CA(10,4)"", ""CA(10,6)"", ""CA(11,0)"", ""CA(11,2)"", ""CA(11,4)"", ""CA(11,6)"", ""CA(12,0)"", ""CA(12,2)"", ""CA(12,4)"", ""CA(12,6)""], ""cell_record"": [""{\""value\"": \""265\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""BuIA\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""26\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""BuIA\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""BuIA\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""35\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1727\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""35\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""35\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""35\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""41\"", \""type\"": \""Other\""}"", ""{\""value\"": \""469\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""41\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""41\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""41\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""42\"", \""type\"": \""Other\""}"", ""{\""value\"": \""397\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""42\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""42\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""42\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""43\"", \""type\"": \""Other\""}"", ""{\""value\"": \""307\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""43\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""43\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""43\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""44\"", \""type\"": \""Other\""}"", ""{\""value\"": \""310\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""44\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""44\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""44\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""47\"", \""type\"": \""Other\""}"", ""{\""value\"": \""463\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""47\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""47\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""47\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""57\"", \""type\"": \""Other\""}"", ""{\""value\"": \""298\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""57\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""57\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""57\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""58\"", \""type\"": \""Other\""}"", ""{\""value\"": \""345\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""58\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""58\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""58\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""59\"", \""type\"": \""Other\""}"", ""{\""value\"": \""183\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""59\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""59\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""59\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""60\"", \""type\"": \""Other\""}"", ""{\""value\"": \""320\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""60\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""60\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""60\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""63\"", \""type\"": \""Other\""}"", ""{\""value\"": \""1934\"", \""type\"": \""IC50\"", \""target\"": \""α3β4\"", \""treatment\"": \""63\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α3β2\"", \""treatment\"": \""63\"", \""unit\"": \""nM\""}"", ""{\""value\"": \""10000\"", \""type\"": \""IC50\"", \""target\"": \""α4β2\"", \""treatment\"": \""63\"", \""unit\"": \""nM\""}""]}"
