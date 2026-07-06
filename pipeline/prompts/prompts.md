@@ -3,17 +3,103 @@
 ## ARQA
 
 ### zero_shot
-Given the following context and question, generate a JSON response.
 
-Context paragraphs: %{context_paragraphs}%
+You are answering a financial document question using the provided context.
 
-Tables: %{tables}%
+Return ONLY a valid JSON object.
 
-Schema: %{schema}%
+The JSON object must have exactly these top-level fields:
+- "answer"
+- "claims"
 
-Question: %{question}%
+Do NOT use "citations".
+Do NOT use markdown.
+Do NOT include explanation outside the JSON.
 
-Generate a JSON response:
+Each item in "claims" must be one factual claim that supports the answer.
+
+Provide Paragraph IDs or Table IDs of where you find the answers.
+
+Each claim must have:
+- "type": "table" or "text"
+- "claim_text": a specific factual statement
+- "evidence": evidence for that specific claim only
+
+For table evidence, use:
+"evidence": {
+ "table_cells": [
+   {
+     "table_id": "...",
+     "row": "...",
+     "col": "...",
+     "cell_text": "..."
+   }
+ ]
+}
+
+For text evidence, use:
+"evidence": {
+ "text_spans": [
+   {
+     "para_id": "...",
+     "char_start": 0,
+     "char_end": 0,
+     "text": "..."
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all evidence in one citations list.
+Each claim needs its own evidence.
+Use table evidence when the answer is supported by a table.
+
+Required JSON shape:
+{
+ "answer": "...",
+ "claims": [
+   {
+     "type": "table",
+     "claim_text": "...",
+     "evidence": {
+       "table_cells": [
+         {
+           "table_id": "...",
+           "row": "...",
+           "col": "...",
+           "cell_text": "..."
+         }
+       ]
+     }
+   },
+   {
+     "type": "text",
+     "claim_text": "...",
+     "evidence": {
+       "text_spans": [
+         {
+           "para_id": "...",
+           "char_start": 0,
+           "char_end": 0,
+           "text": "..."
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Question:
+%{question}%
+
+Context paragraphs:
+%{context_paragraphs}%
+
+Tables:
+%{tables}%
+"""
+
+
 
 ### few_shot
 Given the following context and question, generate a JSON response.
