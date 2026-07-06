@@ -1,0 +1,79 @@
+{
+  "ARQA": {
+    "active_columns": [
+      "char_has_table_cells",
+      "char_has_text_spans",
+      "table_cell_total_refs_count",
+      "claim_count",
+      "max_evidence_items_per_claim",
+      "gold_json_length",
+      "total_object_count",
+      "total_array_count",
+      "max_array_length",
+      "total_key_count",
+      "unique_key_count",
+      "max_key_length",
+      "long_text_value_count",
+      "numeric_value_count",
+      "alphanumeric_value_count",
+      "max_value_length",
+      "average_value_length",
+      "value_types"
+    ],
+    "constant_columns": {
+      "nesting_depth": "6",
+      "max_array_nesting_depth": "2"
+    }
+  },
+  "DeepJSONEval": {
+    "active_columns": [
+      "array_of_objects",
+      "array_of_primitives",
+      "has_enum",
+      "property_count",
+      "gold_json_length",
+      "nesting_depth",
+      "total_object_count",
+      "max_array_nesting_depth",
+      "total_array_count",
+      "max_array_length",
+      "total_key_count",
+      "unique_key_count",
+      "max_key_length",
+      "long_text_value_count",
+      "numeric_value_count",
+      "alphanumeric_value_count",
+      "max_value_length",
+      "average_value_length",
+      "value_types"
+    ],
+    "constant_columns": {}
+  },
+  "SchemaToJSON": {
+    "active_columns": [
+      "escaping_count",
+      "numeric_string_count",
+      "cell_record_count",
+      "duplicate_record_count",
+      "table_cell_ref",
+      "long_text",
+      "gold_json_length",
+      "total_object_count",
+      "total_array_count",
+      "max_array_length",
+      "total_key_count",
+      "unique_key_count",
+      "long_text_value_count",
+      "numeric_value_count",
+      "alphanumeric_value_count",
+      "max_value_length",
+      "average_value_length"
+    ],
+    "constant_columns": {
+      "nesting_depth": "3",
+      "max_array_nesting_depth": "2",
+      "max_key_length": "11",
+      "value_types": "number, string"
+    }
+  }
+}

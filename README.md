@@ -229,6 +229,12 @@ STED complements strict schema validation but does not replace it.
 - Tokens per valid response
 - Tokens per valid and correct response
 
+## Characteristics & Prompts
+
+- Run `python scripts/analyze_characteristics.py` to build the active-column manifest (`data/active_characteristics.json`) and statistics report (`reports/characteristic_statistics_report.md`).
+- Run `python scripts/analyze_duplicate_records.py` after `organize_datasets.py` to append `duplicate_record_count` to `data/SchemaToJSON_characteristics_final.csv`.
+- Example generation prompts (zero-shot, few-shot, NL-to-Format): [`prompts/example_prompts.md`](prompts/example_prompts.md).
+
 ## Status
 
 Work in progress.
