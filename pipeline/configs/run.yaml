@@ -1,0 +1,14 @@
+dataset: "DeepJSONEval" #ARQA, DeepJSONEval, SchemaToJSON
+dataset_path: "data/DeepJSONEval.csv"
+context_path: ""
+prompts_path: "prompts/prompts.md"
+model: "Qwen/Qwen3-8B"
+method: "few_shot" #zero_shot, few_shot, NL_to_format
+num_shots: 3
+random_seed: 42
+generation_config:
+  do_sample: false
+  temperature: 0
+  max_new_tokens: 4096
+output_path: "outputs"
+max_rows: 5
