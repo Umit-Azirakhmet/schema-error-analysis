@@ -1,0 +1,13 @@
+dataset: "SchemaToJSON"
+dataset_path: "../data/SchemaToJSON.csv"
+prompts_path: "prompts/prompts.md"
+model: "meta-llama/Llama-3.1-8B-Instruct"
+method: "zero_shot"
+num_shots: 3
+random_seed: 42
+generation_config:
+  do_sample: false
+  temperature: 0
+  max_new_tokens: 4096
+output_path: "outputs"
+max_rows: 5
