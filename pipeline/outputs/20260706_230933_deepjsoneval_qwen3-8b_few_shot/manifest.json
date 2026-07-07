@@ -1,9 +1,9 @@
 {
-  "run_id": "20260706_193736_deepjsoneval_qwen3-8b_few_shot",
-  "created_at": "2026-07-06T19:51:24.723685",
+  "run_id": "20260706_230933_deepjsoneval_qwen3-8b_few_shot",
+  "created_at": "2026-07-06T23:27:13.694250",
   "dataset": "DeepJSONEval",
-  "dataset_path": "data/DeepJSONEval.csv",
-  "context_path": "",
+  "dataset_path": "../data/DeepJSONEval.csv",
+  "context_path": null,
   "prompts_path": "prompts/prompts.md",
   "model": "Qwen/Qwen3-8B",
   "method": "few_shot",
@@ -11,7 +11,7 @@
   "generation_config": {
     "do_sample": false,
     "temperature": 0,
-    "max_new_tokens": 2048
+    "max_new_tokens": 4096
   },
   "max_rows": 5,
   "total_rows": 5,

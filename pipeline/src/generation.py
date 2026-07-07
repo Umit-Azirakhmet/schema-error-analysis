@@ -5,7 +5,8 @@ import json
 import random
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
+import numpy as np
 import pandas as pd
 
 # Import dataset loaders
@@ -17,7 +18,20 @@ from src.datasets import (
 
 class GenerationRunner:
     """Main generation runner."""
-    
+
+    @staticmethod
+    def _to_json_safe(value: Any) -> Any:
+        """Convert numpy/pandas scalars to native Python types for JSON output."""
+        if value is None or isinstance(value, (str, int, float, bool)):
+            return value
+        if isinstance(value, np.generic):
+            return value.item()
+        if isinstance(value, dict):
+            return {key: GenerationRunner._to_json_safe(item) for key, item in value.items()}
+        if isinstance(value, (list, tuple)):
+            return [GenerationRunner._to_json_safe(item) for item in value]
+        return value
+
     def __init__(self, config, prompt_manager, model_wrapper, output_dir, run_id):
         self.config = config
         self.prompt_manager = prompt_manager
@@ -354,7 +368,7 @@ class GenerationRunner:
                 
                 # Save to JSONL
                 with open(responses_path, 'a', encoding='utf-8') as f:
-                    f.write(json.dumps(record) + '\n')
+                    f.write(json.dumps(self._to_json_safe(record), ensure_ascii=False) + '\n')
                 
             except Exception as e:
                 failed += 1
@@ -383,7 +397,7 @@ class GenerationRunner:
                 }
                 
                 with open(responses_path, 'a', encoding='utf-8') as f:
-                    f.write(json.dumps(record) + '\n')
+                    f.write(json.dumps(self._to_json_safe(record), ensure_ascii=False) + '\n')
         
         # Save manifest
         self._save_manifest(total, completed, failed)

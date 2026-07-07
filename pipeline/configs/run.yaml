@@ -1,9 +1,9 @@
-dataset: "DeepJSONEval" #ARQA, DeepJSONEval, SchemaToJSON
-dataset_path: "data/DeepJSONEval.csv"
+dataset: "SchemaToJSON"
+dataset_path: "../data/SchemaToJSON.csv"
 context_path: ""
 prompts_path: "prompts/prompts.md"
-model: "Qwen/Qwen3-8B"
-method: "few_shot" #zero_shot, few_shot, NL_to_format
+model: "meta-llama/Llama-3.1-8B-Instruct"
+method: "zero_shot" #zero_shot, few_shot, NL_to_format
 num_shots: 3
 random_seed: 42
 generation_config:
