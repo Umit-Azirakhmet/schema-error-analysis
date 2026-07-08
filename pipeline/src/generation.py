@@ -3,6 +3,7 @@ Generation logic for zero-shot, few-shot, and NL-to-Format methods.
 """
 import json
 import random
+import re
 from pathlib import Path
 from datetime import datetime
 from typing import Any, Dict, List, Optional
@@ -15,6 +16,55 @@ from src.datasets import (
     load_deepjson_dataset,
     load_schema_to_json_dataset
 )
+
+# Instance field order/labels for few-shot examples (matches prompting.md).
+FEW_SHOT_FIELD_LAYOUT = {
+    'ARQA': [
+        ('question', 'Question'),
+        ('context_paragraphs', 'Context paragraphs'),
+        ('tables', 'Tables'),
+    ],
+    'DeepJSONEval': [
+        ('schema', 'Schema'),
+        ('text', 'Text'),
+    ],
+    'SchemaToJSON': [
+        ('table_code', 'Table code'),
+        ('sup_text', 'Supplementary text'),
+        ('target_cells', 'Target cells'),
+    ],
+}
+
+# Matches "PART 1 - Natural Language Response:" and "PART 1:" style headers.
+_PART1_PATTERN = re.compile(
+    r'PART\s*1\s*(?:-\s*[^\n]*)?\s*:\s*(.*?)(?=PART\s*2\s*(?:-\s*[^\n]*)?\s*:|$)',
+    re.DOTALL | re.IGNORECASE,
+)
+_PART2_PATTERN = re.compile(
+    r'PART\s*2\s*(?:-\s*[^\n]*)?\s*:\s*(.*?)$',
+    re.DOTALL | re.IGNORECASE,
+)
+
+_PART_LABEL_PREFIXES = {
+    'natural language response',
+    'natural language',
+    'json response',
+    'json',
+}
+
+
+def _strip_part_label(text: str) -> str:
+    """Drop a repeated section title if it appears as the first content line."""
+    text = text.strip()
+    first_newline = text.find('\n')
+    if first_newline == -1:
+        return text
+
+    first_line = text[:first_newline].strip().lower()
+    if first_line in _PART_LABEL_PREFIXES:
+        return text[first_newline + 1:].strip()
+    return text
+
 
 class GenerationRunner:
     """Main generation runner."""
@@ -63,7 +113,7 @@ class GenerationRunner:
             num_shots: Number of examples to select
             
         Returns:
-            List of example dictionaries with 'input' and 'gold_json' fields
+            List of example dictionaries with 'prompt_fields' and 'gold_json' fields
         """
         # Set fixed random seed for reproducibility
         random.seed(self.config.get('random_seed', 42))
@@ -80,26 +130,33 @@ class GenerationRunner:
         examples = []
         for idx in selected_indices:
             row = all_rows[idx]
-            # Format the input fields
-            input_text = '\n'.join([
-                f"{k}: {v}" for k, v in row['prompt_fields'].items() 
-                if v and v != ''  # Only include non-empty fields
-            ])
-            
-            example = {
-                'input': input_text,
-                'gold_json': row['gold_json_raw']
-            }
-            examples.append(example)
+            examples.append({
+                'prompt_fields': row['prompt_fields'],
+                'gold_json': row['gold_json_raw'],
+            })
         
         return examples
     
-    def _format_few_shots(self, examples):
+    def _format_example_input(self, prompt_fields: Dict, dataset: str) -> str:
+        """Format one few-shot example input using the same labels as prompting.md."""
+        layout = FEW_SHOT_FIELD_LAYOUT.get(dataset, [])
+        sections = []
+
+        for field_key, label in layout:
+            value = prompt_fields.get(field_key, '')
+            if value is None or not str(value).strip():
+                continue
+            sections.append(f"{label}:\n{value}")
+
+        return '\n\n'.join(sections)
+    
+    def _format_few_shots(self, examples, dataset=None):
         """
         Format few-shot examples for insertion into the prompt template.
         
         Args:
             examples: List of example dictionaries
+            dataset: Dataset name for field layout (defaults to config dataset)
             
         Returns:
             Formatted string with all examples
@@ -107,11 +164,13 @@ class GenerationRunner:
         if not examples:
             return ""
         
+        dataset = dataset or self.config.get('dataset', '')
         formatted = "\n\nExamples:\n"
         for i, example in enumerate(examples, 1):
+            input_text = self._format_example_input(example['prompt_fields'], dataset)
             formatted += f"\nExample {i}:\n"
-            formatted += f"Input:\n{example['input']}\n"
-            formatted += f"Expected JSON:\n{example['gold_json']}\n"
+            formatted += f"{input_text}\n\n"
+            formatted += f"JSON Response:\n{example['gold_json']}\n"
         
         return formatted
     
@@ -146,29 +205,33 @@ class GenerationRunner:
         Returns:
             Dictionary with 'nl_part' and 'json_part'
         """
-        # Try to find PART 1 and PART 2 in the response
-        import re
-        
         nl_part = ""
         json_part = ""
-        
-        # Look for PART 1 and PART 2 markers
-        part1_match = re.search(r'PART 1[:\-]\s*(.*?)(?=PART 2[:\-]|$)', raw_response, re.DOTALL | re.IGNORECASE)
-        part2_match = re.search(r'PART 2[:\-]\s*(.*?)$', raw_response, re.DOTALL | re.IGNORECASE)
-        
+
+        if not raw_response:
+            return {'nl_part': nl_part, 'json_part': json_part}
+
+        part1_match = _PART1_PATTERN.search(raw_response)
+        part2_match = _PART2_PATTERN.search(raw_response)
+
         if part1_match:
-            nl_part = part1_match.group(1).strip()
-        
+            nl_part = _strip_part_label(part1_match.group(1))
+
         if part2_match:
-            json_part = part2_match.group(1).strip()
-        
-        # If no markers found, try to find JSON at the end
+            json_part = _strip_part_label(part2_match.group(1))
+
+        # Strip markdown fences from JSON part if present
+        if json_part.startswith('```'):
+            fenced = re.search(r'^```(?:json)?\s*(.*?)\s*```', json_part, re.DOTALL | re.IGNORECASE)
+            if fenced:
+                json_part = fenced.group(1).strip()
+
+        # Fallback: extract from a ```json code block anywhere in the response
         if not json_part and '```json' in raw_response:
-            # Extract from code block
-            json_match = re.search(r'```json\s*(.*?)\s*```', raw_response, re.DOTALL)
+            json_match = re.search(r'```json\s*(.*?)\s*```', raw_response, re.DOTALL | re.IGNORECASE)
             if json_match:
                 json_part = json_match.group(1).strip()
-        
+
         return {
             'nl_part': nl_part,
             'json_part': json_part
@@ -309,7 +372,7 @@ class GenerationRunner:
                     # Get examples from other rows
                     examples = self._get_few_shot_examples(all_rows, idx, num_shots)
                     # Format them
-                    prompt_fields['few_shots'] = self._format_few_shots(examples)
+                    prompt_fields['few_shots'] = self._format_few_shots(examples, dataset_name)
                     print(f"  Using {len(examples)} few-shot examples")
                 else:
                     # Zero-shot or NL-to-Format: no examples
