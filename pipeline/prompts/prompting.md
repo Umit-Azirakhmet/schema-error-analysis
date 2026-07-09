@@ -4,6 +4,15 @@
 
 ### zero_shot
 
+Question:
+%{question}%
+
+Context paragraphs:
+%{context_paragraphs}%
+
+Tables:
+%{tables}%
+
 You are answering a financial document question using the provided context.
 
 Return ONLY a valid JSON object.
@@ -88,6 +97,8 @@ Required JSON shape:
  ]
 }
 
+
+### few_shot
 Question:
 %{question}%
 
@@ -96,9 +107,6 @@ Context paragraphs:
 
 Tables:
 %{tables}%
-
-
-### few_shot
 
 You are answering a financial document question using the provided context.
 
@@ -188,7 +196,10 @@ Required JSON shape:
 
 %{few_shots}%
 
-Now complete the following instance.
+Now complete the earlier given instance.
+
+
+### nl_to_format
 
 Question:
 %{question}%
@@ -198,9 +209,6 @@ Context paragraphs:
 
 Tables:
 %{tables}%
-
-
-### nl_to_format
 
 Answer the financial document question using the provided context.
 
@@ -294,19 +302,16 @@ Required JSON shape:
  ]
 }
 
-Question:
-%{question}%
-
-Context paragraphs:
-%{context_paragraphs}%
-
-Tables:
-%{tables}%
-
 
 ## DeepJSONEval
 
 ### zero_shot
+
+Schema:
+%{schema}%
+
+Text:
+%{text}%
 
 Given a source text and a JSON Schema, generate a JSON instance that satisfies the schema and accurately reflects the text.
 
@@ -315,14 +320,14 @@ Preserve the data types defined in the schema.
 Do not add unsupported information.
 Return only valid JSON with no markdown or extra commentary.
 
+
+### few_shot
+
 Schema:
 %{schema}%
 
 Text:
 %{text}%
-
-
-### few_shot
 
 Given a source text and a JSON Schema, generate a JSON instance that satisfies the schema and accurately reflects the text.
 
@@ -333,16 +338,16 @@ Return only valid JSON with no markdown or extra commentary.
 
 %{few_shots}%
 
-Now complete the following instance.
+Now complete the earlier given instance.
+
+
+### nl_to_format
 
 Schema:
 %{schema}%
 
 Text:
 %{text}%
-
-
-### nl_to_format
 
 Read the source text and identify the information required by the JSON Schema.
 
@@ -359,16 +364,19 @@ Preserve the data types defined in the schema.
 Do not add information that was not stated in PART 1.
 Do not include markdown fences.
 
-Schema:
-%{schema}%
-
-Text:
-%{text}%
-
 
 ## SchemaToJSON
 
 ### zero_shot
+
+Table code:
+%{table_code}%
+
+Supplementary text:
+%{sup_text}%
+
+Target cells:
+%{target_cells}%
 
 Given a pipe-delimited table, optional supporting text, and target cell coordinates, produce a JSON object with parallel lists "cell_index" and "cell_record".
 
@@ -393,6 +401,9 @@ Required output structure:
   "cell_record": ["{\"value\": \"...\", \"type\": \"...\", ...}", ...]
 }
 
+
+### few_shot
+
 Table code:
 %{table_code}%
 
@@ -401,9 +412,6 @@ Supplementary text:
 
 Target cells:
 %{target_cells}%
-
-
-### few_shot
 
 Given a pipe-delimited table, optional supporting text, and target cell coordinates, produce a JSON object with parallel lists "cell_index" and "cell_record".
 
@@ -430,7 +438,10 @@ Required output structure:
 
 %{few_shots}%
 
-Now complete the following instance.
+Now complete the earlier given instance.
+
+
+### nl_to_format
 
 Table code:
 %{table_code}%
@@ -440,9 +451,6 @@ Supplementary text:
 
 Target cells:
 %{target_cells}%
-
-
-### nl_to_format
 
 Identify the value and record type for each target cell in the table.
 
@@ -475,12 +483,3 @@ Required output structure:
   "cell_index": [[i, j, k], ...],
   "cell_record": ["{\"value\": \"...\", \"type\": \"...\", ...}", ...]
 }
-
-Table code:
-%{table_code}%
-
-Supplementary text:
-%{sup_text}%
-
-Target cells:
-%{target_cells}%
