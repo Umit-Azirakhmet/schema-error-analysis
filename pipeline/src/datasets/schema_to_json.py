@@ -67,7 +67,12 @@ def load_schema_to_json_dataset(dataset_path: str) -> List[Dict[str, Any]]:
         }
         
         # Get gold JSON - keep exactly as in CSV
+<<<<<<< HEAD
         gold_json_raw = str(row.get('gold_json', '')) if pd.notna(row.get('gold_json')) else ''
+=======
+        gold_value = row.get("gold_json", row.get("gold_json_records", ""))
+        gold_json_raw = str(gold_value) if pd.notna(gold_value) else ""
+>>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
         
         # Create row wrapper
         row_data = {

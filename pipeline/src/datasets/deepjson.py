@@ -25,7 +25,11 @@ def load_deepjson_dataset(dataset_path: str) -> List[Dict]:
             'row_id': str(row_id),
             'row_index': idx,
             'prompt_fields': prompt_fields,
+<<<<<<< HEAD
             'gold_json_raw': row.get('gold_json', ''),
+=======
+            'gold_json_raw': row.get('gold_json', row.get('json', '')),
+>>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
             'characteristics': {},  # Will be filled later
             'original_row': row.to_dict()
         }
