@@ -212,10 +212,10 @@ Tables:
 
 Answer the financial document question using the provided context.
 
-Follow this exact two-part format.
+Return a TWO-PART response with exactly this format:
 
 PART 1 - Natural Language Response:
-Briefly explain how the evidence from the tables and text supports the answer. Then provide the complete final answer in natural language.
+Provide a brief explanation of how the evidence supports the answer, then state the complete final answer in natural language.
 
 PART 2 - JSON Response:
 Convert only the final natural-language answer from PART 1 into valid JSON that satisfies these requirements:
@@ -227,8 +227,12 @@ The JSON object must have exactly these top-level fields:
 Do NOT use "citations".
 Do NOT use markdown.
 Do NOT include explanation outside the JSON.
+Do not repeat the question, context, tables, or instructions. 
+Do not write "Answer:" before or after the JSON. 
+Stop immediately after the final closing brace.
 
-Each item in "claims" must be one factual claim that supports the answer.
+Each item in "claims" must be one factual claim that supports the answer. Use only the minimum number of claims needed to support the answer. Do not add extra related claims that are not necessary.
+
 
 Provide Paragraph IDs or Table IDs of where you find the answers.
 
@@ -265,7 +269,7 @@ Do not cite an entire paragraph generally.
 Do not put all evidence in one citations list.
 Each claim needs its own evidence.
 Use table evidence when the answer is supported by a table.
-For text_spans[].text, copy only the exact few sentences that prove the claim; do not copy the full paragraph.
+For text_spans[].text, copy only the exact few sentences that prove the claim; do not copy the full paragraph. Do not invent table IDs, paragraph IDs, rows, columns, cell values, or character spans.
 
 Required JSON shape:
 {
@@ -301,6 +305,8 @@ Required JSON shape:
    }
  ]
 }
+Now answer the current question only. Return one JSON object and one short NL answer.
+
 
 
 ## DeepJSONEval
@@ -318,7 +324,9 @@ Given a source text and a JSON Schema, generate a JSON instance that satisfies t
 Include all required fields.
 Preserve the data types defined in the schema.
 Do not add unsupported information.
-Return only valid JSON with no markdown or extra commentary.
+Output ONLY a valid, raw JSON object.
+Do NOT use Markdown code blocks (e.g., do not use ```json).
+Do NOT include any introductory text, chain-of-thought reasoning, explanations, or concluding commentary.
 
 
 ### few_shot
@@ -334,7 +342,10 @@ Given a source text and a JSON Schema, generate a JSON instance that satisfies t
 Include all required fields.
 Preserve the data types defined in the schema.
 Do not add unsupported information.
-Return only valid JSON with no markdown or extra commentary.
+Output ONLY a valid, raw JSON object.
+Do NOT use Markdown code blocks (e.g., do not use ```json).
+Do NOT include any introductory text, chain-of-thought reasoning, explanations, or concluding commentary.
+
 
 %{few_shots}%
 
@@ -363,7 +374,7 @@ Include all required fields.
 Preserve the data types defined in the schema.
 Do not add information that was not stated in PART 1.
 Do not include markdown fences.
-
+Do NOT include any introductory text, conversational filler, or chain-of-thought reasoning. Your entire response MUST begin exactly with the text "PART 1 - Natural Language Response:" Limit backend reasoning to one small, brief paragraph that is less than 5 sentences.
 
 ## SchemaToJSON
 
