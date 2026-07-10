@@ -319,14 +319,25 @@ Schema:
 Text:
 %{text}%
 
-Given a source text and a JSON Schema, generate a JSON instance that satisfies the schema and accurately reflects the text.
+Given the source text and JSON Schema, generate exactly one JSON object that satisfies the schema and accurately reflects the text.
 
 Include all required fields.
-Preserve the data types defined in the schema.
+Preserve the field names, nesting, and data types defined in the schema.
 Do not add unsupported information.
-Output ONLY a valid, raw JSON object.
-Do NOT use Markdown code blocks (e.g., do not use ```json).
-Do NOT include any introductory text, chain-of-thought reasoning, explanations, or concluding commentary.
+
+Now generate the JSON object for the Schema and Text above.
+
+Output rules:
+
+Output exactly one JSON object.
+Output raw JSON only.
+Do not repeat the JSON.
+Do not include Markdown code blocks.
+Do not include introductory text, reasoning, explanations, or commentary.
+The first character of your response must be {.
+The last character of your response must be }.
+Stop generating immediately after the final closing brace.
+
 
 
 ### few_shot
@@ -337,19 +348,26 @@ Schema:
 Text:
 %{text}%
 
-Given a source text and a JSON Schema, generate a JSON instance that satisfies the schema and accurately reflects the text.
+Given the source text and JSON Schema, generate exactly one JSON object that satisfies the schema and accurately reflects the text.
 
 Include all required fields.
-Preserve the data types defined in the schema.
+Preserve the field names, nesting, and data types defined in the schema.
 Do not add unsupported information.
-Output ONLY a valid, raw JSON object.
-Do NOT use Markdown code blocks (e.g., do not use ```json).
-Do NOT include any introductory text, chain-of-thought reasoning, explanations, or concluding commentary.
-
 
 %{few_shots}%
 
-Now complete the earlier given instance.
+Now generate the JSON object for the Schema and Text above.
+
+Output rules:
+
+Output exactly one JSON object.
+Output raw JSON only.
+Do not repeat the JSON.
+Do not include Markdown code blocks.
+Do not include introductory text, reasoning, explanations, or commentary.
+The first character of your response must be {.
+The last character of your response must be }.
+Stop generating immediately after the final closing brace.
 
 
 ### nl_to_format
@@ -362,19 +380,19 @@ Text:
 
 Read the source text and identify the information required by the JSON Schema.
 
-Follow this exact two-part format.
+Follow this exact two-part format exactly once:
 
 PART 1 - Natural Language Response:
-Briefly explain which information must be extracted from the text to satisfy the schema. Then provide the complete final answer in natural language.
+Briefly explain which information must be extracted from the text to satisfy the schema. Then provide the complete final answer in natural language. Limit reasoning to one small paragraph of fewer than 5 sentences.
 
 PART 2 - JSON Response:
-Convert only the final natural-language answer from PART 1 into valid JSON that satisfies the provided schema.
+Convert only the final natural-language answer from PART 1 into valid JSON that satisfies the provided schema. Include all required fields. Preserve the data types defined in the schema. Do not add information that was not stated in PART 1. Do not include markdown fences.
 
-Include all required fields.
-Preserve the data types defined in the schema.
-Do not add information that was not stated in PART 1.
-Do not include markdown fences.
-Do NOT include any introductory text, conversational filler, or chain-of-thought reasoning. Your entire response MUST begin exactly with the text "PART 1 - Natural Language Response:" Limit backend reasoning to one small, brief paragraph that is less than 5 sentences.
+Provide exactly one PART 1 and exactly one PART 2.
+Do not repeat PART 1 or PART 2.
+Do not restart the response after completing PART 2.
+Do not include any text before PART 1 or after the final JSON object.
+Your response must begin exactly with "PART 1 - Natural Language Response:" and end immediately after the closing brace of the JSON object.
 
 ## SchemaToJSON
 
