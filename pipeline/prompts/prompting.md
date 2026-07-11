@@ -13,24 +13,28 @@ Context paragraphs:
 Tables:
 %{tables}%
 
-You are answering a financial document question using the provided context.
+Answer the financial document question using the provided context and return one valid JSON object.
 
-Return ONLY a valid JSON object.
+Requirements:
 
 The JSON object must have exactly these top-level fields:
 - "answer"
 - "claims"
-
-Do NOT use "citations".
-Do NOT use markdown.
-Do NOT include explanation outside the JSON.
-
-Each item in "claims" must be one factual claim that supports the answer.
-
-Each claim must have:
+Do not use "citations".
+Each item in "claims" must be one factual claim that directly supports the answer.
+Use only the minimum number of claims needed.
+Each claim must contain:
 - "type": "table" or "text"
 - "claim_text": a specific factual statement
-- "evidence": evidence for that specific claim only
+- "evidence": evidence supporting only that claim
+Use table evidence when the claim is supported by a table.
+Use text evidence when the claim is supported by a paragraph.
+Do not combine evidence for different claims.
+Do not invent paragraph IDs, table IDs, rows, columns, cell values, character spans, or evidence text.
+For "text_spans[].text", copy only the exact supporting text, not the full paragraph.
+Return one raw JSON only, without Markdown, explanations, or additional text.
+Stop immediately after the final closing brace.
+
 
 For table evidence, use:
 "evidence": {
@@ -55,12 +59,6 @@ For text evidence, use:
    }
  ]
 }
-
-Do not cite an entire paragraph generally.
-Do not put all evidence in one citations list.
-Each claim needs its own evidence.
-Use table evidence when the answer is supported by a table.
-For text_spans[].text, copy only the exact few sentences that prove the claim; do not copy the full paragraph.
 
 Required JSON shape:
 {
@@ -97,6 +95,7 @@ Required JSON shape:
  ]
 }
 
+Now answer the question.
 
 ### few_shot
 Question:
@@ -108,26 +107,28 @@ Context paragraphs:
 Tables:
 %{tables}%
 
-You are answering a financial document question using the provided context.
+Answer the financial document question using the provided context and return one valid JSON object.
 
-Return ONLY a valid JSON object.
+Requirements:
 
 The JSON object must have exactly these top-level fields:
 - "answer"
 - "claims"
-
-Do NOT use "citations".
-Do NOT use markdown.
-Do NOT include explanation outside the JSON.
-
-Each item in "claims" must be one factual claim that supports the answer.
-
-Provide Paragraph IDs or Table IDs of where you find the answers.
-
-Each claim must have:
+Do not use "citations".
+Each item in "claims" must be one factual claim that directly supports the answer.
+Use only the minimum number of claims needed.
+Each claim must contain:
 - "type": "table" or "text"
 - "claim_text": a specific factual statement
-- "evidence": evidence for that specific claim only
+- "evidence": evidence supporting only that claim
+Use table evidence when the claim is supported by a table.
+Use text evidence when the claim is supported by a paragraph.
+Do not combine evidence for different claims.
+Do not invent paragraph IDs, table IDs, rows, columns, cell values, character spans, or evidence text.
+For "text_spans[].text", copy only the exact supporting text, not the full paragraph.
+Return one raw JSON only, without Markdown, explanations, or additional text.
+Stop immediately after the final closing brace.
+
 
 For table evidence, use:
 "evidence": {
@@ -152,12 +153,6 @@ For text evidence, use:
    }
  ]
 }
-
-Do not cite an entire paragraph generally.
-Do not put all evidence in one citations list.
-Each claim needs its own evidence.
-Use table evidence when the answer is supported by a table.
-For text_spans[].text, copy only the exact few sentences that prove the claim; do not copy the full paragraph.
 
 Required JSON shape:
 {
@@ -196,8 +191,7 @@ Required JSON shape:
 
 %{few_shots}%
 
-Now complete the earlier given instance.
-
+Now answer the question.
 
 ### nl_to_format
 
@@ -212,34 +206,35 @@ Tables:
 
 Answer the financial document question using the provided context.
 
-Return a TWO-PART response with exactly this format:
+
+Follow this exact two-part format:
 
 PART 1 - Natural Language Response:
-Provide a brief explanation of how the evidence supports the answer, then state the complete final answer in natural language.
+In one short paragraph of fewer than 5 sentences, identify the required information and provide the complete answer in natural language.
 
 PART 2 - JSON Response:
-Convert only the final natural-language answer from PART 1 into valid JSON that satisfies these requirements:
+Convert the answer from PART 1 into one valid JSON object using the requirements below.
 
+Requirements:
 The JSON object must have exactly these top-level fields:
 - "answer"
 - "claims"
-
-Do NOT use "citations".
-Do NOT use markdown.
-Do NOT include explanation outside the JSON.
-Do not repeat the question, context, tables, or instructions. 
-Do not write "Answer:" before or after the JSON. 
-Stop immediately after the final closing brace.
-
-Each item in "claims" must be one factual claim that supports the answer. Use only the minimum number of claims needed to support the answer. Do not add extra related claims that are not necessary.
-
-
-Provide Paragraph IDs or Table IDs of where you find the answers.
-
-Each claim must have:
+Do not use "citations".
+Each item in "claims" must be one factual claim that directly supports the answer.
+Use only the minimum number of claims needed.
+Each claim must contain:
 - "type": "table" or "text"
 - "claim_text": a specific factual statement
-- "evidence": evidence for that specific claim only
+- "evidence": evidence supporting only that claim
+Use table evidence when the claim is supported by a table.
+Use text evidence when the claim is supported by a paragraph.
+Do not combine evidence for different claims.
+Do not invent paragraph IDs, table IDs, rows, columns, cell values, character spans, or evidence text.
+For "text_spans[].text", copy only the exact supporting text, not the full paragraph.
+Do not add information that was not stated in PART 1.
+Do not use Markdown code blocks.
+Do not repeat the question, context, tables, or instructions. 
+
 
 For table evidence, use:
 "evidence": {
@@ -264,12 +259,6 @@ For text evidence, use:
    }
  ]
 }
-
-Do not cite an entire paragraph generally.
-Do not put all evidence in one citations list.
-Each claim needs its own evidence.
-Use table evidence when the answer is supported by a table.
-For text_spans[].text, copy only the exact few sentences that prove the claim; do not copy the full paragraph. Do not invent table IDs, paragraph IDs, rows, columns, cell values, or character spans.
 
 Required JSON shape:
 {
@@ -305,9 +294,12 @@ Required JSON shape:
    }
  ]
 }
-Now answer the current question only. Return one JSON object and one short NL answer.
 
+Provide exactly one PART 1 and exactly one PART 2.
+Do not include any text before PART 1 or after the final JSON object.
+Your response must begin exactly with "PART 1 - Natural Language Response:" and end immediately after the closing brace of the JSON object.
 
+Now answer the question.
 
 ## DeepJSONEval
 
@@ -319,25 +311,19 @@ Schema:
 Text:
 %{text}%
 
-Given the source text and JSON Schema, generate exactly one JSON object that satisfies the schema and accurately reflects the text.
+Generate one valid JSON object that satisfies the provided JSON Schema and accurately reflects the source text.
+
+Requirements:
 
 Include all required fields.
-Preserve the field names, nesting, and data types defined in the schema.
+Preserve the exact field names, nesting, and data types defined in the schema.
 Do not add unsupported information.
-
-Now generate the JSON object for the Schema and Text above.
-
-Output rules:
-
-Output exactly one JSON object.
-Output raw JSON only.
+Return one raw JSON only, without Markdown, explanations, or additional text.
 Do not repeat the JSON.
-Do not include Markdown code blocks.
-Do not include introductory text, reasoning, explanations, or commentary.
 The first character of your response must be {.
 The last character of your response must be }.
-Stop generating immediately after the final closing brace.
 
+Now generate the JSON object for the Schema and Text above.
 
 
 ### few_shot
@@ -348,26 +334,22 @@ Schema:
 Text:
 %{text}%
 
-Given the source text and JSON Schema, generate exactly one JSON object that satisfies the schema and accurately reflects the text.
+Generate one valid JSON object that satisfies the provided JSON Schema and accurately reflects the source text.
+
+Requirements:
 
 Include all required fields.
-Preserve the field names, nesting, and data types defined in the schema.
+Preserve the exact field names, nesting, and data types defined in the schema.
 Do not add unsupported information.
+Return one raw JSON only, without Markdown, explanations, or additional text.
+Do not repeat the JSON.
+The first character of your response must be {.
+The last character of your response must be }.
+
 
 %{few_shots}%
 
 Now generate the JSON object for the Schema and Text above.
-
-Output rules:
-
-Output exactly one JSON object.
-Output raw JSON only.
-Do not repeat the JSON.
-Do not include Markdown code blocks.
-Do not include introductory text, reasoning, explanations, or commentary.
-The first character of your response must be {.
-The last character of your response must be }.
-Stop generating immediately after the final closing brace.
 
 
 ### nl_to_format
@@ -380,17 +362,15 @@ Text:
 
 Read the source text and identify the information required by the JSON Schema.
 
-Follow this exact two-part format exactly once:
+Follow this exact two-part format:
 
 PART 1 - Natural Language Response:
-Briefly explain which information must be extracted from the text to satisfy the schema. Then provide the complete final answer in natural language. Limit reasoning to one small paragraph of fewer than 5 sentences.
+In one short paragraph of fewer than 5 sentences, identify the required information and provide the complete answer in natural language.
 
 PART 2 - JSON Response:
-Convert only the final natural-language answer from PART 1 into valid JSON that satisfies the provided schema. Include all required fields. Preserve the data types defined in the schema. Do not add information that was not stated in PART 1. Do not include markdown fences.
+Convert the answer from PART 1 into one valid JSON object that satisfies the schema. Include all required fields and preserve the exact field names, nesting, and data types. Do not add information not stated in PART 1. Do not use Markdown code blocks.
 
 Provide exactly one PART 1 and exactly one PART 2.
-Do not repeat PART 1 or PART 2.
-Do not restart the response after completing PART 2.
 Do not include any text before PART 1 or after the final JSON object.
 Your response must begin exactly with "PART 1 - Natural Language Response:" and end immediately after the closing brace of the JSON object.
 
@@ -407,29 +387,65 @@ Supplementary text:
 Target cells:
 %{target_cells}%
 
-Given a pipe-delimited table, optional supporting text, and target cell coordinates, produce a JSON object with parallel lists "cell_index" and "cell_record".
+Given a pipe-delimited table, optional supplementary text, and an ordered list of target cells, geenerate one valid JSON object containing the gold record for every target cell.
 
 Requirements:
-- Each item in "cell_index" must be a coordinate [i, j, k].
-- Each item in "cell_record" must be a valid JSON object serialized as a string.
-- Each inner JSON object must contain:
-  - "value": string
-  - "type": string
-- Depending on the record type, the inner object may also contain:
-  - "constituent": string
-  - "unit": string
-  - "material": string
-- The nth "cell_index" must correspond to the nth "cell_record".
-- Do not omit or reorder target cells.
-- Use the record type and required fields supported by the table context and dataset examples.
-- Return only valid JSON with no markdown or extra commentary.
+Use exactly these top-level fields: "cell_index" and "cell_record".
+Produce one "cell_index" and one "cell_record" for each target-cell entry.
+Preserve the original order of the target cells.
+Do not omit, merge, deduplicate, add, or reorder entries.
+Copy each target coordinate exactly as [i, j, k].
+The k value identifies a specific numeric value when a table cell contains multiple extracted values.
+The nth "cell_index" must correspond to the nth "cell_record".
+Copy "value" exactly from the processed value in target_cells.
+Keep "value" as a string and preserve formatting such as trailing zeros.
 
-Required output structure:
+Record types:
+
+The "type" field must be exactly one of:
+- "Glass_Compound_Amount"
+- "Other"
+
+Use "Glass_Compound_Amount" only when the value represents the amount of a chemical constituent in a glass or glass-mixture composition.
+A "Glass_Compound_Amount" record must contain these fields in this order:
+- "value"
+- "type"
+- "constituent"
+- "unit"
+- "material"
+
+Field rules:
+- "constituent": the chemical compound or component associated with the value.
+- "unit": the normalized composition unit, such as "mol" or "wt", without a percent sign.
+- "material": the sample, material, or glass identifier.
+- If no explicit material identifier is provided for a glass composition, use "xx".
+- Include all five fields for every "Glass_Compound_Amount" record.
+
+Use "Other" for all remaining target values, including measurements, properties, identifiers, ratios, temperatures, and densities.
+An "Other" record must contain only these fields in this order:
+- "value"
+- "type"
+
+Serialization requirements:
+Every item in "cell_record" must be an inner JSON object serialized as a JSON string.
+Do not return inner records as nested JSON objects.
+Escape all double quotes inside each serialized object.
+Use standard JSON double quotes, not single quotes.
+Do not include null, comments, Markdown, explanations, or additional fields.
+Return raw JSON only.
+
+Required JSON shape:
 {
-  "cell_index": [[i, j, k], ...],
-  "cell_record": ["{\"value\": \"...\", \"type\": \"...\", ...}", ...]
+"cell_index": [
+[i, j, k]
+],
+"cell_record": [
+"{"value":"...","type":"Other"}",
+"{"value":"...","type":"Glass_Compound_Amount","constituent":"...","unit":"...","material":"..."}"
+]
 }
 
+Now complete the earlier given instance.
 
 ### few_shot
 
@@ -442,33 +458,67 @@ Supplementary text:
 Target cells:
 %{target_cells}%
 
-Given a pipe-delimited table, optional supporting text, and target cell coordinates, produce a JSON object with parallel lists "cell_index" and "cell_record".
+Given a pipe-delimited table, optional supplementary text, and an ordered list of target cells, geenerate one valid JSON object containing the gold record for every target cell.
 
 Requirements:
-- Each item in "cell_index" must be a coordinate [i, j, k].
-- Each item in "cell_record" must be a valid JSON object serialized as a string.
-- Each inner JSON object must contain:
-  - "value": string
-  - "type": string
-- Depending on the record type, the inner object may also contain:
-  - "constituent": string
-  - "unit": string
-  - "material": string
-- The nth "cell_index" must correspond to the nth "cell_record".
-- Do not omit or reorder target cells.
-- Use the record type and required fields supported by the table context and dataset examples.
-- Return only valid JSON with no markdown or extra commentary.
+Use exactly these top-level fields: "cell_index" and "cell_record".
+Produce one "cell_index" and one "cell_record" for each target-cell entry.
+Preserve the original order of the target cells.
+Do not omit, merge, deduplicate, add, or reorder entries.
+Copy each target coordinate exactly as [i, j, k].
+The k value identifies a specific numeric value when a table cell contains multiple extracted values.
+The nth "cell_index" must correspond to the nth "cell_record".
+Copy "value" exactly from the processed value in target_cells.
+Keep "value" as a string and preserve formatting such as trailing zeros.
 
-Required output structure:
+Record types:
+
+The "type" field must be exactly one of:
+- "Glass_Compound_Amount"
+- "Other"
+
+Use "Glass_Compound_Amount" only when the value represents the amount of a chemical constituent in a glass or glass-mixture composition.
+A "Glass_Compound_Amount" record must contain these fields in this order:
+- "value"
+- "type"
+- "constituent"
+- "unit"
+- "material"
+
+Field rules:
+- "constituent": the chemical compound or component associated with the value.
+- "unit": the normalized composition unit, such as "mol" or "wt", without a percent sign.
+- "material": the sample, material, or glass identifier.
+- If no explicit material identifier is provided for a glass composition, use "xx".
+- Include all five fields for every "Glass_Compound_Amount" record.
+
+Use "Other" for all remaining target values, including measurements, properties, identifiers, ratios, temperatures, and densities.
+An "Other" record must contain only these fields in this order:
+- "value"
+- "type"
+
+Serialization requirements:
+Every item in "cell_record" must be an inner JSON object serialized as a JSON string.
+Do not return inner records as nested JSON objects.
+Escape all double quotes inside each serialized object.
+Use standard JSON double quotes, not single quotes.
+Do not include null, comments, Markdown, explanations, or additional fields.
+Return raw JSON only.
+
+Required JSON shape:
 {
-  "cell_index": [[i, j, k], ...],
-  "cell_record": ["{\"value\": \"...\", \"type\": \"...\", ...}", ...]
+"cell_index": [
+[i, j, k]
+],
+"cell_record": [
+"{"value":"...","type":"Other"}",
+"{"value":"...","type":"Glass_Compound_Amount","constituent":"...","unit":"...","material":"..."}"
+]
 }
 
 %{few_shots}%
 
-Now complete the earlier given instance.
-
+Return raw JSON only.
 
 ### nl_to_format
 
@@ -481,34 +531,67 @@ Supplementary text:
 Target cells:
 %{target_cells}%
 
-Identify the value and record type for each target cell in the table.
+Read the table, supplementary text, and target cells.
 
-Follow this exact two-part format.
+Follow this exact two-part format:
 
 PART 1 - Natural Language Response:
-For each target cell, briefly explain the identified value, record type, and any additional fields required by that record type. Then provide the complete final answer in natural language, preserving the order of the target cells.
+In one short paragraph of fewer than 5 sentences, identify the record type and required information for each target cell while preserving the target-cell order.
 
 PART 2 - JSON Response:
-Convert only the final natural-language answer from PART 1 into a valid JSON object with parallel lists "cell_index" and "cell_record".
+Convert the answer from PART 1 into one valid JSON object using the requirements below.
 
 Requirements:
-- Each item in "cell_index" must be a coordinate [i, j, k].
-- Each item in "cell_record" must be a valid JSON object serialized as a string.
-- Each inner JSON object must contain:
-  - "value": string
-  - "type": string
-- Depending on the record type, the inner object may also contain:
-  - "constituent": string
-  - "unit": string
-  - "material": string
-- The nth "cell_index" must correspond to the nth "cell_record".
-- Do not omit or reorder target cells.
-- Use the record type and required fields supported by the table context and dataset examples.
-- Return only valid JSON with no markdown or extra commentary.
-- Do not add information that was not stated in PART 1.
+Use exactly these top-level fields: "cell_index" and "cell_record".
+Produce one "cell_index" and one "cell_record" for each target-cell entry.
+Preserve the original order of the target cells.
+Do not omit, merge, deduplicate, add, or reorder entries.
+Copy each target coordinate exactly as [i, j, k].
+The nth "cell_index" must correspond to the nth "cell_record".
+Copy "value" exactly from the processed value in target_cells.
+Keep "value" as a string and preserve formatting such as trailing zeros.
 
-Required output structure:
+The "type" field must be exactly one of:
+- "Glass_Compound_Amount"
+- "Other"
+
+Use "Glass_Compound_Amount" only for the amount of a chemical constituent in a glass or glass-mixture composition.
+A "Glass_Compound_Amount" record must contain these fields in this order:
+- "value"
+- "type"
+- "constituent"
+- "unit"
+- "material"
+
+For these records:
+- "constituent" is the associated chemical compound or component.
+- "unit" is the normalized composition unit without a percent sign.
+- "material" is the associated sample, material, or glass identifier.
+- Use "xx" when no explicit material identifier is provided.
+
+Use "Other" for all remaining values.
+An "Other" record must contain only:
+- "value"
+- "type"
+
+Serialization requirements:
+Every "cell_record" item must be an inner JSON object serialized as a JSON string.
+Escape all double quotes inside each serialized object.
+Do not return inner records as nested JSON objects.
+Do not use single quotes, null, comments, Markdown, explanations, or additional fields.
+Do not add information that was not stated in PART 1.
+
+Required JSON shape:
 {
-  "cell_index": [[i, j, k], ...],
-  "cell_record": ["{\"value\": \"...\", \"type\": \"...\", ...}", ...]
+"cell_index": [
+[i, j, k]
+],
+"cell_record": [
+"{"value":"...","type":"Other"}",
+"{"value":"...","type":"Glass_Compound_Amount","constituent":"...","unit":"...","material":"..."}"
+]
 }
+
+Provide exactly one PART 1 and exactly one PART 2.
+Do not include any text before PART 1 or after the final JSON object.
+Your response must begin exactly with "PART 1 - Natural Language Response:" and end immediately after the closing brace of the JSON object.
