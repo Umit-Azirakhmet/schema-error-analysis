@@ -40,16 +40,9 @@ class PromptManager:
         
         templates = {}
         
-<<<<<<< HEAD
-        # Split by dataset sections (## ARQA, ## DeepJSONEval, ## SchemaToJSON)
-        dataset_sections = re.split(r'##\s+', content)
-        
-        for section in dataset_sections:
-=======
         # Split only on level-2 headers (##), not method headers (###)
         sections = re.split(r'(?m)^##\s+', content)
         for section in sections:
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
             if not section.strip():
                 continue
             
@@ -89,12 +82,9 @@ class PromptManager:
                     'Zero Shot': 'zero_shot',
                     'Few Shot': 'few_shot',
                     'NL to Format': 'nl_to_format',
-<<<<<<< HEAD
-=======
                     'zero_shot': 'zero_shot',
                     'few_shot': 'few_shot',
                     'nl_to_format': 'nl_to_format',
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
                 }
                 
                 method = method_map.get(method_header, method_header.lower().replace(' ', '_'))

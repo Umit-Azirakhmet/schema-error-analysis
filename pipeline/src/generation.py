@@ -3,17 +3,11 @@ Generation logic for zero-shot, few-shot, and NL-to-Format methods.
 """
 import json
 import random
-<<<<<<< HEAD
-from pathlib import Path
-from datetime import datetime
-from typing import Dict, List, Optional
-=======
 import re
 from pathlib import Path
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 import numpy as np
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
 import pandas as pd
 
 # Import dataset loaders
@@ -23,11 +17,6 @@ from src.datasets import (
     load_schema_to_json_dataset
 )
 
-<<<<<<< HEAD
-class GenerationRunner:
-    """Main generation runner."""
-    
-=======
 # Instance field order/labels for few-shot examples (matches prompting.md).
 FEW_SHOT_FIELD_LAYOUT = {
     'ARQA': [
@@ -93,7 +82,6 @@ class GenerationRunner:
             return [GenerationRunner._to_json_safe(item) for item in value]
         return value
 
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
     def __init__(self, config, prompt_manager, model_wrapper, output_dir, run_id):
         self.config = config
         self.prompt_manager = prompt_manager
@@ -111,11 +99,7 @@ class GenerationRunner:
         elif dataset == 'SchemaToJSON':
             return load_schema_to_json_dataset
         else:
-<<<<<<< HEAD
-            raise ValueError(f"Unknown dataset: {dataset}")
-=======
             raise ValueError(f"Unknown dataset: {dataset}. Dataset options are: ARQA, DeepJSONEval, SchemaToJSON")
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
     
     # ===== FEW-SHOT HELPERS =====
     
@@ -129,11 +113,7 @@ class GenerationRunner:
             num_shots: Number of examples to select
             
         Returns:
-<<<<<<< HEAD
-            List of example dictionaries with 'input' and 'gold_json' fields
-=======
             List of example dictionaries with 'prompt_fields' and 'gold_json' fields
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
         """
         # Set fixed random seed for reproducibility
         random.seed(self.config.get('random_seed', 42))
@@ -150,23 +130,6 @@ class GenerationRunner:
         examples = []
         for idx in selected_indices:
             row = all_rows[idx]
-<<<<<<< HEAD
-            # Format the input fields
-            input_text = '\n'.join([
-                f"{k}: {v}" for k, v in row['prompt_fields'].items() 
-                if v and v != ''  # Only include non-empty fields
-            ])
-            
-            example = {
-                'input': input_text,
-                'gold_json': row['gold_json_raw']
-            }
-            examples.append(example)
-        
-        return examples
-    
-    def _format_few_shots(self, examples):
-=======
             examples.append({
                 'prompt_fields': row['prompt_fields'],
                 'gold_json': row['gold_json_raw'],
@@ -188,16 +151,12 @@ class GenerationRunner:
         return '\n\n'.join(sections)
     
     def _format_few_shots(self, examples, dataset=None):
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
         """
         Format few-shot examples for insertion into the prompt template.
         
         Args:
             examples: List of example dictionaries
-<<<<<<< HEAD
-=======
             dataset: Dataset name for field layout (defaults to config dataset)
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
             
         Returns:
             Formatted string with all examples
@@ -205,13 +164,6 @@ class GenerationRunner:
         if not examples:
             return ""
         
-<<<<<<< HEAD
-        formatted = "\n\nExamples:\n"
-        for i, example in enumerate(examples, 1):
-            formatted += f"\nExample {i}:\n"
-            formatted += f"Input:\n{example['input']}\n"
-            formatted += f"Expected JSON:\n{example['gold_json']}\n"
-=======
         dataset = dataset or self.config.get('dataset', '')
         formatted = "\n\nExamples:\n"
         for i, example in enumerate(examples, 1):
@@ -219,7 +171,6 @@ class GenerationRunner:
             formatted += f"\nExample {i}:\n"
             formatted += f"{input_text}\n\n"
             formatted += f"JSON Response:\n{example['gold_json']}\n"
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
         
         return formatted
     
@@ -254,31 +205,6 @@ class GenerationRunner:
         Returns:
             Dictionary with 'nl_part' and 'json_part'
         """
-<<<<<<< HEAD
-        # Try to find PART 1 and PART 2 in the response
-        import re
-        
-        nl_part = ""
-        json_part = ""
-        
-        # Look for PART 1 and PART 2 markers
-        part1_match = re.search(r'PART 1[:\-]\s*(.*?)(?=PART 2[:\-]|$)', raw_response, re.DOTALL | re.IGNORECASE)
-        part2_match = re.search(r'PART 2[:\-]\s*(.*?)$', raw_response, re.DOTALL | re.IGNORECASE)
-        
-        if part1_match:
-            nl_part = part1_match.group(1).strip()
-        
-        if part2_match:
-            json_part = part2_match.group(1).strip()
-        
-        # If no markers found, try to find JSON at the end
-        if not json_part and '```json' in raw_response:
-            # Extract from code block
-            json_match = re.search(r'```json\s*(.*?)\s*```', raw_response, re.DOTALL)
-            if json_match:
-                json_part = json_match.group(1).strip()
-        
-=======
         nl_part = ""
         json_part = ""
 
@@ -306,7 +232,6 @@ class GenerationRunner:
             if json_match:
                 json_part = json_match.group(1).strip()
 
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
         return {
             'nl_part': nl_part,
             'json_part': json_part
@@ -447,11 +372,7 @@ class GenerationRunner:
                     # Get examples from other rows
                     examples = self._get_few_shot_examples(all_rows, idx, num_shots)
                     # Format them
-<<<<<<< HEAD
-                    prompt_fields['few_shots'] = self._format_few_shots(examples)
-=======
                     prompt_fields['few_shots'] = self._format_few_shots(examples, dataset_name)
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
                     print(f"  Using {len(examples)} few-shot examples")
                 else:
                     # Zero-shot or NL-to-Format: no examples
@@ -510,11 +431,7 @@ class GenerationRunner:
                 
                 # Save to JSONL
                 with open(responses_path, 'a', encoding='utf-8') as f:
-<<<<<<< HEAD
-                    f.write(json.dumps(record) + '\n')
-=======
                     f.write(json.dumps(self._to_json_safe(record), ensure_ascii=False) + '\n')
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
                 
             except Exception as e:
                 failed += 1
@@ -543,11 +460,7 @@ class GenerationRunner:
                 }
                 
                 with open(responses_path, 'a', encoding='utf-8') as f:
-<<<<<<< HEAD
-                    f.write(json.dumps(record) + '\n')
-=======
                     f.write(json.dumps(self._to_json_safe(record), ensure_ascii=False) + '\n')
->>>>>>> 1b4301fa5fa5691a639c379431f8d29270174332
         
         # Save manifest
         self._save_manifest(total, completed, failed)
