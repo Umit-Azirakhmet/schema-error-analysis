@@ -1,0 +1,6 @@
+backslash_issues_count,different_language_count,dj_enum_check,dj_property_count,dj_property_type,dj_required_fields,dj_schema_echo,dj_titles_mismatch,dj_top_level_not_object,dj_wrong_schema,empty_response_count,explanatory_text_count,hallucinated_fields_count,incorrect_values_count,invalid_json_syntax_count,longer_shorter_count,markdown_code_fence_count,missing_fields_count,placeholder_values_count,python_code_count,repetition_count,row_id,total_errors,trailing_commas_count,truncated_count,unescaped_quotes_count,wrong_field_names_count,wrong_nesting_count,wrong_order_count,wrong_types_count
+0,0,0,0,0,0,0,0,0,0,0,2095,0,0,0,0,2,0,0,0,0,deepjson_0,2099,0,2,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,240,0,3,0,2,0,0,0,0,0,deepjson_1,245,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,1982,0,0,0,0,2,0,0,0,0,deepjson_2,1986,0,2,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,2128,0,0,0,0,2,0,0,0,0,deepjson_3,2132,0,2,0,0,0,0,0
+0,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,deepjson_4,5,0,2,0,0,0,0,0

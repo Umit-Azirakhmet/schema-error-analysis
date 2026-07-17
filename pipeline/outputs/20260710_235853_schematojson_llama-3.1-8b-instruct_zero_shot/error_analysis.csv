@@ -1,0 +1,6 @@
+backslash_issues_count,different_language_count,empty_response_count,explanatory_text_count,hallucinated_fields_count,incorrect_values_count,invalid_json_syntax_count,longer_shorter_count,markdown_code_fence_count,missing_fields_count,placeholder_values_count,python_code_count,repetition_count,row_id,s2j_array_instead_of_string,s2j_cell_value_errors,s2j_fields_not_allowed,s2j_hallucinated_type,s2j_missing_conditional_fields,s2j_wrong_constituent,s2j_wrong_root_structure,total_errors,trailing_commas_count,truncated_count,unescaped_quotes_count,wrong_field_names_count,wrong_nesting_count,wrong_order_count,wrong_types_count
+1,0,0,0,0,0,5,0,3,2,1,3,0,schema_to_json_000000,1,0,0,0,0,0,1,19,0,2,0,0,0,0,0
+0,0,0,0,0,0,1,0,4,2,1,3,0,schema_to_json_000001,1,0,0,0,0,0,1,14,0,1,0,0,0,0,0
+0,0,0,0,0,0,1,0,3,2,1,3,0,schema_to_json_000002,1,0,0,0,0,0,1,12,0,0,0,0,0,0,0
+0,0,0,0,0,0,1,0,4,2,1,3,0,schema_to_json_000003,0,0,0,0,0,0,1,13,0,1,0,0,0,0,0
+0,0,0,0,0,0,1,0,4,2,1,5,0,schema_to_json_000004,1,0,0,0,0,0,1,16,0,1,0,0,0,0,0

@@ -1,0 +1,6 @@
+arqa_empty_evidence_span,arqa_hallucinated_claim_type,arqa_hallucinated_claims,arqa_hallucinated_table_id,arqa_inaccurate_claims_evidence,arqa_missing_cell_text,arqa_missing_top_level_fields,arqa_wrong_claim_type,arqa_wrong_coordinates,backslash_issues_count,different_language_count,empty_response_count,explanatory_text_count,hallucinated_fields_count,incorrect_values_count,invalid_json_syntax_count,longer_shorter_count,markdown_code_fence_count,missing_fields_count,placeholder_values_count,python_code_count,repetition_count,row_id,total_errors,trailing_commas_count,truncated_count,unescaped_quotes_count,wrong_field_names_count,wrong_nesting_count,wrong_order_count,wrong_types_count
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,2,2,0,0,2202f19313,13,0,2,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,0,1,0,e0138b014d,6,0,2,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,2,1,0,0,ff16c163f4,10,0,1,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,2,1,0,0,04849bb3f7,7,0,2,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,2,0,0,0,a477d27e77,8,0,2,0,0,0,0,0
