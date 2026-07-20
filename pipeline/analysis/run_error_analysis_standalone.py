@@ -172,13 +172,13 @@ class ErrorDetector:
     # ====== General Error Detectors (Return Counts) ======
     
     def _detect_truncated(self) -> int:
+        """Detect if the response was truncated by hitting the token limit."""
         count = 0
+        
+        # Only flag truncation if output_tokens reached token limit
         if self.output_tokens is not None and self.output_tokens >= self.token_limit:
             count += 1
-        cleaned = self.raw_response.strip()
-        cleaned = re.sub(r'```\s*$', '', cleaned)
-        if cleaned and not cleaned.endswith(('}', ']')):
-            count += 1
+        
         return count
     
     def _detect_repetition(self) -> int:
@@ -441,12 +441,9 @@ class ErrorDetector:
         
         # Check for unescaped quotes inside string values
         # Pattern: find quotes that are not escaped and appear inside a string value
-        # We look for: value "text with "unquoted" quote" - this is invalid JSON
         if re.search(r':\s*"[^"]*"[^"]*"', json_str):
             # This pattern matches strings that have quotes inside them
-            # But we need to check if they are properly escaped
             # Look for sequences where a quote appears inside a string without a backslash
-            # This is a simplified check - real unescaped quotes are rare in valid JSON
             if re.search(r':\s*"[^"\\]*(?<!\\)"(?=[^",}\]]*")', json_str):
                 count += 1
         
@@ -466,23 +463,45 @@ class ErrorDetector:
         return errors
     
     def _s2j_cell_value_errors(self) -> int:
+        """Count cell value mismatches between gold and response."""
         count = 0
         if not self.parsed_raw or not self.gold_json:
-            return count
-        def get_values(obj):
-            if isinstance(obj, dict) and 'cell_record' in obj:
-                return obj['cell_record']
-            return []
-        raw_records = get_values(self.parsed_raw)
-        gold_records = get_values(self.gold_json)
-        for i, (r, g) in enumerate(zip(raw_records, gold_records)):
+            return 0
+        
+        if not isinstance(self.parsed_raw, dict):
+            return 0
+        
+        raw_records = self.parsed_raw.get('cell_record', [])
+        gold_records = self.gold_json.get('cell_record', [])
+        
+        # Count missing entries (gold has more than raw)
+        if len(gold_records) > len(raw_records):
+            count += len(gold_records) - len(raw_records)
+        
+        # Count extra entries (raw has more than gold)
+        if len(raw_records) > len(gold_records):
+            count += len(raw_records) - len(gold_records)
+        
+        # Compare values and types for existing entries
+        for i in range(min(len(raw_records), len(gold_records))):
             try:
-                r_obj = json.loads(r) if isinstance(r, str) else r
-                g_obj = json.loads(g) if isinstance(g, str) else g
-                if r_obj.get('value') != g_obj.get('value'):
+                r_obj = json.loads(raw_records[i]) if isinstance(raw_records[i], str) else raw_records[i]
+                g_obj = json.loads(gold_records[i]) if isinstance(gold_records[i], str) else gold_records[i]
+                
+                r_val = r_obj.get('value') if isinstance(r_obj, dict) else None
+                g_val = g_obj.get('value') if isinstance(g_obj, dict) else None
+                
+                r_type = r_obj.get('type') if isinstance(r_obj, dict) else None
+                g_type = g_obj.get('type') if isinstance(g_obj, dict) else None
+                
+                # Count as error if value mismatches OR type mismatches
+                if r_val != g_val:
+                    count += 1
+                elif r_type != g_type:
                     count += 1
             except:
-                pass
+                count += 1
+        
         return count
     
     def _s2j_array_instead_of_string(self) -> int:
@@ -635,13 +654,17 @@ class ErrorDetector:
         return count
     
     def _arqa_missing_cell_text(self) -> int:
-        """Count table cells missing the cell_text field."""
+        """Count table cells missing the cell_text field or with empty cell_text."""
         count = 0
         if self.parsed_raw:
             for claim in self.parsed_raw.get('claims', []):
                 cells = claim.get('evidence', {}).get('table_cells', [])
                 for cell in cells:
+                    # Check if cell_text is missing, empty, or None
                     if 'cell_text' not in cell or not cell['cell_text']:
+                        count += 1
+                    # Also check if cell_text is a placeholder or invalid
+                    elif cell['cell_text'] in ['', 'None', 'null', 'undefined']:
                         count += 1
         return count
     
