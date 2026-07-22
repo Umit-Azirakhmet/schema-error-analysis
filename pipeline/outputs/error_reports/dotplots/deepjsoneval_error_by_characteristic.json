@@ -1,0 +1,218 @@
+{
+  "dataset": "DeepJSONEval",
+  "definition": "X = top error types; Y = min-max normalized characteristic value on eval rows; color = characteristic; 1 dot = 1 run\u00d7row with that error on a high-bin row (char >= median); models/methods pooled",
+  "n_runs": 18,
+  "n_rows_eval": 5,
+  "n_dots": 891,
+  "top_errors": [
+    "Explanatory Text",
+    "Markdown Code Fence",
+    "Hallucinated Fields",
+    "Missing Fields",
+    "Invalid JSON Syntax",
+    "Longer/Shorter",
+    "Repetition",
+    "Truncated"
+  ],
+  "error_ranking": [
+    {
+      "error": "Explanatory Text",
+      "total_findings": 8665
+    },
+    {
+      "error": "Markdown Code Fence",
+      "total_findings": 307
+    },
+    {
+      "error": "Hallucinated Fields",
+      "total_findings": 180
+    },
+    {
+      "error": "Missing Fields",
+      "total_findings": 87
+    },
+    {
+      "error": "Invalid JSON Syntax",
+      "total_findings": 73
+    },
+    {
+      "error": "Longer/Shorter",
+      "total_findings": 60
+    },
+    {
+      "error": "Repetition",
+      "total_findings": 48
+    },
+    {
+      "error": "Truncated",
+      "total_findings": 47
+    },
+    {
+      "error": "Wrong Order",
+      "total_findings": 31
+    },
+    {
+      "error": "Wrong Schema",
+      "total_findings": 26
+    },
+    {
+      "error": "Incorrect Values",
+      "total_findings": 22
+    },
+    {
+      "error": "Schema Echo",
+      "total_findings": 21
+    },
+    {
+      "error": "Required Fields",
+      "total_findings": 18
+    },
+    {
+      "error": "Property Count Mismatch",
+      "total_findings": 13
+    },
+    {
+      "error": "Wrong Field Names",
+      "total_findings": 13
+    },
+    {
+      "error": "Unescaped Quotes",
+      "total_findings": 3
+    },
+    {
+      "error": "Wrong Types",
+      "total_findings": 3
+    },
+    {
+      "error": "Different Language",
+      "total_findings": 1
+    },
+    {
+      "error": "Placeholder Values",
+      "total_findings": 1
+    }
+  ],
+  "characteristics": [
+    "property_count",
+    "has_enum",
+    "gold_json_length",
+    "nesting_depth",
+    "total_object_count",
+    "total_key_count",
+    "max_array_length",
+    "average_value_length"
+  ],
+  "medians": {
+    "property_count": 11.0,
+    "has_enum": 1.0,
+    "gold_json_length": 362.0,
+    "nesting_depth": 4.0,
+    "total_object_count": 9.0,
+    "total_key_count": 15.0,
+    "max_array_length": 3.0,
+    "average_value_length": 8.88
+  },
+  "norm_min": {
+    "property_count": 5.0,
+    "has_enum": 0.0,
+    "gold_json_length": 172.0,
+    "nesting_depth": 3.0,
+    "total_object_count": 4.0,
+    "total_key_count": 9.0,
+    "max_array_length": 2.0,
+    "average_value_length": 5.5
+  },
+  "norm_max": {
+    "property_count": 12.0,
+    "has_enum": 1.0,
+    "gold_json_length": 523.0,
+    "nesting_depth": 4.0,
+    "total_object_count": 10.0,
+    "total_key_count": 20.0,
+    "max_array_length": 5.0,
+    "average_value_length": 23.45
+  },
+  "cell_finding_totals": {
+    "Explanatory Text": {
+      "property_count": 5516,
+      "has_enum": 6346,
+      "gold_json_length": 3603,
+      "nesting_depth": 5666,
+      "total_object_count": 6233,
+      "total_key_count": 3603,
+      "max_array_length": 6035,
+      "average_value_length": 3914
+    },
+    "Markdown Code Fence": {
+      "property_count": 193,
+      "has_enum": 264,
+      "gold_json_length": 152,
+      "nesting_depth": 206,
+      "total_object_count": 254,
+      "total_key_count": 152,
+      "max_array_length": 205,
+      "average_value_length": 211
+    },
+    "Hallucinated Fields": {
+      "property_count": 157,
+      "has_enum": 172,
+      "gold_json_length": 147,
+      "nesting_depth": 36,
+      "total_object_count": 166,
+      "total_key_count": 147,
+      "max_array_length": 161,
+      "average_value_length": 158
+    },
+    "Missing Fields": {
+      "property_count": 77,
+      "has_enum": 67,
+      "gold_json_length": 62,
+      "nesting_depth": 53,
+      "total_object_count": 86,
+      "total_key_count": 62,
+      "max_array_length": 63,
+      "average_value_length": 66
+    },
+    "Invalid JSON Syntax": {
+      "property_count": 49,
+      "has_enum": 53,
+      "gold_json_length": 51,
+      "nesting_depth": 48,
+      "total_object_count": 64,
+      "total_key_count": 51,
+      "max_array_length": 60,
+      "average_value_length": 44
+    },
+    "Longer/Shorter": {
+      "property_count": 34,
+      "has_enum": 58,
+      "gold_json_length": 50,
+      "nesting_depth": 24,
+      "total_object_count": 53,
+      "total_key_count": 50,
+      "max_array_length": 57,
+      "average_value_length": 51
+    },
+    "Repetition": {
+      "property_count": 36,
+      "has_enum": 48,
+      "gold_json_length": 39,
+      "nesting_depth": 3,
+      "total_object_count": 39,
+      "total_key_count": 39,
+      "max_array_length": 48,
+      "average_value_length": 39
+    },
+    "Truncated": {
+      "property_count": 31,
+      "has_enum": 34,
+      "gold_json_length": 28,
+      "nesting_depth": 32,
+      "total_object_count": 39,
+      "total_key_count": 28,
+      "max_array_length": 36,
+      "average_value_length": 26
+    }
+  },
+  "png": "pipeline/outputs/error_reports/dotplots/deepjsoneval_error_by_characteristic.png"
+}

@@ -1,0 +1,182 @@
+{
+  "dataset": "SchemaToJSON",
+  "definition": "X = top error types; Y = min-max normalized characteristic value on eval rows; color = characteristic; 1 dot = 1 run\u00d7row with that error on a high-bin row (char >= median); models/methods pooled",
+  "n_runs": 21,
+  "n_rows_eval": 5,
+  "n_dots": 1051,
+  "top_errors": [
+    "Markdown Code Fence",
+    "Cell Value Error",
+    "Longer/Shorter",
+    "Incorrect Values",
+    "Missing Fields",
+    "Arrays Instead Of Strings",
+    "Hallucinated Fields",
+    "Truncated"
+  ],
+  "error_ranking": [
+    {
+      "error": "Markdown Code Fence",
+      "total_findings": 1354
+    },
+    {
+      "error": "Cell Value Error",
+      "total_findings": 453
+    },
+    {
+      "error": "Longer/Shorter",
+      "total_findings": 324
+    },
+    {
+      "error": "Incorrect Values",
+      "total_findings": 238
+    },
+    {
+      "error": "Missing Fields",
+      "total_findings": 180
+    },
+    {
+      "error": "Arrays Instead Of Strings",
+      "total_findings": 136
+    },
+    {
+      "error": "Hallucinated Fields",
+      "total_findings": 124
+    },
+    {
+      "error": "Truncated",
+      "total_findings": 105
+    },
+    {
+      "error": "Invalid JSON Syntax",
+      "total_findings": 102
+    },
+    {
+      "error": "Wrong Root Structure",
+      "total_findings": 97
+    },
+    {
+      "error": "Repetition",
+      "total_findings": 72
+    },
+    {
+      "error": "Python Code",
+      "total_findings": 53
+    },
+    {
+      "error": "Wrong Field Names",
+      "total_findings": 43
+    },
+    {
+      "error": "Placeholder Values",
+      "total_findings": 32
+    },
+    {
+      "error": "Wrong Order",
+      "total_findings": 24
+    },
+    {
+      "error": "Wrong Nesting",
+      "total_findings": 12
+    },
+    {
+      "error": "Wrong Types",
+      "total_findings": 12
+    },
+    {
+      "error": "Backslash Issues",
+      "total_findings": 8
+    },
+    {
+      "error": "Unescaped Quotes",
+      "total_findings": 1
+    }
+  ],
+  "characteristics": [
+    "cell_record_count",
+    "duplicate_record_count",
+    "escaping_count",
+    "numeric_string_count",
+    "gold_json_length"
+  ],
+  "medians": {
+    "cell_record_count": 32.0,
+    "duplicate_record_count": 5.0,
+    "escaping_count": 288.0,
+    "numeric_string_count": 32.0,
+    "gold_json_length": 2063.0
+  },
+  "norm_min": {
+    "cell_record_count": 18.0,
+    "duplicate_record_count": 2.0,
+    "escaping_count": 256.0,
+    "numeric_string_count": 18.0,
+    "gold_json_length": 1819.0
+  },
+  "norm_max": {
+    "cell_record_count": 48.0,
+    "duplicate_record_count": 9.0,
+    "escaping_count": 384.0,
+    "numeric_string_count": 48.0,
+    "gold_json_length": 2684.0
+  },
+  "cell_finding_totals": {
+    "Markdown Code Fence": {
+      "cell_record_count": 158,
+      "duplicate_record_count": 133,
+      "escaping_count": 1308,
+      "numeric_string_count": 158,
+      "gold_json_length": 1308
+    },
+    "Cell Value Error": {
+      "cell_record_count": 423,
+      "duplicate_record_count": 343,
+      "escaping_count": 296,
+      "numeric_string_count": 423,
+      "gold_json_length": 296
+    },
+    "Longer/Shorter": {
+      "cell_record_count": 249,
+      "duplicate_record_count": 209,
+      "escaping_count": 257,
+      "numeric_string_count": 249,
+      "gold_json_length": 257
+    },
+    "Incorrect Values": {
+      "cell_record_count": 135,
+      "duplicate_record_count": 126,
+      "escaping_count": 197,
+      "numeric_string_count": 135,
+      "gold_json_length": 197
+    },
+    "Missing Fields": {
+      "cell_record_count": 146,
+      "duplicate_record_count": 110,
+      "escaping_count": 110,
+      "numeric_string_count": 146,
+      "gold_json_length": 110
+    },
+    "Arrays Instead Of Strings": {
+      "cell_record_count": 129,
+      "duplicate_record_count": 92,
+      "escaping_count": 94,
+      "numeric_string_count": 129,
+      "gold_json_length": 94
+    },
+    "Hallucinated Fields": {
+      "cell_record_count": 92,
+      "duplicate_record_count": 45,
+      "escaping_count": 67,
+      "numeric_string_count": 92,
+      "gold_json_length": 67
+    },
+    "Truncated": {
+      "cell_record_count": 85,
+      "duplicate_record_count": 66,
+      "escaping_count": 66,
+      "numeric_string_count": 85,
+      "gold_json_length": 66
+    }
+  },
+  "png": "pipeline/outputs/error_reports/dotplots/schematojson_error_by_characteristic.png"
+}

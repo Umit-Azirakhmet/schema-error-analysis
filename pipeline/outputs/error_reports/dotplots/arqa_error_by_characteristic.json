@@ -1,0 +1,210 @@
+{
+  "dataset": "ARQA",
+  "definition": "X = top error types; Y = min-max normalized characteristic value on eval rows; color = characteristic; 1 dot = 1 run\u00d7row with that error on a high-bin row (char >= median); models/methods pooled",
+  "n_runs": 18,
+  "n_rows_eval": 5,
+  "n_dots": 1472,
+  "top_errors": [
+    "Explanatory Text",
+    "Incorrect Values",
+    "Longer/Shorter",
+    "Missing Fields",
+    "Invalid JSON Syntax",
+    "Inaccurate Claims/Evidence",
+    "Repetition",
+    "Wrong Coordinates"
+  ],
+  "error_ranking": [
+    {
+      "error": "Explanatory Text",
+      "total_findings": 985
+    },
+    {
+      "error": "Incorrect Values",
+      "total_findings": 262
+    },
+    {
+      "error": "Longer/Shorter",
+      "total_findings": 204
+    },
+    {
+      "error": "Missing Fields",
+      "total_findings": 160
+    },
+    {
+      "error": "Invalid JSON Syntax",
+      "total_findings": 148
+    },
+    {
+      "error": "Inaccurate Claims/Evidence",
+      "total_findings": 133
+    },
+    {
+      "error": "Repetition",
+      "total_findings": 122
+    },
+    {
+      "error": "Wrong Coordinates",
+      "total_findings": 92
+    },
+    {
+      "error": "Markdown Code Fence",
+      "total_findings": 88
+    },
+    {
+      "error": "Truncated",
+      "total_findings": 68
+    },
+    {
+      "error": "Hallucinated Table Id",
+      "total_findings": 64
+    },
+    {
+      "error": "Placeholder Values",
+      "total_findings": 63
+    },
+    {
+      "error": "Wrong Claim Type",
+      "total_findings": 42
+    },
+    {
+      "error": "Empty Evidence Span",
+      "total_findings": 35
+    },
+    {
+      "error": "Hallucinated Claims",
+      "total_findings": 35
+    },
+    {
+      "error": "Missing Cell Text",
+      "total_findings": 17
+    },
+    {
+      "error": "Backslash Issues",
+      "total_findings": 8
+    },
+    {
+      "error": "Trailing Commas",
+      "total_findings": 6
+    },
+    {
+      "error": "Python Code",
+      "total_findings": 4
+    },
+    {
+      "error": "Different Language",
+      "total_findings": 1
+    }
+  ],
+  "characteristics": [
+    "table_cell_total_refs_count",
+    "max_evidence_items_per_claim",
+    "gold_json_length",
+    "total_object_count",
+    "total_key_count",
+    "max_value_length",
+    "average_value_length"
+  ],
+  "medians": {
+    "table_cell_total_refs_count": 4.0,
+    "max_evidence_items_per_claim": 2.0,
+    "gold_json_length": 1375.0,
+    "total_object_count": 12.0,
+    "total_key_count": 34.0,
+    "max_value_length": 229.0,
+    "average_value_length": 33.07
+  },
+  "norm_min": {
+    "table_cell_total_refs_count": 1.0,
+    "max_evidence_items_per_claim": 1.0,
+    "gold_json_length": 1349.0,
+    "total_object_count": 10.0,
+    "total_key_count": 26.0,
+    "max_value_length": 204.0,
+    "average_value_length": 31.41
+  },
+  "norm_max": {
+    "table_cell_total_refs_count": 4.0,
+    "max_evidence_items_per_claim": 2.0,
+    "gold_json_length": 1727.0,
+    "total_object_count": 12.0,
+    "total_key_count": 34.0,
+    "max_value_length": 252.0,
+    "average_value_length": 70.47
+  },
+  "cell_finding_totals": {
+    "Explanatory Text": {
+      "table_cell_total_refs_count": 597,
+      "max_evidence_items_per_claim": 760,
+      "gold_json_length": 632,
+      "total_object_count": 597,
+      "total_key_count": 597,
+      "max_value_length": 632,
+      "average_value_length": 632
+    },
+    "Incorrect Values": {
+      "table_cell_total_refs_count": 171,
+      "max_evidence_items_per_claim": 236,
+      "gold_json_length": 150,
+      "total_object_count": 171,
+      "total_key_count": 171,
+      "max_value_length": 150,
+      "average_value_length": 150
+    },
+    "Longer/Shorter": {
+      "table_cell_total_refs_count": 121,
+      "max_evidence_items_per_claim": 167,
+      "gold_json_length": 159,
+      "total_object_count": 121,
+      "total_key_count": 121,
+      "max_value_length": 159,
+      "average_value_length": 159
+    },
+    "Missing Fields": {
+      "table_cell_total_refs_count": 91,
+      "max_evidence_items_per_claim": 123,
+      "gold_json_length": 97,
+      "total_object_count": 91,
+      "total_key_count": 91,
+      "max_value_length": 97,
+      "average_value_length": 97
+    },
+    "Invalid JSON Syntax": {
+      "table_cell_total_refs_count": 78,
+      "max_evidence_items_per_claim": 105,
+      "gold_json_length": 96,
+      "total_object_count": 78,
+      "total_key_count": 78,
+      "max_value_length": 96,
+      "average_value_length": 96
+    },
+    "Inaccurate Claims/Evidence": {
+      "table_cell_total_refs_count": 86,
+      "max_evidence_items_per_claim": 115,
+      "gold_json_length": 79,
+      "total_object_count": 86,
+      "total_key_count": 86,
+      "max_value_length": 79,
+      "average_value_length": 79
+    },
+    "Repetition": {
+      "table_cell_total_refs_count": 58,
+      "max_evidence_items_per_claim": 77,
+      "gold_json_length": 115,
+      "total_object_count": 58,
+      "total_key_count": 58,
+      "max_value_length": 115,
+      "average_value_length": 115
+    },
+    "Wrong Coordinates": {
+      "table_cell_total_refs_count": 75,
+      "max_evidence_items_per_claim": 86,
+      "gold_json_length": 47,
+      "total_object_count": 75,
+      "total_key_count": 75,
+      "max_value_length": 47,
+      "average_value_length": 47
+    }
+  },
+  "png": "pipeline/outputs/error_reports/dotplots/arqa_error_by_characteristic.png"
+}

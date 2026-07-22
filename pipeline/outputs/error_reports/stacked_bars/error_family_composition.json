@@ -1,0 +1,122 @@
+{
+  "definition": "100% stacked bars: X = error family; stack segments = leaf errors from a strict shared-column map; Y = share within family; counts pooled across all pipeline/outputs runs",
+  "n_runs": 57,
+  "families": {
+    "Completion": {
+      "total": 462,
+      "errors": {
+        "Truncated": {
+          "column": "truncated_count",
+          "count": 220,
+          "share": 0.47619047619047616
+        },
+        "Repetition": {
+          "column": "repetition_count",
+          "count": 242,
+          "share": 0.5238095238095238
+        },
+        "Empty responses": {
+          "column": "empty_response_count",
+          "count": 0,
+          "share": 0.0
+        }
+      }
+    },
+    "Syntax": {
+      "total": 339,
+      "errors": {
+        "Invalid JSON syntax": {
+          "column": "invalid_json_syntax_count",
+          "count": 323,
+          "share": 0.9528023598820059
+        },
+        "Backslash issues": {
+          "column": "backslash_issues_count",
+          "count": 16,
+          "share": 0.0471976401179941
+        }
+      }
+    },
+    "Contamination": {
+      "total": 17870,
+      "errors": {
+        "Markdown code fence": {
+          "column": "markdown_code_fence_count",
+          "count": 1749,
+          "share": 0.0978735310576385
+        },
+        "Python code": {
+          "column": "python_code_count",
+          "count": 57,
+          "share": 0.0031897034135422494
+        },
+        "Explanatory text": {
+          "column": "explanatory_text_count",
+          "count": 16064,
+          "share": 0.8989367655288193
+        }
+      }
+    },
+    "Schema": {
+      "total": 869,
+      "errors": {
+        "Hallucinated fields": {
+          "column": "hallucinated_fields_count",
+          "count": 304,
+          "share": 0.34982738780207134
+        },
+        "Wrong field names": {
+          "column": "wrong_field_names_count",
+          "count": 56,
+          "share": 0.06444188722669736
+        },
+        "Missing fields": {
+          "column": "missing_fields_count",
+          "count": 427,
+          "share": 0.49136939010356734
+        },
+        "Wrong nesting": {
+          "column": "wrong_nesting_count",
+          "count": 12,
+          "share": 0.01380897583429229
+        },
+        "Wrong types": {
+          "column": "wrong_types_count",
+          "count": 15,
+          "share": 0.01726121979286536
+        },
+        "Wrong order": {
+          "column": "wrong_order_count",
+          "count": 55,
+          "share": 0.06329113924050633
+        }
+      }
+    },
+    "Content": {
+      "total": 1208,
+      "errors": {
+        "Incorrect values": {
+          "column": "incorrect_values_count",
+          "count": 522,
+          "share": 0.43211920529801323
+        },
+        "Placeholder values": {
+          "column": "placeholder_values_count",
+          "count": 96,
+          "share": 0.07947019867549669
+        },
+        "Longer/shorter than gold": {
+          "column": "longer_shorter_count",
+          "count": 588,
+          "share": 0.4867549668874172
+        },
+        "Different language": {
+          "column": "different_language_count",
+          "count": 2,
+          "share": 0.0016556291390728477
+        }
+      }
+    }
+  },
+  "png": "pipeline/outputs/error_reports/stacked_bars/error_family_composition.png"
+}
