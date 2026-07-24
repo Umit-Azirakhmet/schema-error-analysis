@@ -398,7 +398,7 @@ class GenerationRunner:
                     print(f"  Extracted NL part: {len(nl_part) if nl_part else 0} chars")
                     print(f"  Extracted JSON part: {len(json_part) if json_part else 0} chars")
                 
-                # Create record
+                # Create record (omit full prompt to reduce I/O; keep schema for DeepJSONEval)
                 record = {
                     'run_id': self.run_id,
                     'dataset': dataset_name,
@@ -407,7 +407,6 @@ class GenerationRunner:
                     'method': method,
                     'model': self.config['model'],
                     'num_shots': num_shots if method == 'few_shot' else 0,
-                    'prompt': full_prompt,
                     'raw_response': result['raw_response'],
                     'gold_json_raw': row_data['gold_json_raw'],
                     'characteristics': row_data.get('characteristics', {}),
@@ -420,7 +419,9 @@ class GenerationRunner:
                     'nl_part': nl_part,
                     'json_part': json_part
                 }
-                
+                if dataset_name == 'DeepJSONEval':
+                    record['schema'] = prompt_fields.get('schema', '')
+
                 # Update counters
                 if result['error']:
                     failed += 1
@@ -446,7 +447,6 @@ class GenerationRunner:
                     'method': method,
                     'model': self.config['model'],
                     'num_shots': num_shots if method == 'few_shot' else 0,
-                    'prompt': full_prompt if 'full_prompt' in locals() else None,
                     'raw_response': None,
                     'gold_json_raw': row_data.get('gold_json_raw', ''),
                     'characteristics': row_data.get('characteristics', {}),
@@ -458,7 +458,9 @@ class GenerationRunner:
                     'nl_part': None,
                     'json_part': None
                 }
-                
+                if dataset_name == 'DeepJSONEval':
+                    record['schema'] = row_data.get('prompt_fields', {}).get('schema', '')
+
                 with open(responses_path, 'a', encoding='utf-8') as f:
                     f.write(json.dumps(self._to_json_safe(record), ensure_ascii=False) + '\n')
         

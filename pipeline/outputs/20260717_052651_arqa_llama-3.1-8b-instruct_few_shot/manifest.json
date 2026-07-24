@@ -1,0 +1,20 @@
+{
+  "run_id": "20260717_052651_arqa_llama-3.1-8b-instruct_few_shot",
+  "created_at": "2026-07-18T07:15:09.932015",
+  "dataset": "ARQA",
+  "dataset_path": "/home/uazirakh/schema-error-analysis/data/ARQA.csv",
+  "context_path": "/home/uazirakh/schema-error-analysis/data/ARQA_DB.csv",
+  "prompts_path": "/home/uazirakh/schema-error-analysis/pipeline/prompts/prompting.md",
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "method": "few_shot",
+  "num_shots": 3,
+  "generation_config": {
+    "do_sample": false,
+    "temperature": 0,
+    "max_new_tokens": 4096
+  },
+  "max_rows": null,
+  "total_rows": 535,
+  "completed_rows": 535,
+  "failed_rows": 0
+}
