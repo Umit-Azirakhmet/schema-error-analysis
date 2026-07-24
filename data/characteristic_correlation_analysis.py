@@ -170,8 +170,8 @@ def get_characteristic_families():
             'max_array_nesting_depth', 'total_array_count', 'max_array_length',
             'total_key_count', 'unique_key_count', 'max_key_length'
         ],
-        'Value Types': [
-            'long_text_value_count', 'numeric_value_count',
+        'Value   Types': [
+            'long_text_value_count', 'numeric_value_count', 'value_types',
             'alphanumeric_value_count', 'max_value_length', 'average_value_length'
         ],
         'Structural': [
@@ -185,7 +185,7 @@ def get_characteristic_families():
         ],
         'Schema Features': [
             'property_count', 'has_enum', 'array_of_objects',
-            'array_of_primitives', 'category'
+            'array_of_primitives'
         ]
     }
 
