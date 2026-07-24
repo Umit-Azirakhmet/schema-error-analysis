@@ -377,221 +377,220 @@ Your response must begin exactly with "PART 1 - Natural Language Response:" and 
 ## SchemaToJSON
 
 ### zero_shot
+Table code: %{table_code}%
 
-Table code:
-%{table_code}%
+Supplementary text: %{sup_text}%
 
-Supplementary text:
-%{sup_text}%
+Target cells: %{target_cells}%
 
-Target cells:
-%{target_cells}%
+Generate one valid JSON object for the supplied target cells.
 
-Given a pipe-delimited table, optional supplementary text, and an ordered list of target cells, geenerate one valid JSON object containing the gold record for every target cell.
+The arrays "cell_value_processed", "i", "j", and "k" in target_cells are parallel arrays of equal length. For each position n:
 
-Requirements:
-Use exactly these top-level fields: "cell_index" and "cell_record".
-Produce one "cell_index" and one "cell_record" for each target-cell entry.
-Preserve the original order of the target cells.
-Do not omit, merge, deduplicate, add, or reorder entries.
-Copy each target coordinate exactly as [i, j, k].
-The k value identifies a specific numeric value when a table cell contains multiple extracted values.
-The nth "cell_index" must correspond to the nth "cell_record".
-Copy "value" exactly from the processed value in target_cells.
-Keep "value" as a string and preserve formatting such as trailing zeros.
+cell_index[n] = [i[n], j[n], k[n]]
+value[n] = cell_value_processed[n]
 
-Record types:
+Zip the arrays strictly by position. Copy each coordinate and value exactly. Do not infer coordinates from the table, create new coordinates, combine values from different positions, sort entries, or treat any array as a range.
 
-The "type" field must be exactly one of:
-- "Glass_Compound_Amount"
-- "Other"
+The lengths of "cell_index" and "cell_record" must both equal the length of "cell_value_processed". The nth cell_record must describe the nth cell_index.
 
-Use "Glass_Compound_Amount" only when the value represents the amount of a chemical constituent in a glass or glass-mixture composition.
-A "Glass_Compound_Amount" record must contain these fields in this order:
-- "value"
-- "type"
-- "constituent"
-- "unit"
-- "material"
+Return exactly one object with these top-level fields:
 
-Field rules:
-- "constituent": the chemical compound or component associated with the value.
-- "unit": the normalized composition unit, such as "mol" or "wt", without a percent sign.
-- "material": the sample, material, or glass identifier.
-- If no explicit material identifier is provided for a glass composition, use "xx".
-- Include all five fields for every "Glass_Compound_Amount" record.
-
-Use "Other" for all remaining target values, including measurements, properties, identifiers, ratios, temperatures, and densities.
-An "Other" record must contain only these fields in this order:
-- "value"
-- "type"
-
-Serialization requirements:
-Every item in "cell_record" must be an inner JSON object serialized as a JSON string.
-Do not return inner records as nested JSON objects.
-Escape all double quotes inside each serialized object.
-Use standard JSON double quotes, not single quotes.
-Do not include null, comments, Markdown, explanations, or additional fields.
-Return raw JSON only.
-
-Required JSON shape:
 {
-"cell_index": [
-[i, j, k]
-],
-"cell_record": [
-"{"value":"...","type":"Other"}",
-"{"value":"...","type":"Glass_Compound_Amount","constituent":"...","unit":"...","material":"..."}"
-]
+  "cell_index": [[i, j, k], ...],
+  "cell_record": ["serialized record", ...]
 }
 
-Now complete the earlier given instance.
+Determine each record type from the target cell's table context, especially its associated row and column headers.
+
+Use "Glass_Compound_Amount" when:
+1. the target cell represents the amount of a chemical constituent in a glass or glass-mixture composition, and
+2. its associated composition unit is mol%, mol, wt%, or wt.
+
+For "Glass_Compound_Amount":
+- Use the associated chemical compound or component label as "constituent".
+- Normalize mol% to "mol" and wt% to "wt".
+- Use an explicit sample, material, or glass identifier as "material"; otherwise use "xx".
+- Do not use experimental descriptions, measurement purposes, parameter names, or property names as "material".
+
+A "Glass_Compound_Amount" record must contain exactly these fields:
+"value", "type", "constituent", "unit", "material"
+
+Use "Other" for every remaining value, including measurements, properties, parameters, identifiers, ratios, temperatures, densities, number densities, and rates.
+
+An "Other" record must contain exactly these fields:
+"value", "type"
+
+Every item in "cell_record" must be one JSON object serialized as a JSON string. Do not return inner records as nested objects or arrays. Escape all internal double quotes.
+
+Required structure:
+
+{
+  "cell_index": [[i, j, k], ...],
+  "cell_record": [
+    "{\"value\":\"...\",\"type\":\"Other\"}",
+    "{\"value\":\"...\",\"type\":\"Glass_Compound_Amount\",\"constituent\":\"...\",\"unit\":\"...\",\"material\":\"...\"}"
+  ]
+}
+
+Before returning, verify:
+1. Both output arrays have exactly the same length as "cell_value_processed".
+2. Every coordinate exactly equals [i[n], j[n], k[n]].
+3. Every record value exactly equals cell_value_processed[n].
+4. No coordinate or value was added, removed, reordered, or modified.
+5. Every composition amount under a chemical constituent header is classified as "Glass_Compound_Amount".
+
+Return raw JSON only. Do not return Python, Markdown, explanations, or multiple JSON objects.
 
 ### few_shot
 
-Table code:
-%{table_code}%
+Table code: %{table_code}%
 
-Supplementary text:
-%{sup_text}%
+Supplementary text: %{sup_text}%
 
-Target cells:
-%{target_cells}%
+Target cells: %{target_cells}%
 
-Given a pipe-delimited table, optional supplementary text, and an ordered list of target cells, geenerate one valid JSON object containing the gold record for every target cell.
+Generate one valid JSON object for the supplied target cells.
 
-Requirements:
-Use exactly these top-level fields: "cell_index" and "cell_record".
-Produce one "cell_index" and one "cell_record" for each target-cell entry.
-Preserve the original order of the target cells.
-Do not omit, merge, deduplicate, add, or reorder entries.
-Copy each target coordinate exactly as [i, j, k].
-The k value identifies a specific numeric value when a table cell contains multiple extracted values.
-The nth "cell_index" must correspond to the nth "cell_record".
-Copy "value" exactly from the processed value in target_cells.
-Keep "value" as a string and preserve formatting such as trailing zeros.
+The arrays "cell_value_processed", "i", "j", and "k" in target_cells are parallel arrays of equal length. For each position n:
 
-Record types:
+cell_index[n] = [i[n], j[n], k[n]]
+value[n] = cell_value_processed[n]
 
-The "type" field must be exactly one of:
-- "Glass_Compound_Amount"
-- "Other"
+Zip the arrays strictly by position. Copy each coordinate and value exactly. Do not infer coordinates from the table, create new coordinates, combine values from different positions, sort entries, or treat any array as a range.
 
-Use "Glass_Compound_Amount" only when the value represents the amount of a chemical constituent in a glass or glass-mixture composition.
-A "Glass_Compound_Amount" record must contain these fields in this order:
-- "value"
-- "type"
-- "constituent"
-- "unit"
-- "material"
+The k value only distinguishes multiple extracted values from the same table cell. It does not determine the record type.
 
-Field rules:
-- "constituent": the chemical compound or component associated with the value.
-- "unit": the normalized composition unit, such as "mol" or "wt", without a percent sign.
-- "material": the sample, material, or glass identifier.
-- If no explicit material identifier is provided for a glass composition, use "xx".
-- Include all five fields for every "Glass_Compound_Amount" record.
+The lengths of "cell_index" and "cell_record" must both equal the length of "cell_value_processed". The nth cell_record must describe the nth cell_index.
 
-Use "Other" for all remaining target values, including measurements, properties, identifiers, ratios, temperatures, and densities.
-An "Other" record must contain only these fields in this order:
-- "value"
-- "type"
+Return exactly one object with these top-level fields:
 
-Serialization requirements:
-Every item in "cell_record" must be an inner JSON object serialized as a JSON string.
-Do not return inner records as nested JSON objects.
-Escape all double quotes inside each serialized object.
-Use standard JSON double quotes, not single quotes.
-Do not include null, comments, Markdown, explanations, or additional fields.
-Return raw JSON only.
-
-Required JSON shape:
 {
-"cell_index": [
-[i, j, k]
-],
-"cell_record": [
-"{"value":"...","type":"Other"}",
-"{"value":"...","type":"Glass_Compound_Amount","constituent":"...","unit":"...","material":"..."}"
-]
+  "cell_index": [[i, j, k], ...],
+  "cell_record": ["serialized record", ...]
 }
+
+Determine each record type from the target cell's table context, especially its associated row and column headers.
+
+Use "Glass_Compound_Amount" when:
+1. the target cell represents the amount of a chemical constituent in a glass or glass-mixture composition, and
+2. its associated composition unit is mol%, mol, wt%, or wt.
+
+For "Glass_Compound_Amount":
+- Use the associated chemical compound or component label as "constituent".
+- Normalize mol% to "mol" and wt% to "wt".
+- Use an explicit sample, material, or glass identifier as "material"; otherwise use "xx".
+- Do not use experimental descriptions, measurement purposes, parameter names, or property names as "material".
+
+A "Glass_Compound_Amount" record must contain exactly these fields:
+"value", "type", "constituent", "unit", "material"
+
+Use "Other" for every remaining value, including measurements, properties, parameters, identifiers, ratios, temperatures, densities, number densities, and rates.
+
+An "Other" record must contain exactly these fields:
+"value", "type"
+
+Every item in "cell_record" must be one JSON object serialized as a JSON string. Do not return inner records as nested objects or arrays. Escape all internal double quotes.
+
+Required structure:
+
+{
+  "cell_index": [[i, j, k], ...],
+  "cell_record": [
+    "{\"value\":\"...\",\"type\":\"Other\"}",
+    "{\"value\":\"...\",\"type\":\"Glass_Compound_Amount\",\"constituent\":\"...\",\"unit\":\"...\",\"material\":\"...\"}"
+  ]
+}
+
+The examples demonstrate only classification and formatting. Do not copy their coordinates, values, number of entries, or table structure into the current answer.
 
 %{few_shots}%
 
-Return raw JSON only.
+Before returning, verify:
+1. Both output arrays have exactly the same length as "cell_value_processed".
+2. Every coordinate exactly equals [i[n], j[n], k[n]].
+3. Every record value exactly equals cell_value_processed[n].
+4. No coordinate or value was added, removed, reordered, or modified.
+5. Every composition amount under a chemical constituent header is classified as "Glass_Compound_Amount".
+
+Return raw JSON only. Do not return Python, Markdown, explanations, or multiple JSON objects.
 
 ### nl_to_format
+Table code: %{table_code}%
 
-Table code:
-%{table_code}%
+Supplementary text: %{sup_text}%
 
-Supplementary text:
-%{sup_text}%
-
-Target cells:
-%{target_cells}%
+Target cells: %{target_cells}%
 
 Read the table, supplementary text, and target cells.
 
-Follow this exact two-part format:
+Follow exactly this two-part format.
 
 PART 1 - Natural Language Response:
-In one short paragraph of fewer than 5 sentences, identify the record type and required information for each target cell while preserving the target-cell order.
+In one short paragraph of fewer than 5 sentences, summarize the record types and required fields for the target cells while preserving their order. Do not include JSON, code, or detailed reasoning.
 
 PART 2 - JSON Response:
-Convert the answer from PART 1 into one valid JSON object using the requirements below.
+Convert PART 1 into one valid JSON object using the rules below.
 
-Requirements:
-Use exactly these top-level fields: "cell_index" and "cell_record".
-Produce one "cell_index" and one "cell_record" for each target-cell entry.
-Preserve the original order of the target cells.
-Do not omit, merge, deduplicate, add, or reorder entries.
-Copy each target coordinate exactly as [i, j, k].
-The nth "cell_index" must correspond to the nth "cell_record".
-Copy "value" exactly from the processed value in target_cells.
-Keep "value" as a string and preserve formatting such as trailing zeros.
+The arrays "cell_value_processed", "i", "j", and "k" in target_cells are parallel arrays of equal length. For each position n:
 
-The "type" field must be exactly one of:
-- "Glass_Compound_Amount"
-- "Other"
+cell_index[n] = [i[n], j[n], k[n]]
+value[n] = cell_value_processed[n]
 
-Use "Glass_Compound_Amount" only for the amount of a chemical constituent in a glass or glass-mixture composition.
-A "Glass_Compound_Amount" record must contain these fields in this order:
-- "value"
-- "type"
-- "constituent"
-- "unit"
-- "material"
+Zip the arrays strictly by position. Copy each coordinate and value exactly. Do not infer coordinates from the table, create new coordinates, combine values from different positions, sort entries, or treat any array as a range.
 
-For these records:
-- "constituent" is the associated chemical compound or component.
-- "unit" is the normalized composition unit without a percent sign.
-- "material" is the associated sample, material, or glass identifier.
-- Use "xx" when no explicit material identifier is provided.
+The k value only distinguishes multiple extracted values from the same table cell. It does not determine the record type.
 
-Use "Other" for all remaining values.
-An "Other" record must contain only:
-- "value"
-- "type"
+The lengths of "cell_index" and "cell_record" must both equal the length of "cell_value_processed". The nth cell_record must describe the nth cell_index.
 
-Serialization requirements:
-Every "cell_record" item must be an inner JSON object serialized as a JSON string.
-Escape all double quotes inside each serialized object.
-Do not return inner records as nested JSON objects.
-Do not use single quotes, null, comments, Markdown, explanations, or additional fields.
-Do not add information that was not stated in PART 1.
+Use exactly these two top-level fields:
 
-Required JSON shape:
 {
-"cell_index": [
-[i, j, k]
-],
-"cell_record": [
-"{"value":"...","type":"Other"}",
-"{"value":"...","type":"Glass_Compound_Amount","constituent":"...","unit":"...","material":"..."}"
-]
+  "cell_index": [[i, j, k], ...],
+  "cell_record": ["serialized record", ...]
 }
 
-Provide exactly one PART 1 and exactly one PART 2.
-Do not include any text before PART 1 or after the final JSON object.
-Your response must begin exactly with "PART 1 - Natural Language Response:" and end immediately after the closing brace of the JSON object.
+Determine each record type from the target cell's table context, especially its associated row and column headers.
+
+Use "Glass_Compound_Amount" when:
+1. the target cell represents the amount of a chemical constituent in a glass or glass-mixture composition, and
+2. its associated composition unit is mol%, mol, wt%, or wt.
+
+For "Glass_Compound_Amount":
+- Use the associated chemical compound or component label as "constituent".
+- Normalize mol% to "mol" and wt% to "wt".
+- Use an explicit sample, material, or glass identifier as "material"; otherwise use "xx".
+- Do not use experimental descriptions, measurement purposes, parameter names, or property names as "material".
+
+A "Glass_Compound_Amount" record must contain exactly these fields:
+"value", "type", "constituent", "unit", "material"
+
+Use "Other" for every remaining value, including measurements, properties, parameters, identifiers, ratios, temperatures, densities, number densities, and rates.
+
+An "Other" record must contain exactly these fields:
+"value", "type"
+
+Every item in "cell_record" must be one JSON object serialized as a JSON string. Do not return inner records as nested objects or arrays. Escape all internal double quotes.
+
+Required structure:
+
+{
+  "cell_index": [[i, j, k], ...],
+  "cell_record": [
+    "{\"value\":\"...\",\"type\":\"Other\"}",
+    "{\"value\":\"...\",\"type\":\"Glass_Compound_Amount\",\"constituent\":\"...\",\"unit\":\"...\",\"material\":\"...\"}"
+  ]
+}
+
+Before returning PART 2, verify:
+1. Both output arrays have exactly the same length as "cell_value_processed".
+2. Every coordinate exactly equals [i[n], j[n], k[n]].
+3. Every record value exactly equals cell_value_processed[n].
+4. No coordinate or value was added, removed, reordered, or modified.
+5. Every composition amount under a chemical constituent header is classified as "Glass_Compound_Amount".
+
+Provide exactly one PART 1 and exactly one PART 2. Do not include text before PART 1 or after the final JSON object. The response must begin exactly with:
+
+PART 1 - Natural Language Response:
+
+and end immediately after the closing brace of the JSON object.

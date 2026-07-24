@@ -1,6 +1,6 @@
 dataset: "ARQA"
 dataset_path: "../data/ARQA.csv"
-context_path: "../data/ARQA_DB.csv"
+#context_path: "../data/ARQA_DB.csv"
 prompts_path: "prompts/prompting.md"
 model: "Qwen/Qwen3-8B" #google/gemma-3-4b-it, meta-llama/Llama-3.1-8B-Instruct, Qwen/Qwen3-8B, mistralai/Mistral-7B-Instruct-v0.3
 method: "zero_shot" #zero_shot, few_shot, nl_to_format

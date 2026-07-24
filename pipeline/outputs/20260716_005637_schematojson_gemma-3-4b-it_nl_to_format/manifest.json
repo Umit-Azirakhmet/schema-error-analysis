@@ -1,0 +1,20 @@
+{
+  "run_id": "20260716_005637_schematojson_gemma-3-4b-it_nl_to_format",
+  "created_at": "2026-07-16T08:41:12.629978",
+  "dataset": "SchemaToJSON",
+  "dataset_path": "/home/uazirakh/schema-error-analysis/data/SchemaToJSON.csv",
+  "context_path": "",
+  "prompts_path": "/home/uazirakh/schema-error-analysis/pipeline/prompts/prompting.md",
+  "model": "google/gemma-3-4b-it",
+  "method": "nl_to_format",
+  "num_shots": 3,
+  "generation_config": {
+    "do_sample": false,
+    "temperature": 0,
+    "max_new_tokens": 4096
+  },
+  "max_rows": null,
+  "total_rows": 500,
+  "completed_rows": 500,
+  "failed_rows": 0
+}
