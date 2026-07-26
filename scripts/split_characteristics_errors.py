@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """
-Compute the sum of each characteristic family and error family for every row.
-
-Usage:
-  python scripts/compute_family_sums.py
+Split merged CSV into separate files per characteristic family and error family.
 """
 
 from __future__ import annotations
@@ -17,10 +14,12 @@ from pathlib import Path
 INPUT_CSV = Path(
     r"C:\Users\Justin\SIP-git\schema-error-analysis\pipeline\outputs\full_merged_characteristics_and_errors.csv"
 )
-OUTPUT_CSV = INPUT_CSV.parent / "family_sums.csv"
+OUTPUT_DIR = INPUT_CSV.parent / "split_data"
+
+IDENTIFIER_COLS = ["row_id", "dataset", "model", "method"]
 
 # ---------- CHARACTERISTIC FAMILIES ----------
-CHAR_FAMILIES = {
+CHARACTERISTIC_FAMILIES: dict[str, list[str]] = {
     "Complexity": [
         "gold_json_length", "nesting_depth", "total_object_count",
         "max_array_nesting_depth", "total_array_count", "max_array_length",
@@ -45,29 +44,35 @@ CHAR_FAMILIES = {
     ]
 }
 
-# ---------- ERROR FAMILIES ----------
-ERROR_FAMILIES = {
+# ---------- ERROR FAMILIES (exactly as you provided) ----------
+ERROR_FAMILIES: dict[str, list[str]] = {
     "Completion": [
-        "truncated_count", "repetition_count", "empty_response_count"
+        "truncated_count",
+        "repetition_count",
+        "empty_response_count",
     ],
     "Syntax": [
-        "invalid_json_syntax_count", "backslash_issues_count"
+        "invalid_json_syntax_count",
+        "backslash_issues_count",
     ],
     "Contamination": [
-        "markdown_code_fence_count", "explanatory_text_count"
+        "markdown_code_fence_count",
+        "explanatory_text_count",
     ],
-    "Schema_Error": [
-        "hallucinated_fields_count", "missing_fields_count",
-        "wrong_nesting_count", "wrong_types_count", "wrong_order_count"
+    "Schema": [
+        "hallucinated_fields_count",
+        "missing_fields_count",
+        "wrong_nesting_count",
+        "wrong_types_count",
+        "wrong_order_count",
     ],
     "Content": [
-        "incorrect_values_count", "placeholder_values_count",
-        "longer_shorter_count", "different_language_count"
-    ]
+        "incorrect_values_count",
+        "placeholder_values_count",
+        "longer_shorter_count",
+        "different_language_count",
+    ],
 }
-
-# Identifier columns to keep
-ID_COLS = ["row_id", "dataset", "model", "method"]
 
 # ------------------------------------------------------------
 # MAIN
@@ -75,53 +80,59 @@ ID_COLS = ["row_id", "dataset", "model", "method"]
 def main():
     if not INPUT_CSV.exists():
         raise FileNotFoundError(f"Input file not found: {INPUT_CSV}")
-
     df = pd.read_csv(INPUT_CSV)
     print(f"✅ Loaded {len(df)} rows from {INPUT_CSV.name}")
 
-    # Ensure all columns are numeric (coerce errors to NaN, then fill with 0)
-    all_family_cols = []
-    for fam, cols in {**CHAR_FAMILIES, **ERROR_FAMILIES}.items():
-        all_family_cols.extend(cols)
+    missing_id = [c for c in IDENTIFIER_COLS if c not in df.columns]
+    if missing_id:
+        raise KeyError(f"Missing identifier columns: {missing_id}")
 
-    for col in all_family_cols:
-        if col in df.columns:
-            df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Start with the identifier columns
-    result_df = df[ID_COLS].copy()
-
-    # Compute sums for each characteristic family
-    print("\n📊 Computing characteristic family sums...")
-    for fam, cols in CHAR_FAMILIES.items():
+    # --- Characteristics ---
+    print("\n📊 Characteristic families:")
+    for family, cols in CHARACTERISTIC_FAMILIES.items():
         existing = [c for c in cols if c in df.columns]
-        if existing:
-            result_df[f"{fam}_sum"] = df[existing].sum(axis=1)
-            print(f"  ✅ {fam}: {len(existing)} columns summed")
-        else:
-            result_df[f"{fam}_sum"] = 0
-            print(f"  ⚠️  {fam}: no columns found → sum set to 0")
+        if not existing:
+            print(f"  ⚠️  {family}: no columns found")
+            continue
+        subset_cols = IDENTIFIER_COLS + existing
+        subset_df = df[subset_cols].copy()
+        out_path = OUTPUT_DIR / f"characteristics_{family}.csv"
+        subset_df.to_csv(out_path, index=False)
+        print(f"  ✅ {family}: {len(existing)} columns → {out_path.name}")
 
-    # Compute sums for each error family
-    print("\n❌ Computing error family sums...")
-    for fam, cols in ERROR_FAMILIES.items():
+    all_char_cols = [c for cols in CHARACTERISTIC_FAMILIES.values() for c in cols if c in df.columns]
+    if all_char_cols:
+        subset_cols = IDENTIFIER_COLS + all_char_cols
+        subset_df = df[subset_cols].copy()
+        out_path = OUTPUT_DIR / "characteristics_all.csv"
+        subset_df.to_csv(out_path, index=False)
+        print(f"  ✅ All characteristics ({len(all_char_cols)} columns) → {out_path.name}")
+
+    # --- Errors ---
+    print("\n❌ Error families:")
+    for family, cols in ERROR_FAMILIES.items():
         existing = [c for c in cols if c in df.columns]
-        if existing:
-            result_df[f"{fam}_sum"] = df[existing].sum(axis=1)
-            print(f"  ✅ {fam}: {len(existing)} columns summed")
-        else:
-            result_df[f"{fam}_sum"] = 0
-            print(f"  ⚠️  {fam}: no columns found → sum set to 0")
+        if not existing:
+            print(f"  ⚠️  {family}: no columns found")
+            continue
+        subset_cols = IDENTIFIER_COLS + existing
+        subset_df = df[subset_cols].copy()
+        out_path = OUTPUT_DIR / f"errors_{family}.csv"
+        subset_df.to_csv(out_path, index=False)
+        print(f"  ✅ {family}: {len(existing)} columns → {out_path.name}")
 
-    # Save to CSV
-    OUTPUT_CSV.parent.mkdir(parents=True, exist_ok=True)
-    result_df.to_csv(OUTPUT_CSV, index=False)
-    print(f"\n✅ Family sums saved to: {OUTPUT_CSV}")
-    print(f"   Shape: {result_df.shape}")
+    all_err_cols = [c for cols in ERROR_FAMILIES.values() for c in cols if c in df.columns]
+    if all_err_cols:
+        subset_cols = IDENTIFIER_COLS + all_err_cols
+        subset_df = df[subset_cols].copy()
+        out_path = OUTPUT_DIR / "errors_all.csv"
+        subset_df.to_csv(out_path, index=False)
+        print(f"  ✅ All errors ({len(all_err_cols)} columns) → {out_path.name}")
 
-    # Show a preview of the first few rows
-    print("\n🔍 Preview (first 3 rows):")
-    print(result_df.head(3).to_string())
+    print(f"\n✅ All files saved to: {OUTPUT_DIR}")
+
 
 if __name__ == "__main__":
-    main()
+    main()  
