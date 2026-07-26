@@ -1,0 +1,112 @@
+{
+  "definition": "100% stacked bars for a single combined CSV file.",
+  "source_file": "C:\\Users\\Justin\\SIP-git\\schema-error-analysis\\pipeline\\outputs\\full error analysis - combined_full_error_analysis.csv",
+  "families": {
+    "Completion": {
+      "total": 57836,
+      "errors": {
+        "Truncated": {
+          "column": "truncated_count",
+          "count": 1585,
+          "share": 0.02740507642298914
+        },
+        "Repetition": {
+          "column": "repetition_count",
+          "count": 55992,
+          "share": 0.968116743896535
+        },
+        "Empty responses": {
+          "column": "empty_response_count",
+          "count": 259,
+          "share": 0.004478179680475828
+        }
+      }
+    },
+    "Syntax": {
+      "total": 1181537,
+      "errors": {
+        "Invalid JSON syntax": {
+          "column": "invalid_json_syntax_count",
+          "count": 336,
+          "share": 0.0002843753517663857
+        },
+        "Backslash issues": {
+          "column": "backslash_issues_count",
+          "count": 1181201,
+          "share": 0.9997156246482336
+        }
+      }
+    },
+    "Contamination": {
+      "total": 20167,
+      "errors": {
+        "Markdown code fence": {
+          "column": "markdown_code_fence_count",
+          "count": 10605,
+          "share": 0.5258590767094758
+        },
+        "Explanatory text": {
+          "column": "explanatory_text_count",
+          "count": 9562,
+          "share": 0.4741409232905241
+        }
+      }
+    },
+    "Schema": {
+      "total": 442741,
+      "errors": {
+        "Hallucinated fields": {
+          "column": "hallucinated_fields_count",
+          "count": 6588,
+          "share": 0.01488003144050359
+        },
+        "Missing fields": {
+          "column": "missing_fields_count",
+          "count": 434684,
+          "share": 0.9818020016217156
+        },
+        "Wrong nesting": {
+          "column": "wrong_nesting_count",
+          "count": 1180,
+          "share": 0.002665215103186739
+        },
+        "Wrong types": {
+          "column": "wrong_types_count",
+          "count": 284,
+          "share": 0.0006414585502585033
+        },
+        "Wrong order": {
+          "column": "wrong_order_count",
+          "count": 5,
+          "share": 1.129328433553703e-05
+        }
+      }
+    },
+    "Content": {
+      "total": 307833,
+      "errors": {
+        "Incorrect values": {
+          "column": "incorrect_values_count",
+          "count": 254804,
+          "share": 0.8277345183914655
+        },
+        "Placeholder values": {
+          "column": "placeholder_values_count",
+          "count": 49506,
+          "share": 0.16082096461393028
+        },
+        "Longer/shorter than gold": {
+          "column": "longer_shorter_count",
+          "count": 3523,
+          "share": 0.011444516994604217
+        },
+        "Different language": {
+          "column": "different_language_count",
+          "count": 0,
+          "share": 0.0
+        }
+      }
+    }
+  },
+  "png": "pipeline/outputs/error_reports/stacked_bars/error_family_composition_single_file.png"
+}

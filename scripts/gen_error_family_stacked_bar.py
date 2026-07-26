@@ -1,30 +1,26 @@
 #!/usr/bin/env python3
 """100%-normalized stacked bars of shared error families.
-
-Pools all pipeline/outputs/*/error_analysis.csv runs (all datasets/models/methods),
-sums a strict set of shared error columns into five families, and renders one
-chart where each bar is the within-family composition of leaf errors.
-
-Usage:
-  python scripts/gen_error_family_stacked_bar.py
+Single-file version: reads one specific CSV instead of scanning the outputs directory.
 """
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any
 
 import matplotlib.pyplot as plt
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parent.parent
-OUTPUTS_DIR = ROOT / "pipeline" / "outputs"
-OUT_DIR = OUTPUTS_DIR / "error_reports" / "stacked_bars"
+# ------------------------------------------------------------
+# CONFIGURATION: EDIT THIS PATH TO YOUR FILE
+# ------------------------------------------------------------
+INPUT_CSV = r"C:\Users\Justin\SIP-git\schema-error-analysis\pipeline\outputs\full error analysis - combined_full_error_analysis.csv"
+# ------------------------------------------------------------
 
-# Fixed X-axis family order and strict column membership (omit Few-shot
-# contamination; keep empty_response_count; ignore trailing_commas /
-# unescaped_quotes and all arqa_/s2j_/dj_* extras).
+# Output directory
+OUTPUT_DIR = Path(INPUT_CSV).parent / "error_reports" / "stacked_bars"
+
+# Fixed X-axis family order and strict column membership
 FAMILY_COLUMNS: dict[str, list[str]] = {
     "Completion": [
         "truncated_count",
@@ -37,12 +33,10 @@ FAMILY_COLUMNS: dict[str, list[str]] = {
     ],
     "Contamination": [
         "markdown_code_fence_count",
-        "python_code_count",
         "explanatory_text_count",
     ],
     "Schema": [
         "hallucinated_fields_count",
-        "wrong_field_names_count",
         "missing_fields_count",
         "wrong_nesting_count",
         "wrong_types_count",
@@ -63,10 +57,8 @@ ERROR_LABELS: dict[str, str] = {
     "invalid_json_syntax_count": "Invalid JSON syntax",
     "backslash_issues_count": "Backslash issues",
     "markdown_code_fence_count": "Markdown code fence",
-    "python_code_count": "Python code",
     "explanatory_text_count": "Explanatory text",
     "hallucinated_fields_count": "Hallucinated fields",
-    "wrong_field_names_count": "Wrong field names",
     "missing_fields_count": "Missing fields",
     "wrong_nesting_count": "Wrong nesting",
     "wrong_types_count": "Wrong types",
@@ -81,37 +73,35 @@ FAMILY_ORDER = list(FAMILY_COLUMNS.keys())
 MAPPED_COLUMNS = [c for cols in FAMILY_COLUMNS.values() for c in cols]
 
 
-def load_all_run_errors(outputs_dir: Path = OUTPUTS_DIR) -> tuple[pd.DataFrame, int]:
-    """Load every error_analysis.csv under outputs (no dataset filter)."""
-    frames: list[pd.DataFrame] = []
-    for run_dir in sorted(outputs_dir.iterdir()):
-        if not run_dir.is_dir():
-            continue
-        csv_path = run_dir / "error_analysis.csv"
-        if not csv_path.exists():
-            continue
-        df = pd.read_csv(csv_path)
-        df["run_id"] = run_dir.name
-        frames.append(df)
+def load_single_file(csv_path: str) -> pd.DataFrame:
+    """Load the single combined CSV file and clean numeric columns."""
+    path = Path(csv_path)
+    if not path.exists():
+        raise FileNotFoundError(f"File not found: {path}")
+    df = pd.read_csv(path)
+    print(f"✅ Loaded {len(df)} rows from {path.name}")
 
-    if not frames:
-        raise FileNotFoundError(f"No error_analysis.csv under {outputs_dir}")
+    # 🔧 FIX: Convert all mapped columns to numeric, coercing errors to NaN, then fill NaN with 0
+    for col in MAPPED_COLUMNS:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
+        else:
+            print(f"⚠️  Warning: Column '{col}' not found, skipping")
+            # Add the column with all zeros so we don't get KeyError later
+            df[col] = 0
 
-    return pd.concat(frames, ignore_index=True), len(frames)
+    return df
 
 
-def aggregate_families(df: pd.DataFrame) -> dict[str, Any]:
+def aggregate_families(df: pd.DataFrame) -> dict[str, any]:
     """Sum mapped columns and compute within-family shares."""
-    missing = [c for c in MAPPED_COLUMNS if c not in df.columns]
-    if missing:
-        raise KeyError(f"Missing mapped error columns: {missing}")
-
-    families: dict[str, Any] = {}
+    # All columns should now exist from load_single_file
+    families: dict[str, any] = {}
     for family in FAMILY_ORDER:
-        errors: dict[str, Any] = {}
+        errors: dict[str, any] = {}
         total = 0
         for col in FAMILY_COLUMNS[family]:
-            count = int(df[col].fillna(0).sum())
+            count = int(df[col].sum())  # Now safe because we cleaned it
             total += count
             errors[col] = {"label": ERROR_LABELS[col], "count": count, "share": 0.0}
 
@@ -126,9 +116,8 @@ def aggregate_families(df: pd.DataFrame) -> dict[str, Any]:
     return families
 
 
-def plot_stacked_bars(families: dict[str, Any], out_path: Path) -> None:
+def plot_stacked_bars(families: dict[str, any], out_path: Path) -> None:
     """Draw 100% stacked bars with absolute family totals above each bar."""
-    # Distinct colors for every leaf error (stable order across families).
     leaf_order = MAPPED_COLUMNS
     cmap = plt.get_cmap("tab20")
     color_of = {col: cmap(i % 20) for i, col in enumerate(leaf_order)}
@@ -139,7 +128,7 @@ def plot_stacked_bars(families: dict[str, Any], out_path: Path) -> None:
 
     x = list(range(len(FAMILY_ORDER)))
     bottoms = [0.0] * len(FAMILY_ORDER)
-    legend_handles: list[Any] = []
+    legend_handles: list[any] = []
     legend_labels: list[str] = []
     seen_labels: set[str] = set()
 
@@ -184,7 +173,7 @@ def plot_stacked_bars(families: dict[str, Any], out_path: Path) -> None:
     ax.set_xlabel("Error family")
     ax.set_ylim(0, 112)
     ax.set_yticks([0, 25, 50, 75, 100])
-    ax.set_title("Error family composition (100% stacked, all runs pooled)")
+    ax.set_title("Error family composition (100% stacked, single file)")
 
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
@@ -208,10 +197,10 @@ def plot_stacked_bars(families: dict[str, Any], out_path: Path) -> None:
     plt.close(fig)
 
 
-def build_payload(families: dict[str, Any], n_runs: int, png_path: Path) -> dict[str, Any]:
-    family_out: dict[str, Any] = {}
+def build_payload(families: dict[str, any], png_path: Path) -> dict[str, any]:
+    family_out: dict[str, any] = {}
     for family in FAMILY_ORDER:
-        err_out: dict[str, Any] = {}
+        err_out: dict[str, any] = {}
         for col, entry in families[family]["errors"].items():
             err_out[ERROR_LABELS[col]] = {
                 "column": col,
@@ -224,30 +213,25 @@ def build_payload(families: dict[str, Any], n_runs: int, png_path: Path) -> dict
         }
 
     return {
-        "definition": (
-            "100% stacked bars: X = error family; stack segments = leaf errors "
-            "from a strict shared-column map; Y = share within family; "
-            "counts pooled across all pipeline/outputs runs"
-        ),
-        "n_runs": n_runs,
+        "definition": "100% stacked bars for a single combined CSV file.",
+        "source_file": str(INPUT_CSV),
         "families": family_out,
-        "png": str(png_path.relative_to(ROOT)).replace("\\", "/"),
+        "png": str(png_path.relative_to(Path(INPUT_CSV).parent.parent.parent)).replace("\\", "/"),
     }
 
 
 def main() -> None:
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    df, n_runs = load_all_run_errors()
+    df = load_single_file(INPUT_CSV)
     families = aggregate_families(df)
 
-    png_path = OUT_DIR / "error_family_composition.png"
-    json_path = OUT_DIR / "error_family_composition.json"
+    png_path = OUTPUT_DIR / "error_family_composition_single_file.png"
+    json_path = OUTPUT_DIR / "error_family_composition_single_file.json"
 
     plot_stacked_bars(families, png_path)
-    payload = build_payload(families, n_runs, png_path)
+    payload = build_payload(families, png_path)
     json_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
-    print(f"runs={n_runs}")
+    print(f"\n📊 Results:")
     for family in FAMILY_ORDER:
         total = families[family]["total"]
         parts = ", ".join(
@@ -255,8 +239,8 @@ def main() -> None:
             for c in FAMILY_COLUMNS[family]
         )
         print(f"  {family}: total={total} ({parts})")
-    print(f"Wrote {png_path}")
-    print(f"Wrote {json_path}")
+    print(f"\n✅ PNG saved to: {png_path}")
+    print(f"✅ JSON saved to: {json_path}")
 
 
 if __name__ == "__main__":
