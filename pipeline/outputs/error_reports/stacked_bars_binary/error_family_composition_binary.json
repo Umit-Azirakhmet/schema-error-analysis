@@ -1,0 +1,117 @@
+{
+  "definition": "100% stacked bars using binary error presence (0/1).",
+  "source_file": "C:\\Users\\Justin\\SIP-git\\schema-error-analysis\\pipeline\\outputs\\full_error_analysis_binary.csv",
+  "families": {
+    "Completion": {
+      "total": 9542,
+      "errors": {
+        "Truncated": {
+          "column": "truncated_count",
+          "count": 1585,
+          "share": 0.16610773422762523
+        },
+        "Repetition": {
+          "column": "repetition_count",
+          "count": 7798,
+          "share": 0.8172290924334521
+        },
+        "Empty responses": {
+          "column": "empty_response_count",
+          "count": 159,
+          "share": 0.016663173338922657
+        }
+      }
+    },
+    "Syntax": {
+      "total": 4481,
+      "errors": {
+        "Invalid JSON syntax": {
+          "column": "invalid_json_syntax_count",
+          "count": 287,
+          "share": 0.06404820352599866
+        },
+        "Backslash issues": {
+          "column": "backslash_issues_count",
+          "count": 4194,
+          "share": 0.9359517964740013
+        }
+      }
+    },
+    "Contamination": {
+      "total": 13872,
+      "errors": {
+        "Markdown code fence": {
+          "column": "markdown_code_fence_count",
+          "count": 5391,
+          "share": 0.38862456747404844
+        },
+        "Python code wrapping": {
+          "column": "python_code_wrapping_count",
+          "count": 1070,
+          "share": 0.07713379469434833
+        },
+        "Explanatory text": {
+          "column": "explanatory_text_count",
+          "count": 7411,
+          "share": 0.5342416378316033
+        }
+      }
+    },
+    "Schema": {
+      "total": 14539,
+      "errors": {
+        "Hallucinated fields": {
+          "column": "hallucinated_fields_count",
+          "count": 989,
+          "share": 0.06802393562143201
+        },
+        "Missing fields": {
+          "column": "missing_fields_count",
+          "count": 9768,
+          "share": 0.6718481326088451
+        },
+        "Wrong nesting": {
+          "column": "wrong_nesting_count",
+          "count": 1143,
+          "share": 0.0786161359103102
+        },
+        "Wrong types": {
+          "column": "wrong_types_count",
+          "count": 114,
+          "share": 0.007840979434624114
+        },
+        "Wrong order": {
+          "column": "wrong_order_count",
+          "count": 3,
+          "share": 0.00020634156406905565
+        },
+        "Wrong nesting depth": {
+          "column": "wrong_nesting_depth_count",
+          "count": 2522,
+          "share": 0.17346447486071945
+        }
+      }
+    },
+    "Content": {
+      "total": 20957,
+      "errors": {
+        "Incorrect values": {
+          "column": "incorrect_values_count",
+          "count": 11174,
+          "share": 0.5331870019563869
+        },
+        "Placeholder values": {
+          "column": "placeholder_values_count",
+          "count": 6260,
+          "share": 0.298706875984158
+        },
+        "Longer/shorter than gold": {
+          "column": "longer_shorter_count",
+          "count": 3523,
+          "share": 0.16810612205945508
+        }
+      }
+    }
+  },
+  "png": "pipeline/outputs/error_reports/stacked_bars_binary/error_family_composition_binary.png"
+}

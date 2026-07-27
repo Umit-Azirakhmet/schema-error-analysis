@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """100%-normalized stacked bars of shared error families.
-Single-file version: reads one specific CSV instead of scanning the outputs directory.
+Binary version: reads the binary error CSV (0/1 presence).
 """
 
 from __future__ import annotations
@@ -12,13 +12,13 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # ------------------------------------------------------------
-# CONFIGURATION: EDIT THIS PATH TO YOUR FILE
+# CONFIGURATION: USE THE BINARY CSV
 # ------------------------------------------------------------
-INPUT_CSV = r"C:\Users\Justin\SIP-git\schema-error-analysis\pipeline\outputs\full error analysis - combined_full_error_analysis.csv"
+INPUT_CSV = r"C:\Users\Justin\SIP-git\schema-error-analysis\pipeline\outputs\full_error_analysis_binary.csv"
 # ------------------------------------------------------------
 
 # Output directory
-OUTPUT_DIR = Path(INPUT_CSV).parent / "error_reports" / "stacked_bars"
+OUTPUT_DIR = Path(INPUT_CSV).parent / "error_reports" / "stacked_bars_binary"
 
 # Fixed X-axis family order and strict column membership
 FAMILY_COLUMNS: dict[str, list[str]] = {
@@ -33,6 +33,7 @@ FAMILY_COLUMNS: dict[str, list[str]] = {
     ],
     "Contamination": [
         "markdown_code_fence_count",
+        "python_code_wrapping_count",      # <-- comma added here
         "explanatory_text_count",
     ],
     "Schema": [
@@ -41,12 +42,12 @@ FAMILY_COLUMNS: dict[str, list[str]] = {
         "wrong_nesting_count",
         "wrong_types_count",
         "wrong_order_count",
+        "wrong_nesting_depth_count",
     ],
     "Content": [
         "incorrect_values_count",
         "placeholder_values_count",
         "longer_shorter_count",
-        "different_language_count",
     ],
 }
 
@@ -57,12 +58,14 @@ ERROR_LABELS: dict[str, str] = {
     "invalid_json_syntax_count": "Invalid JSON syntax",
     "backslash_issues_count": "Backslash issues",
     "markdown_code_fence_count": "Markdown code fence",
+    "python_code_wrapping_count": "Python code wrapping",
     "explanatory_text_count": "Explanatory text",
     "hallucinated_fields_count": "Hallucinated fields",
     "missing_fields_count": "Missing fields",
     "wrong_nesting_count": "Wrong nesting",
     "wrong_types_count": "Wrong types",
     "wrong_order_count": "Wrong order",
+    "wrong_nesting_depth_count": "Wrong nesting depth",
     "incorrect_values_count": "Incorrect values",
     "placeholder_values_count": "Placeholder values",
     "longer_shorter_count": "Longer/shorter than gold",
@@ -81,13 +84,12 @@ def load_single_file(csv_path: str) -> pd.DataFrame:
     df = pd.read_csv(path)
     print(f"✅ Loaded {len(df)} rows from {path.name}")
 
-    # 🔧 FIX: Convert all mapped columns to numeric, coercing errors to NaN, then fill NaN with 0
+    # Ensure all mapped columns are numeric (binary), fill NaN with 0
     for col in MAPPED_COLUMNS:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
         else:
             print(f"⚠️  Warning: Column '{col}' not found, skipping")
-            # Add the column with all zeros so we don't get KeyError later
             df[col] = 0
 
     return df
@@ -95,13 +97,12 @@ def load_single_file(csv_path: str) -> pd.DataFrame:
 
 def aggregate_families(df: pd.DataFrame) -> dict[str, any]:
     """Sum mapped columns and compute within-family shares."""
-    # All columns should now exist from load_single_file
     families: dict[str, any] = {}
     for family in FAMILY_ORDER:
         errors: dict[str, any] = {}
         total = 0
         for col in FAMILY_COLUMNS[family]:
-            count = int(df[col].sum())  # Now safe because we cleaned it
+            count = int(df[col].sum())
             total += count
             errors[col] = {"label": ERROR_LABELS[col], "count": count, "share": 0.0}
 
@@ -173,7 +174,7 @@ def plot_stacked_bars(families: dict[str, any], out_path: Path) -> None:
     ax.set_xlabel("Error family")
     ax.set_ylim(0, 112)
     ax.set_yticks([0, 25, 50, 75, 100])
-    ax.set_title("Error family composition (100% stacked, single file)")
+    ax.set_title("Error family composition (binary presence, 100% stacked)")
 
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
@@ -213,7 +214,7 @@ def build_payload(families: dict[str, any], png_path: Path) -> dict[str, any]:
         }
 
     return {
-        "definition": "100% stacked bars for a single combined CSV file.",
+        "definition": "100% stacked bars using binary error presence (0/1).",
         "source_file": str(INPUT_CSV),
         "families": family_out,
         "png": str(png_path.relative_to(Path(INPUT_CSV).parent.parent.parent)).replace("\\", "/"),
@@ -224,14 +225,14 @@ def main() -> None:
     df = load_single_file(INPUT_CSV)
     families = aggregate_families(df)
 
-    png_path = OUTPUT_DIR / "error_family_composition_single_file.png"
-    json_path = OUTPUT_DIR / "error_family_composition_single_file.json"
+    png_path = OUTPUT_DIR / "error_family_composition_binary.png"
+    json_path = OUTPUT_DIR / "error_family_composition_binary.json"
 
     plot_stacked_bars(families, png_path)
     payload = build_payload(families, png_path)
     json_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
-    print(f"\n📊 Results:")
+    print(f"\n📊 Results (binary):")
     for family in FAMILY_ORDER:
         total = families[family]["total"]
         parts = ", ".join(
