@@ -173,7 +173,7 @@ def plot_stacked_bars(families: dict[str, any], out_path: Path) -> None:
     ax.set_xlabel("Error family")
     ax.set_ylim(0, 112)
     ax.set_yticks([0, 25, 50, 75, 100])
-    ax.set_title("Error family composition (binary presence, 100% stacked)")
+    ax.set_title("Error family composition")
 
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)

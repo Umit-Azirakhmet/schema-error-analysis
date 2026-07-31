@@ -13,7 +13,7 @@ plt.rcParams['font.sans-serif'] = ['Arial', 'DejaVu Sans', 'Helvetica']
 # ------------------------------------------------------------
 # CONFIGURATION
 # ------------------------------------------------------------
-INPUT_CSV = Path("pipeline/outputs/family_sums.csv")
+INPUT_CSV = Path("outputs/family_sums.csv")
 OUTPUT_DIR = Path(".")
 
 # Characteristic families (as they appear in family_sums.csv)
@@ -171,7 +171,7 @@ def create_forest_plot(df, dataset_name, char_labels, output_dir="."):
     ax.set_yticks(y_pos)
     ax.set_yticklabels(results_df['characteristic'], fontsize=11)
     ax.set_xlabel('Correlation Coefficient', fontsize=13, fontweight='bold')
-    ax.set_title(f'{dataset_name}: Characteristic Family Correlation with Total Errors', 
+    ax.set_title(f'{dataset_name}: Correlation Dot Plot', 
                  fontsize=15, fontweight='bold', pad=20)
     ax.set_xlim(-1.1, 1.1)
 

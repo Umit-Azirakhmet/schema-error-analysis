@@ -38,22 +38,17 @@
       }
     },
     "Contamination": {
-      "total": 13872,
+      "total": 12802,
       "errors": {
         "Markdown code fence": {
           "column": "markdown_code_fence_count",
           "count": 5391,
-          "share": 0.38862456747404844
-        },
-        "Python code wrapping": {
-          "column": "python_code_wrapping_count",
-          "count": 1070,
-          "share": 0.07713379469434833
+          "share": 0.42110607717544135
         },
         "Explanatory text": {
           "column": "explanatory_text_count",
           "count": 7411,
-          "share": 0.5342416378316033
+          "share": 0.5788939228245586
         }
       }
     },
@@ -109,6 +104,11 @@
           "column": "longer_shorter_count",
           "count": 3523,
           "share": 0.16810612205945508
+        },
+        "Different language": {
+          "column": "different_language_count",
+          "count": 0,
+          "share": 0.0
         }
       }
     }
