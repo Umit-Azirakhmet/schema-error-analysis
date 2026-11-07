@@ -1,0 +1,101 @@
+{
+  "reviewer": "reviewer_a",
+  "annotation_type": "independent model annotations; not human validation",
+  "identity": {
+    "assistant": "OpenAI Codex agent",
+    "model_family_disclosed_in_instructions": "GPT-6-based Codex",
+    "exact_serving_model_snapshot": null,
+    "exact_snapshot_limitation": "Exact serving model identifier is not exposed to this agent."
+  },
+  "review_date_utc": "2026-11-06",
+  "timestamp_utc": "2026-11-06T05:17:25Z",
+  "local_task_date": "2026-11-05 America/Los_Angeles",
+  "source_file": "reports/eacl_revision/annotation_sample.csv",
+  "source_sha256": "2121dd2ccd5289b52e5121074f8d7b5febe6cb516c590f00dc137eff854dcc33",
+  "annotation_file": "reports/eacl_revision/agent_review/reviewer_a.csv",
+  "annotation_sha256": "15901d5292673f2fcae5287c194662c3dac70cd65c3e86f7a85e1cb4a84cc4b1",
+  "rows": 230,
+  "dimensions": [
+    "completion",
+    "syntax",
+    "envelope_contamination",
+    "schema_non_conformance",
+    "content_fidelity"
+  ],
+  "label_definition": {
+    "yes": "error present",
+    "no": "no error established in assessable evidence",
+    "not-assessable": "insufficient evidence for reliable judgment"
+  },
+  "independence": {
+    "read_for_labels": [
+      "annotation_sample.csv evidence columns only"
+    ],
+    "not_read": [
+      "existing annotation CSVs",
+      "annotation key",
+      "detector code",
+      "detector metrics",
+      "brief",
+      "other reviewer outputs"
+    ],
+    "subdelegation": false,
+    "existing_detectors_run": false,
+    "posthoc_other_reviewer_access": false
+  },
+  "method": "Independent row-by-row model judgments from raw responses and supplied evidence. Local Python standard JSON parsing and official jsonschema used only for objective syntax/schema checks. Schema cells read with json.loads or ast.literal_eval, never eval. Semantic judgments manually recorded per row. Embedded SchemaToJSON records decoded for coordinate/content comparison; whitespace differences in serialized records ignored. No child-object salvage from invalid parent answers; Python program intermediates not treated as JSON answers.",
+  "completion_policy": "Clear interrupted token/value/field or abandoned answer => yes. Finished wrong delimiter => no. Missing parent closure alone with otherwise finished substantive content => not-assessable.",
+  "envelope_policy": "Raw prose or Markdown fences count as contamination even when NL-to-format prompt requests prose; code-like words inside JSON strings do not count.",
+  "schema_policy": "Only actual supplied schema cell used; missing schema => not-assessable. Invalid intended answer => schema not-assessable.",
+  "content_policy": "Parseable intended answer required. Gold used as comparison evidence, not sufficient proof that differing grounded paraphrases are wrong. Missing prompt/source limits interpretation of semantic/path/classification differences. Internal contradictions, impossible evidence spans, and unequal coordinate/record pairing count as independently observable errors. Ordinary common-noun allergy capitalization judged semantically equivalent in context. Field relocation judged contextually when source available.",
+  "limitations": {
+    "missing_prompts": 137,
+    "missing_actual_schemas": 153,
+    "human_review_performed": false,
+    "reviewer_blinding": "One model-agent review; independent from reviewer B but no claim of independent model family or human reliability.",
+    "long_responses": "Long repetitive invalid outputs inspected through manageable excerpts plus full-input strict parsing; clearly interrupted endings or invalid parent structure were not repaired to infer content.",
+    "no_external_ground_truth": "No outside sources consulted; no factual source verification beyond supplied sample."
+  },
+  "tools_used": [
+    "functions.exec orchestration",
+    "exec_command PowerShell",
+    "Python 3.14 standard csv/json/ast/hashlib",
+    "official jsonschema from .revision-deps",
+    "clock.curr_time"
+  ],
+  "validation": {
+    "coverage_matches_sample": true,
+    "unique_ids": 230,
+    "all_five_labels_present": true,
+    "allowed_labels_only": true,
+    "objective_schema_and_parser_crosscheck": "All applicable supplied schemas checked using official jsonschema; no disagreements with recorded syntax/schema decisions."
+  },
+  "label_counts": {
+    "completion": {
+      "no": 204,
+      "not-assessable": 15,
+      "yes": 11
+    },
+    "syntax": {
+      "no": 175,
+      "yes": 55
+    },
+    "envelope_contamination": {
+      "no": 98,
+      "yes": 132
+    },
+    "schema_non_conformance": {
+      "not-assessable": 172,
+      "yes": 26,
+      "no": 32
+    },
+    "content_fidelity": {
+      "yes": 106,
+      "not-assessable": 79,
+      "no": 45
+    }
+  },
+  "review_csv_sha256": "15901d5292673f2fcae5287c194662c3dac70cd65c3e86f7a85e1cb4a84cc4b1",
+  "status": "frozen",
+  "scope": "All 230 annotation_sample.csv rows, all five dimensions, independently annotated by reviewer A; no adjudication against other reviewer labels."
+}

@@ -18,6 +18,15 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, Set
 
+try:
+    from .opportunity_metrics import evaluate, strict_parse
+    from .error_taxonomy import RAW_LEAVES, family_flags
+    from .response_assessment import code_response, completion
+except ImportError:
+    from opportunity_metrics import evaluate, strict_parse
+    from error_taxonomy import RAW_LEAVES, family_flags
+    from response_assessment import code_response, completion
+
 
 # ============================================================
 # ERROR COLUMNS (General + Dataset Specific)
@@ -83,10 +92,14 @@ def strip_code_fences(text: str) -> str:
 
 
 def find_json_span(text: str) -> Optional[Tuple[int, int]]:
-    """Find first complete {...} or [...] span while respecting strings."""
-    for start, ch in enumerate(text):
-        if ch not in "{[":
-            continue
+    """Find the first outer candidate span; never salvage a nested subtree.
+
+    A truncated parent containing a complete child must remain truncated.
+    """
+    first = find_first_json_opener(text)
+    if first is None:
+        return None
+    for start in (first,):
         stack: List[str] = []
         in_string = False
         escaped = False
@@ -172,10 +185,25 @@ def extract_json_candidate(raw_response: str) -> Tuple[str, str, str, bool]:
         candidate_json, before_json, after_json, has_complete_span
     """
     no_fence = strip_code_fences(raw_response)
+    if strict_parse(no_fence)[0]:
+        return no_fence, '', '', True
+    # An explicit answer section takes priority over illustrative objects in
+    # PART 1. Never accept an intermediate dictionary as an executable answer.
+    answer = re.search(r'(?im)^\s*PART\s*2\b\s*(?:-\s*)?(?:JSON(?:\s+Response)?\s*)?(?::\s*|(?=[{\[]))', no_fence)
+    if answer:
+        candidate, before, after, complete = extract_json_candidate(no_fence[answer.end():])
+        return candidate, no_fence[:answer.end()] + before, after, complete
+    if code_response(no_fence):
+        return '', no_fence, '', False
     span = find_json_span(no_fence)
 
     if span:
         start, end = span
+        # A stray closing delimiter belongs to the malformed answer, not to a
+        # prose envelope. Dropping it would turn a syntax defect into a pass.
+        extra_closers = re.match(r'(?:\s*[}\]])+', no_fence[end:])
+        if extra_closers:
+            end += extra_closers.end()
         return (
             no_fence[start:end].strip(),
             no_fence[:start].strip(),
@@ -441,6 +469,47 @@ class GeneralErrorDetector:
 
     def detect(self, row: Dict[str, Any], run_info: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         run_info = run_info or {}
+        raw = str(row.get('raw_response') or '')
+        candidate, before, after, complete_span = extract_json_candidate(raw)
+        result = self._detect_legacy(row, run_info)
+        dataset = str(row.get('dataset', run_info.get('dataset', '')))
+        result.update(evaluate(candidate, row.get('gold_json_raw', row.get('gold')), self._find_schema(row), dataset))
+        result['raw_valid_parse'] = strict_parse(raw)[0]
+        # The legacy regexes can match prose/code words INSIDE JSON values.
+        # Only material outside the intended candidate is an envelope error.
+        result['envelope_contamination_detected'] = bool(
+            not result['raw_valid_parse'] and (before or after or strip_code_fences(raw) != raw.strip()))
+        result['has_json_candidate'] = bool(candidate)
+        complete, reason = completion(raw, candidate, row.get('output_tokens'),
+            self.token_limit, row.get('error'), row.get('finish_reason'))
+        result.update(is_complete=complete, completion_rule=reason,
+                      detector_version='eacl-v2')
+        # No comparison detector is allowed to convert an absent/unparseable
+        # candidate or missing gold into zero errors.
+        if not result['is_content_assessable']:
+            for col in ALL_ERROR_COLUMNS:
+                if col not in RAW_LEAVES:
+                    result[col] = None
+        dataset = str(row.get('dataset', run_info.get('dataset', ''))).lower()
+        for col in DATASET_SPECIFIC_COLUMNS:
+            prefix = col.split('_')[0]
+            applicable = (prefix == 'deepjson' and 'deepjson' in dataset or
+                          prefix == 'arqa' and 'arqa' in dataset or
+                          prefix == 'schematojson' and ('schema' in dataset))
+            if not applicable:
+                result[col] = None
+        if not result['is_schema_assessable']:
+            for col in DATASET_SPECIFIC_COLUMNS:
+                if col.startswith('deepjson_') and col != 'deepjson_schema_echo':
+                    result[col] = None
+        result['invalid_json_syntax_count'] = int(not result['valid_parse'])
+        result['total_errors'] = sum(result[c] for c in ALL_ERROR_COLUMNS if isinstance(result[c], int))
+        result.update(family_flags(result))
+        result['contract_non_conformance_flag'] = (None if result['contract_valid'] is None else not result['contract_valid'])
+        return result
+
+    def _detect_legacy(self, row: Dict[str, Any], run_info: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        run_info = run_info or {}
         dataset = str(row.get("dataset", run_info.get("dataset", ""))).lower()
 
         raw_value = row.get("raw_response", "")
@@ -459,17 +528,6 @@ class GeneralErrorDetector:
 
         schema = self._find_schema(row)
         errors: Dict[str, Any] = {col: 0 for col in ALL_ERROR_COLUMNS}
-
-        stripped = strip_code_fences(raw_text)
-        no_json_opener = find_first_json_opener(stripped) is None
-        literal_empty_json = parsed_raw in ({}, []) and candidate_json.strip() in {"{}", "[]"}
-
-        # No JSON opener, or a literal empty top-level {} / [], makes all error
-        # columns unavailable rather than numerically meaningful.
-        if no_json_opener or literal_empty_json:
-            invalid_result = {col: "not valid" for col in ALL_ERROR_COLUMNS}
-            invalid_result["total_errors"] = "not valid"
-            return invalid_result
 
         # --------------------
         # General raw-text errors
@@ -1027,14 +1085,14 @@ class GeneralErrorDetector:
         errors["deepjson_property_type_check"] += validation["type"]
         errors["deepjson_property_count_mismatch"] += validation["property_count"]
 
-    def _find_schema(self, row: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    def _find_schema(self, row: Dict[str, Any]) -> Optional[Any]:
         for field in ["schema", "json_schema", "input_schema"]:
             val = row.get(field)
-            if isinstance(val, dict):
+            if isinstance(val, (dict, bool)):
                 return val
             if isinstance(val, str):
                 parsed = parse_json_safely(val)
-                if isinstance(parsed, dict):
+                if isinstance(parsed, (dict, bool)):
                     return parsed
 
         prompt = str(row.get("prompt", ""))
@@ -1260,14 +1318,14 @@ def save_error_csv(rows: List[Dict[str, Any]], output_csv: Path) -> None:
     base_columns = [
         "row_id", "dataset", "model", "method", "total_errors",
     ]
-    columns = base_columns + ALL_ERROR_COLUMNS
+    columns = list(dict.fromkeys(base_columns + ALL_ERROR_COLUMNS + [key for row in rows for key in row]))
     output_csv.parent.mkdir(parents=True, exist_ok=True)
 
     with output_csv.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=columns)
         writer.writeheader()
         for row in rows:
-            writer.writerow({col: row.get(col, 0) for col in columns})
+            writer.writerow({col: row.get(col) for col in columns})
 
 
 def load_manifest(run_dir: Path) -> Dict[str, Any]:
@@ -1289,6 +1347,7 @@ def analyze_rows(
     for i, row in enumerate(rows):
         errs = detector.detect(row, run_info)
         out = {
+            "run_id": row.get("run_id", run_info.get("run_id")),
             "row_id": row.get("row_id", row.get("id", i)),
             "dataset": row.get("dataset", run_info.get("dataset", "Unknown")),
             "model": row.get("model", run_info.get("model", "Unknown")),
@@ -1299,11 +1358,16 @@ def analyze_rows(
     return analyzed
 
 
-def process_outputs_dir(input_path: Path, detector: GeneralErrorDetector) -> None:
+def process_outputs_dir(input_path: Path, detector: GeneralErrorDetector,
+                        output_path: Path = Path('reports/eacl_revision/detector')) -> None:
+    if output_path.resolve() == input_path.resolve() or input_path.resolve() in output_path.resolve().parents:
+        raise ValueError('Detector output must be outside the archived input directory')
     run_dirs = sorted([p for p in input_path.iterdir() if p.is_dir()])
     all_analyzed: List[Dict[str, Any]] = []
 
     for run_dir in run_dirs:
+        if run_dir.name.lower() == 'sample' or not (run_dir / 'manifest.json').exists():
+            continue
         resp_path = run_dir / "responses.jsonl"
         if not resp_path.exists():
             continue
@@ -1311,13 +1375,13 @@ def process_outputs_dir(input_path: Path, detector: GeneralErrorDetector) -> Non
         run_info = load_manifest(run_dir)
         rows = load_json_or_jsonl(resp_path)
         analyzed = analyze_rows(rows, run_info, detector)
-        save_error_csv(analyzed, run_dir / "full_error_analysis.csv")
+        save_error_csv(analyzed, output_path / run_dir.name / "full_error_analysis.csv")
         all_analyzed.extend(analyzed)
         print(f"Processed {run_dir.name}: {len(analyzed)} rows")
 
     save_error_csv(
         all_analyzed,
-        input_path / "combined_full_error_analysis.csv",
+        output_path / "combined_full_error_analysis.csv",
     )
     print(f"Done! Combined rows: {len(all_analyzed)}")
 
@@ -1351,7 +1415,7 @@ def main() -> None:
     parser.add_argument(
         "--output",
         default=None,
-        help="Optional output CSV path for single-file mode.",
+        help="Output CSV for single-file mode, or output directory for archive mode.",
     )
     parser.add_argument(
         "--token-limit",
@@ -1374,7 +1438,7 @@ def main() -> None:
     detector = GeneralErrorDetector(token_limit=args.token_limit)
 
     if input_path.is_dir():
-        process_outputs_dir(input_path, detector)
+        process_outputs_dir(input_path, detector, Path(args.output) if args.output else Path('reports/eacl_revision/detector'))
     else:
         process_single_file(input_path, detector, output=args.output)
 

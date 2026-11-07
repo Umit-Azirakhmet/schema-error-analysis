@@ -1,0 +1,5 @@
+[
+  {"feature": "gold_json_length", "outcome": "syntax_flag", "status": "exploratory"},
+  {"feature": "nesting_depth", "outcome": "schema_non_conformance_flag", "status": "exploratory"},
+  {"feature": "total_key_count", "outcome": "missing_gold_scalar_paths_rate", "status": "exploratory"}
+]

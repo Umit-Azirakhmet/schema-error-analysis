@@ -235,6 +235,17 @@ STED complements strict schema validation but does not replace it.
 - Run `python scripts/analyze_duplicate_records.py` after `organize_datasets.py` to append `duplicate_record_count` to `data/SchemaToJSON_characteristics_final.csv`.
 - Example generation prompts (zero-shot, few-shot, NL-to-Format): [`prompts/example_prompts.md`](prompts/example_prompts.md).
 
+## EACL offline revision
+
+The versioned re-evaluation preserves all archived generations. See
+[revision methods and commands](reports/eacl_revision/README.md) and the
+[human review and paper TTD](reports/eacl_revision/TTD.md). Run
+`python -m analysis.run_revision` after installing `analysis/requirements.txt`.
+The agent audit and detector-v2 rerun are complete; use the
+[corrected outputs and paper impact](reports/eacl_revision/v2/paper_impact.md).
+Manuscript review and semantic-evidence limitations remain. No human validation is claimed; see
+[agent review protocol](validation/agent_review_protocol.md).
+
 ## Status
 
 Work in progress.

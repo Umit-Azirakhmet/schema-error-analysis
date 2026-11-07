@@ -1,0 +1,231 @@
+annotation_id,completion,syntax,envelope_contamination,schema_non_conformance,content_fidelity,notes
+A0000,no,no,no,not-assessable,yes,24 coordinates accompany 32 records; pairing is internally inconsistent; source absent. No actual schema supplied.
+A0001,no,yes,yes,not-assessable,not-assessable,Finished JSON has an extra closing brace; prose surrounds answer; no full parseable candidate. Schema not assessable without full parseable intended answer.
+A0002,no,no,yes,not-assessable,not-assessable,Prose precedes finished JSON; source absent so changed answer and evidence cannot be grounded. No actual schema supplied.
+A0003,no,no,no,not-assessable,yes,Both cited spans claim offsets 0:0 despite nonempty quotations; answer facts otherwise supported. No actual schema supplied.
+A0004,no,no,yes,not-assessable,yes,Fenced JSON uses literal backslash-u in row labels and unsupported table identifier; source table has euro sign. No actual schema supplied.
+A0005,not-assessable,yes,no,not-assessable,not-assessable,Response stops after claims array without closing root object. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. No actual schema supplied.
+A0006,no,no,yes,not-assessable,yes,Fenced answer omits requested causal factors and uses a paragraph identifier as table identifier. No actual schema supplied.
+A0007,no,no,no,yes,no,"DeviceInfo wrapper missing; extracted device values supported, CPU model is an acceptable abbreviated description."
+A0008,no,yes,yes,not-assessable,not-assessable,Complete fenced Python program supplies no intended JSON answer; intermediate dictionaries are not candidates. No actual schema supplied.
+A0009,no,no,yes,not-assessable,no,Natural-language preface; coordinate-aligned embedded records equal reference after JSON decoding. No actual schema supplied.
+A0010,no,no,yes,not-assessable,not-assessable,"Prose and fences surround answer; coordinates differ from reference, source absent to resolve. No actual schema supplied."
+A0011,no,no,yes,not-assessable,yes,Fenced answer cites nonempty quotation using zero-length span 0:0. No actual schema supplied.
+A0012,no,no,yes,yes,yes,"Returns schema instead of plant instance; source specifies Arctic Raspberry values, all instance data omitted."
+A0013,no,no,yes,not-assessable,yes,"Explanatory prose and fence; 18 coordinates versus 26 records breaks pairing, independently of missing source. No actual schema supplied."
+A0014,yes,yes,yes,not-assessable,not-assessable,Repetitive coordinate array cuts off mid-coordinate; no complete JSON candidate. No actual schema supplied.
+A0015,no,no,yes,not-assessable,yes,Fenced response copies JCPDS example instead of supplied target table data. No actual schema supplied.
+A0016,no,no,yes,not-assessable,yes,"Fenced response repeats coordinate [2,2,0], inserts dash records, and loses target pairing. No actual schema supplied."
+A0017,no,no,no,not-assessable,yes,Nonempty text citations use zero-length 0:0 spans; fabricated table id differs from available evidence. No actual schema supplied.
+A0018,yes,yes,no,not-assessable,not-assessable,Response cuts off inside serialized Glass_C record; intended outer answer unparseable. No actual schema supplied.
+A0019,no,no,yes,yes,yes,Fenced plant schema is unrelated to source film The Quantum Dream and violates required film instance fields.
+A0020,no,no,no,no,not-assessable,Added medication identities cannot be verified without source; common allergy nouns differ only by case.
+A0021,no,yes,yes,not-assessable,not-assessable,Fenced Python program finishes but never emits literal JSON answer for review. No actual schema supplied.
+A0022,no,yes,no,not-assessable,not-assessable,"Finished response contains mismatched parenthesis in text_spans, preventing intended JSON parse. No actual schema supplied."
+A0023,no,no,yes,not-assessable,yes,"Production count is described as sales, paragraph id used for table, and zero-length citation span. No actual schema supplied."
+A0024,no,no,yes,not-assessable,yes,Prose precedes JSON; 74 coordinates versus 77 records produces unpaired records. No actual schema supplied.
+A0025,no,no,yes,not-assessable,yes,Claim calls 17.1 percent growth EUR17.1 billion; arithmetic gives about EUR12.6 billion. No actual schema supplied.
+A0026,no,no,yes,not-assessable,yes,25 coordinates versus 26 records; duplicate coordinates lose supplied target position mapping. No actual schema supplied.
+A0027,no,no,no,yes,yes,Schema with defaults returned instead of plant instance; required plantData values absent.
+A0028,no,no,no,no,no,Parsed fields match reference; source describes these game statistics and achievements.
+A0029,no,no,yes,no,no,Natural-language preface contaminates otherwise reference-equivalent game instance.
+A0030,not-assessable,yes,no,not-assessable,not-assessable,Object stops after MedicalHistory without closing root; no full parseable answer. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. Schema not assessable without full parseable intended answer.
+A0031,no,no,no,yes,not-assessable,Cultivation moved under characteristics violates supplied schema; semantic nesting equivalence needs missing source.
+A0032,no,no,no,no,not-assessable,Added medication identities cannot be verified without source; same allergy nouns with lowercase spelling.
+A0033,no,no,no,not-assessable,yes,"Quoted evidence text is longer than declared 0:248 span, so evidence coordinates cannot match quotation. No actual schema supplied."
+A0034,no,no,yes,not-assessable,yes,Fenced answer uses multiple zero-length citation spans for nonempty evidence. No actual schema supplied.
+A0035,no,no,yes,not-assessable,no,Natural-language preface; decoded records and coordinate alignment match reference. No actual schema supplied.
+A0036,no,no,yes,not-assessable,no,Prose preface; all three decoded records align with reference. No actual schema supplied.
+A0037,no,no,no,yes,not-assessable,Extra Game wrapper violates required root GameStatistics; missing source prevents semantic path adjudication.
+A0038,no,no,yes,no,no,Prose surrounds complete patient JSON matching reference values.
+A0039,no,no,yes,not-assessable,yes,FWHM measurement 11.8 ppm is falsely classified as glass constituent amount. No actual schema supplied.
+A0040,no,no,no,no,no,Bee stings is the same common allergy noun phrase despite capitalization; remaining values match.
+A0041,no,no,no,not-assessable,not-assessable,"Finished seven-cell result omits reference eighth cell, but source target list absent. No actual schema supplied."
+A0042,no,no,yes,not-assessable,no,Prose and fences surround coordinate-aligned reference-equivalent records. No actual schema supplied.
+A0043,no,no,no,no,no,"Lowercase dust, mold and bee stings retain ordinary allergy meanings; all patient values match reference."
+A0044,no,no,yes,yes,not-assessable,Returns a Patient schema with prose rather than instance; source absent to assess omitted patient data.
+A0045,no,no,yes,yes,not-assessable,BloodType and MedicalHistory paths violate schema; source absent for substantive path/representation judgment.
+A0046,no,yes,yes,not-assessable,not-assessable,"Complete fenced Python procedure, no literal JSON result; intermediate dictionary is not intended answer. No actual schema supplied."
+A0047,no,no,no,not-assessable,yes,Nonempty quotation has zero-length span; table evidence also lacks cell text. No actual schema supplied.
+A0048,no,no,no,not-assessable,yes,24 coordinates accompany 77 records; record pairing is internally inconsistent. No actual schema supplied.
+A0049,no,no,yes,no,no,Prose preface surrounds otherwise reference-equivalent game instance.
+A0050,no,no,yes,not-assessable,yes,"20 coordinates accompany 27 records, so several records cannot be aligned. No actual schema supplied."
+A0051,no,no,no,no,no,Complete schema-valid game instance exactly matches reference values.
+A0052,no,no,no,not-assessable,yes,"Same coordinate [1,2,0] receives contradictory values 12.6,11.8,12.2 repeatedly. No actual schema supplied."
+A0053,no,no,yes,yes,yes,Returns plant data for source about Star Voyagers game; GameStatistics absent.
+A0054,no,no,yes,no,no,Fenced plant instance matches reference and supplied source values.
+A0055,no,no,yes,yes,yes,Returns plant schema instead of Ghost Orchid instance; actual plant data omitted.
+A0056,no,no,yes,yes,not-assessable,Schema plus prose modifications supplied instead of device instance; absent source prevents grounding values.
+A0057,no,no,no,no,no,Complete schema-valid patient object matches all provided reference values.
+A0058,no,no,yes,not-assessable,yes,Prose preface; zero-length text spans and numeric table coordinates fail evidence grounding. No actual schema supplied.
+A0059,no,no,yes,not-assessable,yes,"Bus claim says 83,270 while its cited cell says 8,327; prose and fences surround JSON. No actual schema supplied."
+A0060,no,no,yes,no,no,Prose preface; complete patient instance matches reference values.
+A0061,no,no,yes,yes,yes,Plant schema returned for automotive-specification task; required TechnicalSpecs and Dimensions absent.
+A0062,not-assessable,yes,no,not-assessable,not-assessable,Stops after claims array without closing root object; no full parseable candidate. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. No actual schema supplied.
+A0063,not-assessable,yes,no,not-assessable,not-assessable,Stops after claims array without closing root object; cannot assess JSON content. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. No actual schema supplied.
+A0064,no,no,no,not-assessable,yes,82 coordinates but 77 records creates unpaired entries. No actual schema supplied.
+A0065,no,no,yes,not-assessable,yes,Nonempty quote exceeds specified 0:61 character span; fenced answer. No actual schema supplied.
+A0066,no,yes,yes,not-assessable,not-assessable,Fenced Python program finishes without literal intended JSON result. No actual schema supplied.
+A0067,no,no,yes,no,no,Prose precedes patient JSON; lowercase ordinary allergy names preserve reference meanings.
+A0068,no,no,yes,yes,yes,"Ghost Orchid source replaced with invented luminous-plant references, species and pH6.2."
+A0069,no,no,yes,not-assessable,yes,Prose preface; evidence quotations have zero-length character spans. No actual schema supplied.
+A0070,no,no,no,not-assessable,yes,Zero-length quotation span; claimed growth is inconsistent with displayed numeric comparison as well. No actual schema supplied.
+A0071,no,no,yes,no,no,Natural-language preface; game instance matches reference exactly.
+A0072,no,no,yes,not-assessable,yes,Fenced answer copies JCPDS example rather than three target FWHM measurements. No actual schema supplied.
+A0073,no,no,yes,yes,yes,Tomato source replaced with luminous-plant species and references; schema lacks taxonomy/cultivation.
+A0074,no,yes,yes,not-assessable,not-assessable,Prose precedes JSON with mismatched outer closures; finished but syntactically invalid. Schema not assessable without full parseable intended answer.
+A0075,no,no,yes,not-assessable,yes,Prose and fences; 20 coordinates for 26 records lose supplied target pairing. No actual schema supplied.
+A0076,no,no,yes,not-assessable,yes,Prose preface; all three nonempty quotations cite zero-length spans. No actual schema supplied.
+A0077,no,no,yes,not-assessable,yes,Fenced example JCPDS records replace target oscillator-strength data; 18 coordinates but 14 records. No actual schema supplied.
+A0078,no,no,no,not-assessable,yes,"Claim says 11,006 but cited production cell is 12,430; nonempty citations also have 0:0 spans. No actual schema supplied."
+A0079,not-assessable,yes,no,not-assessable,not-assessable,Root object never closes after claims array; no parseable full intended answer. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. No actual schema supplied.
+A0080,no,no,yes,not-assessable,yes,Prose preface; evidence has zero-length quotation span and unsupported numeric row labels. No actual schema supplied.
+A0081,no,no,yes,not-assessable,yes,Fenced answer gives 28-character quotation at a nine-character span 13:22. No actual schema supplied.
+A0082,no,no,no,not-assessable,yes,Table evidence uses paragraph id; nonempty quotation cites impossible 0:0 span. No actual schema supplied.
+A0083,no,no,yes,not-assessable,yes,"Prose preface; 24 coordinates accompany 27 records, breaking pairing. No actual schema supplied."
+A0084,no,yes,no,not-assessable,not-assessable,Finished plant JSON closes root prematurely before references; extra delimiter makes full answer invalid. Schema not assessable without full parseable intended answer.
+A0085,no,no,yes,not-assessable,yes,Prose preface; 76 coordinates versus 77 records leaves unpaired record. No actual schema supplied.
+A0086,no,no,yes,not-assessable,yes,Nonempty citation has zero span; Bentayga percentage also fails stated sales arithmetic. No actual schema supplied.
+A0087,no,no,no,not-assessable,not-assessable,Two coordinates swapped relative to reference; absent source prevents resolving intended target order. No actual schema supplied.
+A0088,no,no,yes,not-assessable,yes,Fenced answer gives nonempty quotations at 0:0 and falsely attributes popularity despite quoted Octavia/Enyaq evidence. No actual schema supplied.
+A0089,no,no,yes,yes,yes,Arctic Raspberry source replaced by luminous-plant claims and 2021 discovery; schema missing taxonomy/cultivation.
+A0090,no,no,no,not-assessable,yes,Nonempty quotations have zero-length spans; sales claim cites production total. No actual schema supplied.
+A0091,no,no,yes,no,yes,Prose preface; source address number 2389 omitted from Street.
+A0092,yes,yes,yes,not-assessable,not-assessable,Prose/fence precedes answer with missing comma and final record cut mid-string. No actual schema supplied.
+A0093,no,no,yes,yes,yes,Patient task receives unrelated tomato instance; required PersonalInfo and MedicalHistory absent.
+A0094,no,no,yes,not-assessable,yes,Fenced response copies JCPDS example instead of supplied radiative-transition targets. No actual schema supplied.
+A0095,no,no,yes,not-assessable,yes,Fenced answer has nonempty quotations at 0:0; Bentayga production is called sales. No actual schema supplied.
+A0096,no,no,no,yes,not-assessable,References and cultivation at wrong paths violate supplied schema; semantic reassociation needs absent source.
+A0097,no,no,yes,not-assessable,yes,Prose preface; 73 coordinates for 75 records creates impossible pairing. No actual schema supplied.
+A0098,no,no,yes,not-assessable,no,Prose preface; all eight parsed records match reference by coordinates. No actual schema supplied.
+A0099,no,yes,no,not-assessable,not-assessable,"Finished response lacks claim-object closure before next claim, preventing full JSON parse. No actual schema supplied."
+A0100,no,yes,no,not-assessable,not-assessable,Claims use malformed array/object closures; intended full JSON invalid. No actual schema supplied.
+A0101,no,no,yes,yes,yes,Patient task receives tomato data; patient instance fields absent.
+A0102,no,no,no,not-assessable,yes,"Claimed 6.6 percent increase conflicts with 11,006 versus 10,494 (about4.9 percent); citation span too short. No actual schema supplied."
+A0103,no,no,no,yes,yes,"Returns plant schema instead of source Ghost Orchid instance, omitting actual instance values."
+A0104,no,yes,yes,not-assessable,not-assessable,Prose preface; extra closing brace after finished plant object prevents full intended parse. Schema not assessable without full parseable intended answer.
+A0105,no,no,yes,not-assessable,yes,Fenced JCPDS example copied instead of supplied isotope measurements. No actual schema supplied.
+A0106,no,yes,yes,not-assessable,not-assessable,Complete fenced Python program supplies no literal JSON answer; dictionaries are program intermediates. No actual schema supplied.
+A0107,not-assessable,yes,no,not-assessable,not-assessable,Schema-like JSON stops before required outer closing braces; full intended answer cannot parse. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. Schema not assessable without full parseable intended answer.
+A0108,no,no,yes,yes,no,"Fenced instance moves cultivation to root, violating schema; pH remains clearly associated with same Ghost Orchid."
+A0109,no,yes,yes,not-assessable,not-assessable,Complete fenced Python program replaces literal JSON answer. No actual schema supplied.
+A0110,no,no,yes,not-assessable,yes,Fenced answer has 25 coordinates and 26 records; target pairing impossible. No actual schema supplied.
+A0111,no,no,yes,no,no,Prose precedes patient instance; lowercase allergy nouns preserve source/reference meaning.
+A0112,no,no,yes,not-assessable,yes,"Claim says 11,006 while cited production cell says12,430; nonempty quotation uses zero span. No actual schema supplied."
+A0113,no,no,yes,not-assessable,yes,Fenced response cites long quotations using 25- and50-character spans that cannot contain them. No actual schema supplied.
+A0114,not-assessable,yes,no,not-assessable,not-assessable,Plant answer stops after plantData closure without closing root; no full parseable candidate. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. Schema not assessable without full parseable intended answer.
+A0115,no,no,yes,not-assessable,yes,Prose and fences; nonempty quotations cite zero-length spans. No actual schema supplied.
+A0116,not-assessable,yes,no,not-assessable,not-assessable,Device answer ends after Specifications closure and leaves root unfinished. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. Schema not assessable without full parseable intended answer.
+A0117,no,no,yes,not-assessable,yes,Fenced answer assigns every nonempty quotation a 0:0 span; paragraph ids repeat VW2020 prefix. No actual schema supplied.
+A0118,no,no,no,not-assessable,yes,Three nonempty causal quotations all use zero-length spans. No actual schema supplied.
+A0119,not-assessable,yes,no,not-assessable,not-assessable,Response stops after claims array without closing root object. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. No actual schema supplied.
+A0120,yes,yes,yes,not-assessable,not-assessable,Prose precedes JSON that cuts off in serialized value43.01; intended answer cannot parse. No actual schema supplied.
+A0121,yes,yes,yes,not-assessable,not-assessable,Prose precedes expanding coordinate array cut mid-item; no complete answer. No actual schema supplied.
+A0122,no,no,yes,not-assessable,yes,Prose preface; anniversary quotation cites impossible zero-length span. No actual schema supplied.
+A0123,no,no,yes,not-assessable,yes,"2019 operating result3,785 million is mislabeled3,785 billion; nonempty quotation span0:0. No actual schema supplied."
+A0124,no,no,yes,not-assessable,yes,"Prose/fences; repeatedly assigns different measurements to same coordinate[3,3,0] and shifts target rows. No actual schema supplied."
+A0125,no,no,yes,not-assessable,not-assessable,"Prose preface; weighting-factor records differ from reference classifications, but source table absent. No actual schema supplied."
+A0126,no,no,yes,not-assessable,no,Prose preface; all nine records equal reference after embedded JSON decoding. No actual schema supplied.
+A0127,yes,yes,yes,not-assessable,not-assessable,Prose precedes endlessly expanding coordinate array cut mid-coordinate; no complete intended JSON. No actual schema supplied.
+A0128,no,yes,no,not-assessable,not-assessable,Finished JSON lacks closing claim-object delimiter before next claim; cannot parse full answer. No actual schema supplied.
+A0129,no,no,no,not-assessable,yes,"25 coordinates accompany26 records, preventing complete pairing. No actual schema supplied."
+A0130,no,no,no,not-assessable,yes,"Operating profit fall stated as3,784.5 billion and100.1 percent despite cited3785-to454 million values. No actual schema supplied."
+A0131,no,yes,yes,not-assessable,not-assessable,Complete fenced Python program rather than literal JSON answer; no program execution used. No actual schema supplied.
+A0132,no,no,no,no,no,Complete patient instance matches reference and supplied schema.
+A0133,no,no,yes,not-assessable,no,Natural-language preface; eight coordinate-aligned records match parsed reference. No actual schema supplied.
+A0134,no,no,yes,not-assessable,not-assessable,Prose preface; substantially different performance-share answer cannot be judged without question/source. No actual schema supplied.
+A0135,no,no,yes,not-assessable,yes,"Repeated coordinate[4,4,5] receives conflicting values0.46,30,750,834. No actual schema supplied."
+A0136,no,no,no,no,no,Complete Ghost Orchid instance equals reference and passes supplied schema.
+A0137,no,no,no,not-assessable,yes,99 coordinates for88 records; invented xx-valued composition records and impossible pairing. No actual schema supplied.
+A0138,not-assessable,yes,no,not-assessable,not-assessable,GameStatistics closes but root remains open at response end. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. Schema not assessable without full parseable intended answer.
+A0139,no,no,no,not-assessable,yes,Nonempty urban-transport quotation has zero-length citation span. No actual schema supplied.
+A0140,no,no,yes,not-assessable,no,Fenced complete isotope record object matches coordinate-aligned reference. No actual schema supplied.
+A0141,no,no,no,not-assessable,yes,Nonempty quotations cite0:0 and claim revenue causality where evidence refers to orders. No actual schema supplied.
+A0142,no,no,no,not-assessable,not-assessable,Extra Artificial record differs from reference; source targets absent to establish whether allowed. No actual schema supplied.
+A0143,no,no,yes,not-assessable,yes,"Prose/fences; paragraph identifiers used as table IDs, with unsupported numeric row/column labels. No actual schema supplied."
+A0144,no,no,yes,not-assessable,yes,Prose preface; over100 coordinates for74 records and unpaired values. No actual schema supplied.
+A0145,no,no,yes,not-assessable,yes,Explanatory prose/fences; six coordinates accompany eight records. No actual schema supplied.
+A0146,no,no,yes,no,no,Prose and fences surround source-consistent reference-equivalent Arctic Raspberry instance.
+A0147,no,no,yes,not-assessable,yes,Prose preface; nonempty construction-industry quotation cites0:0 span. No actual schema supplied.
+A0148,yes,yes,yes,not-assessable,not-assessable,Explanatory prose/fence precedes coordinate array cut mid-coordinate. No actual schema supplied.
+A0149,no,no,no,not-assessable,yes,Answer says0.5billion while claim says0.5million for same result; quotation exceeds76-character span. No actual schema supplied.
+A0150,not-assessable,yes,no,not-assessable,not-assessable,GameStatistics closes but root object remains open at end. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. Schema not assessable without full parseable intended answer.
+A0151,no,no,yes,not-assessable,no,Prose/fences surround eight coordinate-aligned isotope records matching reference. No actual schema supplied.
+A0152,no,no,no,not-assessable,yes,Both nonempty causal quotations cite0:0 spans; numeric table coordinates unsupported. No actual schema supplied.
+A0153,yes,yes,yes,not-assessable,not-assessable,Fenced repetitive coordinate array ends just after opening next item; no complete JSON candidate. No actual schema supplied.
+A0154,no,no,yes,not-assessable,yes,Prose preface; nonempty commercial-vehicle quotation cites0:0 span. No actual schema supplied.
+A0155,no,yes,no,not-assessable,not-assessable,Finished response has malformed array/object delimiters between claims. No actual schema supplied.
+A0156,no,no,no,yes,not-assessable,Missing plantData.cultivation violates schema; absent source prevents judging omitted synonyms/common names.
+A0157,no,no,yes,not-assessable,yes,Prose preface; all three nonempty text citations have zero-length spans. No actual schema supplied.
+A0158,no,no,no,not-assessable,not-assessable,Branching values recast as constituent amounts versus reference; missing table prevents classification adjudication. No actual schema supplied.
+A0159,no,yes,no,not-assessable,not-assessable,"Finished schema-like response has mismatched closure near TicketTypes items; syntax error, no full candidate. Schema not assessable without full parseable intended answer."
+A0160,no,no,no,not-assessable,yes,"61 coordinates accompany63 records, with unpaired xx-valued composition records. No actual schema supplied."
+A0161,not-assessable,yes,no,not-assessable,not-assessable,VisitorInformation closes while root object stays open at response end. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. Schema not assessable without full parseable intended answer.
+A0162,no,no,no,not-assessable,yes,"Claimed15.3 percent increase conflicts with cited83,940-to95,781 (14.1 percent); answer increase also differs. No actual schema supplied."
+A0163,no,no,yes,no,no,Prose/fences surround Ghost Orchid instance matching reference and supplied source values.
+A0164,no,no,no,not-assessable,yes,Both nonempty construction/urban-transport quotations cite zero-length spans. No actual schema supplied.
+A0165,no,no,yes,not-assessable,yes,Prose preface; nonempty pandemic evidence cites zero-length character span. No actual schema supplied.
+A0166,no,yes,yes,not-assessable,not-assessable,Prose precedes finished Ghost Orchid JSON with extra closing brace. Schema not assessable without full parseable intended answer.
+A0167,no,yes,no,not-assessable,not-assessable,"Final brace appears where relatedSpecies array closure is required; finished wrong delimiter, no full parse. Schema not assessable without full parseable intended answer."
+A0168,no,no,yes,no,no,"Prose preface; ordinary allergy nouns differ only in capitalization, other source values preserved."
+A0169,no,yes,no,not-assessable,not-assessable,Finished answer lacks claim-object closures between text claims; full JSON invalid. No actual schema supplied.
+A0170,no,no,no,yes,not-assessable,Patient wrapper violates required root fields; missing source limits semantic path judgment.
+A0171,no,no,yes,no,yes,Fenced schema-valid game instance changes Pioneer rarity from source10 percent to1 percent.
+A0172,no,no,yes,not-assessable,yes,Prose preface; positive and negative factor quotations cite zero-length spans. No actual schema supplied.
+A0173,no,no,no,not-assessable,yes,Both nonempty text citations use0:0 character spans. No actual schema supplied.
+A0174,no,no,no,not-assessable,yes,"Claimed12,032 increase conflicts with cited87,454 minus75,452 =12,002; zero-length quotation span. No actual schema supplied."
+A0175,no,yes,no,not-assessable,not-assessable,Last feature object is followed by wrong array-closing delimiter; finished output is syntactically invalid. Schema not assessable without full parseable intended answer.
+A0176,no,no,no,not-assessable,no,Complete raw JSON; coordinate-aligned parsed oscillator-strength records match reference. No actual schema supplied.
+A0177,no,no,yes,not-assessable,yes,Fenced answer provides quotations longer than33- and20-character spans. No actual schema supplied.
+A0178,yes,yes,no,not-assessable,not-assessable,Serialized record array cuts off during next quoted record; full intended JSON cannot parse. No actual schema supplied.
+A0179,no,no,no,no,no,Complete patient JSON equals reference and satisfies supplied schema.
+A0180,not-assessable,yes,no,not-assessable,not-assessable,Stops after claims array without closing root object; intended answer cannot parse. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. No actual schema supplied.
+A0181,no,no,no,not-assessable,no,Complete raw JSON; three coordinate-aligned FWHM records equal reference. No actual schema supplied.
+A0182,no,yes,no,not-assessable,not-assessable,Finished response lacks closing claim-object delimiters between text claims. No actual schema supplied.
+A0183,yes,yes,yes,not-assessable,not-assessable,Prose preface; composition record cuts off within Na2 constituent string. No actual schema supplied.
+A0184,no,no,no,no,no,Lowercase common allergy nouns retain reference meanings; patient instance otherwise matches and validates.
+A0185,no,no,yes,not-assessable,not-assessable,"Prose precedes answer; table citations omit cell values and use numeric rows, source absent for grounding. No actual schema supplied."
+A0186,no,no,no,no,no,Complete patient instance equals reference and passes supplied schema.
+A0187,no,no,yes,not-assessable,not-assessable,Prose preface; bare numeric table coordinates cannot be grounded without missing source. No actual schema supplied.
+A0188,no,no,yes,not-assessable,no,Prose and fences surround reference-equivalent three-cell FWHM result. No actual schema supplied.
+A0189,no,no,yes,not-assessable,yes,Fenced response copies JCPDS example instead of target0.83-to0.86 measurements. No actual schema supplied.
+A0190,no,no,yes,not-assessable,yes,"Fenced JCPDS example replaces target2.1,+0.11 and related measurement cells. No actual schema supplied."
+A0191,yes,yes,yes,not-assessable,not-assessable,Prose preface; coordinate sequence expands to row150 and ends mid-item. No actual schema supplied.
+A0192,no,no,no,not-assessable,yes,Nonempty quotation length does not match stated0:424 span; source absent to check paragraph itself. No actual schema supplied.
+A0193,no,no,no,not-assessable,yes,Two coordinates accompany three records; one FWHM record unpaired. No actual schema supplied.
+A0194,no,no,no,not-assessable,not-assessable,Financial values align broadly with reference but numeric citation rows/columns and missing question prevent full grounding. No actual schema supplied.
+A0195,no,no,no,not-assessable,yes,Operating-result quote exceeds its37-character span; other citation lengths also inconsistent. No actual schema supplied.
+A0196,no,no,yes,no,no,Fenced patient instance retains source values; common allergy nouns differ only by case.
+A0197,no,no,yes,not-assessable,yes,Prose/fences; nonempty production and revenue quotations cite0:0 spans. No actual schema supplied.
+A0198,no,no,no,not-assessable,not-assessable,Bare numeric citations omit cell values; absent source/question prevents evidence and answer-completeness assessment. No actual schema supplied.
+A0199,no,yes,yes,not-assessable,not-assessable,Complete fenced Python program replaces literal JSON answer. No actual schema supplied.
+A0200,no,yes,yes,not-assessable,not-assessable,"Complete fenced Python program replaces literal JSON answer, with dictionary intermediates only. No actual schema supplied."
+A0201,no,no,yes,yes,yes,Tomato output substitutes for source variegated climbing-plant record and omits required propagation/reference fields.
+A0202,no,no,no,not-assessable,yes,Nonempty R&D quotation has0:0 span; numeric cell cannot support formula derivation claim. No actual schema supplied.
+A0203,no,no,yes,not-assessable,no,Natural-language preface; decoded FWHM records align exactly with reference. No actual schema supplied.
+A0204,no,no,yes,not-assessable,yes,"Prose preface; paragraph ids used as table ids,0.6 text evidence has zero-length span. No actual schema supplied."
+A0205,no,no,yes,not-assessable,yes,"Prose preface;25 coordinates for26 records, with conflicting values at repeated coordinates. No actual schema supplied."
+A0206,no,yes,yes,not-assessable,not-assessable,Natural-language preface; extra final brace makes intended full plant answer invalid. Schema not assessable without full parseable intended answer.
+A0207,no,no,no,not-assessable,yes,Anniversary quotation is longer than declared34-character span; source absent for other grounding. No actual schema supplied.
+A0208,no,no,yes,not-assessable,not-assessable,Prose preface; bare table coordinates omit values and cannot be grounded against absent source. No actual schema supplied.
+A0209,no,no,yes,not-assessable,yes,Fenced answer misclassifies FWHM ppm measurements as glass composition amounts. No actual schema supplied.
+A0210,no,no,no,not-assessable,yes,"74 coordinates accompany77 records, leaving three records unpaired. No actual schema supplied."
+A0211,no,yes,yes,not-assessable,not-assessable,Complete fenced Python program supplies no literal JSON answer; dictionaries are intermediate code. No actual schema supplied.
+A0212,no,no,no,no,no,Patient instance preserves source/reference values; lowercase common allergy names do not change meaning.
+A0213,no,no,yes,yes,no,"Prose preface; GameStatistics wrapper missing violates schema, extracted game facts remain associated correctly."
+A0214,no,yes,no,not-assessable,not-assessable,Finished answer includes extra final closing brace; full intended JSON is invalid. Schema not assessable without full parseable intended answer.
+A0215,no,no,yes,no,no,Fenced patient instance matches reference and source values and passes schema.
+A0216,no,yes,no,not-assessable,not-assessable,Finished response mixes array/object closings between claims; full intended JSON invalid. No actual schema supplied.
+A0217,no,no,no,no,no,Complete raw game instance matches reference and satisfies supplied schema.
+A0218,no,yes,yes,not-assessable,not-assessable,Natural-language preface; unescaped quote before second related-species object breaks intended JSON. Schema not assessable without full parseable intended answer.
+A0219,not-assessable,yes,no,not-assessable,not-assessable,PriceHistory array closes while root object is left open at end. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. Schema not assessable without full parseable intended answer.
+A0220,no,no,no,not-assessable,yes,"71 coordinates accompany59 records, leaving several coordinates without matching content. No actual schema supplied."
+A0221,no,no,yes,not-assessable,not-assessable,"Prose preface; five exponential records replace one reference value, missing source prevents adjudication. No actual schema supplied."
+A0222,no,no,yes,not-assessable,yes,Prose/fences; actual paragraph ids are incorrectly reused as table identifiers. No actual schema supplied.
+A0223,no,no,yes,yes,yes,Machu Picchu attraction task receives unrelated tomato record; required attraction fields absent.
+A0224,no,no,no,no,no,Complete plant instance equals reference and passes supplied schema.
+A0225,no,no,no,yes,yes,Common name Arctic Raspberry is falsely listed as a scientific synonym; cultivation path also violates schema.
+A0226,not-assessable,yes,no,not-assessable,not-assessable,Response ends after claims array without closing root object. Substantive ending may be finished; missing parent closure alone does not establish semantic cutoff. No actual schema supplied.
+A0227,no,no,no,no,no,Complete patient instance matches reference/source values and supplied schema.
+A0228,no,no,no,not-assessable,no,Complete three-cell result aligns with reference after decoding embedded records. No actual schema supplied.
+A0229,no,no,no,no,no,Complete patient instance matches supplied reference/source values and schema.

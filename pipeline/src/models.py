@@ -73,6 +73,11 @@ class ModelWrapper:
             return prompt
 
         messages = [{"role": "user", "content": prompt}]
+        kwargs = self.chat_template_configuration()
+        return self.tokenizer.apply_chat_template(messages, **kwargs)
+
+    def chat_template_configuration(self):
+        """Expose the actual template arguments for generation provenance."""
         kwargs = {
             "tokenize": False,
             "add_generation_prompt": True,
@@ -81,7 +86,7 @@ class ModelWrapper:
         if "qwen3" in self.model_name.lower():
             kwargs["enable_thinking"] = False
 
-        return self.tokenizer.apply_chat_template(messages, **kwargs)
+        return kwargs
 
     def generate(self, prompt: str) -> Dict[str, Any]:
         """

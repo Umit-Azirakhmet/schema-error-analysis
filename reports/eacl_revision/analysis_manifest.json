@@ -1,0 +1,62 @@
+{
+  "detector_version": "eacl-v1",
+  "bootstrap": 2000,
+  "seed": 42,
+  "hypotheses": [
+    {
+      "feature": "gold_json_length",
+      "outcome": "syntax_flag",
+      "status": "exploratory"
+    },
+    {
+      "feature": "nesting_depth",
+      "outcome": "schema_non_conformance_flag",
+      "status": "exploratory"
+    },
+    {
+      "feature": "total_key_count",
+      "outcome": "missing_gold_scalar_paths_rate",
+      "status": "exploratory"
+    }
+  ],
+  "python": "3.14.5",
+  "packages": {
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "jsonschema": "4.26.0",
+    "pyarrow": "24.0.0"
+  },
+  "source_rows": 15576,
+  "output_directory": "C:\\Users\\pierc\\OneDrive\\Documents\\GitHub\\schema-error-analysis\\reports\\eacl_revision",
+  "status": "provisional_pending_detector_corrections_after_agent_audit",
+  "content_metric": "strict_gold_match_proxy",
+  "implementation_sha256": {
+    "analysis/association_analysis.py": "5e81071693dd8674b7a3e9bca6b7cfe0bd97e48bcc8f5caf2b67d6f80896b608",
+    "analysis/audit_history.py": "5ef1ee45efe8202622901966b3aa4ef832ad36a2bd909b9eca5d516979e81d72",
+    "analysis/box_and_whisker.py": "f80c7259c53b642f76f651e4143d4cb3880a255a0a2d39ccfbb793189c98b2a5",
+    "analysis/build_dataset.py": "d63d72f92dc961465bb44ad25a11f9e3ec18f1059e36b0f8d9a71c836d045de0",
+    "analysis/cleanup_ablation.py": "e5eafee1ef05d8f2930d622102e5c518010b6b7ce735b5d6f8bd9e282badfe1b",
+    "analysis/common.py": "195590dc2f67c5e72e3f1f492f96e8128ba276e249655e722e3307d191216b01",
+    "analysis/conditional_reliability.py": "788ee5b9c15b3d99603171c15a486038bc331f953295842410cb052d5ab65f66",
+    "analysis/correlation_heatmap.py": "e9da923942b3cd4d60d83f3ba5fbe9c93059b07ddbed09a848e5e20d8804c5ec",
+    "analysis/family_prevalence.py": "cca6ecdd6b5b030d6e79c644fb266e7003bd68f31e92f976a5b666f014a014a9",
+    "analysis/forest_plot.py": "71ad9e5d1d79192c1a73eb0acd6075a0a787b59d9b43b368747eeb32d8542cbc",
+    "analysis/heatmap.py": "76f293a0c3a11261143c6375d54211b48e15159c7f005e4e5956c33879e7bc03",
+    "analysis/run_revision.py": "862c392c3e8c137296e5b7ded2e0aa79b25995b00bba213a9f6373461068220d",
+    "scripts/analyze_characteristic_stats.py": "675a4ab1bcc4ac55b05c905807bf21592a048e56d354d1971b8e269ea77a5e30",
+    "scripts/analyze_characteristics.py": "965641befe06e8afc1ffa3a90bbf67c84bde348963601d7ef98f43ac4f244d83",
+    "scripts/ARQA-add-fields.py": "228165361f619c68c9f06f39919e1a49e7581d449f0b5bf1b2c980cb8eb2b0d4",
+    "scripts/DeepJSONEval-add-fields.py": "d6fb53a27d804440f4d7a1467e4f487537fd639177a86acbf9b62c6fdc522954",
+    "scripts/Error_detector.py": "e66f6bdb5e3448e6133c6e7bd30b49cd599dcbb5c1104e6385656ec5e7ad1506",
+    "scripts/error_taxonomy.py": "36def8e1a021be6755ef5d1fe9f07fb74dd8a843785dde75d472d3ff0d7b8c8a",
+    "scripts/gold_json_analysis.py": "1ce0bc2913e55639ceeac8759bc539bef7badfaf53f9535502c85935f526a002",
+    "scripts/opportunity_metrics.py": "1efd4391747918b2d3331216ab11ba1ee3e6b3fa421f62fd98a1991834c092b7",
+    "scripts/SchemaToJSON-add-fields.py": "32475b552270268f26431d54f5a5cbd495bb34adb1f793afdad3611fb944e29a",
+    "validation/evaluate_annotations.py": "54dd904f9a0a289466936936491f5fa0876993c720fb07bb72ea035e322cc9c7",
+    "validation/sample_annotations.py": "94fce7fc37451ac944d4ef76685b27d918893898ab363f10dc6c9a33e0bfd748"
+  },
+  "review_kind": "independent_agent_audit_not_human_validation",
+  "post_run_note": "Corpus statistics retain their original run/source hashes. Review policy and Qwen audit were updated after that run; corpus statistics have not been rerun after agent adjudication.",
+  "agent_audit_manifest": "agent_review/audit_manifest.json"
+}

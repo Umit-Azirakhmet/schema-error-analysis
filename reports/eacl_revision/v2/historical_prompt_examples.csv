@@ -1,0 +1,1449 @@
+commit,commit_date,source_file,source_sha256,field,valid,reason,position,excerpt
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,681,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,839,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,1274,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,1523,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,table_cells,True,array_of_objects,1177,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,text_spans,True,array_of_objects,1335,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Required JSON shape:
+{
+ ""answer"": ""..."",
+ ""claims"": [
+   {"
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,table_cells,True,array_of_objects,1584,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,text_spans,True,array_of_objects,1833,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+N"
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,table_cells,True,array_of_objects,3154,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,text_spans,True,array_of_objects,3312,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Required JSON shape:
+{
+ ""answer"": ""..."",
+ ""claims"": [
+   {"
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,table_cells,True,array_of_objects,3561,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,text_spans,True,array_of_objects,3810,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+%"
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,table_cells,True,array_of_objects,5465,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,text_spans,True,array_of_objects,5623,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Required JSON shape:
+{
+ ""answer"": ""..."",
+ ""claims"": [
+   {"
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,table_cells,True,array_of_objects,5872,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+5eb108983f70635da243b29a10bc14c9a623fb1e,2026-07-24T11:46:21-07:00,pipeline/prompts/prompting.md,05c28a7fa23e617fe0092e493fe2ec3cb30730c41cfb1f1f330794b2ea86d189,text_spans,True,array_of_objects,6121,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+P"
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,681,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,839,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,1274,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,1523,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,table_cells,True,array_of_objects,1177,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,text_spans,True,array_of_objects,1335,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Required JSON shape:
+{
+ ""answer"": ""..."",
+ ""claims"": [
+   {"
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,table_cells,True,array_of_objects,1584,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,text_spans,True,array_of_objects,1833,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+N"
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,table_cells,True,array_of_objects,3154,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,text_spans,True,array_of_objects,3312,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Required JSON shape:
+{
+ ""answer"": ""..."",
+ ""claims"": [
+   {"
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,table_cells,True,array_of_objects,3561,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,text_spans,True,array_of_objects,3810,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+%"
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,table_cells,True,array_of_objects,5465,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,text_spans,True,array_of_objects,5623,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Required JSON shape:
+{
+ ""answer"": ""..."",
+ ""claims"": [
+   {"
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,table_cells,True,array_of_objects,5872,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+80ff3ebe28f963d475c2e726df74f4bd85006dbb,2026-07-11T15:04:07-07:00,pipeline/prompts/prompting.md,fbdfa219ac3fb84a99ac6eeb26d08fa148229cdd9d70358abffbed9f7d676836,text_spans,True,array_of_objects,6121,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+P"
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,681,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,839,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,1274,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,1523,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,table_cells,True,array_of_objects,702,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,text_spans,True,array_of_objects,860,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,table_cells,True,array_of_objects,1406,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,text_spans,True,array_of_objects,1655,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+
+"
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,table_cells,True,array_of_objects,2543,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,text_spans,True,array_of_objects,2701,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,table_cells,True,array_of_objects,3247,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,text_spans,True,array_of_objects,3496,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+%"
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,table_cells,True,array_of_objects,5042,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,text_spans,True,array_of_objects,5200,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,table_cells,True,array_of_objects,5834,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+f6fdd586c52cb1fb931225f4c0cf08077522c29d,2026-07-10T12:14:48-07:00,pipeline/prompts/prompting.md,f867d98a6e986a2ac7bb5d2449dc2878007af389248fe4b5d7ffe3e856708ac3,text_spans,True,array_of_objects,6083,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+No"
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,681,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,839,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,1274,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,1523,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,table_cells,True,array_of_objects,702,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,text_spans,True,array_of_objects,860,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,table_cells,True,array_of_objects,1406,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,text_spans,True,array_of_objects,1655,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+
+"
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,table_cells,True,array_of_objects,2543,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,text_spans,True,array_of_objects,2701,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,table_cells,True,array_of_objects,3247,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,text_spans,True,array_of_objects,3496,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+%"
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,table_cells,True,array_of_objects,5042,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,text_spans,True,array_of_objects,5200,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,table_cells,True,array_of_objects,5834,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+0b91463034c1dffcab735932221afcd666df93e2,2026-07-10T11:19:49-07:00,pipeline/prompts/prompting.md,819fb36ff6756f97d6c9c8ab63322d88aef233f1b342b2ef6f6a509f62201f3a,text_spans,True,array_of_objects,6083,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+No"
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,681,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,839,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,1274,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,1523,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,table_cells,True,array_of_objects,702,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,text_spans,True,array_of_objects,860,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,table_cells,True,array_of_objects,1406,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,text_spans,True,array_of_objects,1655,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+
+"
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,table_cells,True,array_of_objects,2543,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,text_spans,True,array_of_objects,2701,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,table_cells,True,array_of_objects,3247,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,text_spans,True,array_of_objects,3496,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+%"
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,table_cells,True,array_of_objects,4750,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,text_spans,True,array_of_objects,4908,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,table_cells,True,array_of_objects,5454,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+0abdcd7348ee20e6fb2340f6e344d5e7cc207eed,2026-07-08T21:47:43-07:00,pipeline/prompts/prompting.md,9f33d44ce9ec5cb24454ba298380f81e61b1a22f90422b681d3c6e206ceba006,text_spans,True,array_of_objects,5703,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+
+"
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,681,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,839,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,1274,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,1523,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,table_cells,True,array_of_objects,614,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,text_spans,True,array_of_objects,772,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,table_cells,True,array_of_objects,1318,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,text_spans,True,array_of_objects,1567,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,table_cells,True,array_of_objects,2456,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,text_spans,True,array_of_objects,2614,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,table_cells,True,array_of_objects,3160,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,text_spans,True,array_of_objects,3409,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+%"
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,table_cells,True,array_of_objects,4659,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,text_spans,True,array_of_objects,4817,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,table_cells,True,array_of_objects,5363,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+5d220bde190d8a8f79e5a9119326ea1bd392ae92,2026-07-08T16:54:29-07:00,pipeline/prompts/prompting.md,a8a6cd9a83952c08a63592f63b8395aad087ce1503821ec0a0f159b04841091d,text_spans,True,array_of_objects,5612,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"
+675c4596b62bde94ddee99a6568abeffc5bea1be,2026-07-07T14:09:45-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,681,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+675c4596b62bde94ddee99a6568abeffc5bea1be,2026-07-07T14:09:45-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,839,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+675c4596b62bde94ddee99a6568abeffc5bea1be,2026-07-07T14:09:45-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,1274,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+675c4596b62bde94ddee99a6568abeffc5bea1be,2026-07-07T14:09:45-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,1523,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"
+17b4e5e70d13b2684edfd8406991351146def6ce,2026-07-06T20:12:42Z,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,681,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+17b4e5e70d13b2684edfd8406991351146def6ce,2026-07-06T20:12:42Z,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,839,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+17b4e5e70d13b2684edfd8406991351146def6ce,2026-07-06T20:12:42Z,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,1274,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+17b4e5e70d13b2684edfd8406991351146def6ce,2026-07-06T20:12:42Z,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,1523,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"
+2c8aad50e9dad102ab97ac3eb5187b5f72207f12,2026-07-06T20:03:22Z,pipeline/prompts/prompts.md,32b162685ebb0078407d5b198d5b62802be06463c521f9e82b61aa98dce662b8,table_cells,True,array_of_objects,681,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+2c8aad50e9dad102ab97ac3eb5187b5f72207f12,2026-07-06T20:03:22Z,pipeline/prompts/prompts.md,32b162685ebb0078407d5b198d5b62802be06463c521f9e82b61aa98dce662b8,text_spans,True,array_of_objects,839,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+2c8aad50e9dad102ab97ac3eb5187b5f72207f12,2026-07-06T20:03:22Z,pipeline/prompts/prompts.md,32b162685ebb0078407d5b198d5b62802be06463c521f9e82b61aa98dce662b8,table_cells,True,array_of_objects,1274,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+2c8aad50e9dad102ab97ac3eb5187b5f72207f12,2026-07-06T20:03:22Z,pipeline/prompts/prompts.md,32b162685ebb0078407d5b198d5b62802be06463c521f9e82b61aa98dce662b8,text_spans,True,array_of_objects,1523,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"
+0f3e6ca79e242f709682a997f0e9035c3fa935be,2026-07-06T13:01:00-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,681,"[
+   {
+     ""table_id"": ""..."",
+     ""row"": ""..."",
+     ""col"": ""..."",
+     ""cell_text"": ""...""
+   }
+ ]
+}
+
+For text evidence, use:
+""evidence"": {
+ ""text_spans"": [
+ "
+0f3e6ca79e242f709682a997f0e9035c3fa935be,2026-07-06T13:01:00-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,839,"[
+   {
+     ""para_id"": ""..."",
+     ""char_start"": 0,
+     ""char_end"": 0,
+     ""text"": ""...""
+   }
+ ]
+}
+
+Do not cite an entire paragraph generally.
+Do not put all "
+0f3e6ca79e242f709682a997f0e9035c3fa935be,2026-07-06T13:01:00-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,table_cells,True,array_of_objects,1274,"[
+         {
+           ""table_id"": ""..."",
+           ""row"": ""..."",
+           ""col"": ""..."",
+           ""cell_text"": ""...""
+         }
+       ]
+     }
+   },
+   {"
+0f3e6ca79e242f709682a997f0e9035c3fa935be,2026-07-06T13:01:00-07:00,pipeline/prompts/prompts.md,1e5fd7bd3cd45c9fb117d0a5e1e7dae2661af3c27f063a3fa5cb178e1cf992b7,text_spans,True,array_of_objects,1523,"[
+         {
+           ""para_id"": ""..."",
+           ""char_start"": 0,
+           ""char_end"": 0,
+           ""text"": ""...""
+         }
+       ]
+     }
+   }
+ ]
+}
+
+Q"

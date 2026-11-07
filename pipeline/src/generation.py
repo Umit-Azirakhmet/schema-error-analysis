@@ -9,6 +9,7 @@ from datetime import datetime
 from typing import Any, Dict, List, Optional
 import numpy as np
 import pandas as pd
+from src.provenance import runtime_provenance
 
 # Import dataset loaders
 from src.datasets import (
@@ -249,6 +250,7 @@ class GenerationRunner:
             failed_rows: Number of rows that failed
         """
         manifest = {
+            **runtime_provenance(self.model_wrapper),
             'run_id': self.run_id,
             'created_at': datetime.now().isoformat(),
             'dataset': self.config['dataset'],
@@ -419,7 +421,7 @@ class GenerationRunner:
                     'nl_part': nl_part,
                     'json_part': json_part
                 }
-                if dataset_name == 'DeepJSONEval':
+                if prompt_fields.get('schema'):
                     record['schema'] = prompt_fields.get('schema', '')
 
                 # Update counters
@@ -458,7 +460,7 @@ class GenerationRunner:
                     'nl_part': None,
                     'json_part': None
                 }
-                if dataset_name == 'DeepJSONEval':
+                if row_data.get('prompt_fields', {}).get('schema'):
                     record['schema'] = row_data.get('prompt_fields', {}).get('schema', '')
 
                 with open(responses_path, 'a', encoding='utf-8') as f:

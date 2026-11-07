@@ -1,0 +1,16 @@
+sample_type,family,weighted,n,eligible_n,human_unassessable_n,automatic_unassessable_n,tp,fp,fn,precision,recall,f1
+balanced,completion,False,180,177,0,3,4.0,13.0,0.0,0.23529411764705882,1.0,0.38095238095238093
+balanced,completion,True,180,177,0,3,400.0,1119.0,0.0,0.2633311389071758,1.0,0.41688379364252215
+balanced,syntax,False,180,180,0,0,20.0,0.0,6.0,1.0,0.7692307692307693,0.8695652173913043
+balanced,syntax,True,180,180,0,0,1819.0,0.0,600.0,1.0,0.7519636213311286,0.8584237848041529
+balanced,envelope_contamination,False,180,180,0,0,105.0,0.0,0.0,1.0,1.0,1.0
+balanced,envelope_contamination,True,180,180,0,0,9193.2,0.0,0.0,1.0,1.0,1.0
+balanced,schema_non_conformance,False,180,55,125,125,23.0,0.0,0.0,1.0,1.0,1.0
+balanced,schema_non_conformance,True,180,55,125,125,1209.7999999999997,0.0,0.0,1.0,1.0,1.0
+balanced,content_fidelity,False,180,154,26,20,109.0,25.0,0.0,0.8134328358208955,1.0,0.897119341563786
+balanced,content_fidelity,True,180,154,26,20,10173.800000000001,1931.1999999999998,0.0,0.8404626187525817,1.0,0.9133166956927662
+challenge,completion,False,50,48,0,2,7.0,13.0,0.0,0.35,1.0,0.5185185185185185
+challenge,syntax,False,50,50,0,0,22.0,0.0,0.0,1.0,1.0,1.0
+challenge,envelope_contamination,False,50,50,0,0,30.0,0.0,0.0,1.0,1.0,1.0
+challenge,schema_non_conformance,False,50,10,40,40,10.0,0.0,0.0,1.0,1.0,1.0
+challenge,content_fidelity,False,50,28,22,22,24.0,4.0,0.0,0.8571428571428571,1.0,0.9230769230769231

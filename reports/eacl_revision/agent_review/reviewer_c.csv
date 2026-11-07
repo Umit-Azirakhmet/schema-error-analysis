@@ -1,0 +1,131 @@
+annotation_id,completion,syntax,envelope_contamination,schema_non_conformance,content_fidelity,notes
+A0100,no,yes,no,not-assessable,not-assessable,Malformed claims list closes then inserts bare arrays in object; no prompt or schema supplied.
+A0101,no,no,yes,yes,yes,Fenced valid JSON describes tomato/related plants instead of the patient in source; required PersonalInfo/MedicalHistory absent.
+A0102,no,no,no,not-assessable,not-assessable,"Complete parseable answer; prompt and actual JSON Schema absent, so source fidelity and schema cannot be established."
+A0103,no,no,no,yes,yes,Returns the schema itself instead of source Ghost Orchid facts; required plantData and references absent.
+A0104,no,yes,yes,not-assessable,not-assessable,Two prose parts surround JSON with an extra closing brace; intended JSON is malformed; source prompt absent.
+A0105,no,no,yes,not-assessable,yes,Fenced JSON copies example JCPDS coordinates/values instead of eight supplied Mossbauer target cells.
+A0106,no,yes,yes,not-assessable,not-assessable,Complete fenced Python program rather than a JSON answer; no source prompt or JSON Schema supplied.
+A0107,no,yes,no,not-assessable,not-assessable,"Schema-like response ends with missing closing delimiter; final field is otherwise complete, so no semantic cut-off established."
+A0108,no,no,yes,yes,no,"Fenced JSON preserves supplied orchid facts, but cultivation is at root rather than required inside plantData."
+A0109,no,yes,yes,not-assessable,not-assessable,"Complete fenced Python program, not an intended JSON data answer; source prompt/schema absent."
+A0110,no,no,yes,not-assessable,not-assessable,"Fenced parseable JSON with serialized records; source prompt/schema absent, so coordinates/classification cannot be verified."
+A0111,no,no,yes,no,no,"Requested prose precedes JSON; valid schema-conforming patient facts match Emily source, including active-active-inactive medications."
+A0112,no,no,yes,not-assessable,yes,"Requested prose wrapper; table evidence 12430 is production, not claimed 11006 sales; text span end 0 cannot cover quote and minus sign is lost."
+A0113,no,no,yes,not-assessable,yes,Fenced JSON; Marina Pack quote attributed to wrong paragraph ID and character spans do not select the quoted text.
+A0114,no,yes,no,not-assessable,not-assessable,"Final related-species record is finished but root closure is missing; malformed JSON, source prompt absent."
+A0115,no,no,yes,not-assessable,yes,"Prose and fences outside JSON; revenue quote assigned to deliveries paragraph, invented prefix on profit quote, and zero-length spans."
+A0116,no,yes,no,not-assessable,not-assessable,GPU/storage/OS/weight values finish normally but final root brace is missing; no source text provided.
+A0117,no,no,yes,not-assessable,yes,Fenced JSON uses nonexistent double-prefixed VW2020_VW2020 paragraph IDs and zero-length quoted spans.
+A0118,no,no,no,not-assessable,yes,"Financial amounts match source, but all three nonempty evidence quotes have zero-length character spans; omits lower fixed costs in answer."
+A0119,no,yes,no,not-assessable,not-assessable,Finished claims array lacks final root brace; no source prompt or actual JSON Schema supplied.
+A0120,yes,yes,yes,not-assessable,not-assessable,Prose wrapper and JSON cut off inside serialized value 43.01; incomplete intended object; no source/schema.
+A0121,yes,yes,yes,not-assessable,not-assessable,Prose wrapper; coordinate array visibly cuts off at a new '[' before any cell_record output.
+A0122,no,no,yes,not-assessable,not-assessable,Complete JSON follows two-part prose; missing source and JSON Schema prevent evidence/shape verification.
+A0123,no,no,yes,not-assessable,yes,Fenced JSON misstates 2019 operating profit as 3785 billion rather than 3785 million; quote span length zero.
+A0124,no,no,yes,not-assessable,yes,"Two-part prose and fences; first coordinate [2,2,0] should be [2,1,0], subsequent coordinates are shifted/duplicated despite correct Other records."
+A0125,no,no,yes,not-assessable,not-assessable,Two-part prose precedes parseable serialized records; missing source and JSON Schema prevent classification verification.
+A0126,no,no,yes,not-assessable,not-assessable,Two-part prose outside parseable JSON; source table/target cells and JSON Schema absent.
+A0127,yes,yes,yes,not-assessable,not-assessable,"Two-part prose; JSON coordinate generation cuts off mid-coordinate [4,297, with no records array."
+A0128,no,yes,no,not-assessable,not-assessable,Missing claim-object closure before second claim makes JSON invalid; no source or schema supplied.
+A0129,no,no,no,not-assessable,not-assessable,"Complete parseable JSON and serialized records; supplied prompt/schema absent, so positions and content cannot be verified."
+A0130,no,no,no,not-assessable,yes,Claims mix million/billion units and assert impossible -100.1% profit decrease; quote has zero-length span.
+A0131,no,yes,yes,not-assessable,not-assessable,"Finished fenced Python program, not JSON output; source prompt/schema absent."
+A0132,no,no,no,no,not-assessable,Complete JSON conforms to supplied patient schema; source text absent so extracted values cannot be checked.
+A0133,no,no,yes,not-assessable,not-assessable,Part 1 prose precedes complete JSON; source prompt/schema absent.
+A0134,no,no,yes,not-assessable,not-assessable,Two-part prose wrapper around complete JSON; source paragraphs and JSON Schema absent.
+A0135,no,no,yes,not-assessable,not-assessable,Prose plus fenced JSON with finished serialized records; source prompt/schema absent.
+A0136,no,no,no,no,not-assessable,Complete orchid object passes supplied schema; no source text to assess values.
+A0137,no,no,no,not-assessable,not-assessable,Finished parseable arrays and embedded JSON records; source table/target cells and JSON Schema absent.
+A0138,no,yes,no,not-assessable,not-assessable,"Finished achievement entries end normally; final root brace missing, so JSON malformed without clear semantic cutoff."
+A0139,no,no,no,not-assessable,yes,Quote has zero-length span and table location uses nonmatching row/column labels; causal claim is stronger than supplied context.
+A0140,no,no,yes,not-assessable,no,"Fenced JSON accurately zips all eight targets; keV/mm/s/branching values are measurements, correctly Other."
+A0141,no,no,no,not-assessable,yes,"Source supports technical factors, but both nonempty quotes have zero-length spans; table location labels do not match supplied headers."
+A0142,no,no,no,not-assessable,not-assessable,Parseable object with serialized records; no source target cells or JSON Schema to decide whether Artificial is requested.
+A0143,no,no,yes,not-assessable,yes,Prose/fences; table evidence uses paragraph IDs as table IDs and incorrect columns; answer omits requested positive/negative financial drivers.
+A0144,no,no,yes,not-assessable,not-assessable,Two-part prose and complete JSON; embedded final record lacks type but actual JSON Schema/source prompt absent.
+A0145,no,no,yes,not-assessable,not-assessable,Introductory/trailing explanation and fences surround finished JSON; source prompt/schema absent.
+A0146,no,no,yes,no,no,"Requested prose and extra fences; Arctic Raspberry values, synonyms, and related-species names match source and supplied schema."
+A0147,no,no,yes,not-assessable,yes,"Prose wrapper; text evidence zero-length, and table evidence places total 95781 under empty column rather than 2017."
+A0148,yes,yes,yes,not-assessable,not-assessable,"Intro and fence precede JSON cut off mid-coordinate [26,6, before any records array."
+A0149,no,no,no,not-assessable,not-assessable,"Finished parseable answer; source prompt and JSON Schema absent, so table IDs and financial claims not independently verifiable."
+A0150,no,yes,no,not-assessable,not-assessable,"All five achievements finish normally but root brace is missing; intended JSON is invalid, preventing content/schema assessment."
+A0151,no,no,yes,not-assessable,not-assessable,Two-part prose and fences surround complete JSON; source target cells/schema absent.
+A0152,no,no,no,not-assessable,yes,"Financial statements match context, but evidence quotes have zero-length spans and table locations do not match supplied revenue row/year."
+A0153,yes,yes,yes,not-assessable,not-assessable,Fenced JSON repeats coordinates and cuts off at an empty new coordinate before cell_record; intended object unparseable.
+A0154,no,no,yes,not-assessable,not-assessable,Prose wrapper with completed JSON; source prompt and actual JSON Schema absent.
+A0155,no,yes,no,not-assessable,not-assessable,"Claims array closes then a bare array appears inside the object; complete prose but malformed JSON, no source/schema."
+A0156,no,no,no,yes,not-assessable,"Valid JSON nests cultivation inside characteristics, omitting required plantData.cultivation; no source text."
+A0157,no,no,yes,not-assessable,not-assessable,Two-part prose wrapper around complete answer; source paragraphs/table and JSON Schema absent.
+A0158,no,no,no,not-assessable,not-assessable,"Parseable JSON with embedded records; no source table to judge Sn/Te compound classifications, no actual JSON Schema."
+A0159,no,yes,no,not-assessable,not-assessable,"Schema-like output has malformed closure near TicketTypes items; no interrupted token at end, source text absent."
+A0160,no,no,no,not-assessable,not-assessable,Complete parseable object with embedded records; no source table/target cells or actual JSON Schema.
+A0161,no,yes,no,not-assessable,not-assessable,Ticket entries end normally but root brace missing; source prompt absent and malformed intended JSON prevents downstream assessment.
+A0162,no,no,no,not-assessable,not-assessable,Complete parseable answer; no source prompt/table or JSON Schema available to verify financial content/evidence locations.
+A0163,no,no,yes,no,no,"Requested prose and fences surround valid orchid JSON; extracted names, endangered status, pH and references agree with source/schema."
+A0164,no,no,no,not-assessable,yes,"Claims paraphrase source, but both nonempty supporting quotes are assigned zero-length character spans."
+A0165,no,no,yes,not-assessable,not-assessable,Two-part prose wrapper around complete JSON; source prompt/table and actual JSON Schema absent.
+A0166,no,yes,yes,not-assessable,not-assessable,Two-part prose precedes intended JSON with an extra closing brace; source text absent.
+A0167,no,yes,no,not-assessable,not-assessable,"Finished related-species entries end with wrong/missing array delimiter; no semantic cut-off established, JSON unparseable."
+A0168,no,no,yes,no,no,"Requested prose wrapper; valid patient JSON accurately extracts Emily's details, allergies and medication statuses and passes schema."
+A0169,no,yes,no,not-assessable,not-assessable,"Claim objects lack closing braces before next claims; no outer prose or semantic cutoff, source/schema absent."
+A0170,no,no,no,yes,not-assessable,Valid JSON introduces Patient wrapper so required root PersonalInfo/MedicalHistory are absent; source prompt absent.
+A0171,no,no,yes,no,yes,"Fenced valid JSON passes schema, but Pioneer rarity is 1.0 while source explicitly gives 10.0 percent."
+A0172,no,no,yes,not-assessable,not-assessable,Two-part prose wrapper around finished JSON; missing source prompt/table and actual JSON Schema.
+A0173,no,no,no,not-assessable,not-assessable,"Complete parseable answer; source prompt and actual JSON Schema absent, so source/evidence fidelity cannot be established."
+A0174,no,no,no,not-assessable,not-assessable,"Complete parseable answer; supplied prompt/table/schema absent, so source-based assessment unavailable."
+A0175,no,yes,no,not-assessable,not-assessable,All five feature values finish normally but Features ends with object brace instead of array closure; intended JSON malformed.
+A0176,no,no,no,not-assessable,not-assessable,Complete parseable arrays and serialized records; source target cells/table and actual JSON Schema absent.
+A0177,no,no,yes,not-assessable,yes,"Fenced JSON uses paragraph ID for table and incorrect text offsets (130-163, 213-233) that cannot cover quoted financial sentences."
+A0178,yes,yes,no,not-assessable,not-assessable,JSON cuts off inside a new serialized record after long repeated '-' values; no wrapper; source/schema absent.
+A0179,no,no,no,no,not-assessable,Complete patient JSON passes supplied schema; original source text absent.
+A0180,no,yes,no,not-assessable,not-assessable,Finished claims array is missing root closing brace; source prompt/schema absent.
+A0181,no,no,no,not-assessable,not-assessable,Complete JSON contains three serialized Other records; source targets/table and JSON Schema absent.
+A0182,no,yes,no,not-assessable,not-assessable,"Claim objects are not closed before subsequent claims; intended JSON malformed, no semantic cutoff."
+A0183,yes,yes,yes,not-assessable,not-assessable,"Two-part prose; JSON cuts off inside constituent string Na2, leaving records/parent unfinished."
+A0184,no,no,no,no,not-assessable,Complete JSON passes supplied patient schema; original source text absent.
+A0185,no,no,yes,not-assessable,not-assessable,Two-part prose before complete JSON; source prompt/table and actual JSON Schema absent.
+A0186,no,no,no,no,not-assessable,Complete patient object conforms to supplied JSON Schema; source text absent.
+A0187,no,no,yes,not-assessable,not-assessable,Prose wrapper around finished JSON; supplied source prompt/table and actual JSON Schema absent.
+A0188,no,no,yes,not-assessable,not-assessable,Two-part prose and fenced complete JSON; source targets/schema absent.
+A0189,no,no,yes,not-assessable,yes,"Fenced JSON copies fourteen JCPDS example values (34,0158,...) instead of eight impedance targets (0.84,0.83,...)."
+A0190,no,no,yes,not-assessable,yes,Fenced JSON copies fourteen JCPDS values/coordinates instead of six supplied electronegativity/partial-charge targets.
+A0191,yes,yes,yes,not-assessable,not-assessable,"Prose wrapper; generated coordinate list visibly stops at [150, before records array or parent closure."
+A0192,no,no,no,not-assessable,not-assessable,Finished parseable answer; no original source paragraphs or JSON Schema supplied.
+A0193,no,no,no,not-assessable,not-assessable,"Finished parseable JSON has unequal arrays, but source target cells and actual JSON Schema absent for task-level assessment."
+A0194,no,no,no,not-assessable,not-assessable,"Complete parseable answer; source table/prompt and JSON Schema absent, so evidence locations cannot be checked."
+A0195,no,no,no,not-assessable,not-assessable,Complete parseable answer; no source paragraphs/table or actual JSON Schema supplied.
+A0196,no,no,yes,no,no,"Fenced JSON passes schema and matches source Emily identity/contact information, allergies, and active medication statuses."
+A0197,no,no,yes,not-assessable,yes,"Prose and fences; fictitious table evidence uses paragraph ID VW2019_P1c5fe2, and nonempty production/revenue quotes have zero-length spans."
+A0198,no,no,no,not-assessable,not-assessable,Complete parseable JSON; source table/prompt and actual JSON Schema absent.
+A0199,no,yes,yes,not-assessable,not-assessable,"Finished fenced Python program rather than JSON; intermediate dictionaries are program data, not a JSON answer."
+A0200,no,yes,yes,not-assessable,not-assessable,Complete fenced Python function/example program instead of JSON answer; source prompt/schema absent.
+A0201,no,no,yes,yes,yes,"Fenced tomato JSON instead of source Hedera ivy; supplied schema additionally requires missing references, colorVariations and propagationMethods."
+A0202,no,no,no,not-assessable,yes,"Nonempty R&D quote has zero-length span; table numeric ratio does not support the claimed formula, which comes from source text."
+A0203,no,no,yes,not-assessable,not-assessable,Two-part prose wrapper; complete JSON records but source targets/table and actual JSON Schema absent.
+A0204,no,no,yes,not-assessable,yes,Requested prose wrapper; table evidence uses paragraph IDs rather than supplied table; quoted 0.6 has zero-length span.
+A0205,no,no,yes,not-assessable,not-assessable,Prose wrapper around complete JSON with serialized records; source target cells/table and JSON Schema absent.
+A0206,no,yes,yes,not-assessable,not-assessable,Two-part prose precedes intended JSON with extra closing brace; no source prompt to assess fidelity.
+A0207,no,no,no,not-assessable,not-assessable,Complete parseable answer; source table/paragraphs and actual JSON Schema absent.
+A0208,no,no,yes,not-assessable,not-assessable,Two-part prose wrapper with complete JSON; source prompt/table and actual JSON Schema absent.
+A0209,no,no,yes,not-assessable,yes,Fenced JSON preserves target coordinates/values but misclassifies second/third FWHM measurements as glass composition amounts with ppm units.
+A0210,no,no,no,not-assessable,not-assessable,Complete parseable JSON with finished embedded records; original target table/prompt and actual JSON Schema absent.
+A0211,no,yes,yes,not-assessable,not-assessable,Finished fenced Python program/examples rather than JSON data answer; no source prompt/schema supplied.
+A0212,no,no,no,no,no,"Complete raw JSON passes supplied schema and accurately represents Emily's identity, contact details, allergies and medication statuses."
+A0213,no,no,yes,yes,no,"Requested prose precedes valid JSON; source player counts and achievement facts correct, but required GameStatistics wrapper absent."
+A0214,no,yes,no,not-assessable,not-assessable,"Finished relatedSpecies array followed by extra closing brace; malformed full intended JSON, source prompt absent."
+A0215,no,no,yes,no,no,"Fenced patient JSON passes schema and accurately extracts gender, blood type, address, and three medication names from source."
+A0216,no,yes,no,not-assessable,not-assessable,"Claims array closes before bare additional arrays in object; finished content but malformed intended JSON, source absent."
+A0217,no,no,no,no,not-assessable,Complete GameStatistics JSON passes supplied schema; source text absent so fidelity not established.
+A0218,no,yes,yes,not-assessable,not-assessable,Prose wrapper; stray quote before second related-species object breaks intended JSON; no clear semantic cutoff.
+A0219,no,yes,no,not-assessable,not-assessable,"Finished PriceHistory entries lack root closing brace; intended JSON malformed, source prompt absent."
+A0220,no,no,no,not-assessable,not-assessable,Complete parseable object with embedded records; supplied source target cells/table and actual JSON Schema absent.
+A0221,no,no,yes,not-assessable,not-assessable,Two-part prose before complete JSON; source prompt/target cells and actual JSON Schema absent.
+A0222,no,no,yes,not-assessable,yes,"Prose and fences; table evidence names paragraph IDs rather than supplied Scania table title, so citations do not identify supplied cells."
+A0223,no,no,yes,yes,yes,Fenced tomato object instead of source Machu Picchu and ticket information; required BasicInformation/LocationInformation/VisitorInformation absent.
+A0224,no,no,no,no,not-assessable,Complete Arctic Raspberry JSON passes supplied schema; source text absent.
+A0225,no,no,no,yes,not-assessable,Valid JSON puts cultivation under characteristics instead of required plantData.cultivation; source text absent.
+A0226,no,yes,no,not-assessable,not-assessable,Finished claims array lacks final root closing brace; source prompt/schema absent.
+A0227,no,no,no,no,no,"Complete raw patient JSON conforms to schema and matches source gender, blood type, address and all medication names."
+A0228,no,no,no,not-assessable,not-assessable,Complete JSON with three serialized Other records; original source targets/table and actual JSON Schema absent.
+A0229,no,no,no,no,no,"Complete raw patient JSON conforms to schema and accurately extracts source gender, blood type, address and medication list."

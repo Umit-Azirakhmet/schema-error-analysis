@@ -1,0 +1,67 @@
+{
+  "detector_version": "eacl-v2",
+  "bootstrap": 2000,
+  "seed": 42,
+  "hypotheses": [
+    {
+      "feature": "gold_json_length",
+      "outcome": "syntax_flag",
+      "status": "exploratory"
+    },
+    {
+      "feature": "nesting_depth",
+      "outcome": "schema_non_conformance_flag",
+      "status": "exploratory"
+    },
+    {
+      "feature": "total_key_count",
+      "outcome": "missing_gold_scalar_paths_rate",
+      "status": "exploratory"
+    }
+  ],
+  "python": "3.14.5",
+  "packages": {
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "jsonschema": "4.26.0",
+    "pyarrow": "24.0.0"
+  },
+  "source_rows": 15576,
+  "output_directory": "C:\\Users\\pierc\\OneDrive\\Documents\\GitHub\\schema-error-analysis\\reports\\eacl_revision\\v2",
+  "status": "recomputed_after_agent_audit_requires_manuscript_review",
+  "review_kind": "independent_agent_audit_not_human_validation",
+  "content_metric": "dataset_specific_gold_proxy; source_grounding_separate",
+  "retrospective_contract_version": "retrospective-v1",
+  "frozen_review": "C:\\Users\\pierc\\OneDrive\\Documents\\GitHub\\schema-error-analysis\\reports\\eacl_revision\\agent_review",
+  "implementation_sha256": {
+    "analysis/association_analysis.py": "5e81071693dd8674b7a3e9bca6b7cfe0bd97e48bcc8f5caf2b67d6f80896b608",
+    "analysis/audit_history.py": "390cebf354367c090d66ddffd6bb80ff15ed7b9d68054f3b85cb90960cf5d1d3",
+    "analysis/box_and_whisker.py": "f80c7259c53b642f76f651e4143d4cb3880a255a0a2d39ccfbb793189c98b2a5",
+    "analysis/build_dataset.py": "d63d72f92dc961465bb44ad25a11f9e3ec18f1059e36b0f8d9a71c836d045de0",
+    "analysis/cleanup_ablation.py": "455241c9f8c24502dcaa5e55daa6996c4d5f839bda203058c51a092a307e6b21",
+    "analysis/common.py": "38ddaee31fe57c5d17501c63f3b4a05cee37174d4acc0020fb1e19bbb493a9d0",
+    "analysis/conditional_reliability.py": "5a101e3329e4b0beae7bb57963e517770684ab0f85b5408a1760d1b2d386a098",
+    "analysis/correlation_heatmap.py": "e9da923942b3cd4d60d83f3ba5fbe9c93059b07ddbed09a848e5e20d8804c5ec",
+    "analysis/family_prevalence.py": "a64b92f689751ea926c1fa8ad62480a4da1ac49b58a5923ceeacd163138902df",
+    "analysis/forest_plot.py": "71ad9e5d1d79192c1a73eb0acd6075a0a787b59d9b43b368747eeb32d8542cbc",
+    "analysis/heatmap.py": "76f293a0c3a11261143c6375d54211b48e15159c7f005e4e5956c33879e7bc03",
+    "analysis/protocol_audit.py": "68f7757c51b31a50e1af3b37a47b119cb531332f57d9e560c0eefdab0ee9a5d2",
+    "analysis/run_revision.py": "82203a1118cd1aa86e113e681a8331645973bd88a2367e754c648ea733b02e7c",
+    "analysis/source_evidence.py": "98997e12ff7dd70ded7fab746d11cd25b21a7147971e6f09fa2641b3c68c0c9f",
+    "scripts/analyze_characteristic_stats.py": "675a4ab1bcc4ac55b05c905807bf21592a048e56d354d1971b8e269ea77a5e30",
+    "scripts/analyze_characteristics.py": "965641befe06e8afc1ffa3a90bbf67c84bde348963601d7ef98f43ac4f244d83",
+    "scripts/ARQA-add-fields.py": "228165361f619c68c9f06f39919e1a49e7581d449f0b5bf1b2c980cb8eb2b0d4",
+    "scripts/DeepJSONEval-add-fields.py": "d6fb53a27d804440f4d7a1467e4f487537fd639177a86acbf9b62c6fdc522954",
+    "scripts/Error_detector.py": "97809a05eb049868bbcd9c03016bba2f13bd91b7f7300eb2cf6bcb12a5e4a1fe",
+    "scripts/error_taxonomy.py": "36def8e1a021be6755ef5d1fe9f07fb74dd8a843785dde75d472d3ff0d7b8c8a",
+    "scripts/gold_json_analysis.py": "1ce0bc2913e55639ceeac8759bc539bef7badfaf53f9535502c85935f526a002",
+    "scripts/opportunity_metrics.py": "7c0e20286d0a9d8fc8666d3e97540f916d6cf9c8c66594f2a88136d5f66a4f3f",
+    "scripts/output_contracts.py": "79126889a3a51fa80f954a1d88474ebf4a582f154a6c05698235d581c72ebdc1",
+    "scripts/response_assessment.py": "f62eaf6b44a15e86b07ce5585464e3ed6457a5b6281ce2df68b3327b5423428f",
+    "scripts/SchemaToJSON-add-fields.py": "32475b552270268f26431d54f5a5cbd495bb34adb1f793afdad3611fb944e29a",
+    "validation/compare_agent_reviews.py": "b4e52d4debe7cdf198ca5b4513b38c071f49fe3f25bceb6b4c7276dbba502cf7",
+    "validation/evaluate_annotations.py": "990b113f79acf44fdbd998ea8f23984848fae3de919550f42e001d86256f901d",
+    "validation/sample_annotations.py": "94fce7fc37451ac944d4ef76685b27d918893898ab363f10dc6c9a33e0bfd748"
+  }
+}

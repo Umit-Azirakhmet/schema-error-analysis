@@ -1,0 +1,4 @@
+Dataset,N,Parseable v1,Parseable v2,Incomplete v1,Incomplete v2,Completion unknown v2,Content proxy matches v1,Content proxy matches v2
+ARQA,6420,5741,5741,660,4,54,0,0
+DeepJSONEval,3156,2671,2611,471,1,43,1140,1133
+SchemaToJSON,6000,5382,4914,425,282,260,181,1340

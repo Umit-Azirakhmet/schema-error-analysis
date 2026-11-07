@@ -1,0 +1,67 @@
+{
+  "reviewer_id": "reviewer_c",
+  "review_type": "independent blinded AI agent annotation",
+  "model_identity": {
+    "available_identity": "Codex, based on GPT-6 (developer-provided identity)",
+    "exact_model_id": null,
+    "limitation": "Exact serving model identifier was not exposed to reviewer; no guess made."
+  },
+  "date_utc": "2026-11-06T05:20:40.404398+00:00",
+  "source_file": "reports/eacl_revision/annotation_sample.csv",
+  "source_sha256": "2121dd2ccd5289b52e5121074f8d7b5febe6cb516c590f00dc137eff854dcc33",
+  "review_csv": "reports/eacl_revision/agent_review/reviewer_c.csv",
+  "review_csv_sha256": "8499f0cce85b79528e14e6f74aa0c2de20a536152f5fff9d7e47b2a080bab00d",
+  "scope": {
+    "first_annotation_id": "A0100",
+    "last_annotation_id": "A0229",
+    "assigned_rows": 130,
+    "annotated_rows": 130,
+    "labels_per_row": 5
+  },
+  "blinding": {
+    "allowed_material": "Assigned rows in annotation_sample.csv: raw_response, supplied schema, prompt and gold_json_raw. Gold shown for initial inspection only; no gold inequality used to produce labels.",
+    "excluded_material": "No other reviewer labels, original label files, detector implementation/results, private annotation key, brief, or other report contents accessed.",
+    "process": "Individually inspected assigned raw responses in sequential batches and authored every five-label judgment and evidence note. Python assisted display, strict JSON parsing, and objective jsonschema validation only; no detector heuristic or mass gold-comparison labeling. Complete child structures inside unfinished parents were not salvaged. Prose/fences counted as literal envelope material, including requested two-part prose."
+  },
+  "label_semantics": {
+    "yes": "Detected error",
+    "no": "No detected error",
+    "not-assessable": "Insufficient evidence"
+  },
+  "assessment_rules": {
+    "completion": "Semantic interruption requires interrupted token/value/field or visibly abandoned section; finished content with malformed final delimiter alone is not a completion error.",
+    "syntax": "Intended full JSON without repairs after separating outer prose/fences; Python source code is not a JSON answer.",
+    "schema": "Only supplied actual JSON Schema; schemas decoded safely with ast.literal_eval and checked with installed jsonschema. Missing schema or unparseable intended JSON is not-assessable.",
+    "content": "Compared parseable intended JSON with supplied source context and task requirements. Paraphrases allowed. Source-absent rows not judged by gold mismatch or borrowed context from other rows. Structure-only schema errors were not automatically also content errors."
+  },
+  "missing_source_limitations": {
+    "assigned_rows_without_prompt": 84,
+    "assigned_rows_without_schema": 89,
+    "description": "Many rows lack original source prompts/tables and/or actual JSON Schema. Content fidelity is not-assessable when source evidence is absent or intended JSON is unparseable. Gold alone was not treated as independent ground truth. Missing delimiters can show malformed syntax without proving semantic interruption."
+  },
+  "human_validation": false,
+  "label_counts": {
+    "completion": {
+      "no": 122,
+      "yes": 8
+    },
+    "syntax": {
+      "yes": 38,
+      "no": 92
+    },
+    "envelope_contamination": {
+      "no": 63,
+      "yes": 67
+    },
+    "schema_non_conformance": {
+      "not-assessable": 104,
+      "yes": 9,
+      "no": 17
+    },
+    "content_fidelity": {
+      "not-assessable": 90,
+      "yes": 28,
+      "no": 12
+    }
+  }
+}

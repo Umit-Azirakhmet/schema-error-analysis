@@ -1,0 +1,6 @@
+pandas
+numpy
+scipy
+matplotlib
+pyarrow
+jsonschema>=4.23,<5

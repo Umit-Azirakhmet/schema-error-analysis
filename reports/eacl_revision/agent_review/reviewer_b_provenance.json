@@ -1,0 +1,87 @@
+{
+  "reviewer": "B",
+  "reviewer_type": "independent AI agent; not human annotation or human validation",
+  "exact_model_identifier": null,
+  "model_identity_available_in_session": "Codex, described as based on GPT-6; exact runtime model identifier unavailable and not guessed",
+  "review_completed_utc": "2026-11-06T05:16:11Z",
+  "source": "reports/eacl_revision/annotation_sample.csv",
+  "source_sha256": "2121dd2ccd5289b52e5121074f8d7b5febe6cb516c590f00dc137eff854dcc33",
+  "source_total_rows": 230,
+  "reviewed_scope": {
+    "count": 100,
+    "first_annotation_id": "A0000",
+    "last_annotation_id": "A0099",
+    "reason": "Parent narrowed scope to first 100 rows; remaining rows assigned to another blinded reviewer."
+  },
+  "blinding": {
+    "consulted_fields": [
+      "annotation_id",
+      "dataset",
+      "raw_response",
+      "gold_json_raw",
+      "schema",
+      "prompt"
+    ],
+    "excluded_sources": [
+      "annotation key",
+      "existing annotation labels",
+      "other reviewer outputs",
+      "detector code",
+      "detector reports",
+      "Phase 7 brief"
+    ],
+    "independence": "No delegation and no access to other reviewers judgments. Full source row-count/dataset/field-length metadata enumerated initially; substantive review restricted to A0000-A0099."
+  },
+  "method": "Manually inspected source batches and manually authored every five-label row and rationale. Source display compacted whitespace and decoded embedded cell_record JSON strings for inspection. Recursive raw/reference differences and standard Python JSON parsing plus official jsonschema validation were objective aids, not semantic annotation rules. JSON fragments inside Python programs or prematurely closed/unfinished parent answers were not accepted as full intended JSON.",
+  "decision_policy": {
+    "labels": "yes means error; no means no error; not-assessable means evidence insufficient.",
+    "completion": "Semantic interruption required: unfinished tokens/values count; finished substantive answers with missing/extra delimiters alone do not.",
+    "syntax": "Assessed full intended JSON after removal of surrounding prose/fences only, without repair.",
+    "envelope_contamination": "Literal surrounding prose/fences count even when a two-part natural-language format was requested.",
+    "schema_non_conformance": "Only actual supplied schema field used, parsed safely via ast.literal_eval and checked with jsonschema. No schema synthesized from gold or prompt shape. Invalid full intended JSON gives not-assessable.",
+    "content_fidelity": "Judged meaningful correctness against source prompt and reference evidence; decoded records and coordinate/value correspondence inspected. Harmless allergy capitalization and unambiguous added nesting do not by themselves imply content error. Unsupported additional medication identities without source prompt remain not-assessable. Invalid full intended JSON gives not-assessable despite visible partial faults."
+  },
+  "source_missingness_in_scope": {
+    "raw_response": 0,
+    "gold_json_raw": 0,
+    "schema": 64,
+    "prompt": 53
+  },
+  "dataset_counts_in_scope": {
+    "SchemaToJSON": 33,
+    "DeepJSONEval": 36,
+    "ARQA": 31
+  },
+  "label_totals": {
+    "completion": {
+      "no": 97,
+      "yes": 3
+    },
+    "syntax": {
+      "no": 83,
+      "yes": 17
+    },
+    "envelope_contamination": {
+      "no": 34,
+      "yes": 66
+    },
+    "schema_non_conformance": {
+      "not-assessable": 68,
+      "yes": 17,
+      "no": 15
+    },
+    "content_fidelity": {
+      "yes": 60,
+      "not-assessable": 19,
+      "no": 21
+    }
+  },
+  "review_csv_sha256": "f933d2c8acea6c4fada19c94013c12a0faefb9c60c191604cb26aeded294452d",
+  "limitations": [
+    "AI judgments are not human validation and may retain subjective semantic errors.",
+    "53 of 100 prompts are absent and 64 of 100 supplied schema fields are absent.",
+    "Reference answers can be incomplete or imperfect; differences alone were not treated as sufficient evidence of semantic error.",
+    "Long prompts were viewed selectively around task input and relevant constraints; unrelated few-shot examples were not relied upon as task evidence.",
+    "The 130 rows after A0099 are outside this reviewers substantive review scope."
+  ]
+}

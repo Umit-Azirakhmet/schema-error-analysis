@@ -126,6 +126,9 @@ temp/
 *.bak
 
 # Pipeline run artifacts
+.revision-deps/
+reports/eacl_revision/canonical_generations.parquet
+reports/eacl_revision/**/canonical_generations.parquet
 #pipeline/outputs/
 
 # Optional: uncomment if generated outputs should not be committed

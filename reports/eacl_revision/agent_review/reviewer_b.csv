@@ -1,0 +1,101 @@
+annotation_id,completion,syntax,envelope_contamination,schema_non_conformance,content_fidelity,notes
+A0000,no,no,no,not-assessable,yes,Complete JSON; coordinates omit row 5 while retaining its values and composition cells are mislabeled Other; no supplied schema.
+A0001,no,yes,yes,not-assessable,not-assessable,"Finished two-part answer has an extra closing brace and misplaced cultivation; full intended JSON is invalid, so schema/content cannot be evaluated."
+A0002,no,no,yes,not-assessable,yes,"Two-part prose surrounds valid JSON; table identifier and text endpoint do not match reference evidence, and delivery growth is omitted; schema absent."
+A0003,no,no,no,not-assessable,yes,Complete raw JSON; both text evidence spans use zero-length offsets inconsistent with copied text; schema absent.
+A0004,no,no,yes,not-assessable,yes,Fenced complete JSON; table evidence uses a different identifier and omits supporting text evidence for asserted drivers; schema absent.
+A0005,no,yes,no,not-assessable,not-assessable,Answer finishes its claims but lacks the final object brace; punctuation defect rather than interrupted semantics; downstream dimensions unassessable.
+A0006,no,no,yes,not-assessable,yes,Fenced complete JSON; cites a paragraph identifier as a table and does not answer the requested contributing factors; no schema.
+A0007,no,no,no,yes,yes,Complete JSON lacks required DeviceInfo nesting and omits source CPU clock speed from the processor specification.
+A0008,no,yes,yes,not-assessable,not-assessable,Finished fenced Python program is not the intended JSON answer; intermediate dictionaries cannot serve as the full answer.
+A0009,no,no,yes,not-assessable,no,Two-part wrapper surrounds valid JSON; decoded cell records and coordinate/value alignment match the reference; schema absent.
+A0010,no,no,yes,not-assessable,yes,Complete fenced two-part JSON uses nonzero k for later rows and mismatches index/record lengths; no schema.
+A0011,no,no,yes,not-assessable,yes,Complete fenced answer uses a zero-length span for a nonempty quote; schema absent.
+A0012,no,no,yes,yes,yes,"Complete two-part JSON returns the schema itself instead of plant data, failing required plantData and the extraction task."
+A0013,no,no,yes,not-assessable,yes,Prose/fences surround finished JSON; 18 indices are paired with 26 records and row 5 coordinates are missing; no schema.
+A0014,yes,yes,yes,not-assessable,not-assessable,"Fenced response degenerates into repeated indices and cuts off mid-coordinate; full JSON unavailable, downstream checks unassessable."
+A0015,no,no,yes,not-assessable,yes,Fenced complete JSON copies JCPDS example cells instead of the target table values reflected in the reference; no schema.
+A0016,no,no,yes,not-assessable,yes,"Fenced finished JSON repeats the first coordinate, adds dash values and loses later target coordinates; schema absent."
+A0017,no,no,no,not-assessable,yes,Complete raw JSON; evidence has zero-length text spans and a table identifier inconsistent with the reference; schema absent.
+A0018,yes,yes,yes,not-assessable,not-assessable,Two-part answer cuts off inside a serialized compound record; visible missing sample identifiers but full JSON unavailable.
+A0019,no,no,yes,yes,yes,Complete fenced JSON returns botanical schema information for a movie extraction task and fails required movie fields.
+A0020,no,no,no,no,not-assessable,"Complete schema-valid JSON; allergy capitalization preserves meaning, but added medication identities cannot be substantiated without source prompt."
+A0021,no,yes,yes,not-assessable,not-assessable,Complete fenced Python program does not provide the requested JSON; no full JSON candidate or schema.
+A0022,no,yes,no,not-assessable,not-assessable,"The evidence object is closed before more keys are appended, making the full answer invalid; finished punctuation defect, no wrapper."
+A0023,no,no,yes,not-assessable,yes,"Fenced complete JSON; a paragraph identifier and numeric row replace table evidence, and a nonempty quote has zero-length offsets."
+A0024,no,no,yes,not-assessable,yes,Two-part complete JSON has fewer coordinates than records and shifts later radiative values to the wrong cells; schema absent.
+A0025,no,no,yes,not-assessable,yes,Fenced complete JSON incorrectly treats the 17.1 percent rise as €17.1 billion and fabricates a text quote of 3.016 million.
+A0026,no,no,yes,not-assessable,yes,Fenced complete JSON fails positional coordinate/value correspondence and drops required multiple-value k coordinates; no schema.
+A0027,no,no,no,yes,yes,Finished raw JSON supplies a schema with defaults rather than the required plantData instance.
+A0028,no,no,no,no,no,Complete raw JSON passes the supplied schema; player totals and all five achievement facts match source/reference.
+A0029,no,no,yes,no,no,Complete two-part wrapper; JSON passes schema and preserves the five achievement records and statistics.
+A0030,no,yes,no,not-assessable,not-assessable,All medical facts reach their end but the final object brace is absent; full JSON invalid and downstream checks unknown.
+A0031,no,no,no,yes,no,"Complete raw JSON places cultivation under characteristics, failing required nesting; stated botanical values retain their meaning."
+A0032,no,no,no,no,not-assessable,"Complete schema-valid JSON; allergy names preserve meaning, while extra medication identities lack source support in this row."
+A0033,no,no,no,not-assessable,yes,Complete JSON uses a wrong table identifier and a 248-character endpoint for a much longer quote; schema absent.
+A0034,no,no,yes,not-assessable,yes,Fenced complete answer uses zero-length and mismatched text spans for substantive quotes; schema absent.
+A0035,no,no,yes,not-assessable,no,Complete two-part JSON; decoded target coordinates and records match the reference; no schema supplied.
+A0036,no,no,yes,not-assessable,no,"Two-part complete JSON matches all decoded target cell records; prose is imprecise about composition, but extracted cells remain correct; no schema."
+A0037,no,no,no,yes,no,Complete JSON adds Game nesting and fails required root GameStatistics; statistics and achievement meanings are preserved.
+A0038,no,no,yes,no,no,"Complete two-part response; JSON validates and agrees with patient demographics, address, and medication evidence."
+A0039,no,no,yes,not-assessable,yes,Two-part fenced JSON incorrectly classifies the 11.8 ppm line width as a glass compound amount.
+A0040,no,no,no,no,no,Complete raw schema-valid answer; Bee stings capitalization changes no allergy meaning.
+A0041,no,no,no,not-assessable,yes,"Complete JSON omits target coordinate [3,2,0] and its 0.586 record; schema absent."
+A0042,no,no,yes,not-assessable,no,Complete two-part fenced JSON preserves all eight target coordinates and decoded records; no schema.
+A0043,no,no,no,no,no,Complete raw JSON validates; lowercase common allergy labels preserve the reference facts.
+A0044,no,no,yes,yes,yes,"Complete two-part JSON returns a patient schema instead of the patient record, failing required instance fields."
+A0045,no,no,yes,yes,no,Complete two-part JSON fails required BloodType and MedicalHistory nesting; patient facts remain identifiable despite representation errors.
+A0046,no,yes,yes,not-assessable,not-assessable,Finished fenced Python program contains intermediate dictionaries but no full intended JSON answer; schema absent.
+A0047,no,no,no,not-assessable,yes,"Complete JSON uses numeric table coordinates, lacks cell_text, and gives a zero-length span for a nonempty quote; schema absent."
+A0048,no,no,no,not-assessable,yes,Complete JSON has only 24 indices for 77 records and shifts transition values to wrong coordinates; no schema.
+A0049,no,no,yes,no,no,Complete two-part wrapper; JSON validates and all game statistics and achievement facts match reference.
+A0050,no,no,yes,not-assessable,yes,"Complete prose/fenced JSON duplicates 534 and loses range coordinates, breaking coordinate/value alignment; no schema."
+A0051,no,no,no,no,no,"Complete raw schema-valid JSON agrees with reference player count, playtime, and all achievement facts."
+A0052,no,no,no,not-assessable,yes,"Complete JSON repeats [1,2,0] twenty times instead of three distinct target coordinates and adds values; no schema."
+A0053,no,no,yes,yes,yes,Complete fenced JSON returns plant facts for a game statistics task and lacks required GameStatistics.
+A0054,no,no,yes,no,no,"Complete fenced JSON validates and preserves the plant synonyms, conservation details, pH and related species."
+A0055,no,no,yes,yes,yes,"Finished prose plus JSON returns a schema rather than extracted orchid data, failing required plantData and references."
+A0056,no,no,yes,yes,yes,Finished prose surrounds a schema object with suggested modifications; schema instance fields and extracted sensor records are not supplied.
+A0057,no,no,no,no,no,"Complete raw schema-valid JSON matches reference patient demographics, address and medications."
+A0058,no,no,yes,not-assessable,yes,Complete two-part JSON states supported financial factors but table coordinates and zero-length text offsets do not ground the claims.
+A0059,no,no,yes,not-assessable,yes,"Complete two-part fenced JSON wrongly reports 83,270 buses despite cited value 8,327; no schema."
+A0060,no,no,yes,no,no,Complete two-part response; JSON validates and matches all patient facts in the reference.
+A0061,no,no,yes,yes,yes,Complete fenced botanical schema is returned for a vehicle specifications task; required TechnicalSpecs and Dimensions are missing.
+A0062,no,yes,no,not-assessable,not-assessable,Answer completes its claims but omits the last object brace; full JSON cannot be assessed against schema/content.
+A0063,no,yes,no,not-assessable,not-assessable,"Financial answer finishes all claims but lacks the last object brace; full JSON invalid, downstream dimensions unknown."
+A0064,no,no,no,not-assessable,yes,"Complete JSON invents transition coordinates and omits row 8, shifting subsequent records against the reference; schema absent."
+A0065,no,no,yes,not-assessable,yes,"Complete fenced answer quotes a 97-character sentence with char_end 61, so evidence coordinates are incorrect; schema absent."
+A0066,no,yes,yes,not-assessable,not-assessable,Finished fenced Python program has no full intended JSON answer; dictionaries in executable code are not answer objects.
+A0067,no,no,yes,no,no,"Complete two-part JSON validates; lowercase dust, mold and bee stings preserve the allergy meanings."
+A0068,no,no,yes,yes,yes,"Complete fenced response extracts luminous-plant facts for Ghost Orchid, including wrong pH and references; required taxonomy/cultivation nesting also fails."
+A0069,no,no,yes,not-assessable,yes,Complete two-part JSON uses zero-length text evidence and table-title identifiers rather than the reference identifiers; no schema.
+A0070,no,no,no,not-assessable,yes,"Complete JSON claims 11,631 sales using invented numeric table locations and a paragraph identifier; text offsets are zero-length."
+A0071,no,no,yes,no,no,"Complete two-part JSON validates and preserves all player, playtime and achievement reference facts."
+A0072,no,no,yes,not-assessable,yes,"Complete fenced JSON copies JCPDS example codes rather than target 12.6, 11.8 and 12.2 line widths; no schema."
+A0073,no,no,yes,yes,yes,"Complete fenced JSON supplies luminous-plant facts for a tomato task, with wrong discovery year, pH and relatives; required taxonomy/cultivation missing."
+A0074,no,yes,yes,not-assessable,not-assessable,"Two-part answer reaches its references but closes the object before that field; full intended JSON is invalid, downstream checks unknown."
+A0075,no,no,yes,not-assessable,yes,"Complete two-part fenced JSON has 20 indices for 26 records and loses range k coordinates, misaligning target values; no schema."
+A0076,no,no,yes,not-assessable,yes,Complete two-part JSON gives zero-length evidence spans for all nonempty financial quotations; no schema.
+A0077,no,no,yes,not-assessable,yes,Complete fenced JSON uses unrelated JCPDS values and 18 coordinates for 14 records instead of target oscillator data; no schema.
+A0078,no,no,no,not-assessable,yes,"Complete raw JSON supports an 11,006 sales claim with a 12,430 production cell and gives zero-length text spans; no schema."
+A0079,no,yes,no,not-assessable,not-assessable,Finished financial claims lack the final object brace; syntax defect prevents whole-answer schema/content evaluation.
+A0080,no,no,yes,not-assessable,yes,Complete two-part JSON uses numeric table locations and zero-length text offsets that do not ground its claims; no schema.
+A0081,no,no,yes,not-assessable,yes,Complete fenced JSON omits requested positive/negative drivers and gives a 9-character span for a longer quote; no schema.
+A0082,no,no,no,not-assessable,yes,"Complete JSON cites paragraph IDs as tables and uses zero-length text offsets, despite reasonable rounded financial facts; no schema."
+A0083,no,no,yes,not-assessable,yes,Complete two-part JSON overwrites row identifiers with concentration values and provides 27 records for 24 coordinates; no schema.
+A0084,no,yes,no,not-assessable,not-assessable,Finished orchid answer closes the top object before references; remaining comma/field text cannot be removed as prose to yield the full answer.
+A0085,no,no,yes,not-assessable,yes,"Complete two-part JSON shifts energy columns and omits a coordinate, so transition values attach to incorrect cells; no schema."
+A0086,no,no,yes,not-assessable,yes,"Complete two-part JSON uses cell values as row names, omits cell_text and supplies unsupported Bentayga percentage/text evidence; no schema."
+A0087,no,no,no,not-assessable,yes,"Complete JSON swaps k=0 and k=1 for [5,2], reversing the association of 0.31 and 0.46; schema absent."
+A0088,no,no,yes,not-assessable,yes,Complete fenced JSON invents paragraph spans for Superb/71062 although the quoted source names Octavia/Enyaq; all other evidence offsets are zero-length.
+A0089,no,no,yes,yes,yes,"Complete fenced JSON substitutes luminous-plant facts for Arctic Raspberry, including endangered status, year and pH; required taxonomy/cultivation absent."
+A0090,no,no,no,not-assessable,yes,Complete JSON uses numeric table coordinates and zero-length spans for nonempty quotations; schema absent.
+A0091,no,no,yes,no,yes,Complete two-part JSON validates but drops house number 2389 from the extracted street address.
+A0092,yes,yes,yes,not-assessable,not-assessable,Two-part fenced response cuts off inside a serialized record and lacks a comma before cell_record; downstream checks unknown despite visible misclassification.
+A0093,no,no,yes,yes,yes,"Complete fenced JSON returns tomato facts for Emily Zhang's patient task, failing required PersonalInfo and MedicalHistory."
+A0094,no,no,yes,not-assessable,yes,Complete fenced JSON returns JCPDS example codes instead of the supplied radiative transition data; schema absent.
+A0095,no,no,yes,not-assessable,yes,"Complete fenced JSON gives incorrect text-source identifiers/zero offsets and numeric table locations, failing evidence fidelity; no schema."
+A0096,no,no,no,yes,no,"Complete JSON misnests cultivation and references, failing supplied schema; botanical values and reference titles retain their meanings."
+A0097,no,no,yes,not-assessable,yes,"Complete two-part JSON creates nonexistent oscillator coordinates, repeats later values, and shifts data alignment; no schema."
+A0098,no,no,yes,not-assessable,no,Complete two-part JSON preserves all eight isotope parameter coordinates and decoded values; no schema supplied.
+A0099,no,yes,no,not-assessable,not-assessable,"Finished financial content has an unclosed claim before the next object; full JSON invalid, so schema/content are unknown."

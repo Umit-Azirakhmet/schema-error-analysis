@@ -12,6 +12,22 @@ LONG_TEXT_MIN_CHARS = 40
 LONG_TEXT_MIN_WORDS = 5
 
 
+def scalar_paths(value: Any, prefix: tuple = ()) -> dict[tuple, Any]:
+    """Gold opportunity slots, including nulls, with collision-free tuple paths.
+
+    Embedded JSON strings remain one scalar slot. Structural feature extraction
+    below deliberately expands embedded JSON; those feature counts must not be
+    substituted for these normalization denominators.
+    """
+    if isinstance(value, dict):
+        return {path: leaf for key, child in value.items()
+                for path, leaf in scalar_paths(child, prefix + (key,)).items()}
+    if isinstance(value, list):
+        return {path: leaf for index, child in enumerate(value)
+                for path, leaf in scalar_paths(child, prefix + (index,)).items()}
+    return {prefix: value}
+
+
 @dataclass
 class GoldJsonStructureMetrics:
     nesting_depth: int = 0

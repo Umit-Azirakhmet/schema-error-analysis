@@ -1,0 +1,31 @@
+{
+  "status": "complete_agent_audit_not_human_validation",
+  "distinct_responses": 230,
+  "independent_judgments_per_response": 2,
+  "first_pass_agents": [
+    "reviewer_a",
+    "reviewer_b",
+    "reviewer_c"
+  ],
+  "second_pass_partition": {
+    "reviewer_b": "A0000-A0099",
+    "reviewer_c": "A0100-A0229"
+  },
+  "exact_model_diversity": "not_established; reviewers report serving snapshot unavailable",
+  "disagreement_responses": 67,
+  "disagreement_labels": 67,
+  "limitation": "Process-independent agent judgments may share model biases; no human validation or human semantic ground truth.",
+  "source_sha256": "2121dd2ccd5289b52e5121074f8d7b5febe6cb516c590f00dc137eff854dcc33",
+  "frozen_input_sha256": {
+    "annotation_key.csv": "4850c502bbbbda69f89fc432dc09220be0e131dab3aeb90bb1877b5a4a3ee66d",
+    "annotation_sample.csv": "2121dd2ccd5289b52e5121074f8d7b5febe6cb516c590f00dc137eff854dcc33",
+    "normalized_errors.csv": "766b0995ec5585633ffc420945bbde8a7254611e508281d820c38f02e1b3a4e7"
+  },
+  "adjudication_csv_sha256": "9306e5ac57b6c5c1425987729fb997e287a4c9b04ab40c40267e6c1243a0ce38",
+  "coordinator_script_sha256": "b4e52d4debe7cdf198ca5b4513b38c071f49fe3f25bceb6b4c7276dbba502cf7",
+  "input_sha256": {
+    "reviewer_a.csv": "15901d5292673f2fcae5287c194662c3dac70cd65c3e86f7a85e1cb4a84cc4b1",
+    "reviewer_b.csv": "f933d2c8acea6c4fada19c94013c12a0faefb9c60c191604cb26aeded294452d",
+    "reviewer_c.csv": "8499f0cce85b79528e14e6f74aa0c2de20a536152f5fff9d7e47b2a080bab00d"
+  }
+}

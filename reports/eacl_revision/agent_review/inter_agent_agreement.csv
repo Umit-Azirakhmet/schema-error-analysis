@@ -1,0 +1,11 @@
+family,n,agreement,cohen_kappa,both_assessable_n,both_unassessable_n,assessable_agreement,sample_type,review_kind
+completion,180,0.9555555555555556,0.4886363636363639,172.0,0.0,1.0,balanced,inter_agent
+syntax,180,1.0,1.0,180.0,0.0,1.0,balanced,inter_agent
+envelope_contamination,180,1.0,1.0,180.0,0.0,1.0,balanced,inter_agent
+schema_non_conformance,180,1.0,1.0,49.0,131.0,1.0,balanced,inter_agent
+content_fidelity,180,0.7555555555555555,0.6243062473317206,94.0,42.0,1.0,balanced,inter_agent
+completion,50,0.86,0.6124031007751939,43.0,0.0,1.0,challenge,inter_agent
+syntax,50,1.0,1.0,50.0,0.0,1.0,challenge,inter_agent
+envelope_contamination,50,0.98,0.9586776859504131,50.0,0.0,0.98,challenge,inter_agent
+schema_non_conformance,50,1.0,1.0,9.0,41.0,1.0,challenge,inter_agent
+content_fidelity,50,0.86,0.7213375796178344,17.0,27.0,0.9411764705882353,challenge,inter_agent

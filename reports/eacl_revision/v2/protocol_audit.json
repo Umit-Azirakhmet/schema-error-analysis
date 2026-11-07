@@ -1,0 +1,14 @@
+{
+  "historical_examples": 112,
+  "historical_invalid_examples": 0,
+  "archived_arqa_prompts": 3210,
+  "archived_arqa_missing_prompts": 3210,
+  "archived_arqa_malformed_examples": 0,
+  "limitations": [
+    "Committed prompt history is not proof of a per-run checkout.",
+    "Missing prompts cannot establish whether malformed examples were shown.",
+    "Character lengths are not token counts; gold fit cannot be inferred from characters.",
+    "NL-to-format uses one shared generation budget for prose plus JSON.",
+    "Token-limit hits alone do not establish semantic truncation."
+  ]
+}
